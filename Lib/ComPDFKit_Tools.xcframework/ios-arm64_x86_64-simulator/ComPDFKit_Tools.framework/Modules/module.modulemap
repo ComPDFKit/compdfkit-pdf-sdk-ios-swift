@@ -1,0 +1,11 @@
+framework module ComPDFKit_Tools {
+  umbrella header "ComPDFKit_Tools.h"
+
+  export *
+  module * { export * }
+}
+
+module ComPDFKit_Tools.Swift {
+  header "ComPDFKit_Tools-Swift.h"
+  requires objc
+}

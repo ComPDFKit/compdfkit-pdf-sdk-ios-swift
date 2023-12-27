@@ -1,0 +1,6 @@
+framework module ComPDFKit {
+  umbrella header "ComPDFKit.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,1127 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ComPDFKit_Tools
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFAudio
+import AVFoundation
+import ComPDFKit
+@_exported import ComPDFKit_Tools
+import Foundation
+import MobileCoreServices
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc @_inheritsConvenienceInitializers public class CPDFTextProperty : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public static let shared: ComPDFKit_Tools.CPDFTextProperty
+  public var fontColor: UIKit.UIColor? {
+    get
+    set
+  }
+  public var textOpacity: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var fontName: Foundation.NSString? {
+    get
+    set
+  }
+  public var isBold: Swift.Bool {
+    get
+    set
+  }
+  public var isItalic: Swift.Bool {
+    get
+    set
+  }
+  public var fontSize: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  public var textAlignment: UIKit.NSTextAlignment {
+    get
+    set
+  }
+  @objc deinit
+}
+@objc public protocol AAPLCustomPresentationControllerDelegate {
+  @objc optional func AAPLCustomPresentationControllerTap(_ customPresentationController: ComPDFKit_Tools.AAPLCustomPresentationController)
+}
+@objc @_Concurrency.MainActor(unsafe) public class AAPLCustomPresentationController : UIKit.UIPresentationController, UIKit.UIViewControllerTransitioningDelegate, UIKit.UIViewControllerAnimatedTransitioning {
+  @_Concurrency.MainActor(unsafe) weak public var tapDelegate: ComPDFKit_Tools.AAPLCustomPresentationControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(presentedViewController: UIKit.UIViewController, presenting presentingViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var presentedView: UIKit.UIView? {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func presentationTransitionWillBegin()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func presentationTransitionDidEnd(_ completed: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func dismissalTransitionWillBegin()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func dismissalTransitionDidEnd(_ completed: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func preferredContentSizeDidChange(forChildContentContainer container: UIKit.UIContentContainer)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func size(forChildContentContainer container: UIKit.UIContentContainer, withParentContainerSize parentSize: CoreFoundation.CGSize) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frameOfPresentedViewInContainerView: CoreFoundation.CGRect {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func containerViewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func transitionDuration(using transitionContext: UIKit.UIViewControllerContextTransitioning?) -> Foundation.TimeInterval
+  @_Concurrency.MainActor(unsafe) @objc public func animateTransition(using transitionContext: UIKit.UIViewControllerContextTransitioning)
+  @_Concurrency.MainActor(unsafe) @objc public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
+  @_Concurrency.MainActor(unsafe) @objc public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @_Concurrency.MainActor(unsafe) @objc public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc deinit
+}
+@objc public protocol CPDFAddWatermarkViewControllerDelegate {
+  @objc optional func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Text textWaterModel: ComPDFKit_Tools.CWatermarkModel)
+  @objc optional func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Image imageWaterModel: ComPDFKit_Tools.CWatermarkModel)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFAddWatermarkViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(fileURL: Foundation.URL?, document: ComPDFKit.CPDFDocument?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc deinit
+}
+@objc public protocol CPDFSigntureVerifyDetailsViewControllerDelegate {
+  @objc optional func signtureVerifyDetailsViewControllerUpdate(_ signtureVerifyDetailsViewController: ComPDFKit_Tools.CPDFSigntureVerifyDetailsViewController)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CPDFSigntureVerifyDetailsViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFSigntureVerifyDetailsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var signature: ComPDFKit.CPDFSignature?
+  @_Concurrency.MainActor(unsafe) public var PDFListView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class CAnnotStyle : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public protocol CImportCertificateViewControllerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func importCertificateViewControllerSave(_ importCertificateViewController: ComPDFKit_Tools.CImportCertificateViewController, PKCS12Cert path: Swift.String, password: Swift.String, config: ComPDFKit.CPDFSignatureConfig)
+  @objc optional func importCertificateViewControllerCancel(_ importCertificateViewController: ComPDFKit_Tools.CImportCertificateViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CImportCertificateViewController : UIKit.UIViewController, UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CImportCertificateViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(p12FilePath filePath: Foundation.URL, annotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CPDFConfiguration : ObjectiveC.NSObject {
+  public var showleftItems: [ComPDFKit_Tools.CNavBarButtonItem]
+  public var showRightItems: [ComPDFKit_Tools.CNavBarButtonItem]
+  public var enterToolModel: ComPDFKit_Tools.CPDFToolFunctionTypeState
+  public var showMoreItems: [ComPDFKit_Tools.CPDFPopMenuViewType]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum CPDFMediaState : Swift.Int {
+  case stop
+  case readyRecord
+  case audioRecord
+  case videoPlaying
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CPDFMediaManager : ObjectiveC.NSObject {
+  public static let sharedManager: ComPDFKit_Tools.CPDFMediaManager
+  public var mediaState: ComPDFKit_Tools.CPDFMediaState
+  public var pageNum: Swift.Int
+  public var ptInPdf: CoreFoundation.CGPoint
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol CPDFPageEditViewControllerDelegate : AnyObject {
+  func pageEditViewControllerDone(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController)
+  func pageEditViewController(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController, pageIndex: Swift.Int, isPageEdit: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPageEditViewController : ComPDFKit_Tools.CPDFThumbnailViewController, ComPDFKit_Tools.CPageEditToolBarDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var pageEditDelegate: ComPDFKit_Tools.CPDFPageEditViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var isPageEdit: Swift.Bool
+  @_Concurrency.MainActor(unsafe) override public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func beginEdit()
+  @_Concurrency.MainActor(unsafe) @objc override public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc override public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarBlankPageInsert(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, pageModel: ComPDFKit_Tools.CBlankPageModel)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarPDFInsert(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, pageModel: ComPDFKit_Tools.CBlankPageModel, document: ComPDFKit.CPDFDocument)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarExtract(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarRotate(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarDelete(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarCopy(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  @_Concurrency.MainActor(unsafe) public func pageEditToolBarReplace(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, document: ComPDFKit.CPDFDocument)
+  @objc deinit
+}
+public enum CPDFPopMenuViewType : Swift.Int {
+  case setting
+  case pageEdit
+  case info
+  case save
+  case share
+  case addFile
+  case watermark
+  case security
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CPDFPopMenuViewDelegate : AnyObject {
+  func menuDidClick(at view: ComPDFKit_Tools.CPDFPopMenuView, clickType viewType: ComPDFKit_Tools.CPDFPopMenuViewType)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPopMenuView : UIKit.UIView, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFPopMenuViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+public enum CPDFInkTopToolBarSelect : Swift.Int {
+  case setting
+  case erase
+  case undo
+  case redo
+  case clear
+  case save
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CPDFInkTopToolBarDelegate {
+  @objc optional func inkTopToolBar(_ inkTopToolBar: ComPDFKit_Tools.CPDFInkTopToolBar, tag: Swift.Int, isSelect: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFInkTopToolBar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFInkTopToolBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var buttonArray: [UIKit.UIButton]
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc public class CAnnotationManage : ObjectiveC.NSObject {
+  public var pdfListView: ComPDFKit_Tools.CPDFListView?
+  public var annotation: ComPDFKit.CPDFAnnotation?
+  public var annotStyle: ComPDFKit_Tools.CAnnotStyle?
+  public init(pdfListView: ComPDFKit_Tools.CPDFListView)
+  public func setAnnotStyle(from annotations: [ComPDFKit.CPDFAnnotation])
+  public func refreshPage(with annotations: [ComPDFKit.CPDFAnnotation])
+  public func setAnnotStyle(from annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  @objc deinit
+}
+public enum CDigitalSelectType : Swift.Int {
+  case none
+  case certificate
+  case selfSigned
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CDigitalTypeSelectViewDelegate {
+  @objc optional func CDigitalTypeSelectViewUse(_ digitalTypeSelectView: ComPDFKit_Tools.CDigitalTypeSelectView)
+  @objc optional func CDigitalTypeSelectViewCreate(_ digitalTypeSelectView: ComPDFKit_Tools.CDigitalTypeSelectView)
+}
+@objc @_Concurrency.MainActor(unsafe) public class CDigitalTypeSelectView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CDigitalTypeSelectViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) public func show(in superView: UIKit.UIView)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CDigitalTypeSelectView {
+  @_Concurrency.MainActor(unsafe) public class func loadFromNib() -> ComPDFKit_Tools.CDigitalTypeSelectView
+}
+public enum CPDFToolFunctionTypeState : Swift.Int {
+  case viewer
+  case edit
+  case annotation
+  case form
+  case pageEdit
+  case signature
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CPDFToolsViewControllerDelegate : AnyObject {
+  func CPDFToolsViewControllerDismiss(_ viewController: ComPDFKit_Tools.CPDFToolsViewController, selectItemAtIndex selectIndex: ComPDFKit_Tools.CPDFToolFunctionTypeState)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFToolsViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFToolsViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public init(customizeWithToolArrays toolsTypes: [Foundation.NSNumber])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+public enum CPDFEditMode : Swift.UInt {
+  case text
+  case image
+  case all
+  public init?(rawValue: Swift.UInt)
+  public typealias RawValue = Swift.UInt
+  public var rawValue: Swift.UInt {
+    get
+  }
+}
+@objc public protocol CPDFEditToolBarDelegate {
+  @objc optional func editClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar, editMode mode: Swift.Int)
+  @objc optional func propertyEditDidClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar)
+  @objc optional func redoDidClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar)
+  @objc optional func undoDidClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFEditToolBar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFEditToolBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var pdfView: ComPDFKit.CPDFView?
+  @_Concurrency.MainActor(unsafe) public var undoButton: UIKit.UIButton?
+  @_Concurrency.MainActor(unsafe) public var redoButton: UIKit.UIButton?
+  @_Concurrency.MainActor(unsafe) public var propertyButton: UIKit.UIButton?
+  @_Concurrency.MainActor(unsafe) public var textEditButton: UIKit.UIButton?
+  @_Concurrency.MainActor(unsafe) public var imageEditButton: UIKit.UIButton?
+  @_Concurrency.MainActor(unsafe) public var leftView: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public var rightView: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public var splitView: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public var editToolBarSelectType: ComPDFKit_Tools.CPDFEditMode
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func updateButtonState()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CBlankPageModel : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CPDFSigntureViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var callback: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) public var expiredTrust: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func updateCertState(_ signatures: [ComPDFKit.CPDFSignature])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum CToolModel : Swift.Int {
+  case viewer
+  case edit
+  case annotation
+  case form
+  case pageEdit
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CPDFViewAnnotationMode : Swift.Int {
+  case CPDFViewAnnotationModenone
+  case note
+  case highlight
+  case underline
+  case strikeout
+  case squiggly
+  case circle
+  case square
+  case arrow
+  case line
+  case ink
+  case pencilDrawing
+  case freeText
+  case signature
+  case stamp
+  case image
+  case link
+  case sound
+  case formModeText
+  case formModeCheckBox
+  case formModeRadioButton
+  case formModeCombox
+  case formModeList
+  case formModeButton
+  case formModeSign
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CPDFAnnotationDraggingType {
+  case none
+  case center
+  case topLeft
+  case topRight
+  case bottomLeft
+  case bottomRight
+  case start
+  case end
+  public static func == (a: ComPDFKit_Tools.CPDFAnnotationDraggingType, b: ComPDFKit_Tools.CPDFAnnotationDraggingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CPDFListViewDelegate {
+  @objc optional func PDFListView(_ pdfListView: ComPDFKit_Tools.CPDFListView, customizeMenuItems menuItems: [UIKit.UIMenuItem], forPage page: ComPDFKit.CPDFPage, forPagePoint pagePoint: CoreFoundation.CGPoint) -> [UIKit.UIMenuItem]
+  @objc optional func PDFListViewPerformTouchEnded(_ pdfListView: ComPDFKit_Tools.CPDFListView)
+  @objc optional func PDFListViewChangedToolMode(_ pdfListView: ComPDFKit_Tools.CPDFListView, forToolMode toolMode: Swift.Int)
+  @objc optional func PDFListViewChangedAnnotationType(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotationMode annotationMode: Swift.Int)
+  @objc optional func PDFListViewChangeatioActiveAnnotations(_ pdfListView: ComPDFKit_Tools.CPDFListView, forActiveAnnotations annotations: [ComPDFKit.CPDFAnnotation])
+  @objc optional func PDFListViewAnnotationsOperationChange(_ pdfListView: ComPDFKit_Tools.CPDFListView)
+  @objc optional func PDFListViewEditNote(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFAnnotation)
+  @objc optional func PDFListViewEditProperties(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFAnnotation)
+  @objc optional func PDFListViewPerformPlay(_ pdfView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFSoundAnnotation)
+  @objc optional func PDFListViewPerformCancelMedia(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @objc optional func PDFListViewPerformRecordMedia(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @objc optional func PDFListViewerTouchEndedIsAudioRecordMedia(_ pdfListView: ComPDFKit_Tools.CPDFListView) -> Swift.Bool
+  @objc optional func PDFListViewPerformAddStamp(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @objc optional func PDFListViewPerformAddImage(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @objc optional func PDFListViewPerformSignatureWidget(_ pdfView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
+  @objc optional func PDFListViewContentEditProperty(_ pdfListView: ComPDFKit_Tools.CPDFListView, point: CoreFoundation.CGPoint)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFListView : ComPDFKit.CPDFView, UIKit.UIImagePickerControllerDelegate, UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var performDelegate: ComPDFKit_Tools.CPDFListViewDelegate?
+  @_Concurrency.MainActor(unsafe) public var pageSliderView: ComPDFKit_Tools.CPDFSlider?
+  @_Concurrency.MainActor(unsafe) public var currentToolModel: ComPDFKit_Tools.CToolModel
+  @_Concurrency.MainActor(unsafe) public var currentAnnotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode
+  @_Concurrency.MainActor(unsafe) public var undoPDFManager: Foundation.UndoManager?
+  @_Concurrency.MainActor(unsafe) public var activeAnnotations: [ComPDFKit.CPDFAnnotation]?
+  @_Concurrency.MainActor(unsafe) public var pageIndicatorView: ComPDFKit_Tools.CPDFPageIndicatorView?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var canBecomeFirstResponder: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) public func canUndo() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func canRedo() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func stopObservingNotes(oldNotes: [ComPDFKit.CPDFAnnotation])
+  @_Concurrency.MainActor(unsafe) public func setAnnotationMode(_ annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  @_Concurrency.MainActor(unsafe) public var annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func setToolModel(_ toolModel: ComPDFKit_Tools.CToolModel)
+  @_Concurrency.MainActor(unsafe) public var toolModel: ComPDFKit_Tools.CToolModel {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var activeAnnotation: ComPDFKit.CPDFAnnotation? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchBegan(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchMoved(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchEnded(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchCancelled(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage!)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func menuItems(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage) -> [UIKit.UIMenuItem]
+  @_Concurrency.MainActor(unsafe) public func updateActiveAnnotations(_ activeAnnotations: [ComPDFKit.CPDFAnnotation]?)
+  @_Concurrency.MainActor(unsafe) public func addAnnotation(_ annotation: ComPDFKit.CPDFAnnotation?, for page: ComPDFKit.CPDFPage?)
+  @_Concurrency.MainActor(unsafe) public func stopRecord()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ page: ComPDFKit.CPDFPage!, to context: CoreGraphics.CGContext!)
+  @objc deinit
+}
+public protocol CDocumentPasswordViewControllerDelegate : AnyObject {
+  func documentPasswordViewControllerCancel(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController)
+  func documentPasswordViewControllerOpen(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController, document: ComPDFKit.CPDFDocument)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CDocumentPasswordViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CDocumentPasswordViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(document: ComPDFKit.CPDFDocument)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var x: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var y: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var width: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var height: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var size: CoreFoundation.CGSize {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var centerX: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var centerY: CoreFoundation.CGFloat {
+    get
+    set
+  }
+}
+@objc public protocol CPDFNoteOpenViewControllerDelegate {
+  @objc optional func getNoteOpenViewController(_ noteOpenVC: ComPDFKit_Tools.CPDFNoteOpenViewController, content: Swift.String, isDelete: Swift.Bool)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFNoteOpenViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFNoteOpenViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var annotation: ComPDFKit.CPDFAnnotation?
+  @_Concurrency.MainActor(unsafe) public init(annotation: ComPDFKit.CPDFAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func showViewController(_ viewController: UIKit.UIViewController, inRect rect: CoreFoundation.CGRect)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CPDFNoteOpenViewController : UIKit.UIPopoverPresentationControllerDelegate, UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController, traitCollection: UIKit.UITraitCollection) -> UIKit.UIModalPresentationStyle
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+}
+public enum CSignatureSelectType : Swift.Int {
+  case none
+  case electronic
+  case digital
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CSignatureTypeSelectViewDelegate {
+  @objc optional func signatureTypeSelectViewElectronic(_ signatureTypeSelectView: ComPDFKit_Tools.CSignatureTypeSelectView)
+  @objc optional func signatureTypeSelectViewDigital(_ signatureTypeSelectView: ComPDFKit_Tools.CSignatureTypeSelectView)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CSignatureTypeSelectView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CSignatureTypeSelectViewDelegate?
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func showinView(_ superView: UIKit.UIView?)
+  @objc deinit
+}
+@objc public protocol CSearchToolbarDelegate {
+  @objc optional func searchToolbarOnExitSearch(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar)
+  @objc optional func searchToolbarOnClearQuery(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar)
+  @objc optional func searchToolbarOnSearchQueryBegin(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar)
+  @objc optional func searchToolbarOnSearchQueryEnd(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar)
+  @objc optional func searchToolbar(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar, onSearchQueryResults results: [Any])
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CSearchToolbar : UIKit.UIView, UIKit.UISearchBarDelegate {
+  @_Concurrency.MainActor(unsafe) public var pdfView: ComPDFKit.CPDFView?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func searchBarSearchButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor(unsafe) @objc public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @objc deinit
+}
+public enum CPDFBOTATypeState : Swift.Int {
+  case CPDFBOTATypeStateOutline
+  case CPDFBOTATypeStateBookmark
+  case CPDFBOTATypeStateAnnotation
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CPDFBOTAViewControllerDelegate : AnyObject {
+  func botaViewControllerDismiss(_ botaViewController: ComPDFKit_Tools.CPDFBOTAViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFBOTAViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFBOTAViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var pdfView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit_Tools.CPDFListView)
+  @_Concurrency.MainActor(unsafe) public init(customizeWith pdfView: ComPDFKit_Tools.CPDFListView, navArrays botaTypes: [ComPDFKit_Tools.CPDFBOTATypeState])
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @objc deinit
+}
+@objc public protocol CreateCertificateInfoViewControllerDelegate {
+  @objc optional func createCertificateInfoViewControllerSave(_ createCertificateInfoViewController: ComPDFKit_Tools.CCreateCertificateInfoViewController, PKCS12Cert path: Swift.String, password: Swift.String, config: ComPDFKit.CPDFSignatureConfig)
+  @objc optional func createCertificateInfoViewControllerCancel(_ createCertificateInfoViewController: ComPDFKit_Tools.CCreateCertificateInfoViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CCreateCertificateInfoViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CreateCertificateInfoViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(annotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @objc deinit
+}
+@objc public protocol CPDFSignatureViewControllerDelegate {
+  @objc optional func signatureViewControllerDismiss(_ signatureViewController: ComPDFKit_Tools.CPDFSignatureViewController)
+  @objc optional func signatureViewController(_ signatureViewController: ComPDFKit_Tools.CPDFSignatureViewController, image: UIKit.UIImage)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFSignatureViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFSignatureViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public init(style annotStyle: ComPDFKit_Tools.CAnnotStyle?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+public enum CPDFFormToolbarSelectedIndex : Swift.Int {
+  case none
+  case text
+  case checkBox
+  case radioButton
+  case comboBox
+  case list
+  case button
+  case sign
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CPDFFormBarDelegate {
+  @objc optional func formBarClick(_ pdfFormBar: ComPDFKit_Tools.CPDFFormToolBar, forSelected isSelected: Swift.Bool, forButton button: UIKit.UIButton)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFFormToolBar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFFormBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var pdfListView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public init(annotationManage: ComPDFKit_Tools.CAnnotationManage?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func reloadData()
+  @_Concurrency.MainActor(unsafe) public func updatePropertiesButtonState()
+  @_Concurrency.MainActor(unsafe) public func updateStatus()
+  @_Concurrency.MainActor(unsafe) public func initUndoRedo()
+  @objc @_Concurrency.MainActor(unsafe) public func buttonItemClicked_open(_ button: UIKit.UIButton?)
+  @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openOption(_ annotation: ComPDFKit.CPDFWidgetAnnotation)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CPDFColorUtils : ObjectiveC.NSObject {
+  public class func CPDFViewControllerBackgroundColor() -> UIKit.UIColor
+  public class func CAnnotationBarSelectBackgroundColor() -> UIKit.UIColor
+  public class func CAnnotationSampleBackgoundColor() -> UIKit.UIColor
+  public class func CAnnotationSampleDrawBackgoundColor() -> UIKit.UIColor
+  public class func CAnnotationPropertyViewControllerBackgoundColor() -> UIKit.UIColor
+  public class func CNoteOpenBackgooundColor() -> UIKit.UIColor
+  public class func CAnyReverseBackgooundColor() -> UIKit.UIColor
+  public class func CTableviewCellSplitColor() -> UIKit.UIColor
+  public class func CViewBackgroundColor() -> UIKit.UIColor
+  public class func CPageEditToolbarFontColor() -> UIKit.UIColor
+  public class func CAnnotationBarNoSelectBackgroundColor() -> UIKit.UIColor
+  public class func CFormFontColor() -> UIKit.UIColor
+  public class func CPDFKeyboardToolbarColor() -> UIKit.UIColor
+  public class func CNavBackgroundColor() -> UIKit.UIColor
+  public class func CMessageLabelColor() -> UIKit.UIColor
+  public class func CVerifySignatureBackgroundColor() -> UIKit.UIColor
+  public class func CContentBackgroundColor() -> UIKit.UIColor
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol CPDFDigitalSignatureToolBarDelegate {
+  @objc optional func verifySignatureBar(_ pdfSignatureBar: ComPDFKit_Tools.CPDFDigitalSignatureToolBar, sourceButton: UIKit.UIButton)
+  @objc optional func addSignatureBar(_ pdfSignatureBar: ComPDFKit_Tools.CPDFDigitalSignatureToolBar, sourceButton: UIKit.UIButton)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFDigitalSignatureToolBar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFDigitalSignatureToolBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public init(pdfListView: ComPDFKit_Tools.CPDFListView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func updateStatusWith(signatures: [ComPDFKit.CPDFSignature]?)
+  @objc deinit
+}
+public enum CPDFToolbarSelectedIndex : Swift.Int {
+  case none
+  case note
+  case highlight
+  case underline
+  case strikeout
+  case squiggly
+  case shapeCircle
+  case shapeRectangle
+  case shapeArrow
+  case shapeLine
+  case freehand
+  case pencilDrawing
+  case freeText
+  case signature
+  case stamp
+  case image
+  case link
+  case lSound
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol CPDFAnnotationBarDelegate {
+  @objc optional func annotationBarClick(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Swift.Int, forSelected isSelected: Swift.Bool, forButton button: UIKit.UIButton)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFAnnotationToolBar : UIKit.UIView, UIKit.UINavigationControllerDelegate, UIKit.UIImagePickerControllerDelegate, ComPDFKit_Tools.CPDFSignatureViewControllerDelegate, ComPDFKit_Tools.CPDFInkTopToolBarDelegate, ComPDFKit_Tools.CPDFDrawPencilViewDelegate, ComPDFKit_Tools.AAPLCustomPresentationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public var shapeStyle: Swift.Int
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFAnnotationBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public var pdfListView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) public var topToolBar: ComPDFKit_Tools.CPDFInkTopToolBar?
+  @_Concurrency.MainActor(unsafe) public var drawPencilFuncView: ComPDFKit_Tools.CPDFDrawPencilKitFuncView?
+  @_Concurrency.MainActor(unsafe) public init(annotationManage: ComPDFKit_Tools.CAnnotationManage)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func reloadData()
+  @_Concurrency.MainActor(unsafe) public func updatePropertiesButtonState()
+  @_Concurrency.MainActor(unsafe) public func updateUndoRedoState()
+  @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openAnnotation(_ button: UIKit.UIButton?)
+  @objc @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openModel(_ button: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) public func openSignatureAnnotation(_ signatureAnnotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
+  @_Concurrency.MainActor(unsafe) public func addStampAnnotation(withPage page: ComPDFKit.CPDFPage, point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func addImageAnnotation(withPage page: ComPDFKit.CPDFPage, point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func buttonItemClicked_open(_ button: UIKit.UIButton?)
+  @_Concurrency.MainActor(unsafe) @objc public func AAPLCustomPresentationControllerTap(_ customPresentationController: ComPDFKit_Tools.AAPLCustomPresentationController)
+  @_Concurrency.MainActor(unsafe) @objc public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+  @_Concurrency.MainActor(unsafe) @objc public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
+  @_Concurrency.MainActor(unsafe) @objc public func signatureViewControllerDismiss(_ signatureViewController: ComPDFKit_Tools.CPDFSignatureViewController)
+  @_Concurrency.MainActor(unsafe) @objc public func signatureViewController(_ signatureViewController: ComPDFKit_Tools.CPDFSignatureViewController, image: UIKit.UIImage)
+  @_Concurrency.MainActor(unsafe) @objc public func inkTopToolBar(_ inkTopToolBar: ComPDFKit_Tools.CPDFInkTopToolBar, tag: Swift.Int, isSelect: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, eraserBtn btn: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) public func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, saveBtn btn: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) public func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, cancelBtn btn: UIKit.UIButton)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CPDFListView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func menuItemsEditing(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage) -> [UIKit.UIMenuItem]?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CNavigationBarTitleButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func imageRect(forContentRect contentRect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func titleRect(forContentRect contentRect: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setTitle(_ title: Swift.String?, for state: UIKit.UIControl.State)
+  @objc deinit
+}
+public enum CPDFDrawPencilKitFuncType : Swift.Int {
+  case eraser
+  case cancel
+  case done
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CPDFDrawPencilViewDelegate : AnyObject {
+  func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, eraserBtn btn: UIKit.UIButton)
+  func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, saveBtn btn: UIKit.UIButton)
+  func drawPencilFuncView(_ view: ComPDFKit_Tools.CPDFDrawPencilKitFuncView, cancelBtn btn: UIKit.UIButton)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFDrawPencilKitFuncView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFDrawPencilViewDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+public enum CPageEditToolBarType : Swift.Int {
+  case insert
+  case replace
+  case extract
+  case copy
+  case rotate
+  case delete
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol CPageEditToolBarDelegate : AnyObject {
+  func pageEditToolBarBlankPageInsert(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, pageModel: ComPDFKit_Tools.CBlankPageModel)
+  func pageEditToolBarPDFInsert(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, pageModel: ComPDFKit_Tools.CBlankPageModel, document: ComPDFKit.CPDFDocument)
+  func pageEditToolBarExtract(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  func pageEditToolBarRotate(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  func pageEditToolBarDelete(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  func pageEditToolBarCopy(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar)
+  func pageEditToolBarReplace(_ pageEditToolBar: ComPDFKit_Tools.CPageEditToolBar, document: ComPDFKit.CPDFDocument)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPageEditToolBar : UIKit.UIView, UIKit.UIDocumentPickerDelegate, ComPDFKit_Tools.CDocumentPasswordViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPageEditToolBarDelegate?
+  @_Concurrency.MainActor(unsafe) public var parentVC: UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public var pdfView: ComPDFKit.CPDFView?
+  @_Concurrency.MainActor(unsafe) public var currentPageIndex: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var isSelect: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var pageEditBtns: [UIKit.UIButton]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @_Concurrency.MainActor(unsafe) @objc public func documentPickerWasCancelled(_ controller: UIKit.UIDocumentPickerViewController)
+  @_Concurrency.MainActor(unsafe) public func documentPasswordViewControllerCancel(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController)
+  @_Concurrency.MainActor(unsafe) public func documentPasswordViewControllerOpen(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController, document: ComPDFKit.CPDFDocument)
+  @objc deinit
+}
+public enum CPDFPageIndicatorViewPosition : Swift.Int {
+  case CPDFPageIndicatorViewPositionLeftBottom
+  case CPDFPageIndicatorViewPositionCenterBottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPageIndicatorView : UIKit.UIView {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CWatermarkModel : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public let CSignatureHaveChangeDidChangeNotification: Foundation.NSNotification.Name
+public let CSignatureTrustCerDidChangeNotification: Foundation.NSNotification.Name
+@objc public protocol CPDFSigntureVerifyViewControllerDelegate {
+  @objc optional func signtureVerifyViewControllerUpdate(_ signtureVerifyViewController: ComPDFKit_Tools.CPDFSigntureVerifyViewController)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CPDFSigntureVerifyViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, ComPDFKit_Tools.CPDFSigntureVerifyDetailsViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFSigntureVerifyViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var signatures: [ComPDFKit.CPDFSignature]
+  @_Concurrency.MainActor(unsafe) public var PDFListView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func reloadData()
+  @_Concurrency.MainActor(unsafe) public func stateString(at row: Swift.Int) -> Swift.String
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc public func signtureVerifyDetailsViewControllerUpdate(_ signtureVerifyDetailsViewController: ComPDFKit_Tools.CPDFSigntureVerifyDetailsViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum CPDFViewBarLeftButtonItem : Swift.Int {
+  case back
+  case thumbnail
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CPDFViewBarRightButtonItem : Swift.Int {
+  case search
+  case bota
+  case more
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class CNavBarButtonItem : ObjectiveC.NSObject {
+  public var leftBarItem: ComPDFKit_Tools.CPDFViewBarLeftButtonItem
+  public var rightBarItem: ComPDFKit_Tools.CPDFViewBarRightButtonItem
+  public init(viewLeftBarButtonItem: ComPDFKit_Tools.CPDFViewBarLeftButtonItem)
+  public init(viewRightBarButtonItem: ComPDFKit_Tools.CPDFViewBarRightButtonItem)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CPDFListView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func longPress(_ annotation: ComPDFKit.CPDFAnnotation!, at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage!)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFSlider : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CPDFListView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CNavigationController : UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @available(iOS 5.0, macCatalyst 13.1, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFEditViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIColorPickerViewControllerDelegate, UIKit.UIImagePickerControllerDelegate & UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) public var editMode: ComPDFKit_Tools.CPDFEditMode {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @available(iOS 14.0, *)
+  @_Concurrency.MainActor(unsafe) @objc public func colorPickerViewControllerDidFinish(_ viewController: UIKit.UIColorPickerViewController)
+  @_Concurrency.MainActor(unsafe) @objc public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+  @objc deinit
+}
+@objc public protocol CPDFThumbnailViewControllerDelegate {
+  @objc optional func thumbnailViewController(_ thumbnailViewController: ComPDFKit_Tools.CPDFThumbnailViewController, pageIndex: Swift.Int)
+  @objc optional func thumbnailViewControllerDismiss(_ thumbnailViewController: ComPDFKit_Tools.CPDFThumbnailViewController)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFThumbnailViewController : UIKit.UIViewController, UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor(unsafe) public var pdfView: ComPDFKit.CPDFView
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFThumbnailViewControllerDelegate?
+  @_Concurrency.MainActor(unsafe) public var collectionView: UIKit.UICollectionView?
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willTransition(to newCollection: UIKit.UITraitCollection, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor(unsafe) @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+public protocol CPDFKeyboardToolbarDelegate : AnyObject {
+  func keyboardShouldDissmiss(_ toolbar: ComPDFKit_Tools.CPDFKeyboardToolbar)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFKeyboardToolbar : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFKeyboardToolbarDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func bindToTextView(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) public func bindToTextField(_ textField: UIKit.UITextField)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CActivityIndicatorView : UIKit.UIActivityIndicatorView {
+  @objc deinit
+}
+public enum CPDFSoundState : Swift.Int {
+  case record
+  case play
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CPDFAudioState {
+  case pause
+  case recording
+  case playing
+  public static func == (a: ComPDFKit_Tools.CPDFAudioState, b: ComPDFKit_Tools.CPDFAudioState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public var SOUND_TMP_DICT: Swift.String
+@objc public protocol CPDFSoundPlayBarDelegate {
+  @objc optional func soundPlayBarRecordFinished(_ soundPlayBar: ComPDFKit_Tools.CPDFSoundPlayBar, withFile filePath: Swift.String)
+  @objc optional func soundPlayBarRecordCancel(_ soundPlayBar: ComPDFKit_Tools.CPDFSoundPlayBar)
+  @objc optional func soundPlayBarPlayClose(_ soundPlayBar: ComPDFKit_Tools.CPDFSoundPlayBar)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFSoundPlayBar : UIKit.UIView, AVFAudio.AVAudioPlayerDelegate {
+  @_Concurrency.MainActor(unsafe) public var soundState: ComPDFKit_Tools.CPDFSoundState
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFSoundPlayBarDelegate?
+  @_Concurrency.MainActor(unsafe) public init(style annotStyle: ComPDFKit_Tools.CAnnotStyle?)
+  @_Concurrency.MainActor(unsafe) public func show(inView subView: UIKit.UIView, soundState: ComPDFKit_Tools.CPDFSoundState)
+  @_Concurrency.MainActor(unsafe) public func setURL(_ url: Foundation.URL?)
+  @_Concurrency.MainActor(unsafe) public func startRecord()
+  @_Concurrency.MainActor(unsafe) public func startAudioRecord()
+  @_Concurrency.MainActor(unsafe) public func stopRecord()
+  @_Concurrency.MainActor(unsafe) public func startAudioPlay()
+  @_Concurrency.MainActor(unsafe) public func stopAudioPlay()
+  @_Concurrency.MainActor(unsafe) @objc public func audioPlayerDidFinishPlaying(_ player: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func audioPlayerEndInterruption(_ player: AVFAudio.AVAudioPlayer, withOptions flags: Swift.Int)
+  @objc deinit
+}
+public protocol CPDFPopMenuDelegate : AnyObject {
+  func menuDidClosed(in menu: ComPDFKit_Tools.CPDFPopMenu, isClosed: Swift.Bool)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPopMenu : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFPopMenuDelegate?
+  @objc @_Concurrency.MainActor(unsafe) public func showMenu(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFSecureViewController : UIKit.UIViewController, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) public init(filePath: Swift.String, password: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc deinit
+}
+public let SAMPLESFOLDER: Swift.String
+public let VIEWERSFOLDER: Swift.String
+public let ANNOTATIONSFOLDER: Swift.String
+public let FORMSFOLDER: Swift.String
+public let SIGNATURESFOLDER: Swift.String
+public let CONTENTEDITORFOLDER: Swift.String
+public let SECURITYFOLDER: Swift.String
+public let DOCUMENTEDITORFOLDER: Swift.String
+public let WATERMARKFOLDER: Swift.String
+public let TEMPOARTFOLDER: Swift.String
+@objc public protocol CPDFViewBaseControllerDelete {
+  @objc optional func PDFViewBaseControllerDissmiss(_ baseControllerDelete: ComPDFKit_Tools.CPDFViewBaseController)
+}
+@objc @_Concurrency.MainActor(unsafe) open class CPDFViewBaseController : UIKit.UIViewController, ComPDFKit_Tools.CPDFListViewDelegate, ComPDFKit.CPDFViewDelegate, ComPDFKit_Tools.CSearchToolbarDelegate, ComPDFKit_Tools.CPDFBOTAViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuDelegate, ComPDFKit_Tools.CPDFThumbnailViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuViewDelegate, ComPDFKit_Tools.CDocumentPasswordViewControllerDelegate, ComPDFKit_Tools.CPDFPageEditViewControllerDelegate, ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate, UIKit.UIDocumentPickerDelegate {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFViewBaseControllerDelete?
+  @_Concurrency.MainActor(unsafe) public var filePath: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var password: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var pdfListView: ComPDFKit_Tools.CPDFListView?
+  @_Concurrency.MainActor(unsafe) public var popMenu: ComPDFKit_Tools.CPDFPopMenu?
+  @_Concurrency.MainActor(unsafe) public var navigationTitle: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var titleButton: ComPDFKit_Tools.CNavigationBarTitleButton?
+  @_Concurrency.MainActor(unsafe) public var searchToolbar: ComPDFKit_Tools.CSearchToolbar?
+  @_Concurrency.MainActor(unsafe) public var configuration: ComPDFKit_Tools.CPDFConfiguration?
+  @_Concurrency.MainActor(unsafe) public var signatures: [ComPDFKit.CPDFSignature]?
+  @_Concurrency.MainActor(unsafe) public var documentPickerViewController: UIKit.UIDocumentPickerViewController?
+  @_Concurrency.MainActor(unsafe) public var leftBarButtonItems: [UIKit.UIBarButtonItem]
+  @_Concurrency.MainActor(unsafe) public var rightBarButtonItems: [UIKit.UIBarButtonItem]
+  @_Concurrency.MainActor(unsafe) public var functionTypeState: ComPDFKit_Tools.CPDFToolFunctionTypeState
+  @_Concurrency.MainActor(unsafe) public init(filePath: Swift.String, password: Swift.String?)
+  @_Concurrency.MainActor(unsafe) public init(filePath: Swift.String, password: Swift.String?, configuration: ComPDFKit_Tools.CPDFConfiguration)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public var loadingView: ComPDFKit_Tools.CActivityIndicatorView {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func initWitNavigation()
+  @_Concurrency.MainActor(unsafe) public func enterPDFSetting()
+  @_Concurrency.MainActor(unsafe) public func enterPDFInfo()
+  @_Concurrency.MainActor(unsafe) public func enterPDFShare()
+  @_Concurrency.MainActor(unsafe) public func enterPDFAddFile()
+  @_Concurrency.MainActor(unsafe) public func enterPDFSave()
+  @_Concurrency.MainActor(unsafe) public func enterPDFWatermark()
+  @_Concurrency.MainActor(unsafe) public func enterPDFSecurity()
+  @_Concurrency.MainActor(unsafe) public func enterSecurePDF(filePath: Swift.String, password: Swift.String?)
+  @_Concurrency.MainActor(unsafe) public func enterPermissionPassword(pdfDocument: ComPDFKit.CPDFDocument)
+  @_Concurrency.MainActor(unsafe) public func enterPDFPageEdit()
+  @_Concurrency.MainActor(unsafe) open func initWitNavigationTitle()
+  @_Concurrency.MainActor(unsafe) open func reloadDocument(withFilePath filePath: Swift.String, password: Swift.String?, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) open func pageEditViewControllerDone(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController)
+  @_Concurrency.MainActor(unsafe) open func pageEditViewController(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController, pageIndex: Swift.Int, isPageEdit: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Text textWaterModel: ComPDFKit_Tools.CWatermarkModel)
+  @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Image imageWaterModel: ComPDFKit_Tools.CWatermarkModel)
+  @_Concurrency.MainActor(unsafe) open func setTitleRefresh()
+  @_Concurrency.MainActor(unsafe) open func selectDocumentRefresh()
+  @_Concurrency.MainActor(unsafe) open func shareRefresh()
+  @objc @_Concurrency.MainActor(unsafe) public func buttonItemClicked_Search(_ button: UIKit.UIButton?)
+  @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_Bota(_ button: UIKit.UIButton?)
+  @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_More(_ button: UIKit.UIButton?)
+  @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_thumbnail(_ button: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) open func enterThumbnail()
+  @objc @_Concurrency.MainActor(unsafe) open func titleButtonClickd(_ button: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewDocumentDidLoaded(_ pdfView: ComPDFKit.CPDFView!)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewCurrentPageDidChanged(_ pdfView: ComPDFKit.CPDFView!)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewPerformURL(_ pdfView: ComPDFKit.CPDFView!, withContent content: Swift.String!)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewPerformReset(_ pdfView: ComPDFKit.CPDFView!)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewPerformPrint(_ pdfView: ComPDFKit.CPDFView!)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewEditingSelectStateDidChanged(_ pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewShouldBeginEditing(_ pdfView: ComPDFKit.CPDFView, textView: UIKit.UITextView, for annotation: ComPDFKit.CPDFFreeTextAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewEditingAddTextArea(_ pdfView: ComPDFKit.CPDFView, add page: ComPDFKit.CPDFPage, add rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc open func pdfViewEditingAddImageArea(_ pdfView: ComPDFKit.CPDFView, add page: ComPDFKit.CPDFPage, add rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformTouchEnded(_ pdfListView: ComPDFKit_Tools.CPDFListView)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewEditNote(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewChangedAnnotationType(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotationMode annotationMode: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformAddStamp(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformAddImage(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewerTouchEndedIsAudioRecordMedia(_ pdfListView: ComPDFKit_Tools.CPDFListView) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformCancelMedia(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformRecordMedia(_ pdfView: ComPDFKit_Tools.CPDFListView, atPoint point: CoreFoundation.CGPoint, forPage page: ComPDFKit.CPDFPage)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformPlay(_ pdfView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFSoundAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformSignatureWidget(_ pdfView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewEditProperties(_ pdfListView: ComPDFKit_Tools.CPDFListView, forAnnotation annotation: ComPDFKit.CPDFAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc open func PDFListViewContentEditProperty(_ pdfListView: ComPDFKit_Tools.CPDFListView, point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) @objc open func searchToolbar(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar, onSearchQueryResults results: [Any])
+  @_Concurrency.MainActor(unsafe) @objc open func searchToolbarOnExitSearch(_ searchToolbar: ComPDFKit_Tools.CSearchToolbar)
+  @_Concurrency.MainActor(unsafe) open func botaViewControllerDismiss(_ botaViewController: ComPDFKit_Tools.CPDFBOTAViewController)
+  @_Concurrency.MainActor(unsafe) open func menuDidClosed(in menu: ComPDFKit_Tools.CPDFPopMenu, isClosed: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc open func thumbnailViewController(_ thumbnailViewController: ComPDFKit_Tools.CPDFThumbnailViewController, pageIndex: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc open func thumbnailViewControllerDismiss(_ thumbnailViewController: ComPDFKit_Tools.CPDFThumbnailViewController)
+  @_Concurrency.MainActor(unsafe) public func menuDidClick(at view: ComPDFKit_Tools.CPDFPopMenuView, clickType viewType: ComPDFKit_Tools.CPDFPopMenuViewType)
+  @_Concurrency.MainActor(unsafe) @objc open func documentPicker(_ controller: UIKit.UIDocumentPickerViewController, didPickDocumentsAt urls: [Foundation.URL])
+  @_Concurrency.MainActor(unsafe) open func openFile(with urls: [Foundation.URL])
+  @_Concurrency.MainActor(unsafe) @objc open func documentPickerWasCancelled(_ controller: UIKit.UIDocumentPickerViewController)
+  @_Concurrency.MainActor(unsafe) open func documentPasswordViewControllerOpen(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController, document: ComPDFKit.CPDFDocument)
+  @_Concurrency.MainActor(unsafe) open func documentPasswordViewControllerCancel(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController)
+  @objc deinit
+}
+extension ComPDFKit_Tools.CPDFMediaState : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFMediaState : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFMediaState : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFPopMenuViewType : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFPopMenuViewType : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFPopMenuViewType : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFInkTopToolBarSelect : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFInkTopToolBarSelect : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFInkTopToolBarSelect : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CDigitalSelectType : Swift.Equatable {}
+extension ComPDFKit_Tools.CDigitalSelectType : Swift.Hashable {}
+extension ComPDFKit_Tools.CDigitalSelectType : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFToolFunctionTypeState : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFToolFunctionTypeState : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFToolFunctionTypeState : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFEditMode : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFEditMode : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFEditMode : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CToolModel : Swift.Equatable {}
+extension ComPDFKit_Tools.CToolModel : Swift.Hashable {}
+extension ComPDFKit_Tools.CToolModel : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFViewAnnotationMode : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFViewAnnotationMode : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFViewAnnotationMode : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFAnnotationDraggingType : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFAnnotationDraggingType : Swift.Hashable {}
+extension ComPDFKit_Tools.CSignatureSelectType : Swift.Equatable {}
+extension ComPDFKit_Tools.CSignatureSelectType : Swift.Hashable {}
+extension ComPDFKit_Tools.CSignatureSelectType : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFBOTATypeState : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFBOTATypeState : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFBOTATypeState : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFFormToolbarSelectedIndex : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFFormToolbarSelectedIndex : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFFormToolbarSelectedIndex : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFToolbarSelectedIndex : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFToolbarSelectedIndex : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFToolbarSelectedIndex : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFDrawPencilKitFuncType : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFDrawPencilKitFuncType : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFDrawPencilKitFuncType : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPageEditToolBarType : Swift.Equatable {}
+extension ComPDFKit_Tools.CPageEditToolBarType : Swift.Hashable {}
+extension ComPDFKit_Tools.CPageEditToolBarType : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFPageIndicatorViewPosition : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFPageIndicatorViewPosition : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFPageIndicatorViewPosition : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFViewBarLeftButtonItem : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFViewBarLeftButtonItem : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFViewBarLeftButtonItem : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFViewBarRightButtonItem : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFViewBarRightButtonItem : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFViewBarRightButtonItem : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFSoundState : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFSoundState : Swift.Hashable {}
+extension ComPDFKit_Tools.CPDFSoundState : Swift.RawRepresentable {}
+extension ComPDFKit_Tools.CPDFAudioState : Swift.Equatable {}
+extension ComPDFKit_Tools.CPDFAudioState : Swift.Hashable {}

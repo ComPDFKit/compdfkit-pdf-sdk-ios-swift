@@ -1,0 +1,25 @@
+/* 
+  InfoPlist.strings
+  PDFViewer-Swift
+
+ //  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+ //
+ //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+ //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
+ //  UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+ //  This notice may not be removed from this file.
+ //
+  
+*/
+
+
+// Privacy Settings
+NSPhotoLibraryUsageDescription = "Enable photo access so that you can create scans with your photos.";
+NSCameraUsageDescription = "Enable camera access so that you can create scans with your camera.";
+NSMicrophoneUsageDescription = "Your consent is required before you could access the function.";
+NSContactsUsageDescription = "Your consent is required before you could access the function.";
+NSBluetoothPeripheralUsageDescription = "Your consent is required before you could access the function.";
+NSCalendarsUsageDescription = "Your consent is required before you could access the function.";
+NSLocationAlwaysUsageDescription = "Your consent is required before you could access the function.";
+NSLocationWhenInUseUsageDescription = "Your consent is required before you could access the function.";
+NSPhotoLibraryAddUsageDescription = "Enable photo access so that you can create scans with your photos.";

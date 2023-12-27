@@ -1,0 +1,25 @@
+/* 
+  InfoPlist.strings
+  PDFViewer-Swift
+
+ //  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+ //
+ //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+ //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
+ //  UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+ //  This notice may not be removed from this file.
+ //
+  
+*/
+
+// Privacy Settings
+NSPhotoLibraryUsageDescription = "此App需要您的同意才能访问该功能！";
+NSCameraUsageDescription = "此App需要您的同意才能访问该功能！";
+NSMicrophoneUsageDescription = "此App需要您的同意才能访问该功能！";
+NSContactsUsageDescription = "此App需要您的同意才能访问该功能！";
+NSBluetoothPeripheralUsageDescription = "此App需要您的同意才能访问该功能！";
+NSCalendarsUsageDescription = "此App需要您的同意才能访问该功能！";
+NSLocationAlwaysUsageDescription = "此App需要您的同意才能访问该功能！";
+NSLocationWhenInUseUsageDescription = "此App需要您的同意才能访问该功能！";
+NSPhotoLibraryAddUsageDescription = "此App需要您的同意才能访问该功能！";
+
