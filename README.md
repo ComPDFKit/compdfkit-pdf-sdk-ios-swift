@@ -49,9 +49,9 @@ In this guide, we take ***"PDFViewer"*** as an example to show how to run it in 
 
 <img align="center" src="image/2-1-0.png" alt="2-1-0" width="50%" height="50%" />
 
-1. Click **Product -> Run** to run the demo on an iOS/macOS device. In this guide, we use an iPhone 14 device as an example. After building the demo successfully, the ***"PDF32000_2008.pdf"*** file will be opened and displayed.
+Click **Product -> Run** to run the demo on an iOS/macOS device. In this guide, we use an iPhone 14 device as an example. After building the demo successfully, the ***"PDF32000_2008.pdf"*** file will be opened and displayed.
 
-   <img align="center" src="image/2-1-1.png" alt="2-1-1" width="20%" height="20%" />
+<img align="center" src="image/2-1-1.png" alt="2-1-1" width="20%" height="20%" />
 
 **Note:** *This is a demo project, presenting completed [ComPDFKit PDF SDK](https://www.compdf.com/pdf-sdk) functions. The functions might be different based on the license you have purchased. Please check that the functions you choose work fine in this demo project.*
 
