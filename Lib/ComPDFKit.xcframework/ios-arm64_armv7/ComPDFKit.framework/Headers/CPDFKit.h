@@ -2,7 +2,7 @@
 //  CPDFKit.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -59,6 +59,26 @@ typedef NS_ENUM(NSInteger, CPDFKitLicenseCode) {
     CPDFKitLicenseCodeReadFailed,
 };
 
+typedef NS_ENUM(NSInteger, CPDFKitOnlineLicenseCode) {
+    CPDFKitOnlineLicenseCodeSuccess = 200,
+    CPDFKitOnlineLicenseCodeInvalid = 1001,
+    CPDFKitOnlineLicenseCodeExpire = 1002,
+    CPDFKitOnlineLicenseCodeUnsupportedPlatform = 1003,
+    CPDFKitOnlineLicenseCodeUnsupportedID = 1004,
+    CPDFKitOnlineLicenseCodeUnsupportedDevice = 1005,
+    CPDFKitOnlineLicenseCodePermissionDeny = 1006,
+    CPDFKitOnlineLicenseCodeUninitialized = 1007,
+    CPDFKitOnlineLicenseCodeIllegalAccess = 1008,
+    CPDFKitOnlineLicenseCodeReadFailed = 1009,
+    CPDFKitOnlineLicenseCodeNetworkError = 2001,
+    CPDFKitOnlineLicenseCodeNetworkTimeout = 2002,
+    CPDFKitOnlineLicenseCodeLicenseRequired = 2003,
+    CPDFKitOnlineLicenseCodeSignatureVerificationFailed = 2004,
+    CPDFKitOnlineLicenseCodeVerifyFailed = 2005
+};
+
+typedef void (^CPDFLicenseCompletionHandler)(CPDFKitOnlineLicenseCode code, NSString *message);
+
 @interface CPDFKit : NSObject
 
 /**
@@ -67,9 +87,14 @@ typedef NS_ENUM(NSInteger, CPDFKitLicenseCode) {
 + (instancetype)sharedInstance;
 
 /**
- * Activate ComPDFKit with your license key and secret.
+ * Activate ComPDFKit with your license key.
  */
 + (CPDFKitLicenseCode)verifyWithKey:(NSString *)key;
+
+/**
+ * Activate ComPDFKit with your online license.
+ */
++ (void)verifyWithOnlineLicense:(NSString *)license completionHandler:(CPDFLicenseCompletionHandler)handler;
 
 /**
  * Returns the full ComPDFKit product version string. (e.g. "ComPDFKit 1.0.1 for iOS (101)")

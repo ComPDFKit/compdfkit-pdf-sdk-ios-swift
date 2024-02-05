@@ -2,7 +2,7 @@
 //  CPDFDocument.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -201,8 +201,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 - (BOOL)checkOwnerPassword:(NSString *)password;
 
 /**
- * Whether the owner permission is unlocked.
- * @return Whether the owner permission is unlocked.
+ * Whether the secured PDF document is unlocked.
+ * @return Return the result of whether the secured PDF document is unlocked.
  */
 - (BOOL)isCheckOwnerUnlocked;
 
@@ -574,6 +574,76 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  */
 - (void)cancelFindString;
 
+/**
+ * Synchronously finds all instances of the specified string in the document.
+ *
+ * @discussion Each hit gets added to an NSArray object as a CPDFSelection object. If there are no hits, this method returns an empty array.
+ * Call only in Content Editing
+ * @see CPDFSearchOptions
+ */
+- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)findEditAllPageString:(NSString *_Nonnull)string withOptions:(CPDFSearchOptions)options;
+
+/**
+ * Synchronously finds all instances of the specified string in the document.
+ *
+ * @discussion Each hit gets added to an NSArray object as a CPDFSelection object. If there are no hits, this method returns an empty array.
+ * @param indexSet A collection of page numbers to search
+ * Call only in Content Editing
+ * @see CPDFSearchOptions
+ */
+- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)findEditFindPages:(NSIndexSet *_Nonnull)indexSet withString:(NSString *_Nonnull)string withOptions:(CPDFSearchOptions)options;
+
+/**
+ * Synchronously finds all instances of the specified string in the document.
+ *
+ * @discussion Each hit gets added to an NSArray object as a CPDFSelection object. If there are no hits, this method returns an empty array.
+ * @param currentPage Which page to start with
+ * Call only in Content Editing
+ * @see CPDFSearchOptions
+ */
+- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)startFindEditTextFromPage:(CPDFPage *_Nullable)currentPage withString:(NSString *_Nonnull)string options:(CPDFSearchOptions)options;
+
+/**
+ * Search result
+ * Call only in Content Editing
+ */
+- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)findEditSelections;
+
+/**
+ * Previous result
+ * Call only in Content Editing
+ */
+- (CPDFSelection *_Nullable)findForwardEditText;
+
+/**
+ * Next result
+ * Call only in Content Editing
+ */
+- (CPDFSelection *_Nullable)findBackwordEditText;
+
+/**
+ * Cancels a search initiated with findEditFindPages:
+ * Call only in Content Editing
+ */
+- (void)cancelFindEditString;
+
+/**
+ * Replace the content edit by specifying selection
+ * param selection Replaces the specified selection
+ * param searchString Searched character
+ * param replaceString Replace character
+ * get newSelection The replacement results in a new selection
+ * @see CPDFSearchOptions
+ */
+- (BOOL)replaceWithSelection:(CPDFSelection *_Nonnull)selection searchString:(NSString *_Nonnull)searchString toReplaceString:(NSString *_Nullable)replaceString completionHandler:(void (^_Nullable)(CPDFSelection * _Nullable newSelection))handler;
+
+/**
+ * Replace all search results
+ * Call only in Content Editing
+ */
+- (BOOL)replaceAllEditTextWithString:(NSString *_Nonnull)string toReplaceString:(NSString *_Nullable)replaceString;
+
+
 #pragma mark - Redact
 
 /**
@@ -612,5 +682,19 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion To determine the string selection found, use the selection.
  */
 - (void)documentDidFindMatch:(CPDFSelection *)selection;
+
+@end
+
+@interface CPDFDocument (Deprecated)
+
+- (void)findEditString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findEditAllPageString:withOptions:");
+
+- (void)findEditString:(NSString *)string findPages:(NSIndexSet *)indexSet withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findEditFindPages:withString:withOptions:");
+
+- (CPDFSelection *)startFindEditTextWithCurrentPage:(CPDFPage *)currentPage withString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use startFindEditTextFromPage:withString:options:");
+
+- (CPDFSelection *)findNextEditTextWithLastlection:(CPDFSelection *)lastSelection withString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findBackwordEditText:");
+
+- (CPDFSelection *)findPrevEditTextWithLastlection:(CPDFSelection *)lastSelection withString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findForwardEditText:");
 
 @end

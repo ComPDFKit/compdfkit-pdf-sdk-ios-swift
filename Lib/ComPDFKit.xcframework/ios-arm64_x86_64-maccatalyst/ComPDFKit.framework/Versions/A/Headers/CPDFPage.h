@@ -2,7 +2,7 @@
 //  CPDFPage.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -11,6 +11,9 @@
 //
 
 #import <ComPDFKit/CPDFKitPlatform.h>
+#import <ComPDFKit/CPDFDocument.h>
+
+extern NSNotificationName const CPDFPageEditingDidChangedNotification;
 
 /**
  * The following box types may be used with CPDFPage drawing and bounds-setting methods.
@@ -32,6 +35,7 @@ typedef NS_ENUM(NSInteger, CPDFDisplayBox) {
 extern NSNotificationName const CPDFPageDidLoadAnnotationNotification;
 extern NSNotificationName const CPDFPageDidAddAnnotationNotification;
 extern NSNotificationName const CPDFPageDidRemoveAnnotationNotification;
+extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
 
 @class CPDFDocument, CPDFAnnotation, CPDFSelection;
 
@@ -132,6 +136,12 @@ extern NSNotificationName const CPDFPageDidRemoveAnnotationNotification;
  * Convenience function that returns an image of this page, with annotations.
  */
 - (CPDFKitPlatformImage *)thumbnailOfSize:(CGSize)size;
+
+#pragma mark - Find
+/**
+ *Page number search for content editing*
+ */
+- (NSArray<NSArray<CPDFSelection *> *> *)findEditString:(NSString *)string withOptions:(CPDFSearchOptions)options;
 
 #pragma mark - Text
 

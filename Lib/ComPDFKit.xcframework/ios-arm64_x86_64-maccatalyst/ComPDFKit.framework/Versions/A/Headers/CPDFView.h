@@ -2,7 +2,7 @@
 //  CPDFView.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -376,6 +376,9 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  */
 - (void)goToRect:(CGRect)rect onPage:(CPDFPage *)page animated:(BOOL)animated;
 
+
+- (void)goToRect:(CGRect)rect onPage:(CPDFPage *)page offsetY:(CGFloat)offsetY animated:(BOOL)animated;
+
 /**
  * Returns an array of CPDFPage objects that represent the currently visible pages.
  */
@@ -466,6 +469,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (void)touchCancelledAtPoint:(CGPoint)point forPage:(CPDFPage *)page;
 
 - (void)longPressAnnotation:(CPDFAnnotation *)annotation atPoint:(CGPoint)point forPage:(CPDFPage *)page;
+- (BOOL)longPressGestureShouldBeginAtPoint:(CGPoint)point forPage:(CPDFPage *)page;
 
 #pragma mark - Conversion
 
@@ -557,6 +561,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * The selected block.
  */
 - (CPDFEditArea *)editingArea;
+
+/**
+ * The location of the click is the cursor position
+ */
+- (BOOL)isClickSelectCharItem;
 
 /**
  * Clicks the context menu of block.
@@ -703,7 +712,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * @param page The created page number.
  * @return Returns whether the creation is successful.
  */
-- (BOOL)createEmptyStringBounds:(CGRect)rect withAttributes:(NSDictionary<NSAttributedStringKey, id> *)attributes page:(CPDFPage *)page;
+- (BOOL)createEmptyStringBounds:(CGRect)rect withAttributes:(NSDictionary<NSAttributedStringKey, id> *)attributes page:(CPDFPage *)page DEPRECATED_MSG_ATTRIBUTE("use createStringBounds:withAttributes:page:");
 
 /**
  * Create a blank text block.

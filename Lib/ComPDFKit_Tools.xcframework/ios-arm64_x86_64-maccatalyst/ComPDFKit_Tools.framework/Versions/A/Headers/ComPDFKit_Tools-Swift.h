@@ -358,6 +358,13 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools31CDocumentPasswordViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools10CFormStyle")
+@interface CFormStyle : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class UIDocumentPickerViewController;
 @class NSURL;
 
@@ -586,6 +593,13 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFInkTopToolBar")
 
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFJSONDataParse")
+@interface CPDFJSONDataParse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 @interface CPDFKeyboardToolbar : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -595,6 +609,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 
 
 @class CPDFPage;
+@class CPDFAnnotation;
 @class UIMenuItem;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
@@ -607,6 +622,8 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (void)touchMovedAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
 - (void)touchEndedAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
 - (void)touchCancelledAtPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
+- (void)longPressAnnotation:(CPDFAnnotation * _Null_unspecified)annotation atPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
+- (BOOL)longPressGestureShouldBeginAtPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<UIMenuItem *> * _Nonnull)menuItemsAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page SWIFT_WARN_UNUSED_RESULT;
 - (void)drawPage:(CPDFPage * _Null_unspecified)page toContext:(CGContextRef _Null_unspecified)context;
 @end
@@ -623,11 +640,6 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 @end
 
-@class CPDFAnnotation;
-
-@interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
-- (void)longPressAnnotation:(CPDFAnnotation * _Null_unspecified)annotation atPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
-@end
 
 @class CPDFSoundAnnotation;
 @class CPDFSignatureWidgetAnnotation;
@@ -864,6 +876,13 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools35CPDFThumbnailViewControllerDelegate_")
 @end
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFTipsView")
+@interface CPDFTipsView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 @interface CPDFToolsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -879,25 +898,33 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class CSearchTitleView;
+
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools24CSearchTitleViewDelegate_")
+@protocol CSearchTitleViewDelegate
+@optional
+- (void)searchTitleViewChangeType:(CSearchTitleView * _Nonnull)searchTitleView onChange:(NSInteger)searchType;
+@end
+
 @class CSearchToolbar;
+@class CPDFSelection;
 
 SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools22CSearchToolbarDelegate_")
 @protocol CSearchToolbarDelegate
 @optional
-- (void)searchToolbarOnExitSearch:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnClearQuery:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnSearchQueryBegin:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnSearchQueryEnd:(CSearchToolbar * _Nonnull)searchToolbar;
 - (void)searchToolbar:(CSearchToolbar * _Nonnull)searchToolbar onSearchQueryResults:(NSArray * _Nonnull)results;
+- (void)searchToolbarReplace:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarChangeSelection:(CSearchToolbar * _Nonnull)searchToolbar changeSelection:(CPDFSelection * _Nullable)selection;
 @end
 
 @class UITextView;
 @class CPDFFreeTextAnnotation;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
-@interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
+@interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchTitleViewDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Text:(CWatermarkModel * _Nonnull)textWaterModel;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Image:(CWatermarkModel * _Nonnull)imageWaterModel;
 - (void)buttonItemClicked_Search:(UIButton * _Nullable)button;
@@ -905,6 +932,8 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)buttonItemClicked_More:(UIButton * _Nullable)button;
 - (void)buttonItemClicked_thumbnail:(UIButton * _Nonnull)button;
 - (void)titleButtonClickd:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_searchSetting:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformURL:(CPDFView * _Null_unspecified)pdfView withContent:(NSString * _Null_unspecified)content;
@@ -927,9 +956,11 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewContentEditProperty:(CPDFListView * _Nonnull)pdfListView point:(CGPoint)point;
 - (void)searchToolbar:(CSearchToolbar * _Nonnull)searchToolbar onSearchQueryResults:(NSArray * _Nonnull)results;
-- (void)searchToolbarOnExitSearch:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarReplace:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarChangeSelection:(CSearchToolbar * _Nonnull)searchToolbar changeSelection:(CPDFSelection * _Nullable)selection;
 - (void)thumbnailViewController:(CPDFThumbnailViewController * _Nonnull)thumbnailViewController pageIndex:(NSInteger)pageIndex;
 - (void)thumbnailViewControllerDismiss:(CPDFThumbnailViewController * _Nonnull)thumbnailViewController;
+- (void)searchTitleViewChangeType:(CSearchTitleView * _Nonnull)searchTitleView onChange:(NSInteger)searchType;
 - (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -943,6 +974,78 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 @end
 
 
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools43CreateCertificateInfoViewControllerDelegate_")
+@protocol CreateCertificateInfoViewControllerDelegate
+@optional
+- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
+@end
+
+@class CSignatureTypeSelectView;
+
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools32CSignatureTypeSelectViewDelegate_")
+@protocol CSignatureTypeSelectViewDelegate
+@optional
+- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
+@interface CPDFViewController : CPDFViewBaseController <CDigitalTypeSelectViewDelegate, CImportCertificateViewControllerDelegate, CPDFAnnotationBarDelegate, CPDFDigitalSignatureToolBarDelegate, CPDFEditToolBarDelegate, CPDFFormBarDelegate, CPDFNoteOpenViewControllerDelegate, CPDFSignatureViewControllerDelegate, CPDFSigntureVerifyViewControllerDelegate, CPDFSoundPlayBarDelegate, CSignatureTypeSelectViewDelegate, CreateCertificateInfoViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (void)buttonItemClicked_Bota:(UIButton * _Nullable)button;
+- (void)titleButtonClickd:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_thumbnail:(UIButton * _Nonnull)sender;
+- (void)buttonItemClicked_Search:(UIButton * _Nullable)button;
+- (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
+- (void)PDFViewPerformURL:(CPDFView * _Nonnull)pdfView withContent:(NSString * _Null_unspecified)content;
+- (void)PDFViewEditingSelectStateDidChanged:(CPDFView * _Nonnull)pdfView;
+- (void)PDFViewShouldBeginEditing:(CPDFView * _Nonnull)pdfView textView:(UITextView * _Nonnull)textView forAnnotation:(CPDFFreeTextAnnotation * _Nonnull)annotation;
+- (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
+- (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
+- (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
+- (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformAddImage:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (BOOL)PDFListViewerTouchEndedIsAudioRecordMedia:(CPDFListView * _Nonnull)pdfListView SWIFT_WARN_UNUSED_RESULT;
+- (void)PDFListViewPerformCancelMedia:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformRecordMedia:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformPlay:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSoundAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformSignatureWidget:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSignatureWidgetAnnotation * _Nonnull)annotation;
+- (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewContentEditProperty:(CPDFListView * _Nonnull)pdfListView point:(CGPoint)point;
+- (void)editClickIn:(CPDFEditToolBar * _Nonnull)toolBar editMode:(NSInteger)mode;
+- (void)undoDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)redoDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)propertyEditDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
+- (void)getNoteOpenViewController:(CPDFNoteOpenViewController * _Nonnull)noteOpenVC content:(NSString * _Nonnull)content isDelete:(BOOL)isDelete;
+- (void)soundPlayBarRecordFinished:(CPDFSoundPlayBar * _Nonnull)soundPlayBar withFile:(NSString * _Nonnull)filePath;
+- (void)soundPlayBarRecordCancel:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
+- (void)soundPlayBarPlayClose:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
+- (void)signatureViewControllerDismiss:(CPDFSignatureViewController * _Nonnull)signatureViewController;
+- (void)signatureViewController:(CPDFSignatureViewController * _Nonnull)signatureViewController image:(UIImage * _Nonnull)image;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (void)CDigitalTypeSelectViewUse:(CDigitalTypeSelectView * _Nonnull)digitalTypeSelectView;
+- (void)CDigitalTypeSelectViewCreate:(CDigitalTypeSelectView * _Nonnull)digitalTypeSelectView;
+- (void)importCertificateViewControllerSave:(CImportCertificateViewController * _Nonnull)importCertificateViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)importCertificateViewControllerCancel:(CImportCertificateViewController * _Nonnull)importCertificateViewController;
+- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
+- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)verifySignatureBar:(CPDFDigitalSignatureToolBar * _Nonnull)pdfSignatureBar sourceButton:(UIButton * _Nonnull)sourceButton;
+- (void)addSignatureBar:(CPDFDigitalSignatureToolBar * _Nonnull)pdfSignatureBar sourceButton:(UIButton * _Nonnull)sourceButton;
+- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools16CPageEditToolBar")
 @interface CPageEditToolBar : UIView <UIDocumentPickerDelegate>
@@ -953,14 +1056,33 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools16CPageEditToolBar")
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 @end
 
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools18CSearchContentView")
+@interface CSearchContentView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)drawRect:(CGRect)rect;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools16CSearchTitleView")
+@interface CSearchTitleView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 @class UISearchBar;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools14CSearchToolbar")
-@interface CSearchToolbar : UIView <UISearchBarDelegate>
+@interface CSearchToolbar : UIView <UISearchBarDelegate, UITextFieldDelegate>
 - (void)layoutSubviews;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar * _Nonnull)searchBar SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -974,26 +1096,12 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools24CSignatureTypeSelectView")
 @end
 
 
-SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools32CSignatureTypeSelectViewDelegate_")
-@protocol CSignatureTypeSelectViewDelegate
-@optional
-- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
-- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
-@end
-
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools15CWatermarkModel")
 @interface CWatermarkModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools43CreateCertificateInfoViewControllerDelegate_")
-@protocol CreateCertificateInfoViewControllerDelegate
-@optional
-- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
-- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
-@end
 
 
 
@@ -1367,6 +1475,13 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools31CDocumentPasswordViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools10CFormStyle")
+@interface CFormStyle : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class UIDocumentPickerViewController;
 @class NSURL;
 
@@ -1595,6 +1710,13 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFInkTopToolBar")
 
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFJSONDataParse")
+@interface CPDFJSONDataParse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 @interface CPDFKeyboardToolbar : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -1604,6 +1726,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 
 
 @class CPDFPage;
+@class CPDFAnnotation;
 @class UIMenuItem;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
@@ -1616,6 +1739,8 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (void)touchMovedAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
 - (void)touchEndedAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
 - (void)touchCancelledAtPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
+- (void)longPressAnnotation:(CPDFAnnotation * _Null_unspecified)annotation atPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
+- (BOOL)longPressGestureShouldBeginAtPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page SWIFT_WARN_UNUSED_RESULT;
 - (NSArray<UIMenuItem *> * _Nonnull)menuItemsAtPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page SWIFT_WARN_UNUSED_RESULT;
 - (void)drawPage:(CPDFPage * _Null_unspecified)page toContext:(CGContextRef _Null_unspecified)context;
 @end
@@ -1632,11 +1757,6 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 @end
 
-@class CPDFAnnotation;
-
-@interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
-- (void)longPressAnnotation:(CPDFAnnotation * _Null_unspecified)annotation atPoint:(CGPoint)point forPage:(CPDFPage * _Null_unspecified)page;
-@end
 
 @class CPDFSoundAnnotation;
 @class CPDFSignatureWidgetAnnotation;
@@ -1873,6 +1993,13 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools35CPDFThumbnailViewControllerDelegate_")
 @end
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFTipsView")
+@interface CPDFTipsView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 @interface CPDFToolsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1888,25 +2015,33 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class CSearchTitleView;
+
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools24CSearchTitleViewDelegate_")
+@protocol CSearchTitleViewDelegate
+@optional
+- (void)searchTitleViewChangeType:(CSearchTitleView * _Nonnull)searchTitleView onChange:(NSInteger)searchType;
+@end
+
 @class CSearchToolbar;
+@class CPDFSelection;
 
 SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools22CSearchToolbarDelegate_")
 @protocol CSearchToolbarDelegate
 @optional
-- (void)searchToolbarOnExitSearch:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnClearQuery:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnSearchQueryBegin:(CSearchToolbar * _Nonnull)searchToolbar;
-- (void)searchToolbarOnSearchQueryEnd:(CSearchToolbar * _Nonnull)searchToolbar;
 - (void)searchToolbar:(CSearchToolbar * _Nonnull)searchToolbar onSearchQueryResults:(NSArray * _Nonnull)results;
+- (void)searchToolbarReplace:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarChangeSelection:(CSearchToolbar * _Nonnull)searchToolbar changeSelection:(CPDFSelection * _Nullable)selection;
 @end
 
 @class UITextView;
 @class CPDFFreeTextAnnotation;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
-@interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
+@interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchTitleViewDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Text:(CWatermarkModel * _Nonnull)textWaterModel;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Image:(CWatermarkModel * _Nonnull)imageWaterModel;
 - (void)buttonItemClicked_Search:(UIButton * _Nullable)button;
@@ -1914,6 +2049,8 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)buttonItemClicked_More:(UIButton * _Nullable)button;
 - (void)buttonItemClicked_thumbnail:(UIButton * _Nonnull)button;
 - (void)titleButtonClickd:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_searchSetting:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformURL:(CPDFView * _Null_unspecified)pdfView withContent:(NSString * _Null_unspecified)content;
@@ -1936,9 +2073,11 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewContentEditProperty:(CPDFListView * _Nonnull)pdfListView point:(CGPoint)point;
 - (void)searchToolbar:(CSearchToolbar * _Nonnull)searchToolbar onSearchQueryResults:(NSArray * _Nonnull)results;
-- (void)searchToolbarOnExitSearch:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarReplace:(CSearchToolbar * _Nonnull)searchToolbar;
+- (void)searchToolbarChangeSelection:(CSearchToolbar * _Nonnull)searchToolbar changeSelection:(CPDFSelection * _Nullable)selection;
 - (void)thumbnailViewController:(CPDFThumbnailViewController * _Nonnull)thumbnailViewController pageIndex:(NSInteger)pageIndex;
 - (void)thumbnailViewControllerDismiss:(CPDFThumbnailViewController * _Nonnull)thumbnailViewController;
+- (void)searchTitleViewChangeType:(CSearchTitleView * _Nonnull)searchTitleView onChange:(NSInteger)searchType;
 - (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -1952,6 +2091,78 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 @end
 
 
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools43CreateCertificateInfoViewControllerDelegate_")
+@protocol CreateCertificateInfoViewControllerDelegate
+@optional
+- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
+@end
+
+@class CSignatureTypeSelectView;
+
+SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools32CSignatureTypeSelectViewDelegate_")
+@protocol CSignatureTypeSelectViewDelegate
+@optional
+- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
+@interface CPDFViewController : CPDFViewBaseController <CDigitalTypeSelectViewDelegate, CImportCertificateViewControllerDelegate, CPDFAnnotationBarDelegate, CPDFDigitalSignatureToolBarDelegate, CPDFEditToolBarDelegate, CPDFFormBarDelegate, CPDFNoteOpenViewControllerDelegate, CPDFSignatureViewControllerDelegate, CPDFSigntureVerifyViewControllerDelegate, CPDFSoundPlayBarDelegate, CSignatureTypeSelectViewDelegate, CreateCertificateInfoViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (void)buttonItemClicked_Bota:(UIButton * _Nullable)button;
+- (void)titleButtonClickd:(UIButton * _Nonnull)button;
+- (void)buttonItemClicked_thumbnail:(UIButton * _Nonnull)sender;
+- (void)buttonItemClicked_Search:(UIButton * _Nullable)button;
+- (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
+- (void)PDFViewPerformURL:(CPDFView * _Nonnull)pdfView withContent:(NSString * _Null_unspecified)content;
+- (void)PDFViewEditingSelectStateDidChanged:(CPDFView * _Nonnull)pdfView;
+- (void)PDFViewShouldBeginEditing:(CPDFView * _Nonnull)pdfView textView:(UITextView * _Nonnull)textView forAnnotation:(CPDFFreeTextAnnotation * _Nonnull)annotation;
+- (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
+- (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
+- (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
+- (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformAddImage:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (BOOL)PDFListViewerTouchEndedIsAudioRecordMedia:(CPDFListView * _Nonnull)pdfListView SWIFT_WARN_UNUSED_RESULT;
+- (void)PDFListViewPerformCancelMedia:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformRecordMedia:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
+- (void)PDFListViewPerformPlay:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSoundAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformSignatureWidget:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSignatureWidgetAnnotation * _Nonnull)annotation;
+- (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewContentEditProperty:(CPDFListView * _Nonnull)pdfListView point:(CGPoint)point;
+- (void)editClickIn:(CPDFEditToolBar * _Nonnull)toolBar editMode:(NSInteger)mode;
+- (void)undoDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)redoDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)propertyEditDidClickIn:(CPDFEditToolBar * _Nonnull)toolBar;
+- (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
+- (void)getNoteOpenViewController:(CPDFNoteOpenViewController * _Nonnull)noteOpenVC content:(NSString * _Nonnull)content isDelete:(BOOL)isDelete;
+- (void)soundPlayBarRecordFinished:(CPDFSoundPlayBar * _Nonnull)soundPlayBar withFile:(NSString * _Nonnull)filePath;
+- (void)soundPlayBarRecordCancel:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
+- (void)soundPlayBarPlayClose:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
+- (void)signatureViewControllerDismiss:(CPDFSignatureViewController * _Nonnull)signatureViewController;
+- (void)signatureViewController:(CPDFSignatureViewController * _Nonnull)signatureViewController image:(UIImage * _Nonnull)image;
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (void)CDigitalTypeSelectViewUse:(CDigitalTypeSelectView * _Nonnull)digitalTypeSelectView;
+- (void)CDigitalTypeSelectViewCreate:(CDigitalTypeSelectView * _Nonnull)digitalTypeSelectView;
+- (void)importCertificateViewControllerSave:(CImportCertificateViewController * _Nonnull)importCertificateViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)importCertificateViewControllerCancel:(CImportCertificateViewController * _Nonnull)importCertificateViewController;
+- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
+- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
+- (void)verifySignatureBar:(CPDFDigitalSignatureToolBar * _Nonnull)pdfSignatureBar sourceButton:(UIButton * _Nonnull)sourceButton;
+- (void)addSignatureBar:(CPDFDigitalSignatureToolBar * _Nonnull)pdfSignatureBar sourceButton:(UIButton * _Nonnull)sourceButton;
+- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools16CPageEditToolBar")
 @interface CPageEditToolBar : UIView <UIDocumentPickerDelegate>
@@ -1962,14 +2173,33 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools16CPageEditToolBar")
 - (void)documentPickerWasCancelled:(UIDocumentPickerViewController * _Nonnull)controller;
 @end
 
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools18CSearchContentView")
+@interface CSearchContentView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)drawRect:(CGRect)rect;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools16CSearchTitleView")
+@interface CSearchTitleView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 @class UISearchBar;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools14CSearchToolbar")
-@interface CSearchToolbar : UIView <UISearchBarDelegate>
+@interface CSearchToolbar : UIView <UISearchBarDelegate, UITextFieldDelegate>
 - (void)layoutSubviews;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (void)searchBar:(UISearchBar * _Nonnull)searchBar textDidChange:(NSString * _Nonnull)searchText;
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar * _Nonnull)searchBar SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -1983,26 +2213,12 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools24CSignatureTypeSelectView")
 @end
 
 
-SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools32CSignatureTypeSelectViewDelegate_")
-@protocol CSignatureTypeSelectViewDelegate
-@optional
-- (void)signatureTypeSelectViewElectronic:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
-- (void)signatureTypeSelectViewDigital:(CSignatureTypeSelectView * _Nonnull)signatureTypeSelectView;
-@end
-
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools15CWatermarkModel")
 @interface CWatermarkModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools43CreateCertificateInfoViewControllerDelegate_")
-@protocol CreateCertificateInfoViewControllerDelegate
-@optional
-- (void)createCertificateInfoViewControllerSave:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController PKCS12Cert:(NSString * _Nonnull)path password:(NSString * _Nonnull)password config:(CPDFSignatureConfig * _Nonnull)config;
-- (void)createCertificateInfoViewControllerCancel:(CCreateCertificateInfoViewController * _Nonnull)createCertificateInfoViewController;
-@end
 
 
 
