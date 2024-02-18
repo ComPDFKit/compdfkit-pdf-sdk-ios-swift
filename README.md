@@ -116,21 +116,38 @@ Contact [ComPDFKit's sales team](https://www.compdf.com/contact-sales) to get a 
 
 1. Import the header file ***"ComPDFKit"*** to `AppDelegate.swift`.
 
-2. Follow the code below and call the method `CPDFKit.verify(withKey: YOUR_LICENSE_KEY_GOES_HERE)` in `func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool`. You need to replace the  **LICENSE_KEY** with the license you obtained.
+2. License initialize:
+
+   **Online license:** 
+
+   Follow the code below and call the method `CPDFKit.verify(withOnlineLicense: "YOUR_LICENSE_KEY_GOES_HERE") { code, message in}`   in  ` func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool`. You need to replace the  **LICENSE_KEY** with the license you obtained.
+
+      ```swift
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+     // Set your online license key here. ComPDFKit is commercial software.
+     // Each ComPDFKit license is bound to a specific app bundle id.
+     // com.compdfkit.pdfviewe
+       
+       CPDFKit.verify(withOnlineLicense: "YOUR_LICENSE_KEY_GOES_HERE") { code, message in
+       }
+   }
+      ```
+
+   **Offline license:**
+
+    Follow the code below and call the method `CPDFKit.verifyWithKey:"LICENSE_SECRET"` in `func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool `. You need to replace the  **LICENSE_KEY**  with the license you obtained.
 
    ```swift
-   import ComPDFKit
-   
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      // Set your license key here. ComPDFKit is commercial software.
      // Each ComPDFKit license is bound to a specific app bundle id.
      // com.compdfkit.pdfviewer
        
-       CPDFKit.verify(withKey: YOUR_LICENSE_KEY_GOES_HERE)
-       
+       CPDFKit.verify(withKey: "YOUR_LICENSE_KEY_GOES_HERE")
        return true
    }
    ```
+
 
 3. Compile and run the project. If the console outputs "version information", it means that the license has been set successfully. Otherwise, please check "Troubleshooting" or check error logs in the console to quickly identify and solve the issue. 
 
@@ -143,7 +160,7 @@ So far, we have added ***"ComPDFKit.xcframework"*** to the ***"PDFViewer"*** pro
 
    <img align="center" src="image/2-7-2.jpg" alt="2-7-2" width="50%" height="50%" />
 
-2. Import `<ComPDFKit/ComPDFKit.h>`  at the top of your `UIViewController.m` subclass implementation:
+2. Import `ComPDFKit`  at the top of your `UIViewController.swift` subclass implementation:
 
    ```swift
    import ComPDFKit

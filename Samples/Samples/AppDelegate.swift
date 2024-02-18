@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -27,27 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         
-        do {
-            let error = NSError(domain: "YourDomain", code: 123, userInfo: ["key": "value"])
-            let xmlData = try Data(contentsOf: URL(fileURLWithPath: xmlFliePath))
-            let result = XMLReader.dictionary(forXMLData: xmlData, error: error)
-            
-            if let license = result?["license"] as? NSDictionary {
-                if let keysDic = license["key"] as? NSDictionary {
-                    if let key = keysDic["text"] as? String {
-                        CPDFKit.verify(withKey: key)
-                    } else {
-                        print("License key can not be empty.")
-                    }
-                } else {
-                    print("License key can not be empty.")
-                }
-            } else {
-                print("License key can not be empty.")
-            }
-        } catch {
-            
-        }
+        verifyLicenseFormXML(xmlFliePath)
         
         if #available(iOS 13.0, *) {
             
@@ -58,6 +38,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func verifyLicenseFormXML(_ xmlFliePath: String) {
+        do {
+            let error: NSError = NSError()
+            let xmlData = try Data(contentsOf: URL(fileURLWithPath: xmlFliePath))
+            let result = XMLReader.dictionary(forXMLData: xmlData, error: error)
+            
+            if let license = result?["license"] as? NSDictionary {
+                
+                if let typeDic = license["type"] as? NSDictionary {
+                    
+                    if let type = typeDic["text"] as? String, type == "online" {
+                        readLicenseDic(license, isOnline: true)
+                    } else if let type = typeDic["text"] as? String, type == "offline" {
+                        readLicenseDic(license, isOnline: false)
+                    }
+                    
+                } else {
+                    readLicenseDic(license, isOnline: false)
+                }
+                
+            } else {
+                print("License key can not be empty.")
+            }
+        } catch {
+            
+        }
+    }
+    
+    func readLicenseDic(_ license: NSDictionary, isOnline: Bool) {
+        if let keysDic = license["key"] as? NSDictionary {
+            if let key = keysDic["text"] as? String {
+                if isOnline {
+                    CPDFKit.verify(withOnlineLicense: key) { code, message in
+                        print("Code: \(code), Message:\(String(describing: message))")
+                    }
+                } else {
+                    CPDFKit.verify(withKey: key)
+                }
+            } else {
+                print("License key can not be empty.")
+            }
+        } else {
+            print("License key can not be empty.")
+        }
+    }
+    
     
     func configWindow(window: UIWindow?) -> Void {
         self.window = window
