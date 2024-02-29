@@ -12,6 +12,7 @@
 
 import UIKit
 import ComPDFKit
+import ComPDFKit_Tools
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
