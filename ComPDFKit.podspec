@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
                    DESC
 
   spec.homepage     = "https://www.compdf.com"
-  spec.documentation_url = "https://pspdfkit.com/guides/ios/"
+  spec.documentation_url = "https://www.compdf.com/guides/pdf-sdk/ios/overview"
   spec.license      = { :type => 'Commercial', :file => 'https://www.compdf.com/pricing'} 
   spec.author       = { "ComPDFKit" => "support@compdf.com"}
   spec.platform     = :ios, "10.0"
