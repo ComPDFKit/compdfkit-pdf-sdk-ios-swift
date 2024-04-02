@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'Commercial', :file => 'https://www.compdf.com/pricing'} 
   spec.author       = { "ComPDFKit" => "support@compdf.com"}
   spec.platform     = :ios, "10.0"
-  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-ios.git', :tag => "1.13.0"}
+  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift.git', :tag => "1.13.0"}
 
   spec.vendored_frameworks = "Lib/ComPDFKit.xcframework"
 
@@ -23,12 +23,4 @@ Pod::Spec.new do |spec|
   spec.frameworks          = 'QuartzCore','CoreMedia', 'MediaPlayer', 'AVFoundation',
                           'CoreGraphics', 'Foundation', 'MobileCoreServices', 'SystemConfiguration',
                           'UIKit'
-  spec.support = { 
-    "Documentation": "https://www.compdf.com/guides/pdf-sdk/ios/overview",
-    "Issues": "https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift/issues",
-    "Source Code": "https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift",
-    "Chat": "https://github.com/orgs/ComPDFKit/discussions"
-    "Changelog": "https://www.compdf.com/pdf-sdk/changelog-ios"
-  }
-
 end

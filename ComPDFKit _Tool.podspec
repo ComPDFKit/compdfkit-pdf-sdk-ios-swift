@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'Commercial', :file => 'https://github.com/ComPDFKit/PDF-SDK-iOS/blob/main/LICENSE'} 
   spec.author       = { "ComPDFKit" => "support@compdf.com"}
   spec.platform     = :ios, "10.0"
-  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-ios.git', :tag => "1.13.0"}
+  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift.git', :tag => "1.13.0"}
 
   spec.vendored_frameworks = "Lib/ComPDFKit_Tools.xcframework"
 
