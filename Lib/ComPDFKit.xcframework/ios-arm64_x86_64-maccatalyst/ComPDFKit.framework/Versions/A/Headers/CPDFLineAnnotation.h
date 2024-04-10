@@ -12,6 +12,9 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFFont;
+@class CPDFDistanceMeasureInfo;
+
 /**
  * The following constants specify the available line ending styles.
  */
@@ -76,5 +79,33 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
  * @discussion The ornament at the end of a line is optional (for more information, see the Adobe PDF Specification 1.4).
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
+
+#pragma mark -  Measure
+/**
+* Method to determine whether an annotation has measurement properties.
+ */
+@property (nonatomic,assign,readonly) BOOL isMeasure;
+/**
+ * Method to set the font  used for the annotation’s measure text field.
+ */
+@property (nonatomic,retain) CPDFFont *cFont;
+
+/**
+ * Method to get the font size used for the annotation’s measure text field.
+ */
+@property (nonatomic,assign) CGFloat fontSize;
+
+/**
+ * Method to get / set the font color used in the measure text field of the annotation.
+ */
+@property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
+
+/**
+ * Method to get / set the measure info of the annotation after added to page.
+ *
+ * @discussion The measurement properties of a annotation cannot be cleared by setting the measurement properties of the annotation to empty
+ * Set MeasureInfo: This information will not be effective until it is added to the page
+ */
+@property (nonatomic,retain) CPDFDistanceMeasureInfo * _Nullable measureInfo;
 
 @end

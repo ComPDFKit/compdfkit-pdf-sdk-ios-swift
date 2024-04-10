@@ -12,6 +12,9 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFFont;
+@class CPDFAreaMeasureInfo;
+
 /**
  * A CPDFSquareAnnotation object displays a rectangle on a page.
  *

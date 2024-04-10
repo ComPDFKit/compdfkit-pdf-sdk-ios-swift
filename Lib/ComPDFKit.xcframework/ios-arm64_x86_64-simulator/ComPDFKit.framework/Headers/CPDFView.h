@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <ComPDFKit/CPDFKitPlatform.h>
 
-@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation;
+@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation,CPDFFont;
 
 typedef NS_ENUM(NSInteger, CEditingSelectState) {
     CEditingSelectStateEmpty = 0,
@@ -322,6 +322,18 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 @property (nonatomic,assign) CGFloat scaleFactor;
 
 - (void)setScaleFactor:(CGFloat)scaleFactor animated:(BOOL)animated;
+
+#pragma mark - TextSelection
+
+/**
+ * Enter the text selection effect
+ */
+- (void)enterTextSelection:(CPDFSelection *_Nonnull)selection;
+
+/**
+ * Exit the text selection effect
+ */
+- (void)exitTextSelection;
 
 #pragma mark - Draw
 
@@ -672,14 +684,16 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * The font name of the currently selected text block.
  */
-- (NSString *)editingSelectionFontName DEPRECATED_MSG_ATTRIBUTE("use editingSelectionFontNameWithTextArea instead.");
-- (NSString *)editingSelectionFontNameWithTextArea:(CPDFEditTextArea *)textArea;
+- (NSString *)editingSelectionFontName DEPRECATED_MSG_ATTRIBUTE("use editingSelectionCFontWithTextArea");
+- (NSString *)editingSelectionFontNameWithTextArea:(CPDFEditTextArea *)textArea DEPRECATED_MSG_ATTRIBUTE("use editingSelectionCFontWithTextArea.");
+- (CPDFFont *)editingSelectionCFontWithTextArea:(CPDFEditTextArea *)textArea;
 
 /**
  * Sets the font name of the selected text block. (Several standard fonts are currently supported)
  */
-- (void)setEditingSelectionFontName:(NSString *)fontName DEPRECATED_MSG_ATTRIBUTE("use setEditingSelectionFontName: withTextArea: instead.");
-- (void)setEditingSelectionFontName:(NSString *)fontName withTextArea:(CPDFEditTextArea *)textArea;
+- (void)setEditingSelectionFontName:(NSString *)fontName DEPRECATED_MSG_ATTRIBUTE("use setEditSelectionCFont: withTextArea:");
+- (void)setEditingSelectionFontName:(NSString *)fontName withTextArea:(CPDFEditTextArea *)textArea DEPRECATED_MSG_ATTRIBUTE("use setEditSelectionCFont: withTextArea:");
+- (BOOL)setEditSelectionCFont:(CPDFFont *_Nonnull)font withTextArea:(CPDFEditTextArea *_Nullable)textArea ;
 
 /**
  * Sets the currently selected text is italic.
@@ -778,11 +792,6 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (CGFloat)opacityByRangeForEditArea:(CPDFEditArea *)editArea;
 
 /**
- * Gets the Edit supported font name.
- */
-- (NSArray*)getFontList;
-
-/**
  * Enter text editing state.
  */
 - (BOOL)textFocusedOnWithTextArea:(CPDFEditTextArea *)textArea;
@@ -875,5 +884,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 @interface CPDFView (EditingDeprecated)
 
 - (BOOL)replaceEditImageArea:(CPDFEditImageArea *)editArea imagePath:(NSString *)imagePath DEPRECATED_MSG_ATTRIBUTE("Use editingConfig::replaceEditImageArea:imagePath:rect:");
+
+- (NSArray*)getFontList DEPRECATED_MSG_ATTRIBUTE("use CPDFFont");
 
 @end

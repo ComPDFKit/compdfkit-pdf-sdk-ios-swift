@@ -12,6 +12,8 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFFont;
+
 /**
  * A CPDFFreeTextAnnotation object displays text on a page.
  *
@@ -20,9 +22,19 @@
 @interface CPDFFreeTextAnnotation : CPDFAnnotation
 
 /**
- * Method to get / set the font used for the annotation’s text field.
+ * Method to get the font used for the annotation’s text field.
  */
-@property (nonatomic,retain) CPDFKitPlatformFont *font;
+@property (nonatomic,retain) CPDFKitPlatformFont *font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize: and cFontSize");
+
+/**
+ * Method to set the font name used for the annotation’s text field.
+ */
+@property (nonatomic,retain) CPDFFont *cFont;
+
+/**
+ * Method to get the font size used for the annotation’s text field.
+ */
+@property (nonatomic,assign) CGFloat fontSize;
 
 /**
  * Method to get / set the font color used in the text field of the annotation.

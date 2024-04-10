@@ -12,6 +12,8 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFFont;
+
 /**
  * A CPDFWidgetAnnotation object is a collection of fields for gathering information interactively from the user.
  */
@@ -30,9 +32,20 @@
 @property (nonatomic,assign) CGFloat backgroundOpacity;
 
 /**
+ * Method to set the font name used for the annotation’s form field.
+ */
+@property (nonatomic,retain) CPDFFont *cFont;
+
+/**
+ * Method to get the font size used for the annotation’s form field.
+ */
+@property (nonatomic,assign) CGFloat fontSize;
+
+/**
  * Method to get / set the font used for the form field.
  */
-@property (nonatomic,retain) CPDFKitPlatformFont *font;
+@property (nonatomic,retain) CPDFKitPlatformFont *font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize:");
+
 
 /**
  * Method to get / set the font color used for the form field.

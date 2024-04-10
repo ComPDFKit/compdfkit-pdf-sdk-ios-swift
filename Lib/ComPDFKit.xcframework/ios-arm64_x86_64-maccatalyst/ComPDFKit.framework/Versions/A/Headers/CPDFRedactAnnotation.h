@@ -12,6 +12,8 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFFont;
+
 /**
  * Redaction annotations are used to remove content from a document.
  */
@@ -47,13 +49,14 @@
 - (void)setBorderColor:(CPDFKitPlatformColor *)color;
 
 /**
- * Gets the text font displayed in the specified area after applying the redaction.
+ * Method to set the font name used for the annotation’s text field.
  */
-- (CPDFKitPlatformFont *)font;
+@property (nonatomic,retain) CPDFFont *cFont;
+
 /**
- * Sets the text font displayed in the specified area after applying the redaction.
+ * Method to get the font size used for the annotation’s text field.
  */
-- (void)setFont:(CPDFKitPlatformFont *)font;
+@property (nonatomic,assign) CGFloat fontSize;
 
 /**
  * Gets the text color displayed in the specified area after applying the redaction.
@@ -86,5 +89,13 @@
  * Applies redaction annotation.
  */
 - (void)applyRedaction;
+
+@end
+
+@interface CPDFRedactAnnotation (Deprecated)
+
+- (void)setFont:(CPDFKitPlatformFont *)font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize");
+
+- (CPDFKitPlatformFont *)font DEPRECATED_MSG_ATTRIBUTE("use cFont and cFontSize");
 
 @end

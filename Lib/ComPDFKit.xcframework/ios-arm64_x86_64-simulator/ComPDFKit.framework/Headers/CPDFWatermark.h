@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
     CPDFWatermarkHorizontalPositionRight
 };
 
-@class CPDFDocument;
+@class CPDFDocument,CPDFFont;
 
 /**
  * Add and delete image and text watermarks.
@@ -62,12 +62,26 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
 @property (nonatomic,copy) NSString *text;
 
 /**
+ * Method to set the text font name for the watermark (image watermark does not work).
+ *
+ * @discussion The text font for the watermark; may return NULL if the watermark was created with image.
+ */
+@property (nonatomic,retain) CPDFFont *cFont;
+
+/**
+ * Method to set the text font size for the watermark (image watermark does not work).
+ *
+ * @discussion The text font for the watermark; may return NULL if the watermark was created with image.
+ */
+@property (nonatomic,assign) CGFloat fontSize;
+
+/**
  * Method to get / set the text font for the watermark (image watermark does not work).
  *
  * @discussion The text font for the watermark; may return NULL if the watermark was created with image.
  * Default Font : Helvetica 24
  */
-@property (nonatomic,retain) CPDFKitPlatformFont *textFont;
+@property (nonatomic,retain) CPDFKitPlatformFont *textFont DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize:");
 
 /**
  * Method to get / set the text color for the watermark (image watermark does not work).
@@ -165,3 +179,4 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
 @property (nonatomic,assign) CGFloat horizontalSpacing;
 
 @end
+

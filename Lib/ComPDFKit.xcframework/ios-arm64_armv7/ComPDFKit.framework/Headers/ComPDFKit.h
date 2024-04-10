@@ -48,6 +48,11 @@
 #import <ComPDFKit/CPDFMovieAnnotation.h>
 #import <ComPDFKit/CPDFSignatureAnnotation.h>
 #import <ComPDFKit/CPDFRedactAnnotation.h>
+#import <ComPDFKit/CPDFDistanceMeasureInfo.h>
+#import <ComPDFKit/CPDFPolylineAnnotation.h>
+#import <ComPDFKit/CPDFPolygonAnnotation.h>
+#import <ComPDFKit/CPDFPerimeterMeasureInfo.h>
+#import <ComPDFKit/CPDFAreaMeasureInfo.h>
 
 #import <ComPDFKit/CPDFWidgetAnnotation.h>
 #import <ComPDFKit/CPDFButtonWidgetAnnotation.h>
@@ -56,3 +61,5 @@
 #import <ComPDFKit/CPDFSignatureWidgetAnnotation.h>
 
 #import <ComPDFKit/CPDFView.h>
+
+#import <ComPDFKit/CPDFFont.h>
