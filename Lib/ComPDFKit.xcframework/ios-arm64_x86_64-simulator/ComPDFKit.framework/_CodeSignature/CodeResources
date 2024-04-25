@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/CPDFFreeTextAnnotation.h</key>
 		<data>
-		bh8QakVT7p4V82NNmrjWkKcUCpI=
+		FCu3rkrBAvfYxLWhCtsgdaQrRkI=
 		</data>
 		<key>Headers/CPDFGoToAction.h</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		PV5x+23NuYUepROku6mh7D9fRXk=
+		BmyjU2EIu3uyedF2O3HmILncp2k=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		R+Jco5LLRgUPYvdrwTqjaYaAmE0=
+		gXAsJemZn5PzzVknpLasAWdc8us=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -558,11 +558,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bh8QakVT7p4V82NNmrjWkKcUCpI=
+			FCu3rkrBAvfYxLWhCtsgdaQrRkI=
 			</data>
 			<key>hash2</key>
 			<data>
-			pc8086xG5myTkEOluQLCOhWRLP5DVYbuIXFOMCKbj1I=
+			eKfpBij3y51v2TmLAJmOYwrq0ep5BQ+1yQnBlrqfDE0=
 			</data>
 		</dict>
 		<key>Headers/CPDFGoToAction.h</key>
@@ -899,11 +899,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PV5x+23NuYUepROku6mh7D9fRXk=
+			BmyjU2EIu3uyedF2O3HmILncp2k=
 			</data>
 			<key>hash2</key>
 			<data>
-			xZ5KbIfi7lH0CH4RSqNQAInPz0dhH5GuUnVQvqVhCdQ=
+			8TW/jnSKagw5MtkG4GxJ1MoezVxNr7BYIr8ngiDzZw0=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>

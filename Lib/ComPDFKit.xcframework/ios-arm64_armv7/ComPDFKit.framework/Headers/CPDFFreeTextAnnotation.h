@@ -48,4 +48,9 @@
  */
 @property (nonatomic,assign) NSTextAlignment alignment;
 
+/**
+ * Method to get / set the border color used for the form field.
+ */
+@property (nonatomic,retain) CPDFKitPlatformColor *borderColor;
+
 @end

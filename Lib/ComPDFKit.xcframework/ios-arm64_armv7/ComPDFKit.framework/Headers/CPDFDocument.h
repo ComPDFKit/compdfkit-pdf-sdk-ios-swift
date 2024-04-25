@@ -112,11 +112,6 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsDocumentAssemblyOption;
 extern CPDFDocumentWriteOption const CPDFDocumentAllowsCommentingOption;
 extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
-typedef NSString *CPDFDocumentOptimizeOption NS_STRING_ENUM;
-
-extern CPDFDocumentOptimizeOption const CPDFDocumentImageQualityOption; // NSNumber for the image quality.
-
-
 @class CPDFPage, CPDFOutline, CPDFBookmark, CPDFWatermark, CPDFHeaderFooter, CPDFBates, CPDFBackground, CPDFSelection,CPDFSignature,CPDFSignatureWidgetAnnotation;
 
 @protocol CPDFDocumentDelegate;
@@ -648,14 +643,6 @@ extern CPDFDocumentOptimizeOption const CPDFDocumentImageQualityOption; // NSNum
  */
 - (BOOL)replaceAllEditTextWithString:(NSString *_Nonnull)string toReplaceString:(NSString *_Nullable)replaceString;
 
-#pragma mark - Compress
-
-/**
- * Compress Document
- *
- * param CPDFDocumentOptimizeOptionRange : 1~120, Default is 30.0.The higher the value, the better the quality of the picture
- */
-- (BOOL)writeOptimizeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options;
 
 #pragma mark - Redact
 

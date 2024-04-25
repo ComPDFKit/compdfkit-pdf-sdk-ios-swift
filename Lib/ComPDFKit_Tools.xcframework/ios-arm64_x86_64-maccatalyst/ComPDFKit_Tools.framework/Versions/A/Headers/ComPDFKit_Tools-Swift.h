@@ -614,7 +614,9 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 @interface CPDFListView : CPDFView <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)layoutSubviews;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
@@ -1736,7 +1738,9 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools19CPDFKeyboardToolbar")
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 @interface CPDFListView : CPDFView <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)layoutSubviews;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;

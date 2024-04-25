@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <ComPDFKit/CPDFKitPlatform.h>
 
-@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation,CPDFFont;
+@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation,CPDFFont,CPDFBorder;
 
 typedef NS_ENUM(NSInteger, CEditingSelectState) {
     CEditingSelectStateEmpty = 0,
@@ -354,6 +354,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (void)commitEditAnnotationFreeText;
 - (void)setEditAnnotationFreeTextFont:(UIFont *)font;
 - (void)setEditAnnotationFreeTextColor:(UIColor *)color;
+
+- (void)setEditAnnotationFreeTextBorderColor:(CPDFKitPlatformColor *_Nullable)color;
+- (void)setEditAnnotationFreeTextBorder:(CPDFBorder *_Nullable)border;
+- (void)setEditAnnotationFreeAlignment:(NSTextAlignment)alignment;
+
 
 #pragma mark - Page
 

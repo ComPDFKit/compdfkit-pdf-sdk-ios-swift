@@ -8830,17 +8830,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -8850,8 +8841,10 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -11442,17 +11435,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -11463,8 +11447,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -17864,17 +17850,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -17885,8 +17862,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -18078,6 +18057,39 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFListView",
+                "printedName": "ComPDFKit_Tools.CPDFListView",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView(im)initWithFrame:",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "ComPDFKit_Tools",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
           },
           {
             "kind": "Constructor",
@@ -21299,17 +21311,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -21320,8 +21323,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -21410,17 +21415,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -21431,8 +21427,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -22540,17 +22538,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -22561,8 +22550,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -24998,17 +24989,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -25019,8 +25001,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -26784,17 +26768,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -26805,8 +26780,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -28416,17 +28393,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -28437,8 +28405,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -31276,17 +31246,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIViewController?"
               }
             ],
             "declKind": "Var",
@@ -31297,8 +31258,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -32988,17 +32951,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -33009,8 +32963,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -35144,17 +35100,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ComPDFKit_Tools.CPDFListView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CPDFListView",
-                    "printedName": "ComPDFKit_Tools.CPDFListView",
-                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit_Tools.CPDFListView?"
               }
             ],
             "declKind": "Var",
@@ -35165,8 +35112,10 @@
               "Custom",
               "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -35653,6 +35602,13 @@
         "kind": "Import",
         "name": "MobileCoreServices",
         "printedName": "MobileCoreServices",
+        "declKind": "Import",
+        "moduleName": "ComPDFKit_Tools"
+      },
+      {
+        "kind": "Import",
+        "name": "ComPDFKit_Tools",
+        "printedName": "ComPDFKit_Tools",
         "declKind": "Import",
         "moduleName": "ComPDFKit_Tools"
       },
@@ -38905,20 +38861,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "CPDFView",
-                "printedName": "ComPDFKit.CPDFView",
-                "usr": "c:objc(cs)CPDFView"
+                "name": "WeakStorage",
+                "printedName": "ComPDFKit.CPDFView?"
               }
             ],
             "declKind": "Var",
-            "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvp",
-            "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvp",
+            "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvp",
             "moduleName": "ComPDFKit_Tools",
             "declAttributes": [
               "Custom",
+              "HasInitialValue",
               "HasStorage",
+              "ReferenceOwnership",
               "AccessControl"
             ],
+            "ownership": 1,
             "hasStorage": true,
             "accessors": [
               {
@@ -38928,14 +38886,22 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CPDFView",
-                    "printedName": "ComPDFKit.CPDFView",
-                    "usr": "c:objc(cs)CPDFView"
+                    "name": "Optional",
+                    "printedName": "ComPDFKit.CPDFView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFView",
+                        "printedName": "ComPDFKit.CPDFView",
+                        "usr": "c:objc(cs)CPDFView"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvg",
-                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvg",
+                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvg",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "get"
@@ -38952,14 +38918,22 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "CPDFView",
-                    "printedName": "ComPDFKit.CPDFView",
-                    "usr": "c:objc(cs)CPDFView"
+                    "name": "Optional",
+                    "printedName": "ComPDFKit.CPDFView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFView",
+                        "printedName": "ComPDFKit.CPDFView",
+                        "usr": "c:objc(cs)CPDFView"
+                      }
+                    ],
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvs",
-                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvs",
+                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvs",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "set"
@@ -38976,8 +38950,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvM",
-                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCvM",
+                "usr": "s:15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFThumbnailViewControllerC03pdfE0So8CPDFViewCSgvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -48908,21 +48882,21 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnatationList\/CPDFAnnotationViewController.swift",
       "kind": "Array",
-      "offset": 988,
+      "offset": 993,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnatationList\/CPDFAnnotationViewController.swift",
       "kind": "Array",
-      "offset": 1112,
+      "offset": 1117,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnatationList\/CPDFAnnotationViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1220,
+      "offset": 1225,
       "length": 5,
       "value": "false"
     },
@@ -49426,28 +49400,28 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditCell\/CPDFTextPropertyCell.swift",
       "kind": "IntegerLiteral",
-      "offset": 2274,
+      "offset": 2279,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditCell\/CPDFTextPropertyCell.swift",
       "kind": "StringLiteral",
-      "offset": 2529,
+      "offset": 2534,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditCell\/CPDFTextPropertyCell.swift",
       "kind": "StringLiteral",
-      "offset": 2103,
+      "offset": 2108,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditCell\/CPDFTextPropertyCell.swift",
       "kind": "StringLiteral",
-      "offset": 2127,
+      "offset": 2132,
       "length": 2,
       "value": "\"\""
     },
@@ -50385,14 +50359,14 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFOutlie\/CPDFOutlineViewController.swift",
       "kind": "Array",
-      "offset": 1082,
+      "offset": 1087,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFOutlie\/CPDFOutlineViewController.swift",
       "kind": "Array",
-      "offset": 1174,
+      "offset": 1179,
       "length": 2,
       "value": "[]"
     },
@@ -52618,7 +52592,7 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "BooleanLiteral",
-      "offset": 5476,
+      "offset": 5481,
       "length": 5,
       "value": "false"
     },
@@ -53164,238 +53138,238 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "Array",
-      "offset": 1043,
+      "offset": 1048,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1166,
+      "offset": 1176,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1352,
+      "offset": 1362,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1358,
+      "offset": 1368,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1400,
+      "offset": 1410,
       "length": 2,
       "value": "44"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1450,
+      "offset": 1460,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1499,
+      "offset": 1509,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1552,
+      "offset": 1562,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1624,
+      "offset": 1634,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1677,
+      "offset": 1687,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1730,
+      "offset": 1740,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1783,
+      "offset": 1793,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1866,
+      "offset": 1876,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1918,
+      "offset": 1928,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1970,
+      "offset": 1980,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2062,
+      "offset": 2072,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2068,
+      "offset": 2078,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2110,
+      "offset": 2120,
       "length": 2,
       "value": "91"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2160,
+      "offset": 2170,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2210,
+      "offset": 2220,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2281,
+      "offset": 2291,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2334,
+      "offset": 2344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2387,
+      "offset": 2397,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2438,
+      "offset": 2448,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2492,
+      "offset": 2502,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2653,
+      "offset": 2663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2706,
+      "offset": 2716,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2787,
+      "offset": 2797,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2842,
+      "offset": 2852,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2967,
+      "offset": 2977,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 3019,
+      "offset": 3029,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 3595,
+      "offset": 3605,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "IntegerLiteral",
-      "offset": 3630,
+      "offset": 3640,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchToolbar.swift",
       "kind": "BooleanLiteral",
-      "offset": 4052,
+      "offset": 4062,
       "length": 5,
       "value": "false"
     },
@@ -53486,7 +53460,7 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/BOTA\/CPDFBOTAViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1373,
+      "offset": 1378,
       "length": 1,
       "value": "0"
     },
@@ -54431,14 +54405,14 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
       "kind": "Array",
-      "offset": 1197,
+      "offset": 1202,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1397,
+      "offset": 1402,
       "length": 1,
       "value": "0"
     },
@@ -55481,21 +55455,21 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "Array",
-      "offset": 2277,
+      "offset": 2282,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2317,
+      "offset": 2322,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2701,
+      "offset": 2706,
       "length": 5,
       "value": "false"
     },
@@ -56433,21 +56407,21 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEditBar\/CPageEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1656,
+      "offset": 1661,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEditBar\/CPageEditToolBar.swift",
       "kind": "BooleanLiteral",
-      "offset": 1690,
+      "offset": 1695,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEditBar\/CPageEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1821,
+      "offset": 1826,
       "length": 1,
       "value": "0"
     },
@@ -56727,7 +56701,7 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DigitalSignature\/PDFDigitalSignatureProperties\/VerifySignature\/Controller\/CPDFSigntureVerifyViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1361,
+      "offset": 1366,
       "length": 5,
       "value": "false"
     },
@@ -57189,21 +57163,21 @@
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1991,
+      "offset": 2014,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1068,
+      "offset": 1073,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/dinglingui\/项目\/研发\/KMPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1108,
+      "offset": 1113,
       "length": 2,
       "value": "\"\""
     },
