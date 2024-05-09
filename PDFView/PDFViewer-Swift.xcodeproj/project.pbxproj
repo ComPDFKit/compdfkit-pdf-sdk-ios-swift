@@ -37,7 +37,6 @@
 		F3A6E9EE2A89B53000280D06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A6E9EC2A89B53000280D06 /* Main.storyboard */; };
 		F3A6E9F02A89B53100280D06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6E9EF2A89B53100280D06 /* Assets.xcassets */; };
 		F3A6E9F32A89B53100280D06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A6E9F12A89B53100280D06 /* LaunchScreen.storyboard */; };
-		F3A6EA032A89B99E00280D06 /* CPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6EA022A89B99E00280D06 /* CPDFViewController.swift */; };
 		F3B076F82B073B0800E32ECA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3B076FA2B073B0800E32ECA /* Localizable.strings */; };
 		F3BAD6AC2B0EFD4A003EC289 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3BAD6A02B0EFD4A003EC289 /* Image.xcassets */; };
 		F3BAD6AD2B0EFD4A003EC289 /* CHomeFeaturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BAD6A22B0EFD4A003EC289 /* CHomeFeaturesTableViewCell.swift */; };
@@ -98,7 +97,6 @@
 		F3A6E9EF2A89B53100280D06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3A6E9F22A89B53100280D06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3A6E9F42A89B53100280D06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3A6EA022A89B99E00280D06 /* CPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPDFViewController.swift; sourceTree = "<group>"; };
 		F3B076F92B073B0800E32ECA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F3B076FB2B073B1300E32ECA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F3BAD6A02B0EFD4A003EC289 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				F3C8E2AA2AD68D4A00DA7CD3 /* PDFViewer-Swift.entitlements */,
 				F3A6E9E62A89B53000280D06 /* AppDelegate.swift */,
 				F3A6E9E82A89B53000280D06 /* SceneDelegate.swift */,
-				F3A6EA022A89B99E00280D06 /* CPDFViewController.swift */,
 				F3A6E9EC2A89B53000280D06 /* Main.storyboard */,
 				F3A6E9EF2A89B53100280D06 /* Assets.xcassets */,
 				F3A6E9F12A89B53100280D06 /* LaunchScreen.storyboard */,
@@ -345,7 +342,6 @@
 				F3BAD6B22B0EFD4A003EC289 /* CHomeFileListController.swift in Sources */,
 				F3A6E9E72A89B53000280D06 /* AppDelegate.swift in Sources */,
 				F3BAD6AD2B0EFD4A003EC289 /* CHomeFeaturesTableViewCell.swift in Sources */,
-				F3A6EA032A89B99E00280D06 /* CPDFViewController.swift in Sources */,
 				F3BAD6B12B0EFD4A003EC289 /* CHomeInsertPageViewController.swift in Sources */,
 				F3BAD6B32B0EFD4A003EC289 /* CHomeMFMailComposeViewController.swift in Sources */,
 				F3C8E10E2AD68CFB00DA7CD3 /* XMLReader.swift in Sources */,
