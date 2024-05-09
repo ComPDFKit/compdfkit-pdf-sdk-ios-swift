@@ -2,7 +2,7 @@
 //  CHomeViewController.swift
 //  ComPDFKit_Tools
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -16,6 +16,7 @@ import ComPDFKit_Tools
 class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CPDFViewBaseControllerDelete {
     
     var tabview:UITableView?
+    var jsonDataParse:CPDFJSONDataParse?
     
     private lazy var featureArrays: [Dictionary<String, Any>] = {
         let viewFeature: [String: Any] = ["title": NSLocalizedString("Viewer", comment: ""),
@@ -96,7 +97,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         self.title = NSLocalizedString("ComPDFKit Demo for iOS", comment: "")
         
         let setBarItem = UIBarButtonItem(image: UIImage(named: "CHomeImageSetting", in: Bundle(for: self.classForCoder), compatibleWith: nil), style: .done, target: self, action: #selector(buttonItemClick_Setting(_:)))
@@ -109,7 +110,8 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tabview?.separatorStyle = .none
         if(tabview != nil) {
             view.addSubview(tabview!)
-        }        
+        }   
+        
     }
 
     // MARK: - Action
@@ -235,18 +237,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             let documentURL = URL(fileURLWithPath: documentFolder).appendingPathComponent((filePath as NSString?)?.lastPathComponent ?? "")
             
             let configuration = CPDFConfiguration()
-              
-            let thumbnail = CNavBarButtonItem(viewLeftBarButtonItem: .thumbnail)
-            let back = CNavBarButtonItem(viewLeftBarButtonItem: .back)
-            let search = CNavBarButtonItem(viewRightBarButtonItem: .search)
-            let bota = CNavBarButtonItem(viewRightBarButtonItem: .bota)
-            let more = CNavBarButtonItem(viewRightBarButtonItem: .more)
-
-            configuration.showleftItems = [back, thumbnail]
-            configuration.showRightItems = [search, bota, more]
-            
-            configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .share, .addFile]
-
+                    
             let pdfViewController = CPDFViewController(filePath: documentURL.path, password: nil, configuration: configuration)
             let navController = CNavigationController(rootViewController: pdfViewController)
             pdfViewController.delegate = self
@@ -297,5 +288,5 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func PDFViewBaseControllerDissmiss(_ baseControllerDelete: CPDFViewBaseController) {
         baseControllerDelete.dismiss(animated: true)
     }
-
+    
 }

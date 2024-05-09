@@ -2,7 +2,7 @@
 //  CHomeFileListController.swift
 //  ComPDFKit_Tools
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -342,6 +342,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
         
         configuration.showleftItems = [back, thumbnail]
         configuration.showRightItems = [search, bota, more]
+        
         switch feature {
         case .viewer:
             configuration.enterToolModel = .viewer
@@ -373,8 +374,8 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         
-        configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .share, .addFile]
-
+        configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .flattened, .share, .addFile]
+        
         let pdfViewController = CPDFViewController(filePath: url.path, password: password, configuration: configuration)
         let navController = CNavigationController(rootViewController: pdfViewController)
         pdfViewController.delegate = self
@@ -382,6 +383,8 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
         self.present(navController, animated: true)
         
     }
+    
+    
     
     // MARK: - Action
     @objc func buttonItemClick_Setting(_ button: UIBarButtonItem) {
