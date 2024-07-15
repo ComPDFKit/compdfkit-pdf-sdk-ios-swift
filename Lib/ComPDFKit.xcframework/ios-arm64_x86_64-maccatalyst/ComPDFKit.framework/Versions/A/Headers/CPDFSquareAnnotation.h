@@ -34,4 +34,9 @@
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
 
+/**
+ * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
+ */
+- (BOOL)removeInteriorColor;
+
 @end

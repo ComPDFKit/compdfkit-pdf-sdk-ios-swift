@@ -23,21 +23,25 @@
 
 /**
  * Method to get the font used for the annotation’s text field.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,retain) CPDFKitPlatformFont *font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize: and cFontSize");
 
 /**
  * Method to set the font name used for the annotation’s text field.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,retain) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s text field.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,assign) CGFloat fontSize;
 
 /**
  * Method to get / set the font color used in the text field of the annotation.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
 
@@ -45,11 +49,13 @@
  * Method to get / set the horizontal alignment of text within the bounds of the annotation.
  *
  * @discussion Supported values are NSLeftTextAlignment, NSRightTextAlignment, and NSCenterTextAlignment.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,assign) NSTextAlignment alignment;
 
 /**
  * Method to get / set the border color used for the form field.
+ * Set freetext after manually updateAppearanceStream
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *borderColor;
 

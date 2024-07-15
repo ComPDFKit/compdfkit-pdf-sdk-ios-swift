@@ -1,7 +1,7 @@
 framework module ComPDFKit_Tools {
   umbrella header "ComPDFKit_Tools.h"
-
   export *
+
   module * { export * }
 }
 

@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
-		WG+kY5Vvc08Nr8Dvs0vGY8jYxxg=
+		DRXRwLGfD4ltsNSMkGasvIbsQvw=
 		</data>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/CPDFCircleAnnotation.h</key>
 		<data>
-		BKWbtFxxs8UYIJwo66E9gIDabOs=
+		ipbi91uAXK7fSen33m0EH7rLJu0=
 		</data>
 		<key>Headers/CPDFDestination.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		SYZBVyMsd5Sm1ly3T5ED4Z7RaGk=
+		rqqbWoI4dh2usPOtmoYvD8UahN4=
 		</data>
 		<key>Headers/CPDFFont.h</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Headers/CPDFFreeTextAnnotation.h</key>
 		<data>
-		FCu3rkrBAvfYxLWhCtsgdaQrRkI=
+		9gcJRorzP6EnwfJhnMh55Go2rd0=
 		</data>
 		<key>Headers/CPDFGoToAction.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Headers/CPDFLineAnnotation.h</key>
 		<data>
-		box7OVUlM0cBQmbMmDEsqGPt5uE=
+		73KKa6zOoMvhraFOZQ+oVT6+IcU=
 		</data>
 		<key>Headers/CPDFLinkAnnotation.h</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Headers/CPDFPage.h</key>
 		<data>
-		lmbpFSpKRnZOPsgYbgOVsGaaw68=
+		QJohQ8TR/7rN4dNpF7equtZ19so=
 		</data>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Headers/CPDFRedactAnnotation.h</key>
 		<data>
-		o3Fh3pNCjH8pL040iwi+eSQDaJE=
+		5JHZVF4EOGaSakZFPmyknI4T2+M=
 		</data>
 		<key>Headers/CPDFResetFormAction.h</key>
 		<data>
@@ -190,7 +190,7 @@
 		</data>
 		<key>Headers/CPDFSquareAnnotation.h</key>
 		<data>
-		7KSo7B/DOsZfIQFUI1Xd1AjZPy4=
+		HSXEhUN8ndXJLQOwdyNmOHdOFwk=
 		</data>
 		<key>Headers/CPDFStampAnnotation.h</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		BmyjU2EIu3uyedF2O3HmILncp2k=
+		n9ls7EeSeHqm/r63MTs0BDkkYYI=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
 		<data>
-		O05b42ANR903dj391KzA6YAY/f4=
+		XIOv98gbizrRpU155wBV2asthiM=
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
@@ -230,11 +230,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gXAsJemZn5PzzVknpLasAWdc8us=
+		jFV+r9omz2EoxIT7FGYYMwJ4jQY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		LiQoiZ0HQqg8PLvhYGe2l6sUM/Q=
+		GJse0j0x4wLzigM/YeAjcM+nZxQ=
 		</data>
 		<key>formsign_tag.png</key>
 		<data>
@@ -415,11 +415,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WG+kY5Vvc08Nr8Dvs0vGY8jYxxg=
+			DRXRwLGfD4ltsNSMkGasvIbsQvw=
 			</data>
 			<key>hash2</key>
 			<data>
-			E4k4mmwqO2stiChcnvcQFZJU5eUbraz7pG1aibsiXqk=
+			nu+tKNw+UtNFsC8IuFAGhmQdPDpN8f7RmA7VT5Ofl0A=
 			</data>
 		</dict>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
@@ -503,11 +503,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BKWbtFxxs8UYIJwo66E9gIDabOs=
+			ipbi91uAXK7fSen33m0EH7rLJu0=
 			</data>
 			<key>hash2</key>
 			<data>
-			O+ZaFJXZDvqPU0w5QOT2hVyVv7LP+1M+l7zYkNlaIZY=
+			xky0dM2NknLptjqdxq7e9A5FhUWSYkh2PTbaUPEew+c=
 			</data>
 		</dict>
 		<key>Headers/CPDFDestination.h</key>
@@ -536,11 +536,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SYZBVyMsd5Sm1ly3T5ED4Z7RaGk=
+			rqqbWoI4dh2usPOtmoYvD8UahN4=
 			</data>
 			<key>hash2</key>
 			<data>
-			Hnx9/0D5yrY+UhShDJTYtljmACORqmGHoLSFRTdIYHM=
+			3is49wTM94aSCJKeuCpB4DBmOyT4ees6jCsX4CU5H/4=
 			</data>
 		</dict>
 		<key>Headers/CPDFFont.h</key>
@@ -558,11 +558,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FCu3rkrBAvfYxLWhCtsgdaQrRkI=
+			9gcJRorzP6EnwfJhnMh55Go2rd0=
 			</data>
 			<key>hash2</key>
 			<data>
-			eKfpBij3y51v2TmLAJmOYwrq0ep5BQ+1yQnBlrqfDE0=
+			vx6dB+2QuepV4DFcl8PFA1N3t87BLTqGDJYfhLbXRJo=
 			</data>
 		</dict>
 		<key>Headers/CPDFGoToAction.h</key>
@@ -635,11 +635,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			box7OVUlM0cBQmbMmDEsqGPt5uE=
+			73KKa6zOoMvhraFOZQ+oVT6+IcU=
 			</data>
 			<key>hash2</key>
 			<data>
-			AF0PSBDI6jO7T1ebhqI3aTWy26UhYw0+4gdkZw0x9/g=
+			qQ1GPf8px8oQaD7XpndNHGCqOKXB71y+YT/GI1NfZjw=
 			</data>
 		</dict>
 		<key>Headers/CPDFLinkAnnotation.h</key>
@@ -712,11 +712,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lmbpFSpKRnZOPsgYbgOVsGaaw68=
+			QJohQ8TR/7rN4dNpF7equtZ19so=
 			</data>
 			<key>hash2</key>
 			<data>
-			ITek+5pIYV8/jz66CbdcoMx776Mj6C14brBqsVeBv5k=
+			dCKQZE74CUPFRHLpP74Qf3juCwCLWwqO06Y7EQeicIA=
 			</data>
 		</dict>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
@@ -756,11 +756,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o3Fh3pNCjH8pL040iwi+eSQDaJE=
+			5JHZVF4EOGaSakZFPmyknI4T2+M=
 			</data>
 			<key>hash2</key>
 			<data>
-			tyvDrf3k8NnCKKd+fVxhGco81DUYEvfolRlomslP/GM=
+			2egE7RZ90bwxBzyRtFQhHtm9JBk8U4DFbxi2lH+Lnn4=
 			</data>
 		</dict>
 		<key>Headers/CPDFResetFormAction.h</key>
@@ -833,11 +833,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7KSo7B/DOsZfIQFUI1Xd1AjZPy4=
+			HSXEhUN8ndXJLQOwdyNmOHdOFwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fs6jm3lS4TIMsydM0K+iB3QhIV6ehyxDQ1N4pij/nN4=
+			s+NbTFQbkp/dwg+kcgS6GeOVPAMrk70UuNt+sQp6MLY=
 			</data>
 		</dict>
 		<key>Headers/CPDFStampAnnotation.h</key>
@@ -899,11 +899,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BmyjU2EIu3uyedF2O3HmILncp2k=
+			n9ls7EeSeHqm/r63MTs0BDkkYYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			8TW/jnSKagw5MtkG4GxJ1MoezVxNr7BYIr8ngiDzZw0=
+			P/hQhHf0LXeqDqzERsILAFz3/2Xr7ICILLr8Agxa2ZY=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>
@@ -921,11 +921,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O05b42ANR903dj391KzA6YAY/f4=
+			XIOv98gbizrRpU155wBV2asthiM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ezLGBpBhF7+fZOKryHgQ8Vr0oMQzA+9Rp1ZtOwBSZz4=
+			SL6gNtUQF57K98s8avS/iLaj4RY7uG1++xnAtUomrio=
 			</data>
 		</dict>
 		<key>Headers/ComPDFKit.h</key>
@@ -943,11 +943,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LiQoiZ0HQqg8PLvhYGe2l6sUM/Q=
+			GJse0j0x4wLzigM/YeAjcM+nZxQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AAkcPQ+8lTvgjXGHEKzmPSMjAW0mw1D0ReUK5G9YEwQ=
+			iQcHR0nTiFjwgQN3izRKSCofKuNTCmNsv4iXpEARTgc=
 			</data>
 		</dict>
 		<key>formsign_tag.png</key>

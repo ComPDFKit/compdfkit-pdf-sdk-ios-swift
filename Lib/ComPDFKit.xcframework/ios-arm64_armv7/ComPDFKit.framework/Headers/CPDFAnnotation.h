@@ -15,6 +15,35 @@
 #import <ComPDFKit/CPDFBorder.h>
 
 /**
+ * To setting reply state of the repply state annotation.
+ */
+typedef NS_ENUM(NSInteger, CPDFAnnotationState) {
+    /*A mark state */
+    CPDFAnnotationStateMarked = 0,
+    CPDFAnnotationStateUnMarked,
+    /*A review state*/
+    CPDFAnnotationStateAccepted,
+    CPDFAnnotationStateRejected,
+    CPDFAnnotationStateCanceled,
+    CPDFAnnotationStateCompleted,
+    CPDFAnnotationStateNone,
+    /*A error state*/
+    CPDFAnnotationStateError
+};
+
+/**
+ * Distinguish between different types of reply annotation.
+ */
+typedef NS_ENUM(NSInteger, CPDFReplyAnnotationType)  {
+    CPDFReplyAnnotationTypeNone = 0,
+    /*CPDFReplyAnnotation*/
+    CPDFReplyAnnotationTypeReply,
+    /*CPDFReplyStateAnnotation*/
+    CPDFReplyAnnotationTypeMark,
+    CPDFReplyAnnotationTypeReview
+};
+
+/**
  * A set of flags specifying various characteristics of the annotation.
  * ComPDFKit doesn't support all of those flag settings.
  */
@@ -124,6 +153,11 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *color;
 
+/**
+ * remove color(Set it to transparent, or set SetColor: to nil)
+ */
+- (BOOL)removeColor;
+
 @property (nonatomic,assign) BOOL isNoRotate;
 
 /**
@@ -177,6 +211,26 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * but you must call the updateAppearanceStream method manually when you modify the bounds of CPDFTextAnnotation, CPDFStampAnnotation, CPDFSignatureAnnotation annotations.
  */
 - (void)updateAppearanceStream;
+
+#pragma mark - Reply
+
+// Create Reply Annotation
+// must call SetRect to compatible with adobe
+- (CPDFAnnotation *)createReplyAnnotation;
+
+// Create Reply State Annotation
+// must call SetRect to compatible with adobe
+- (CPDFAnnotation *)createReplyStateAnnotation:(CPDFAnnotationState)state;
+
+// Get all Reply Annotation
+@property (nonatomic,readonly) NSArray<CPDFAnnotation *> *replyAnnotations;
+
+// Get Reply Annotation Type
+@property (nonatomic,readonly) CPDFReplyAnnotationType replyAnnotationType;
+
+// Reply State Annotation to set
+- (BOOL)setAnnotState:(CPDFAnnotationState)state;
+- (CPDFAnnotationState)getAnnotState;
 
 #pragma mark - Drawing
 

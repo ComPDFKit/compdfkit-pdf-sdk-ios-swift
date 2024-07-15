@@ -32,6 +32,18 @@ typedef NS_ENUM(NSInteger, CPDFDisplayBox) {
     CPDFDisplayArtBox = 4
 };
 
+@interface CPDFPageDrawRectOptions : NSObject
+
+@property (nonatomic,retain) CPDFKitPlatformColor *backgroundColor;
+
+@property (nonatomic,assign) BOOL isDrawDrakMode;
+
+@property (nonatomic,assign) CGFloat scale;
+
+@property (nonatomic,assign) BOOL isDrawAnnot;
+
+@end
+
 extern NSNotificationName const CPDFPageDidLoadAnnotationNotification;
 extern NSNotificationName const CPDFPageDidAddAnnotationNotification;
 extern NSNotificationName const CPDFPageDidRemoveAnnotationNotification;
@@ -86,6 +98,8 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
 
 @property (nonatomic,readonly) CGRect bounds;
 
+@property (nonatomic,readonly) CGRect cropBounds;
+
 /**
  * Returns the size of page after rotation.
  */
@@ -136,6 +150,11 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * Convenience function that returns an image of this page, with annotations.
  */
 - (CPDFKitPlatformImage *)thumbnailOfSize:(CGSize)size;
+
+/**
+ * Convenience function that returns an image of this page's bound.
+ */
+- (CPDFKitPlatformImage *)renderPageOfRect:(CGRect)rect pageDrawRectOptions:(CPDFPageDrawRectOptions *)pageDrawRectOptions;
 
 #pragma mark - Find
 /**

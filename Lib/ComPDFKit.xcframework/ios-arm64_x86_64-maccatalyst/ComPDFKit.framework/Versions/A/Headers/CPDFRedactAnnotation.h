@@ -40,6 +40,11 @@
 - (void)setInteriorColor:(CPDFKitPlatformColor *)color;
 
 /**
+ * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
+ */
+- (BOOL)removeInteriorColor;
+
+/**
  * Gets the color used for the redaction’s border in its marked state. Defaults to red.
  */
 - (CPDFKitPlatformColor *)borderColor;

@@ -29,6 +29,12 @@
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *backgroundColor;
 
+/**
+ * remove backgroundColor(Set it to transparent, or set SetBackgroundColor: to nil)
+ */
+
+- (BOOL)removeBackgroundColor;
+
 @property (nonatomic,assign) CGFloat backgroundOpacity;
 
 /**

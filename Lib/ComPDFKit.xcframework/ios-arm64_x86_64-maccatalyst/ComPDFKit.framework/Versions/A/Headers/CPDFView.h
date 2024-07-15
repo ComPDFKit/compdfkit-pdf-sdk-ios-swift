@@ -310,7 +310,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 @property (nonatomic,assign) BOOL scrollEnabled;
 
 /**
- * A Boolean value that determines whether scrolling is disabled in the vertical direction for the document view.
+ * A Boolean value that determines whether zoom is disabled for the document view.
  */
 @property (nonatomic,assign) BOOL directionaHorizontalLockEnabled;
 
@@ -359,6 +359,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (void)setEditAnnotationFreeTextBorder:(CPDFBorder *_Nullable)border;
 - (void)setEditAnnotationFreeAlignment:(NSTextAlignment)alignment;
 
+#pragma mark - Form Annotation
+
+- (BOOL)isEditFormText;
+
+- (void)commitEditFormText;
 
 #pragma mark - Page
 

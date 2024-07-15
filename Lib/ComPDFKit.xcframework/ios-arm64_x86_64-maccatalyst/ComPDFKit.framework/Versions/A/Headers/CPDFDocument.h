@@ -270,7 +270,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 /**
  * Writes the document to a location specified by the passed-in URL.
  */
-- (BOOL)writeToURL:(NSURL *)url;
+- (BOOL)writeToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 /**
  * Writes the document to the specified URL with the specified options.
@@ -278,22 +278,22 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion Set the password to the document by setting options.
  * @param options CPDFDocumentOwnerPasswordOption, CPDFDocumentUserPasswordOption.
  */
-- (BOOL)writeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentWriteOption, id> *)options;
+- (BOOL)writeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentWriteOption, id> *)options isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 /**
  * Writes the document to the specified URL after flattening.
  */
-- (BOOL)writeFlattenToURL:(NSURL *)url;
+- (BOOL)writeFlattenToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 /**
  * Writes the document to the specified URL after removing annotions and form field entries.
  */
-- (BOOL)writeContentToURL:(NSURL *)url;
+- (BOOL)writeContentToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 /**
  * Writes the document to the specified URL after removing permissions.
  */
-- (BOOL)writeDecryptToURL:(NSURL *)url;
+- (BOOL)writeDecryptToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 #pragma mark - Attributes
 
@@ -543,7 +543,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Because the conversion process applies only necessary changes to the source file, the information loss is minimal.
  * @see CPDFType
  */
-- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type;
+- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 #pragma mark - Find
 
@@ -686,6 +686,19 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @end
 
 @interface CPDFDocument (Deprecated)
+
+- (BOOL)writeToURL:(NSURL *)url DEPRECATED_MSG_ATTRIBUTE("Use writeToURL:isSaveFontSubset:");
+
+- (BOOL)writeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentWriteOption, id> *)options DEPRECATED_MSG_ATTRIBUTE("Use writeToURL:withOptions:isSaveFontSubset:");
+
+- (BOOL)writeFlattenToURL:(NSURL *)url DEPRECATED_MSG_ATTRIBUTE("Use writeFlattenToURL:isSaveFontSubset:");
+
+- (BOOL)writeContentToURL:(NSURL *)url DEPRECATED_MSG_ATTRIBUTE("Use writeContentToURL:isSaveFontSubset:");
+
+- (BOOL)writeDecryptToURL:(NSURL *)url DEPRECATED_MSG_ATTRIBUTE("Use writeDecryptToURL:isSaveFontSubset:");
+
+- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type DEPRECATED_MSG_ATTRIBUTE("Use writePDFAToURL:withType:isSaveFontSubset:");
+
 
 - (void)findEditString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findEditAllPageString:withOptions:");
 

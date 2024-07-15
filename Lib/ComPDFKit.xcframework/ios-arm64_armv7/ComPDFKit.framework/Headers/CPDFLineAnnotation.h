@@ -80,6 +80,11 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
  */
 @property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
 
+/**
+ * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
+ */
+- (BOOL)removeInteriorColor;
+
 #pragma mark -  Measure
 /**
 * Method to determine whether an annotation has measurement properties.
