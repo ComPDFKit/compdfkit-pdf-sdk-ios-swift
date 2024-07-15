@@ -137,7 +137,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             }
                             
                             document?.importPages(indexSet, from: guideDocument, at: 1)
-                            document?.write(to: URL(fileURLWithPath: docsFilePath))
+                            let userDefaults = UserDefaults.standard
+                            let isSaveFontSubset = userDefaults.bool(forKey: CPDFSaveFontSubesetKey)
+                            document?.write(to: URL(fileURLWithPath: docsFilePath), isSaveFontSubset: isSaveFontSubset)
                         }
                     }
                 }

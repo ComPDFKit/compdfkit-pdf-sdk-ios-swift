@@ -14,6 +14,8 @@ import UIKit
 import ComPDFKit
 import ComPDFKit_Tools
 
+let CPDFFileAuthorKey = "CPDFFileAuthorKey"
+
 class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextFieldDelegate {
     var tabview:UITableView?
     
@@ -21,6 +23,9 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     
     // Temp
     var tempCell: CHomeSettingsTableViewCell?
+    
+    private var fileAuthorTextField: UITextField?
+    private var annotationAuthorTextField: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +65,10 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
             CPDFKitConfig.sharedInstance().setEnableLinkFieldHighlight(switchBtn.isOn)
         } else if(switchBtn.tag == 1) {
             CPDFKitConfig.sharedInstance().setEnableFormFieldHighlight(switchBtn.isOn)
+        } else if (switchBtn.tag == 2) {
+            let userDefaults = UserDefaults.standard
+            userDefaults.setValue(switchBtn.isOn, forKey: CPDFSaveFontSubesetKey)
+            userDefaults.synchronize()
         }
         
     }
@@ -79,7 +88,7 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(section == 0) {
-            return 3
+            return 5
         } else if(section == 1) {
             return 1
         } else {
@@ -147,11 +156,41 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
                 cell?.accessorySwitch?.tag = indexPath.row
                 cell?.accessorySwitch?.addTarget(self, action:  #selector(buttonItemClick_Change(_:)), for: .valueChanged)
                 cell?.accessorySwitch?.isOn = CPDFKitConfig.sharedInstance().enableFormFieldHighlight()
-            default:
+            case 2:
+                title = NSLocalizedString("The fonts data is saved with the file", comment: "")
+                cell?.accessoryView = cell?.accessorySwitch
+                cell?.accessorySwitch?.tag = indexPath.row
+                cell?.accessorySwitch?.addTarget(self, action:  #selector(buttonItemClick_Change(_:)), for: .valueChanged)
+                
+                let userDefaults = UserDefaults.standard
+                if userDefaults.bool(forKey: CPDFSaveFontSubesetKey) {
+                    cell?.accessorySwitch?.isOn = true
+                } else {
+                    cell?.accessorySwitch?.isOn = false
+                }
+            case 3:
                 title = NSLocalizedString("File Author", comment: "")
                 cell?.accessoryView = cell?.accessoryTextField
+                fileAuthorTextField = cell?.accessoryTextField
                 cell?.accessoryTextField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-                cell?.accessoryTextField?.text = CPDFKitConfig.sharedInstance().annotationAuthor()
+                cell?.accessoryTextField?.returnKeyType = .done
+                cell?.accessoryTextField?.delegate = self
+                
+                let userDefaults = UserDefaults.standard
+                if let text = userDefaults.string(forKey: CPDFFileAuthorKey) {
+                    cell?.accessoryTextField?.text = text
+                } else {
+                    userDefaults.set("ComPDFKit", forKey: CPDFFileAuthorKey)
+                    userDefaults.synchronize()
+                    cell?.accessoryTextField?.text = NSLocalizedString("ComPDFKit", comment: "")
+                }
+            default:
+                title = NSLocalizedString("Annotator", comment: "")
+                cell?.accessoryView = cell?.accessoryTextField
+                annotationAuthorTextField = cell?.accessoryTextField
+                cell?.accessoryTextField?.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+                cell?.accessoryTextField?.text = NSLocalizedString(CPDFKitConfig.sharedInstance().annotationAuthor(), comment: "")
+                cell?.accessoryTextField?.placeholder = NSLocalizedString("Guest", comment: "")
                 cell?.accessoryTextField?.returnKeyType = .done
                 cell?.accessoryTextField?.delegate = self
             }
@@ -220,9 +259,20 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     
     // MARK: - UITextFieldDelegate
     @objc func textFieldDidChange(_ textField: UITextField) {
-        if let text = textField.text {
-            CPDFKitConfig.sharedInstance().setAnnotationAuthor(text)
-
+        if annotationAuthorTextField == textField {
+            if let text = textField.text {
+                if text.count > 0 {
+                    CPDFKitConfig.sharedInstance().setAnnotationAuthor(text)
+                } else {
+                    CPDFKitConfig.sharedInstance().setAnnotationAuthor("Guest")
+                }
+            }
+        } else if fileAuthorTextField == textField {
+            if let text = textField.text {
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(text, forKey: CPDFFileAuthorKey)
+                userDefaults.synchronize()
+            }
         }
     }
     

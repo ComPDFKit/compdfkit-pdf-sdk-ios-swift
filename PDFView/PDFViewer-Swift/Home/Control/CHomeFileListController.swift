@@ -169,7 +169,9 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
         
         let url = NSURL(fileURLWithPath: secPath) as URL
         
-        document?.write(to: url)
+        let userDefaults = UserDefaults.standard
+        let isSaveFontSubset = userDefaults.bool(forKey: CPDFSaveFontSubesetKey)
+        document?.write(to: url, isSaveFontSubset: isSaveFontSubset)
         
         let newDocument = CPDFDocument(url: url)
         let watermarks = newDocument?.watermarks() ?? []
@@ -178,7 +180,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             newDocument?.removeWatermark(watermark)
         }
         
-        newDocument?.write(to: url)
+        newDocument?.write(to: url, isSaveFontSubset: isSaveFontSubset)
         
         shareAction(url: url)
     }
@@ -374,7 +376,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         
-        configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .flattened, .share, .addFile]
+        configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .flattened, .share, .addFile, .snipImage]
         
         let pdfViewController = CPDFViewController(filePath: url.path, password: password, configuration: configuration)
         let navController = CNavigationController(rootViewController: pdfViewController)
@@ -422,7 +424,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             let navController = CNavigationController(rootViewController: creatPage)
             let presentationController = AAPLCustomPresentationController(presentedViewController: navController, presenting: self)
             navController.transitioningDelegate = presentationController
-            self.present(navController, animated: true)
+            UIApplication.presentedViewController()?.present(navController, animated: true)
         }
         
         let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style:.cancel)

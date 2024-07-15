@@ -1,8 +1,11 @@
-/* 
+/*
   Localizable.strings
   PDFViewer-Swift
+/*
+  Localizable.strings
+  PDFViewer
 
- //  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+ //  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
  //
  //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
  //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -18,6 +21,8 @@
 "Highlight Form Fields" = "Highlight Form Fields";
 "File Author" = "File Author";
 "ComPDFKit" = "ComPDFKit";
+"Annotator" = "Annotator";
+"The fonts data is saved with the file" = "The fonts data is saved with the file";
 "SDK Information" = "SDK Information";
 "Version" = "Version";
 "V 1.11.0" = "V 1.11.0";
@@ -31,14 +36,21 @@
 "Technical Support" = "Technical Support";
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "Technical Support";
-"© 2014-2023 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2023 PDF Technologies, Inc. All Rights Reserved.";
+"© 2014-2024 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2024 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "Privacy Policy";
 "Service Terms" = "Service Terms";
 "Click to Open & Process" = "Click to Open & Process";
 "Features" = "Features";
 "Closes" = "Closes";
 "OKs" = "OK";
+"Update Config" = "Update Config";
+"Update Remote Config" = "Update Remote Config";
+"Update Time:" = "Update Time:";
+"Save as Flattened PDF" = "Save as Flattened PDF";
+"_Flattened" = "_Flattened";
+"Sorry PDF Reader Can't open this pdf file!" = "Sorry PDF Reader Can't open this pdf file!";
 
+"Sorry PDF Reader Can't open this pdf file!" = "Sorry PDF Reader Can't open this pdf file!";
 "Your consent is required before you could access the function." = "Your consent is required before you could access the function.";
 
 "Viewer" = "Viewer";
@@ -88,6 +100,20 @@
 "This PDF has password protect." = "This PDF has password protect.";
 "Please input the password below:" = "Please input the password below:";
 "The password is invalid !" = "The password is invalid !";
+"Viewer" = "Viewer";
+"Annotations" = "Annotations";
+"Forms" = "Forms";
+"Signatures" = "Signatures";
+"Document Editor" = "Document Editor";
+"Content Editor" = "Content Editor";
+"Cancel" = "Cancel";
+"Find" = "Find";
+"Replace with" = "Replace with";
+"Replace All" = "Replace All";
+"Setting" = "Setting";
+"Ignore Case" = "Ignore Case";
+"Whole Words only" = "Whole Words only";
+"Effective immediately after setting" = "Effective immediately after setting";
 
 "View Setting" = "View Setting";
 "Document Info" = "Document Info";
@@ -108,6 +134,7 @@
 "Dark" = "Dark";
 "Sepia" = "Sepia";
 "Reseda" = "Reseda";
+"Snip" = "Snip";
 
 "Information" = "Document Info";
 "Abstract:" = "Abstract:";
@@ -153,6 +180,7 @@
 "Search" = "Search";
 "No Results" = "No Results";
 "Text not found!" = "Text not found!";
+"Your search returned no results." = "Your search returned no results.";
 "Results" = "Results";
 "Resultss" = "Results";
 "Please Enter the Password Below." = "Please Enter the Password Below.";
@@ -212,6 +240,7 @@
 "Alignment" = "Alignment";
 "Font Size" = "Font Size";
 "Font Style" = "Font Style";
+"Font List" = "Font List";
 "Signatures" = "Signatures";
 "New Signature" = "New Signature";
 "NO Signature" = "NO Signature";
@@ -260,7 +289,6 @@
 "Paste and Match Style" = "Paste and Match Style";
 "Crop" = "Crop";
 "Export Successfully!" = "Export Successfully!";
-
 
 "Text Field" = "Text Field";
 "Check Box" = "Check Box";
@@ -391,7 +419,7 @@
 "Signer:" = "Signer:";
 "Signing Time:" = "Signing Time:";
 "Signaturess" = "Signature";
-"2023-8-11 05:00:53 PM/AM (EST)" = "2023-8-11 05:00:53 PM/AM (EST)";
+"Your message conforms to the format of an email." = "Your message conforms to the format of an email.";
 
 "Certification Authority Statement" = "Certification Authority Statement";
 "The signer's identity is valid." = "The signer's identity is valid.";
@@ -407,6 +435,7 @@
 "Summary" = "Summary";
 "Issued to:" = "Issued to:";
 "Issuer:" = "Issuer:";
+"Sorry, your name is too long. Creation failed." = "Sorry, your name is too long. Creation failed.";
 
 "Valid from:" = "Valid from:";
 "Valid to:" = "Valid to:";
@@ -493,3 +522,28 @@
 "Please enter the owner's password" = "Please enter the owner's password";
 "Set Permission Passwords" = "Set Permission Passwords";
 
+"Please enter Replace text!" = "Please enter Replace text!";
+"No changes have been made to the document!" = "No changes have been made to the document!";
+"Save successfully！" = "Save successfully！";
+
+
+"Import Annotations" = "Import Annotations";
+"Export Annotations" = "Export Annotations";
+"Delete all annotations" = "Delete all annotations";
+"Delete all replies" = "Delete all replies";
+"Accepted" = "Accepted";
+"Rejected" = "Rejected";
+"Cancelled" = "Cancelled";
+"Completed" = "Completed";
+"Add a new reply" = "Add a new reply";
+"View replies" = "View replies";
+"Delete Annotation" = "Delete Annotation";
+"Delete annotation" = "Delete annotation";
+"Add New Reply" = "Add New Reply";
+"Reply or add thoughts" = "Reply or add thoughts";
+"Replies of Annotation" = "Replies of Annotation";
+"Total: %ld" = "Total: %ld";
+"Unmarked" = "Unmarked";
+"Marked" = "Marked";
+"Reply" = "Reply";
+"View Reply" = "View Reply";

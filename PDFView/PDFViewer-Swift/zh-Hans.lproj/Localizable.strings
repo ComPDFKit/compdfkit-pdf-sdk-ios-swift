@@ -1,8 +1,8 @@
-/* 
+/*
   Localizable.strings
-  PDFViewer-Swift
+  PDFViewer
 
- //  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+ //  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
  //
  //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
  //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -18,6 +18,8 @@
 "Highlight Form Fields" = "高亮表单域";
 "File Author" = "文档作者";
 "ComPDFKit" = "ComPDFKit";
+"Annotator" = "注释作者";
+"The fonts data is saved with the file" = "字体数据随文件一起保存";
 "SDK Information" = "SDK 信息";
 "Version" = "版本";
 "V 1.11.0" = "V 1.11.0";
@@ -31,13 +33,19 @@
 "Technical Support" = "技术支持";
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "ComPDFKit技术支持请求";
-"© 2014-2023 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2023 PDF Technologies, Inc. All Rights Reserved.";
+"© 2014-2024 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2024 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "隐私协议";
 "Service Terms" = "服务条款";
 "Click to Open & Process" = "点击打开 & 处理文档";
 "Features" = "功能";
 "Closes" = "关闭";
 "OKs" = "确认";
+"Update Config" = "更新配置";
+"Update Remote Config" = "更新远程配置";
+"Update Time:" = "更新时间：";
+"Save as Flattened PDF" = "另存为扁平化副本";
+"_Flattened" = "_扁平化文档";
+"Sorry PDF Reader Can't open this pdf file!" = "对不起，PDF阅读器无法打开此PDF文件!";
 
 "Your consent is required before you could access the function." = "在您访问该功能之前需要您的同意。";
 
@@ -89,6 +97,20 @@
 "Please input the password below:" = "请在下方输入密码：";
 "The password is invalid !" = "密码无效!";
 
+"Viewer" = "查看器";
+"Annotations" = "注释";
+"Forms" = "表单";
+"Signatures" = "签名";
+"Document Editor" = "文档编辑器";
+"Content Editor" = "内容编辑器";
+"Cancel" = "取消";
+"Find" = "查找";
+"Replace with" = "替换为";
+"Replace All" = "全部替换";
+"Setting" = "设置";
+"Ignore Case" = "忽略大小写";
+"Whole Words only" = "全词匹配";
+"Effective immediately after setting" = "设置后立即生效";
 
 "View Setting" = "预览设置";
 "Document Info" = "文档信息";
@@ -100,6 +122,7 @@
 "Book Mode" = "封面模式";
 "Continuous Scrolling" = "连续滚动";
 "Crop Mode" = "裁剪模式";
+"Crop" = "裁剪模式";
 "Read Mode" = "阅读模式";
 "Split View" = "分屏视图";
 "Vertical Scrolling" = "垂直";
@@ -109,6 +132,7 @@
 "Dark" = "夜间模式";
 "Sepia" = "柔和模式";
 "Reseda" = "护眼模式";
+"Snip" = "截取";
 
 
 "Information" = "文档属性";
@@ -157,6 +181,7 @@
 "Results" = "搜索结果";
 "Resultss" = "条搜索结果";
 "Text not found!" = "没有找到文本!";
+"Your search returned no results." = "您的搜索没有结果。";
 "Please Enter the Password Below." = "输入密码以查看文档";
 "Please enter the password." = "请输入密码";
 "Password" = "密码";
@@ -210,8 +235,10 @@
 "Font" = "字体";
 "Font Color" = "文字颜色";
 "Alignment" = "文本方向";
+"Alignment" = "文本对齐";
 "Font Size" = "字号";
 "Font Style" = "字体样式";
+"Font List" = "字体列表";
 "Signatures" = "签名";
 "New Signature" = "添加签名";
 "NO Signature" = "无签名";
@@ -260,7 +287,7 @@
 "Crop" = "裁剪";
 "Paste and Match Style" = "带样式粘贴";
 "Export Successfully!" = "图片导出成功！";
-
+"Exit" = "退出";
 
 "Text Field" = "文本域";
 "Check Box" = "复选框";
@@ -299,7 +326,7 @@
 
 
 "Selected:" = "选择";
-"Done" = "保存";
+"Done" = "完成";
 "Insert" = "插入";
 "Extract" = "提取";
 "Replace" = "替换";
@@ -391,7 +418,7 @@
 "Signer:" = "签署人:";
 "Signaturess" = "数字签名";
 "Signing Time:" = "签署时间:";
-"2023-8-11 05:00:53 PM/AM (EST)" = "2023-8-11 05:00:53 PM/AM (EST)";
+"Your message conforms to the format of an email." = "您的信息符合电子邮件的格式。";
 
 "Certification Authority Statement" = "有效性小结";
 "The signer's identity is valid." = "签名者的身份有效。";
@@ -448,6 +475,7 @@
 "Digital Signatures" = "数字签名";
 "Data Encryption" = "数据加密";
 "Digital Signatures and Data Encryption" = "数字签名和数据加密";
+"Sorry, your name is too long. Creation failed." = "对不起，你的命名太长，创建失败";
 
 
 "Set Passwords" = "设置密码";
@@ -492,3 +520,28 @@
 "Please enter the owner's password" = "请输入权限密码";
 "Set Permission Passwords" = "设置权限密码";
 "Enable camera access so that you can create scans with your camera." = "此App需要您的同意才能访问该功能！";
+"Please enter Replace text!" = "请输入替换文本!";
+"No changes have been made to the document!" = "文档没有进行任何修改！";
+"Save successfully！" = "保存成功！";
+
+
+"Import Annotations" = "导入注释";
+"Export Annotations" = "导出注释";
+"Delete all annotations" = "删除所有注释";
+"Delete all replies" = "删除所有回复";
+"Accepted" = "已接受";
+"Rejected" = "已拒绝";
+"Cancelled" = "已取消";
+"Completed" = "已完成";
+"Add a new reply" = "新增回复";
+"View replies" = "查看回复";
+"Delete Annotation" = "删除注释";
+"Delete annotation" = "删除注释";
+"Add New Reply" = "新增回复";
+"Reply or add thoughts" = "请输入回复内容";
+"Replies of Annotation" = "所有回复";
+"Total: %ld" = "共计%d条";
+"Unmarked" = "未标记";
+"Marked" = "已标记";
+"Reply" = "回复";
+"View Reply" = "查看回复";

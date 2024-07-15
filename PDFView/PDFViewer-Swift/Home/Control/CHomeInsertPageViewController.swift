@@ -114,13 +114,20 @@ class CHomeInsertPageViewController: UIViewController,UITableViewDelegate,UITabl
             pageSize.height = z
         }
         let pdfDocument = CPDFDocument()
+        
+        var documentAttributes = pdfDocument!.documentAttributes()!
+        let userDefaults = UserDefaults.standard
+        documentAttributes[CPDFDocumentAttribute.titleAttribute] = userDefaults.string(forKey: CPDFFileAuthorKey)
+        pdfDocument?.setDocumentAttributes(documentAttributes)
+        
         pdfDocument?.insertPage(pageSize, at: 0)
         if (!(FileManager.default.fileExists(atPath: SAMPLESFOLDER))) {
             try? FileManager.default.createDirectory(atPath: SAMPLESFOLDER, withIntermediateDirectories: true, attributes: nil)
         }
         let docsFilePath = URL(fileURLWithPath: SAMPLESFOLDER).appendingPathComponent("/" + "Untitled" + ".pdf")
         let filePath = self.getUniqueFilePath(filePath: docsFilePath.path)
-        let result = pdfDocument?.write(to: NSURL.fileURL(withPath: filePath))
+        let isSaveFontSubset = userDefaults.bool(forKey: CPDFSaveFontSubesetKey)
+        let result = pdfDocument?.write(to: NSURL.fileURL(withPath: filePath), isSaveFontSubset: isSaveFontSubset)
         if(result == true) {
             self.dismiss(animated: true)
             self.delegate?.homeInsertPageViewController?(self, URL: NSURL.fileURL(withPath: filePath))
