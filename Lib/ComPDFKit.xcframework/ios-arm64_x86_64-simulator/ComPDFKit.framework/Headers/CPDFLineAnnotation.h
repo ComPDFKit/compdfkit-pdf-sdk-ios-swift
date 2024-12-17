@@ -78,7 +78,7 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
  *
  * @discussion The ornament at the end of a line is optional (for more information, see the Adobe PDF Specification 1.4).
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *interiorColor;
 
 /**
  * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
@@ -93,7 +93,7 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
 /**
  * Method to set the font  used for the annotation’s measure text field.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s measure text field.
@@ -103,7 +103,7 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
 /**
  * Method to get / set the font color used in the measure text field of the annotation.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *fontColor;
 
 /**
  * Method to get / set the measure info of the annotation after added to page.
@@ -111,6 +111,6 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
  * @discussion The measurement properties of a annotation cannot be cleared by setting the measurement properties of the annotation to empty
  * Set MeasureInfo: This information will not be effective until it is added to the page
  */
-@property (nonatomic,retain) CPDFDistanceMeasureInfo * _Nullable measureInfo;
+@property (nonatomic,strong) CPDFDistanceMeasureInfo * _Nullable measureInfo;
 
 @end

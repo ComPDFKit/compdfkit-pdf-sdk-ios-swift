@@ -77,15 +77,15 @@ typedef NS_OPTIONS(NSInteger, CPDFCaptionType) {
 /**
  *  Setting the decimal symbol in the measurement property value
  */
-@property (nonatomic,retain) NSString *decimalSymbol;
+@property (nonatomic,strong) NSString *decimalSymbol;
 /**
  *  Setting the thousand symbol in the measurement property value
  */
-@property (nonatomic,retain) NSString *thousandSymbol;
+@property (nonatomic,strong) NSString *thousandSymbol;
 /**
  *  Setting the decimal part display mode in the measurement property value
  */
-@property (nonatomic,retain) NSString *display;
+@property (nonatomic,strong) NSString *display;
 /**
  *  Setting the precision in the measurement property value
  */
@@ -93,29 +93,29 @@ typedef NS_OPTIONS(NSInteger, CPDFCaptionType) {
 /**
  *  Setting the unit prefix in the measurement property value
  */
-@property (nonatomic,retain) NSString *unitPrefix;
+@property (nonatomic,strong) NSString *unitPrefix;
 /**
  *  Setting the unit suffix in the measurement property value
  */
-@property (nonatomic,retain) NSString *unitSuffix;
+@property (nonatomic,strong) NSString *unitSuffix;
 /**
  *  Setting the unit position, units before/after the calculation result, before P, after S
  */
-@property (nonatomic,retain) NSString *unitPosition;
+@property (nonatomic,strong) NSString *unitPosition;
 /**
  *  Setting the scale in the measurement property value
  */
 @property (nonatomic,assign) CGFloat rulerBase;
 
-@property (nonatomic,retain) NSString *rulerBaseUnit;
+@property (nonatomic,strong) NSString *rulerBaseUnit;
 
 @property (nonatomic,assign) CGFloat rulerTranslate;
 
-@property (nonatomic,retain) NSString *rulerTranslateUnit;
+@property (nonatomic,strong) NSString *rulerTranslateUnit;
 /**
  *  Setting the format value in the measurement property value
  */
-@property (nonatomic,retain) NSString *formatValue;
+@property (nonatomic,strong) NSString *formatValue;
 /**
  *  Setting the CPDFCaptionType in the measurement property value
  */

@@ -87,6 +87,11 @@ typedef NS_ENUM(NSInteger, CPDFSignaturePermissions) {
     CPDFSignaturePermissionsAnnotationFillSign,
 };
 
+
+typedef NSString *CPDFDocumentOptimizeOption NS_STRING_ENUM;
+
+extern CPDFDocumentOptimizeOption const CPDFDocumentImageQualityOption; // NSNumber for the image quality.
+
 typedef NSString *CPDFDocumentAttribute NS_STRING_ENUM;
 
 extern CPDFDocumentAttribute const CPDFDocumentTitleAttribute;             // NSString containing document title.
@@ -143,7 +148,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  *
  * @see CPDFDocumentDelegate
  */
-@property (nonatomic,assign) id<CPDFDocumentDelegate> delegate;
+@property (nonatomic,weak) id<CPDFDocumentDelegate> delegate;
 
 /**
  * The URL for the document.
@@ -182,6 +187,11 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion Only encrypted documents can be locked. Use the unlockWithPassword: method to unlock a document using a password.
  */
 @property (nonatomic,readonly) BOOL isLocked;
+
+/**
+ * A Boolean value indicating whether the document is image.
+ */
+- (BOOL)isImageDocument;
 
 /**
  * Attempts to unlock an encrypted document.
@@ -294,6 +304,18 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Writes the document to the specified URL after removing permissions.
  */
 - (BOOL)writeDecryptToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
+
+#pragma mark - Optimize
+
+/**
+ * Compress Document
+ * param CPDFDocumentOptimizeOptionRange : 1~120, Default is 30.0.The higher the value, the better the quality of the picture
+ */
+- (void)writeOptimizeToURL:(NSURL *)url
+               withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options
+           progressHandler:(void (^_Nullable)(float cPageIndex, float totalPageIndex))progressHandler
+             cancelHandler:(BOOL (^_Nullable)(void))cancelHandler
+         completionHandler:(void (^_Nullable)(BOOL finished))completionHandler;
 
 #pragma mark - Attributes
 
@@ -440,7 +462,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  *
  * @discussion Indexes are zero based. This method raises an exception if index is out of bounds.
  */
-- (CPDFPage *)pageAtIndex:(NSUInteger)index;
+- (CPDFPage *_Nullable)pageAtIndex:(NSUInteger)index;
 
 /**
  * Gets the index number for the specified page.
@@ -686,6 +708,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @end
 
 @interface CPDFDocument (Deprecated)
+
+- (BOOL)writeOptimizeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options DEPRECATED_MSG_ATTRIBUTE("Use writeOptimizeToURL:withOptions:progressHandler:cancelHandler:completionHandler:");
 
 - (BOOL)writeToURL:(NSURL *)url DEPRECATED_MSG_ATTRIBUTE("Use writeToURL:isSaveFontSubset:");
 

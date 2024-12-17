@@ -545,10 +545,14 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             let pdfDocument = CPDFDocument(url: url!)
             // have open PassWord And have open+ower
             if pdfDocument != nil && pdfDocument?.isLocked == true {
-                pdfDocumentPasswordVC = CDocumentPasswordViewController(document: pdfDocument!)
-                pdfDocumentPasswordVC?.delegate = self
-                pdfDocumentPasswordVC?.modalPresentationStyle = .fullScreen
-                self.present(pdfDocumentPasswordVC!, animated: true, completion: nil)
+                if feature == .security {
+                    openSecurePDF(filePath: url?.path ?? "")
+                } else {
+                    pdfDocumentPasswordVC = CDocumentPasswordViewController(document: pdfDocument!)
+                    pdfDocumentPasswordVC?.delegate = self
+                    pdfDocumentPasswordVC?.modalPresentationStyle = .fullScreen
+                    self.present(pdfDocumentPasswordVC!, animated: true, completion: nil)
+                }
             } else {
                 enterPDFViewController(url!, document: nil)
             }

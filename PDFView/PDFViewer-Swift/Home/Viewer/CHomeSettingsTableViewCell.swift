@@ -2,7 +2,7 @@
 //  CHomeSettingsTableViewCell.swift
 //  ComPDFKit_Tools
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -21,6 +21,10 @@ class CHomeSettingsTableViewCell: UITableViewCell {
     var accessorySwitch:UISwitch?
     
     var accessoryTextField:UITextField?
+    
+    // Temp
+    var accessoryButton: UIButton?
+    var contentSubTitle: UILabel?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -30,6 +34,14 @@ class CHomeSettingsTableViewCell: UITableViewCell {
         contentTitle?.numberOfLines = 1
         if(contentTitle != nil) {
             self.contentView.addSubview(contentTitle!)
+        }
+        
+        contentSubTitle = UILabel.init(frame: CGRect(x: 100, y: 0, width: (contentTitle?.frame.size.width ?? 0) - 60, height: 22))
+        contentSubTitle?.font = UIFont.boldSystemFont(ofSize: 9.0)
+        contentSubTitle?.numberOfLines = 1
+        contentSubTitle?.isHidden = true
+        if(contentSubTitle != nil) {
+            contentTitle?.addSubview(contentSubTitle!)
         }
         
         accessoryTitle = UILabel.init(frame: CGRect(x: 0, y: 0, width: 60, height: 22))
@@ -42,6 +54,11 @@ class CHomeSettingsTableViewCell: UITableViewCell {
         accessoryTextField?.font = UIFont.boldSystemFont(ofSize: 15.0)
         accessoryTextField?.placeholder = NSLocalizedString("ComPDFKit", comment: "")
         accessoryTextField?.textAlignment = .right
+        
+        accessoryButton = UIButton.init(frame: CGRect(x: 0, y: 0, width: 70, height: 31))
+        accessoryButton?.setTitle(NSLocalizedString("Update Config", comment: ""), for: .normal)
+        accessoryButton?.setTitleColor(.black, for: .normal)
+        accessoryButton?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
     }
     
     override func layoutSubviews() {

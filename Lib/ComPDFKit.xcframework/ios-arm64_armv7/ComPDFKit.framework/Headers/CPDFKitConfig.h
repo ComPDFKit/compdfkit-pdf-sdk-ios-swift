@@ -234,5 +234,10 @@
 
 - (void)setIsEnableContentEditNotDrawAnnotation:(BOOL)isEnableContentEditNotDrawAnnotation;
 
-
+/**
+ * Set the display precision of PDFView
+ * Default value 1.5
+ */
+- (void)setPDFViewDisplayAccuracy:(CGFloat)accuracy;
+- (CGFloat)pdfViewDisplayAccuracy;
 @end

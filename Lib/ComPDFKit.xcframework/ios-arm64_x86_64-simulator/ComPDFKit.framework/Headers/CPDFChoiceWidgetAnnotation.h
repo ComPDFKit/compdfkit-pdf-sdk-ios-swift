@@ -14,8 +14,8 @@
 
 @interface CPDFChoiceWidgetItem : NSObject
 
-@property (nonatomic,retain) NSString *value;
-@property (nonatomic,retain) NSString *string;
+@property (nonatomic,strong) NSString *value;
+@property (nonatomic,strong) NSString *string;
 
 @end
 
@@ -41,7 +41,7 @@
 /**
  * Returns an array of CPDFChoiceWidgetItem that represent the items available in the list or pop-up menu of the choice widget annotation.
  */
-@property (nonatomic,retain) NSArray<CPDFChoiceWidgetItem *> *items;
+@property (nonatomic,strong) NSArray<CPDFChoiceWidgetItem *> *items;
 
 @property (nonatomic,assign) NSInteger selectItemAtIndex;
 

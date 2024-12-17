@@ -15,6 +15,7 @@
 
 @class CPDFFont;
 @class CPDFAreaMeasureInfo;
+@class CPDFBorderEffect;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -43,7 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @discussion The ornament at the end of a line is optional (for more information, see the Adobe PDF Specification 1.4).
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *interiorColor;
+
+/**
+ * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
+ */
+- (BOOL)removeInteriorColor;
 
 #pragma mark -  Measure
 /**
@@ -53,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Method to set the font name used for the annotation’s measure text field.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s measure text field.
@@ -63,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Method to get / set the font color used in th measure text field of the annotation.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *fontColor;
 
 /**
  * Method to get the measure info of the annotation after added to page.
@@ -71,7 +77,22 @@ NS_ASSUME_NONNULL_BEGIN
  * @discussion The measurement properties of a annotation cannot be cleared by setting the measurement properties of the annotation to empty
  * Set MeasureInfo: This information will not be effective until it is added to the page
  */
-@property (nonatomic,retain) CPDFAreaMeasureInfo *_Nullable measureInfo;
+@property (nonatomic,strong) CPDFAreaMeasureInfo *_Nullable measureInfo;
+
+#pragma mark -  Border Effect
+
+/**
+ * Method to get / set the  used for border Effect drawing the annotation.
+ * Cloud border effect for setting annotation
+ */
+@property (nonatomic,strong) CPDFBorderEffect * _Nullable borderEffect;
+
+/**
+ * Method to get / set the  used for border Effect drawing the annotation.
+ * If true, the parent view handles the vertices enclosed event; if false, the polygon savePoints Spot Encirclement Area itself handles the event
+ * Note: This property is for configuration purposes and will not affect the internal implementation of the SDK.
+ */
+@property (nonatomic,readwrite) BOOL polygonEncloseHandler;
 
 @end
 

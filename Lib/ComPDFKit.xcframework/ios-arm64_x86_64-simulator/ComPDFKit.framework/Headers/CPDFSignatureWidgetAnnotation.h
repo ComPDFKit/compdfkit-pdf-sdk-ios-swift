@@ -27,7 +27,7 @@
 
 @interface CPDFSignatureConfig : NSObject
 
-@property (nonatomic,retain) NSArray<CPDFSignatureConfigItem *> *contents;
+@property (nonatomic,strong) NSArray<CPDFSignatureConfigItem *> *contents;
 
 @property (nonatomic,assign) BOOL isDrawKey;
 @property (nonatomic,assign) BOOL isDrawLogo;
@@ -35,11 +35,11 @@
 @property (nonatomic,assign) BOOL isContentAlginLeft;
 
 @property (nonatomic,copy) NSString *text;
-@property (nonatomic,retain) CPDFKitPlatformImage *image;
-@property (nonatomic,retain) CPDFKitPlatformImage *logo;
+@property (nonatomic,strong) CPDFKitPlatformImage *image;
+@property (nonatomic,strong) CPDFKitPlatformImage *logo;
 
-@property (nonatomic,retain) CPDFKitPlatformColor *contentsColor;
-@property (nonatomic,retain) CPDFKitPlatformColor *textColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *contentsColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *textColor;
 
 @end
 
@@ -68,6 +68,29 @@
  * Configure the appearance of signatures.
  */
 - (void)signAppearanceConfig:(CPDFSignatureConfig *)config ;
+
+/**
+ * Method to get / set the all rect vertex points after rotation.
+ *
+ * @discussion Vertex points of the current page.
+ */
+- (void)setSaveRectRotationPoints:(NSArray<NSValue *> *)saveRectRotationPoints;
+- (NSArray<NSValue *> *)saveRectRotationPoints;
+
+/**
+ * Method to get / set the  rect befer rotation.
+ *
+ * @discussion rect of the current page.
+ */
+- (void)setSaveSourceRect:(CGRect)saveSourceRect;
+- (CGRect)saveSourceRect;
+
+/**
+ * Sets the rotation angle for the annotation in degrees.
+ *
+ * @discussion Rotation on a annotation. Must be -180 ~ 180.
+ */
+@property (nonatomic,assign) NSInteger annotationRotation;
 
 @end
 

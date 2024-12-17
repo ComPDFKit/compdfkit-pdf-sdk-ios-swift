@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, CPDFBackgroundType) {
 /**
  * Method to get / set the color of the background.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *color;
+@property (nonatomic,strong) CPDFKitPlatformColor *color;
 
 /**
  * Method to get / set the scale of the background.
@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, CPDFBackgroundType) {
 /**
  * Method to get / set the page range of the background by string, such as "0,3,5-7".
  */
-@property (nonatomic,retain) NSString *pageString;
+@property (nonatomic,strong) NSString *pageString;
 
 /**
  * Method to get / set the vertical alignment of the background.

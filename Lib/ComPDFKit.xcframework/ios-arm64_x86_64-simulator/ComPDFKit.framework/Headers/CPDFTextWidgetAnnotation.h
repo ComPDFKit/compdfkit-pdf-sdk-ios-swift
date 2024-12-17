@@ -22,7 +22,7 @@
 /**
  * String value associated with text field.
  */
-@property (nonatomic,retain) NSString *stringValue;
+@property (nonatomic,strong) NSString *stringValue;
 
 /**
  * Alignment of text. Supported: NSLeftTextAlignment, NSRightTextAlignment and NSCenterTextAlignment.

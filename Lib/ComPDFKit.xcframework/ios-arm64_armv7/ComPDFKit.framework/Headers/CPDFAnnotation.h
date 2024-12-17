@@ -125,7 +125,7 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  *
  * @discussion Textual content is typically associated with CPDFTextAnnotation and CPDFFreeTextAnnotation annotations.
  */
-@property (nonatomic,retain) NSString *contents;
+@property (nonatomic,strong) NSString *contents;
 
 /**
  * Method to get / set the stroke thickness for the annotation.
@@ -140,7 +140,7 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * @discussion For the "geometry" annotations (Circle, Ink, Line, Square), the border indicates the line width and whether to draw with a dash pattern or solid pattern.
  * CPDFAnnotation markup types (Highlight, Strikethrough, Underline) ignores the border.
  */
-@property (nonatomic,retain) CPDFBorder *border;
+@property (nonatomic,strong) CPDFBorder *border;
 
 /**
  * Method to get / set the opacity for the annotation.
@@ -151,7 +151,7 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * Method to get / set the color for the annotation.
  * @discussion For many annotations ("Circle", "Square") the stroke color. Used for other annotations as well.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *color;
+@property (nonatomic,strong) CPDFKitPlatformColor *color;
 
 /**
  * remove color(Set it to transparent, or set SetColor: to nil)
@@ -211,6 +211,8 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * but you must call the updateAppearanceStream method manually when you modify the bounds of CPDFTextAnnotation, CPDFStampAnnotation, CPDFSignatureAnnotation annotations.
  */
 - (void)updateAppearanceStream;
+
+- (void)updateAnnotationRotationAppearanceStream;
 
 #pragma mark - Reply
 

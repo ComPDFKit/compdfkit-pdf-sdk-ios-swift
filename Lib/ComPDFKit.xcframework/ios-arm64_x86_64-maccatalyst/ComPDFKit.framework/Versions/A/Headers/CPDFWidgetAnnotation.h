@@ -22,12 +22,12 @@
 /**
  * Method to get / set the border color used for the form field.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *borderColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *borderColor;
 
 /**
  * Method to ge t/ set the background color used for the form field.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *backgroundColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *backgroundColor;
 
 /**
  * remove backgroundColor(Set it to transparent, or set SetBackgroundColor: to nil)
@@ -40,7 +40,7 @@
 /**
  * Method to set the font name used for the annotation’s form field.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s form field.
@@ -50,13 +50,13 @@
 /**
  * Method to get / set the font used for the form field.
  */
-@property (nonatomic,retain) CPDFKitPlatformFont *font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize:");
+@property (nonatomic,strong) CPDFKitPlatformFont *font DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize:");
 
 
 /**
  * Method to get / set the font color used for the form field.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *fontColor;
 
 /**
  * Internal name for the field.

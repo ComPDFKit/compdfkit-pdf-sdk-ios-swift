@@ -53,6 +53,7 @@
 #import <ComPDFKit/CPDFPolygonAnnotation.h>
 #import <ComPDFKit/CPDFPerimeterMeasureInfo.h>
 #import <ComPDFKit/CPDFAreaMeasureInfo.h>
+#import <ComPDFKit/CPDFBorderEffect.h>
 
 #import <ComPDFKit/CPDFWidgetAnnotation.h>
 #import <ComPDFKit/CPDFButtonWidgetAnnotation.h>

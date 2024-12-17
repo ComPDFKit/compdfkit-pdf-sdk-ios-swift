@@ -56,7 +56,7 @@
 /**
  * Method to set the font name used for the annotation’s text field.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s text field.

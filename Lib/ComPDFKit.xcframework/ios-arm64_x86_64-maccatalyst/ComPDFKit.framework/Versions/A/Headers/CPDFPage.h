@@ -113,6 +113,7 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * @discussion The elements of the array will most likely be typed to subclasses of the CPDFAnnotation class.
  */
 @property (nonatomic,readonly) NSArray<CPDFAnnotation *> *annotations;
+- (void)reloadAnnotations;
 
 /**
  * Adds the specified annotation object to the page.
@@ -145,7 +146,6 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
 - (CGAffineTransform)transform;
 
 #pragma mark - Rendering
-
 /**
  * Convenience function that returns an image of this page, with annotations.
  */
@@ -155,6 +155,7 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * Convenience function that returns an image of this page's bound.
  */
 - (CPDFKitPlatformImage *)renderPageOfRect:(CGRect)rect pageDrawRectOptions:(CPDFPageDrawRectOptions *)pageDrawRectOptions;
+- (void)thumbnailOfSize:(CGSize)size needReset:(BOOL)reset completion:(void (^)(CPDFKitPlatformImage *image))completion;
 
 #pragma mark - Find
 /**

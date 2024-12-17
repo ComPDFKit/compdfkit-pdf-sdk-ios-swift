@@ -12,6 +12,8 @@
 
 #import <ComPDFKit/CPDFAnnotation.h>
 
+@class CPDFBorderEffect;
+
 /**
  * A CPDFCircleAnnotation object displays an ellipse on a page.
  *
@@ -29,11 +31,19 @@
 /**
  * Method to get / set the fill color used for drawing the annotation.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *interiorColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *interiorColor;
 
 /**
  * remove interior Color(Set it to transparent, or set SetInteriorColor: to nil)
  */
 - (BOOL)removeInteriorColor;
+
+#pragma mark -  Border Effect
+
+/**
+ * Method to get / set the  used for border Effect drawing the annotation.
+ * Cloud border effect for setting annotation
+ */
+@property (nonatomic,strong) CPDFBorderEffect * _Nullable borderEffect;
 
 @end

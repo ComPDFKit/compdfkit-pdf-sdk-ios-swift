@@ -36,6 +36,7 @@
 "Technical Support" = "Technical Support";
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "Technical Support";
+"Mail account is not set up!" = "Mail account is not set up!";
 "© 2014-2024 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2024 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "Privacy Policy";
 "Service Terms" = "Service Terms";
@@ -49,6 +50,7 @@
 "Save as Flattened PDF" = "Save as Flattened PDF";
 "_Flattened" = "_Flattened";
 "Sorry PDF Reader Can't open this pdf file!" = "Sorry PDF Reader Can't open this pdf file!";
+"The current page is scanned images that do not support adding highlights, underlines, strikeouts, and squiggly lines." = "The current page is scanned images that do not support adding highlights, underlines, strikeouts, and squiggly lines.";
 
 "Sorry PDF Reader Can't open this pdf file!" = "Sorry PDF Reader Can't open this pdf file!";
 "Your consent is required before you could access the function." = "Your consent is required before you could access the function.";
@@ -114,6 +116,7 @@
 "Ignore Case" = "Ignore Case";
 "Whole Words only" = "Whole Words only";
 "Effective immediately after setting" = "Effective immediately after setting";
+"Please enter the password" = "Please enter the password";
 
 "View Setting" = "View Setting";
 "Document Info" = "Document Info";
@@ -129,6 +132,7 @@
 "Split View" = "Split View";
 "Vertical Scrolling" = "Vertical";
 "Horizontal Scrolling" = "Horizontal";
+"Vertical Scrolling Paging" = "Page Break";
 "Themes" = "Themes";
 "Light" = "Light";
 "Dark" = "Dark";
@@ -231,6 +235,7 @@
 "Stroke Color" = "Stroke Color";
 "Fill Color" = "Fill Color";
 "Line and Border Style" = "Line and Border Style";
+"Dash Spacing" = "Dash Spacing";
 "Start" = "Start";
 "End" = "End";
 "Arrow Style" = "Arrow Style";
@@ -289,6 +294,8 @@
 "Paste and Match Style" = "Paste and Match Style";
 "Crop" = "Crop";
 "Export Successfully!" = "Export Successfully!";
+"Styles" = "Style";
+"Select All" = "Select All";
 
 "Text Field" = "Text Field";
 "Check Box" = "Check Box";
@@ -547,3 +554,16 @@
 "Marked" = "Marked";
 "Reply" = "Reply";
 "View Reply" = "View Reply";
+
+"Compress" = "Compress";
+"Selected File" = "Selected File";
+"Change" = "Change";
+"Compress Quality" = "Compress Quality";
+"Low Quality" = "Low Quality";
+"Standard Quality" = "Standard Quality";
+"High Quality" = "High Quality";
+"Custom" = "Custom";
+"Saving Path" = "Saving Path";
+"Compressing" = "Compressing";
+"Incorrect password, please try again." = "Incorrect password, please try again.";
+"Compressed successfully!" = "Compressed successfully!";

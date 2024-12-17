@@ -23,6 +23,6 @@
 /**
  * Method to get / set an array containing the points that make up an annotation.
  */
-@property (nonatomic,retain) NSArray<NSArray *> *paths;
+@property (nonatomic,strong) NSArray<NSArray *> *paths;
 
 @end

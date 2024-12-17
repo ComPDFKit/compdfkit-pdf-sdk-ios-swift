@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Method to set the font name used for the annotation’s measure text field.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to get the font size used for the annotation’s measure text field.
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Method to get / set the font color used in the measure text field of the annotation.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *fontColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *fontColor;
 
 /**
  * Method to get the measure info of the measure annotation after added to page.
@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @discussion The measurement properties of a annotation cannot be cleared by setting the measurement properties of the annotation to empty
  * Set MeasureInfo: This information will not be effective until it is added to the page
  */
-@property (nonatomic,retain) CPDFPerimeterMeasureInfo * _Nullable measureInfo;
+@property (nonatomic,strong) CPDFPerimeterMeasureInfo * _Nullable measureInfo;
 
 @end
 

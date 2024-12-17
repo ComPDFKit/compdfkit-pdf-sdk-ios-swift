@@ -22,7 +22,7 @@
 /**
  * Method to get / set the page range of the header & footer by string, such as "0,3,5-7".
  */
-@property (nonatomic,retain) NSString *pageString;
+@property (nonatomic,strong) NSString *pageString;
 
 /**
  * Method to get / set the margins of the header & footer.

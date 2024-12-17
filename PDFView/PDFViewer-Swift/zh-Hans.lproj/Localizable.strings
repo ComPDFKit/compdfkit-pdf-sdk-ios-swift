@@ -33,6 +33,7 @@
 "Technical Support" = "技术支持";
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "ComPDFKit技术支持请求";
+"Mail account is not set up!" = "尚未设置Email邮箱";
 "© 2014-2024 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2024 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "隐私协议";
 "Service Terms" = "服务条款";
@@ -46,6 +47,7 @@
 "Save as Flattened PDF" = "另存为扁平化副本";
 "_Flattened" = "_扁平化文档";
 "Sorry PDF Reader Can't open this pdf file!" = "对不起，PDF阅读器无法打开此PDF文件!";
+"The current page is scanned images that do not support adding highlights, underlines, strikeouts, and squiggly lines." = "当前页面为图像。不支持添加高光、下划线、删除线和波浪线等注释。";
 
 "Your consent is required before you could access the function." = "在您访问该功能之前需要您的同意。";
 
@@ -96,6 +98,7 @@
 "This PDF has password protect." = "这个PDF有密码保护。";
 "Please input the password below:" = "请在下方输入密码：";
 "The password is invalid !" = "密码无效!";
+"Please enter the password" = "请输入文档密码";
 
 "Viewer" = "查看器";
 "Annotations" = "注释";
@@ -127,6 +130,7 @@
 "Split View" = "分屏视图";
 "Vertical Scrolling" = "垂直";
 "Horizontal Scrolling" = "水平";
+"Vertical Scrolling Paging" = "分页";
 "Themes" = "主题";
 "Light" = "日间模式";
 "Dark" = "夜间模式";
@@ -228,6 +232,7 @@
 "Stroke Color" = "边框颜色";
 "Fill Color" = "填充颜色";
 "Line and Border Style" = "线型";
+"Dash Spacing" = "虚线";
 "Start" = "线头";
 "End" = "线尾";
 "Arrow Style" = "箭头样式";
@@ -288,6 +293,8 @@
 "Paste and Match Style" = "带样式粘贴";
 "Export Successfully!" = "图片导出成功！";
 "Exit" = "退出";
+"Styles" = "效果";
+"Select All" = "选择全部";
 
 "Text Field" = "文本域";
 "Check Box" = "复选框";
@@ -545,3 +552,16 @@
 "Marked" = "已标记";
 "Reply" = "回复";
 "View Reply" = "查看回复";
+
+"Compress" = "压缩";
+"Selected File" = "选中文档";
+"Change" = "更换";
+"Compress Quality" = "压缩质量";
+"Low Quality" = "低";
+"Standard Quality" = "标准";
+"High Quality" = "高";
+"Custom" = "自定义";
+"Saving Path" = "文件存储路径";
+"Compressing" = "正在压缩···";
+"Incorrect password, please try again." = "密码错误，请重试。";
+"Compressed successfully!" = "压缩成功";

@@ -12,69 +12,72 @@
 
 import UIKit
 import ComPDFKit_Tools
+import ComPDFKit
 
-class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, CPDFViewBaseControllerDelete {
+class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, UIDocumentPickerDelegate, CPDFViewBaseControllerDelete,CPDFCompressViewControllerDelegate {
     
     var tabview:UITableView?
     var jsonDataParse:CPDFJSONDataParse?
+    var compressDocument: CPDFDocument?
+    private var okAction: UIAlertAction?
     
     private lazy var featureArrays: [Dictionary<String, Any>] = {
         let viewFeature: [String: Any] = ["title": NSLocalizedString("Viewer", comment: ""),
                                           "image": "CHomeImageFeatureView",
-                                             "subtitle": NSLocalizedString("High-quality rendering speed and rich reading tools support a smooth reading experience.", comment: ""),
+                                          "subtitle": NSLocalizedString("High-quality rendering speed and rich reading tools support a smooth reading experience.", comment: ""),
                                           "type":CHomeFeature.viewer.rawValue]
         
         let annotationsFeature: [String: Any] = ["title": NSLocalizedString("Annotations", comment: ""),
-                                          "image": "CHomeImageFeatureaAnnotations",
-                                          "subtitle": NSLocalizedString("Add, edit, delete, export, import, and flatten various annotations and markups on PDFs.", comment: ""),
-                                             "type":CHomeFeature.annotation.rawValue]
+                                                 "image": "CHomeImageFeatureaAnnotations",
+                                                 "subtitle": NSLocalizedString("Add, edit, delete, export, import, and flatten various annotations and markups on PDFs.", comment: ""),
+                                                 "type":CHomeFeature.annotation.rawValue]
         
         let formsFeature: [String: Any] = ["title": NSLocalizedString("Forms", comment: ""),
-                                          "image": "CHomeImageFeatureForms",
-                                          "subtitle": NSLocalizedString("Create, edit, and fill in PDF forms, with support for importing, exporting, and flattening forms.", comment: ""),
-                                              "type":CHomeFeature.form.rawValue]
+                                           "image": "CHomeImageFeatureForms",
+                                           "subtitle": NSLocalizedString("Create, edit, and fill in PDF forms, with support for importing, exporting, and flattening forms.", comment: ""),
+                                           "type":CHomeFeature.form.rawValue]
         
         let signaturesFeature: [String: Any] = ["title": NSLocalizedString("Signatures", comment: ""),
-                                          "image": "CHomeImageFeatureSignatures",
-                                          "subtitle": NSLocalizedString("Easily sign PDFs with drawn, images, typed signatures, or a digital ID.", comment: ""),
-                                                   "type":CHomeFeature.signatures.rawValue]
+                                                "image": "CHomeImageFeatureSignatures",
+                                                "subtitle": NSLocalizedString("Easily sign PDFs with drawn, images, typed signatures, or a digital ID.", comment: ""),
+                                                "type":CHomeFeature.signatures.rawValue]
         
         let documentEditorFeature: [String: Any] = ["title": NSLocalizedString("Document Editor", comment: ""),
-                                          "image": "CHomeImageFeatureDocumentEditor",
-                                          "subtitle": NSLocalizedString("Add, insert, replace, extract, reverse, move, copy, paste, rotate, delete, crop, and zoom PDF pages.", comment: ""),
-                                                       "type":CHomeFeature.documentEdit.rawValue]
+                                                    "image": "CHomeImageFeatureDocumentEditor",
+                                                    "subtitle": NSLocalizedString("Add, insert, replace, extract, reverse, move, copy, paste, rotate, delete, crop, and zoom PDF pages.", comment: ""),
+                                                    "type":CHomeFeature.documentEdit.rawValue]
         let contentEditorFeature: [String: Any] = ["title": NSLocalizedString("Content Editor", comment: ""),
-                                          "image": "CHomeImageFeatureContentEditor",
-                                          "subtitle": NSLocalizedString("Edit the PDF text and images like edit in Word. You can freely adjust the size, position, style, font, etc.", comment: ""),
-                                                      "type":CHomeFeature.contentEdit.rawValue]
+                                                   "image": "CHomeImageFeatureContentEditor",
+                                                   "subtitle": NSLocalizedString("Edit the PDF text and images like edit in Word. You can freely adjust the size, position, style, font, etc.", comment: ""),
+                                                   "type":CHomeFeature.contentEdit.rawValue]
         let securityFeature: [String: Any] = ["title": NSLocalizedString("Security", comment: ""),
-                                          "image": "CHomeImageFeatureSecurity",
-                                          "subtitle": NSLocalizedString("Encrypt/decrypt PDFs, edit file permissions, headers and footers, backgrounds, Bates numbers, etc.", comment: ""),
-                                                 "type":CHomeFeature.security.rawValue]
+                                              "image": "CHomeImageFeatureSecurity",
+                                              "subtitle": NSLocalizedString("Encrypt/decrypt PDFs, edit file permissions, headers and footers, backgrounds, Bates numbers, etc.", comment: ""),
+                                              "type":CHomeFeature.security.rawValue]
         let redactionFeature: [String: Any] = ["title": NSLocalizedString("Redaction", comment: ""),
-                                          "image": "CHomeImageFeatureRedaction",
-                                          "subtitle": NSLocalizedString("Use redaction to remove sensitive images, text, and vector graphics.", comment: ""),
-                                                  "type":CHomeFeature.redaction.rawValue]
+                                               "image": "CHomeImageFeatureRedaction",
+                                               "subtitle": NSLocalizedString("Use redaction to remove sensitive images, text, and vector graphics.", comment: ""),
+                                               "type":CHomeFeature.redaction.rawValue]
         let watermarkFeature: [String: Any] = ["title": NSLocalizedString("Watermark", comment: ""),
-                                          "image": "CHomeImageFeatureWatermark",
-                                          "subtitle": NSLocalizedString("Create, insert, and remove text or image watermarks to brand the files.", comment: ""),
-                                                  "type":CHomeFeature.watermark.rawValue]
+                                               "image": "CHomeImageFeatureWatermark",
+                                               "subtitle": NSLocalizedString("Create, insert, and remove text or image watermarks to brand the files.", comment: ""),
+                                               "type":CHomeFeature.watermark.rawValue]
         let compareFeature: [String: Any] = ["title": NSLocalizedString("Compare Documents", comment: ""),
-                                          "image": "CHomeImageFeatureCompare",
-                                          "subtitle": NSLocalizedString("Allow to compare PDF files and design drawings with content comparison and overlay comparison.", comment: ""),
-                                                  "type":CHomeFeature.compareDocument.rawValue]
+                                             "image": "CHomeImageFeatureCompare",
+                                             "subtitle": NSLocalizedString("Allow to compare PDF files and design drawings with content comparison and overlay comparison.", comment: ""),
+                                             "type":CHomeFeature.compareDocument.rawValue]
         let conversionFeature: [String: Any] = ["title": NSLocalizedString("Conversion", comment: ""),
-                                          "image": "CHomeImageFeatureConvert",
-                                          "subtitle": NSLocalizedString("Support the mutual conversion between PDF files and Office, image types, text types, HTML, PDF/A, etc.", comment: ""),
-                                                  "type":CHomeFeature.conversion.rawValue]
+                                                "image": "CHomeImageFeatureConvert",
+                                                "subtitle": NSLocalizedString("Support the mutual conversion between PDF files and Office, image types, text types, HTML, PDF/A, etc.", comment: ""),
+                                                "type":CHomeFeature.conversion.rawValue]
         let compressFeature: [String: Any] = ["title": NSLocalizedString("Compress", comment: ""),
-                                          "image": "CHomeImageFeatureCompress",
-                                          "subtitle": NSLocalizedString("Optimize and reduce PDF document size with no or minimum visual quality loss.", comment: ""),
-                                                  "type":CHomeFeature.compress.rawValue]
+                                              "image": "CHomeImageFeatureCompress",
+                                              "subtitle": NSLocalizedString("Optimize and reduce PDF document size with no or minimum visual quality loss.", comment: ""),
+                                              "type":CHomeFeature.compress.rawValue]
         let measureFeature: [String: Any] = ["title": NSLocalizedString("Measurement", comment: ""),
-                                          "image": "CHomeImageFeatureMeasure",
-                                          "subtitle": NSLocalizedString("Measure the distance, perimeter, area, angle, diameter, radius, and volume measurement annotations.", comment: ""),
-                                                  "type":CHomeFeature.measurement.rawValue]
+                                             "image": "CHomeImageFeatureMeasure",
+                                             "subtitle": NSLocalizedString("Measure the distance, perimeter, area, angle, diameter, radius, and volume measurement annotations.", comment: ""),
+                                             "type":CHomeFeature.measurement.rawValue]
         
         return [viewFeature,
                 annotationsFeature,
@@ -82,22 +85,22 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 signaturesFeature,
                 documentEditorFeature,
                 contentEditorFeature,
+                compressFeature,
                 securityFeature,
                 redactionFeature,
                 watermarkFeature,
                 compareFeature,
                 conversionFeature,
-                compressFeature,
                 measureFeature]
     }()
     
     private lazy var fileArrays: [String] = {
         return ["ComPDFKit_Sample_File_iOS"]
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         self.title = NSLocalizedString("ComPDFKit Demo for iOS", comment: "")
         
         let setBarItem = UIBarButtonItem(image: UIImage(named: "CHomeImageSetting", in: Bundle(for: self.classForCoder), compatibleWith: nil), style: .done, target: self, action: #selector(buttonItemClick_Setting(_:)))
@@ -110,10 +113,10 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         tabview?.separatorStyle = .none
         if(tabview != nil) {
             view.addSubview(tabview!)
-        }   
+        }
         
     }
-
+    
     // MARK: - Action
     @objc func buttonItemClick_Setting(_ button: UIBarButtonItem) {
         let settingVC = CHomeSettingViewController(nibName: nil, bundle: nil)
@@ -164,9 +167,9 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             return 58
         }
     }
-     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                
+        
         if(indexPath.section == 0) {
             var cell = tableView.dequeueReusableCell(withIdentifier: "featuresCell") as? CHomeFeaturesTableViewCell
             if(cell == nil) {
@@ -183,15 +186,15 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             if(cell == nil) {
                 cell = CHomeFileTableViewCell.init(style: .default, reuseIdentifier: "featuresCell")
             }
-
+            
             let filePath = Bundle.main.path(forResource: self.fileArrays[indexPath.row], ofType: "pdf")
             
             let nameTitle = (filePath as NSString?)?.lastPathComponent ?? ""
             cell?.nameTitle?.text = NSLocalizedString(nameTitle, comment: "")
-
+            
             cell?.thumImage?.image = UIImage(named: "CHomeImagePDFThum", in: Bundle(for: self.classForCoder), compatibleWith: nil)
             let documentFolder = SAMPLESFOLDER
-
+            
             let documentURL = URL(fileURLWithPath: documentFolder).appendingPathComponent((filePath as NSString?)?.lastPathComponent ?? "")
             
             if let attrib = try? FileManager.default.attributesOfItem(atPath: documentURL.path),
@@ -201,7 +204,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
                 let formattedDate = dateFormatter.string(from: fileModDate)
-
+                
                 var size = fileSize / 1024
                 var unit: String
                 if size >= 1024 {
@@ -216,14 +219,14 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     unit = "K"
                 }
                 
-               let formattedSize = String(format: "%0.1f%@", size, unit)
-
+                let formattedSize = String(format: "%0.1f%@", size, unit)
+                
                 cell?.subNameTitle?.text = formattedDate + "  " + formattedSize
             }
             cell?.accessoryType = .none
             
             return cell!
-
+            
         }
     }
     
@@ -237,7 +240,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             let documentURL = URL(fileURLWithPath: documentFolder).appendingPathComponent((filePath as NSString?)?.lastPathComponent ?? "")
             
             let configuration = CPDFConfiguration()
-                    
+            
             let pdfViewController = CPDFViewController(filePath: documentURL.path, password: nil, configuration: configuration)
             let navController = CNavigationController(rootViewController: pdfViewController)
             pdfViewController.delegate = self
@@ -245,33 +248,42 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             self.present(navController, animated: true)
         } else {
             switch indexPath.row {
-            case 0...6:
+            case 0...5:
                 let featureDic = self.featureArrays[indexPath.row]
                 let featureType = CHomeFeature(rawValue: featureDic["type"] as? Int ?? 0)
                 let featureVC = CHomeFileListController.init(feature: featureType ?? .viewer)
                 let navController = CNavigationController(rootViewController: featureVC)
                 navController.modalPresentationStyle = .fullScreen
                 self.present(navController, animated: true)
+            case 6:
+                openCompressPDF()
             case 7:
+                let featureDic = self.featureArrays[indexPath.row]
+                let featureType = CHomeFeature(rawValue: featureDic["type"] as? Int ?? 0)
+                let featureVC = CHomeFileListController.init(feature: featureType ?? .viewer)
+                let navController = CNavigationController(rootViewController: featureVC)
+                navController.modalPresentationStyle = .fullScreen
+                self.present(navController, animated: true)
+            case 8:
                 if let url = URL(string: "https://www.compdf.com/pdf-sdk/security") {
                     UIApplication.shared.open(url)
                 }
-            case 8:
+            case 9:
                 let featureDic = self.featureArrays[indexPath.row]
                 let featureType = CHomeFeature(rawValue: featureDic["type"] as? Int ?? 0)
                 let featureVC = CHomeFileListController.init(feature: featureType ?? .viewer)
                 let navController = CNavigationController(rootViewController: featureVC)
                 navController.modalPresentationStyle = .fullScreen
                 self.present(navController, animated: true)
-            case 9:
+            case 10:
                 if let url = URL(string: "https://www.compdf.com/pdf-sdk/document-comparison") {
                     UIApplication.shared.open(url)
                 }
-            case 10:
+            case 11:
                 if let url = URL(string: "https://www.compdf.com/conversion") {
                     UIApplication.shared.open(url)
                 }
-            case 11...12:
+            case 12:
                 if let url = URL(string: NSLocalizedString("https://www.compdf.com/contact-sales", comment: "")) {
                     UIApplication.shared.open(url)
                 }
@@ -280,13 +292,169 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                     UIApplication.shared.open(url)
                 }
             }
-
+            
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private  func openCompressPDF() {
+        let documentTypes = ["com.adobe.pdf"]
+        let documentPickerViewController = UIDocumentPickerViewController(documentTypes: documentTypes, in: .open)
+        documentPickerViewController.delegate = self
+        UIApplication.presentedViewController()?.present(documentPickerViewController, animated: true, completion: nil)
+    }
+    
+    @objc func textField_change(_ sender: UITextField) {
+        if let text = sender.text, !text.isEmpty {
+               okAction?.isEnabled = true
+               okAction?.setValue(UIColor.systemBlue, forKey: "titleTextColor")
+           } else {
+               okAction?.isEnabled = false
+               okAction?.setValue(UIColor.gray, forKey: "titleTextColor")
+           }
+    }
+    
+    func enterPermissionPassword(pdfDocument:CPDFDocument) {
+        let alert = UIAlertController(title: NSLocalizedString("Enter Owner's Password to Change the Security", comment: ""), message: "", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            
+        }
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+        
+        let addAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (action) in
+            if let text = alert.textFields?.first?.text, !text.isEmpty {
+                let result = pdfDocument.unlock(withPassword: text)
+                if result == true {
+                    if pdfDocument.permissionsStatus == .owner {
+                        self.compressDocument = pdfDocument
+                        let viewController = CPDFCompressViewController(compressDocument: pdfDocument)
+                        viewController.password = text;
+                        viewController.delegate = self
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                    } else {
+                        self.enterPermissionPassword(pdfDocument: pdfDocument)
+                    }
+                } else {
+                    self.enterPermissionPassword(pdfDocument: pdfDocument)
+                }
+            } else {
+                self.enterPermissionPassword(pdfDocument: pdfDocument)
+            }
+        }
+        
+        
+        alert.addAction(cancelAction)
+        alert.addAction(addAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - UIDocumentPickerDelegate
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        let fileUrlAuthozied = urls.first?.startAccessingSecurityScopedResource() ?? false
+        if fileUrlAuthozied {
+            let fileCoordinator = NSFileCoordinator()
+            var error: NSError?
+            fileCoordinator.coordinate(readingItemAt: urls.first!, options: [], error: &error) { newURL in
+                let documentFolder = NSHomeDirectory() + "/Documents/Files"
+                if !FileManager.default.fileExists(atPath: documentFolder) {
+                    try? FileManager.default.createDirectory(atPath: documentFolder, withIntermediateDirectories: true, attributes: nil)
+                }
+                let documentPath = documentFolder+"/"+newURL.lastPathComponent
+                if !FileManager.default.fileExists(atPath: documentPath) {
+                    try? FileManager.default.copyItem(atPath: newURL.path, toPath: documentPath)
+                }
+                
+                let url = URL(fileURLWithPath: documentPath)
+                
+                guard let document = CPDFDocument(url: url) else {
+                    print("Document is NULL")
+                    return
+                }
+                
+    
+                if let error = document.error, error._code != CPDFDocumentPasswordError {
+                    let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in }
+                    let alert = UIAlertController(title: "", message: NSLocalizedString("Sorry PDF Reader Can't open this pdf file!", comment: ""), preferredStyle: .alert)
+                    alert.addAction(okAction)
+                    let tRootViewControl = self
+                    tRootViewControl.present(alert, animated: true, completion: nil)
+                } else {
+                    if document.isLocked {
+                        
+                        
+                        let alertController = UIAlertController(title: NSLocalizedString("Password", comment: ""), message: "", preferredStyle: .alert)
+                        
+                        // Add the text field to the alert controller
+                        alertController.addTextField { [self] (textField) in
+                            textField.placeholder = NSLocalizedString("Please enter the password", comment: "")
+                            
+                            textField.addTarget(self, action: #selector(textField_change(_:)), for: .editingChanged)
+                        }
+                        
+                        // Add the Cancel action
+                        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+                        alertController.addAction(cancelAction)
+                        
+                        // Add the OK action
+                        okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (_) in
+                            if let textField = alertController.textFields?.first, let text = textField.text {
+                                // Do something with the text input
+                                if document.unlock(withPassword: text) {
+                                    if document.permissionsStatus == .owner {
+                                        self.compressDocument = document
+                                        let viewController = CPDFCompressViewController(compressDocument: document)
+                                        viewController.password = text
+                                        viewController.delegate = self
+                                        self.navigationController?.pushViewController(viewController, animated: true)
+                                    } else {
+                                        self.enterPermissionPassword(pdfDocument: document)
+                                    }
+                                } else {
+                                    let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in }
+                                    let alert = UIAlertController(title: "", message: NSLocalizedString("Incorrect password, please try again.", comment: ""), preferredStyle: .alert)
+                                    alert.addAction(okAction)
+                                    self.present(alert, animated: true, completion: nil)
+                                }
+                            }
+                        }
+                        okAction?.isEnabled = false
+                        okAction?.setValue(UIColor.gray, forKey: "titleTextColor")
+                        alertController.addAction(okAction!)
+                        
+                        // Present the alert controller
+                        present(alertController, animated: true, completion: nil)
+                    } else {
+                        self.compressDocument = document
+                        let viewController = CPDFCompressViewController(compressDocument: document)
+                        viewController.delegate = self
+                        self.navigationController?.pushViewController(viewController, animated: true)
+                    }
+                }
+            }
+            urls.first?.stopAccessingSecurityScopedResource()
         }
     }
     
     // MARK: - CPDFViewBaseControllerDelete
     func PDFViewBaseControllerDissmiss(_ baseControllerDelete: CPDFViewBaseController) {
         baseControllerDelete.dismiss(animated: true)
+    }
+    
+    // MARK: - CPDFCompressViewControllerDelegate
+
+    func compressViewController(_ viewController: CPDFCompressViewController, URL url: URL, Password password: String) {
+        let configuration = CPDFConfiguration()
+        
+        let pdfViewController = CPDFViewController(filePath: url.path, password: password, configuration: configuration)
+        let navController = CNavigationController(rootViewController: pdfViewController)
+        pdfViewController.delegate = self
+        navController.modalPresentationStyle = .fullScreen
+        self.present(navController, animated: true)
+        
+        pdfViewController.isComPressing = true
+        pdfViewController.reloadCompressTopView()
     }
     
 }

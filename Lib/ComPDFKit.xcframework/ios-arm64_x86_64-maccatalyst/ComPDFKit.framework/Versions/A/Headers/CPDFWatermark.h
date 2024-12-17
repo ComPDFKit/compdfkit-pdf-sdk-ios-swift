@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
  *
  * @discussion The text font for the watermark; may return NULL if the watermark was created with image.
  */
-@property (nonatomic,retain) CPDFFont *cFont;
+@property (nonatomic,strong) CPDFFont *cFont;
 
 /**
  * Method to set the text font size for the watermark (image watermark does not work).
@@ -81,17 +81,17 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
  * @discussion The text font for the watermark; may return NULL if the watermark was created with image.
  * Default Font : Helvetica 24
  */
-@property (nonatomic,retain) CPDFKitPlatformFont *textFont DEPRECATED_MSG_ATTRIBUTE("use setCFont:fontSize:");
+@property (nonatomic,strong) CPDFKitPlatformFont *textFont DEPRECATED_MSG_ATTRIBUTE("use setCFont:setFontSize:");
 
 /**
  * Method to get / set the text color for the watermark (image watermark does not work).
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *textColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *textColor;
 
 /**
  * Method to get / set the image for the watermark (text watermark does not work).
  */
-@property (nonatomic,retain) CPDFKitPlatformImage *image;
+@property (nonatomic,strong) CPDFKitPlatformImage *image;
 
 /**
  * Method to get / set the scale factor for the watermark.
@@ -126,7 +126,7 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
  *
  * @discussion A page range string, Such as "0,3,5-7".
  */
-@property (nonatomic,retain) NSString *pageString;
+@property (nonatomic,strong) NSString *pageString;
 
 /**
  * Method to get / set the vertical position for the watermark.

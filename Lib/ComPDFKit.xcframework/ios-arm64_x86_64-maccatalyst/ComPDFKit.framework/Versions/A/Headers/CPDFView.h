@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, CEditingSelectState) {
 typedef NS_OPTIONS(NSInteger, CEditingLoadType) {
     CEditingLoadTypeText =            (1UL << 0),
     CEditingLoadTypeImage =           (1UL << 1),
+    CEditingLoadTypePath =            (1UL << 2),
 };
 
 typedef NS_OPTIONS(NSInteger, CEditingLocation) {
@@ -59,6 +60,15 @@ typedef NS_OPTIONS(NSInteger, CAddEditingAreaType) {
     CAddEditingAreaTypeImage,
 };
 
+typedef NS_OPTIONS(NSInteger, CPDFEditMenuItemType) {
+    CPDFEditMenuItemTypeNone = 0,
+    CPDFEditMenuItemTypeCopy,
+    CPDFEditMenuItemTypeCut,
+    CPDFEditMenuItemTypeDelete,
+    CPDFEditMenuItemTypePaste,
+    CPDFEditMenuItemTypePasteMatchStyle,
+};
+
 extern NSNotificationName const CPDFViewDocumentChangedNotification;
 extern NSNotificationName const CPDFViewPageChangedNotification;
 
@@ -66,9 +76,13 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 @interface CEditAttributes : NSObject
 
-@property (nonatomic,retain) UIFont *_Nonnull font;
+@property (nonatomic,strong) UIFont * _Nonnull font DEPRECATED_MSG_ATTRIBUTE("use setCFont:setFontSize:");
 
-@property (nonatomic,retain) UIColor *_Nonnull fontColor;
+@property (nonatomic,strong) CPDFFont * _Nonnull cFont;
+
+@property (nonatomic,assign) CGFloat fontSize;
+
+@property (nonatomic,strong) UIColor *_Nonnull fontColor;
 
 @property (nonatomic,assign) BOOL isBold;
 
@@ -107,6 +121,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  */
 - (BOOL)IsImageArea;
 
+/**
+ * Whether it is path code block.
+ */
+- (BOOL)IsPathArea;
+
 @end
 
 #pragma mark - CPDFEditTextArea
@@ -142,6 +161,12 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 @end
 
+#pragma mark - CPDFEditPathArea
+
+@interface CPDFEditPathArea : CPDFEditArea
+
+@end
+
 #pragma mark - CPDFEditingConfig
 
 @interface CPDFEditingConfig : NSObject
@@ -149,12 +174,12 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * Sets the unselected border color of the text code block.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *editingBorderColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *editingBorderColor;
 
 /**
  * Sets the selected border color of the text code block.
  */
-@property (nonatomic,retain) CPDFKitPlatformColor *editingSelectionBorderColor;
+@property (nonatomic,strong) CPDFKitPlatformColor *editingSelectionBorderColor;
 
 /**
  * Border width of the text code block.
@@ -164,7 +189,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * Array of dashed lines of the text code block.
  */
-@property (nonatomic,retain) NSArray * editingBorderDashPattern;
+@property (nonatomic,strong) NSArray * editingBorderDashPattern;
 
 /**
  * Sets the offset interval at which blocks are displayed
@@ -204,6 +229,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 - (void)PDFViewShouldEndEditing:(CPDFView *)pdfView textView:(UITextView *)textView forTextWidget:(CPDFTextWidgetAnnotation *)textWidget;
 
+- (void)PDFViewWillBeginDragging:(CPDFView *)pdfView;
+
 - (void)PDFViewDidEndDragging:(CPDFView *)pdfView;
 
 - (void)PDFViewEditingCropBoundsDidChanged:(CPDFView *)pdfView editingArea:(CPDFEditArea *)editArea;
@@ -224,6 +251,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 - (BOOL)PDFEditingViewCanDoubleEnterEdit:(CPDFView * _Nonnull)pdfView;
 
+- (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
+
 @end
 
 /**
@@ -240,7 +269,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * Methods for associating a CPDFDocument with a CPDFView.
  */
-@property (nonatomic,retain) CPDFDocument *document;
+@property (nonatomic,strong) CPDFDocument *document;
 
 #pragma mark - Accessors
 
@@ -249,7 +278,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  *
  * @see CPDFViewDelegate
  */
-@property (nonatomic,assign) id<CPDFViewDelegate> delegate;
+@property (nonatomic,weak) id<CPDFViewDelegate> delegate;
 
 /**
  * A Boolean value indicating whether the document displays two pages side-by-side.
@@ -268,6 +297,12 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * @see CPDFDisplayDirection
  */
 @property (nonatomic,assign) CPDFDisplayDirection displayDirection;
+
+/**
+ *  A Boolean value indicating whether pagination is displayed in vertical mode.
+ *  @discussion Defaults to NO.
+ */
+@property (nonatomic,assign) BOOL displaysVerticalPaging;
 
 /**
  * A Boolean value indicating whether the view is displaying page breaks.
@@ -295,7 +330,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * If displayMode is CPDFDisplayModeCustom, you may customize the color of the page rendering.
  */
-@property (nonatomic,retain) UIColor *displayModeCustomColor;
+@property (nonatomic,strong) UIColor *displayModeCustomColor;
 
 /**
  * A Boolean value indicating whether the view is displaying page crop.
@@ -339,6 +374,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 @property (nonatomic,readonly) BOOL isDrawing;
 @property (nonatomic,readonly) BOOL isDrawErasing;
+@property (nonatomic,readwrite) BOOL isScrollEnabledWhenDrawing;
 
 - (void)beginDrawing;
 - (void)endDrawing;
@@ -532,7 +568,7 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * This method is about configuring of editing content.
  */
-@property (nonatomic,retain) CPDFEditingConfig *editingConfig;
+@property (nonatomic,strong) CPDFEditingConfig *editingConfig;
 
 /**
  * The properties of the editing modes: Edit text, edit images, edit text & images.
@@ -728,6 +764,19 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  */
 - (BOOL)isBoldCurrentSelection DEPRECATED_MSG_ATTRIBUTE("isBoldCurrentSelectionWithTextArea:");
 - (BOOL)isBoldCurrentSelectionWithTextArea:(CPDFEditTextArea *)textArea;
+
+
+/** Sets the currently selected text show underline.
+ * @param showUnderline Whether to display underline, YES indicates setting display, NO indicates deleting
+ * @param textArea The area of the text selected
+ */
+- (BOOL)setCurrentSelectionShowUnderline:(BOOL)showUnderline withTextArea:(CPDFEditTextArea *)textArea;
+
+/** Sets the currently selected text show strikeout.
+ * @param showStrikeout Whether to display strikeout, YES indicates setting display, NO indicates deleting
+ * @param textArea The area of the text selected
+ */
+- (BOOL)setCurrentSelectionShowStrikeout:(BOOL)showStrikeout withTextArea:(CPDFEditTextArea *)textArea;
 
 /**
  * Create a blank text block.

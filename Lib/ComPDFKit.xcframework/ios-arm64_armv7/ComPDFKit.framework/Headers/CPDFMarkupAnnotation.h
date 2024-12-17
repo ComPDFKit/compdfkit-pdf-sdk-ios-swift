@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, CPDFMarkupType) {
  * the next point will be the upper right, the third point will represent the lower left of the text and the last point the lower right.
  * Page space is a coordinate system with the origin at the lower-left corner of the current page.
  */
-@property (nonatomic,retain) NSArray *quadrilateralPoints;
+@property (nonatomic,strong) NSArray *quadrilateralPoints;
 
 /**
  * Gets the markup style.

@@ -13,6 +13,7 @@
 import UIKit
 import ComPDFKit
 import ComPDFKit_Tools
+import MessageUI
 
 let CPDFFileAuthorKey = "CPDFFileAuthorKey"
 
@@ -251,8 +252,16 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
                 let mailVC = CHomeMFMailComposeViewController.init(nibName: nil, bundle: nil)
                 mailVC.setToRecipients(["support@compdf.com"])
                 mailVC.setSubject(NSLocalizedString("Technical Supports", comment: ""))
-                self.present(mailVC, animated: true)
-            
+                if CHomeMFMailComposeViewController.canSendMail() {
+                    self.present(mailVC, animated: false)
+                } else {
+                    let alertController = UIAlertController(title: "", message: NSLocalizedString("Mail account is not set up!", comment: ""), preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { (action) in
+                        
+                    }))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }

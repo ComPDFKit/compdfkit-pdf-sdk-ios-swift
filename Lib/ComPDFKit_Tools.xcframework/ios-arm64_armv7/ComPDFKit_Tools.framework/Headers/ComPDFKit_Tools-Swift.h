@@ -488,6 +488,29 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools14CPDFColorUtils")
 @end
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFCompressSuccessView")
+@interface CPDFCompressSuccessView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools26CPDFCompressViewController")
+@interface CPDFCompressViewController : UIViewController <UIDocumentPickerDelegate, UITableViewDataSource, UITableViewDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (void)viewWillLayoutSubviews;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFConfiguration")
 @interface CPDFConfiguration : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -727,6 +750,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools11CPDFPopMenu")
 @interface CPDFPopMenu : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)showMenuIn:(CGRect)rect;
+- (void)showSubMenuIn:(CGRect)rect;
 - (void)layoutSubviews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -935,6 +959,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFViewWillBeginDragging:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformURL:(CPDFView * _Null_unspecified)pdfView withContent:(NSString * _Null_unspecified)content;
 - (void)PDFViewPerformReset:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformPrint:(CPDFView * _Null_unspecified)pdfView;
@@ -942,6 +967,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFViewShouldBeginEditing:(CPDFView * _Nonnull)pdfView textView:(UITextView * _Nonnull)textView forAnnotation:(CPDFFreeTextAnnotation * _Nonnull)annotation;
 - (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
@@ -972,6 +998,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 @protocol CPDFViewBaseControllerDelete
 @optional
 - (void)PDFViewBaseControllerDissmiss:(CPDFViewBaseController * _Nonnull)baseControllerDelete;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController LoadState:(BOOL)success;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController SaveState:(BOOL)success;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
 @end
 
 @class CPDFViewReplyViewController;
@@ -1015,6 +1044,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
+- (void)PDFViewWillBeginDragging:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -1065,6 +1095,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFViewReplyViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -1634,6 +1665,29 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools14CPDFColorUtils")
 @end
 
 
+SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFCompressSuccessView")
+@interface CPDFCompressSuccessView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC15ComPDFKit_Tools26CPDFCompressViewController")
+@interface CPDFCompressViewController : UIViewController <UIDocumentPickerDelegate, UITableViewDataSource, UITableViewDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (void)viewWillLayoutSubviews;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (void)documentPicker:(UIDocumentPickerViewController * _Nonnull)controller didPickDocumentsAtURLs:(NSArray<NSURL *> * _Nonnull)urls;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools17CPDFConfiguration")
 @interface CPDFConfiguration : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1873,6 +1927,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools11CPDFPopMenu")
 @interface CPDFPopMenu : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)showMenuIn:(CGRect)rect;
+- (void)showSubMenuIn:(CGRect)rect;
 - (void)layoutSubviews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
@@ -2081,6 +2136,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)buttonItemClicked_searchBack:(UIButton * _Nullable)button;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFViewWillBeginDragging:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformURL:(CPDFView * _Null_unspecified)pdfView withContent:(NSString * _Null_unspecified)content;
 - (void)PDFViewPerformReset:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFViewPerformPrint:(CPDFView * _Null_unspecified)pdfView;
@@ -2088,6 +2144,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFViewShouldBeginEditing:(CPDFView * _Nonnull)pdfView textView:(UITextView * _Nonnull)textView forAnnotation:(CPDFFreeTextAnnotation * _Nonnull)annotation;
 - (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
+- (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
@@ -2118,6 +2175,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 @protocol CPDFViewBaseControllerDelete
 @optional
 - (void)PDFViewBaseControllerDissmiss:(CPDFViewBaseController * _Nonnull)baseControllerDelete;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController LoadState:(BOOL)success;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController SaveState:(BOOL)success;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
 @end
 
 @class CPDFViewReplyViewController;
@@ -2161,6 +2221,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewEditingAddTextArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewEditingAddImageArea:(CPDFView * _Nonnull)pdfView addPage:(CPDFPage * _Nonnull)page addRect:(CGRect)rect;
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
+- (void)PDFViewWillBeginDragging:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -2211,6 +2272,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFViewReplyViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;

@@ -52,7 +52,7 @@
  *
  * @discussion The root outline serves only as a container for the outlines it owns; it does not have a label.
  */
-@property (nonatomic,retain) NSString *label;
+@property (nonatomic,strong) NSString *label;
 
 /**
  * Method to get / set the destination associated with the outline.
@@ -63,7 +63,7 @@
  * Note that if the associated action is a CPDFGoToAction, this method returns the destination from the CPDFGoToAction object.
  * However, it is better to use the action method for this purpose.
  */
-@property (nonatomic,retain) CPDFDestination *destination;
+@property (nonatomic,strong) CPDFDestination *destination;
 
 /**
  * Method to get / set the action performed when users click the outline.
@@ -73,7 +73,7 @@
  * If the CPDFOutline object has a destination, instead of an action, action returns a CPDFGoToAction object (this is equivalent to calling destination on the CPDFOutline object).
  * For other action types, action returns the appropriate PDF Kit action type object, such as CPDFURLAction.
  */
-@property (nonatomic,retain) CPDFAction *action;
+@property (nonatomic,strong) CPDFAction *action;
 
 /**
  * Returns the child outline object at the specified index.

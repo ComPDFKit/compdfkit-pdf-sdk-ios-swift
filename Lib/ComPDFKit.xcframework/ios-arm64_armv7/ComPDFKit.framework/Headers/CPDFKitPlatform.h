@@ -20,6 +20,7 @@
 
 #import <UIKit/UIKit.h>
 
+#define CPDFKitPlatformView         UIView
 #define CPDFKitPlatformColor        UIColor
 #define CPDFKitPlatformImage        UIImage
 #define CPDFKitPlatformFont         UIFont
@@ -29,6 +30,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define CPDFKitPlatformView         NSView
 #define CPDFKitPlatformColor        NSColor
 #define CPDFKitPlatformImage        NSImage
 #define CPDFKitPlatformFont         NSFont

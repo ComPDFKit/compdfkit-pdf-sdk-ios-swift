@@ -43,6 +43,7 @@ typedef NS_ENUM(NSInteger, CPDFKitFeatureType) {
     CPDFKitFeatureConversionDigitalSignature,
     CPDFKitFeatureConversionAllowsEditText,
     CPDFKitFeatureConversionAllowsEditImage,
+    CPDFKitFeatureConversionCompressFile,
 
 };
 

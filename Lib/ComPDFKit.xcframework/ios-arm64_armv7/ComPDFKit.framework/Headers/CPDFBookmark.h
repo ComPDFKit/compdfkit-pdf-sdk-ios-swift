@@ -31,11 +31,11 @@
 /**
  * Method to get / set the label for the bookmark.
  */
-@property (nonatomic,retain) NSString *label;
+@property (nonatomic,strong) NSString *label;
 
 /**
  * Method to get / set the date for the bookmark.
  */
-@property (nonatomic,retain) NSDate *date;
+@property (nonatomic,strong) NSDate *date;
 
 @end
