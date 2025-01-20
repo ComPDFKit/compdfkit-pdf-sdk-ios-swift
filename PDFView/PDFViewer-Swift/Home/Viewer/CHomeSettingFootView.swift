@@ -33,7 +33,7 @@ class CHomeSettingFootView: UIView {
             footTitle?.textColor = UIColor.init(red: 153.0/255.0, green: 153.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         }
         
-        footTitle?.text = NSLocalizedString("© 2014-2024 PDF Technologies, Inc. All Rights Reserved.", comment: "")
+        footTitle?.text = NSLocalizedString("© 2014-2025 PDF Technologies, Inc. All Rights Reserved.", comment: "")
         if(footTitle != nil) {
             self.addSubview(footTitle!)
         }

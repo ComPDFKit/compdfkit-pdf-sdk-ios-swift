@@ -32,6 +32,7 @@
 		C9DB30532B341D0D005470C5 /* ComPDFKit_Tools.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB30512B341D0D005470C5 /* ComPDFKit_Tools.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9DB30552B341D1C005470C5 /* ComPDFKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB30542B341D1C005470C5 /* ComPDFKit.xcframework */; };
 		C9DB30562B341D1C005470C5 /* ComPDFKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9DB30542B341D1C005470C5 /* ComPDFKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C9F49E642D3E3E970047A943 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = C9F49E632D3E3E970047A943 /* Font */; };
 		F3A6E9E72A89B53000280D06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6E9E62A89B53000280D06 /* AppDelegate.swift */; };
 		F3A6E9E92A89B53000280D06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6E9E82A89B53000280D06 /* SceneDelegate.swift */; };
 		F3A6E9EE2A89B53000280D06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3A6E9EC2A89B53000280D06 /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		C9DB303B2B3417E7005470C5 /* license_key_ios.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = license_key_ios.xml; path = ../license_key_ios.xml; sourceTree = "<group>"; };
 		C9DB30512B341D0D005470C5 /* ComPDFKit_Tools.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ComPDFKit_Tools.xcframework; path = ../Lib/ComPDFKit_Tools.xcframework; sourceTree = "<group>"; };
 		C9DB30542B341D1C005470C5 /* ComPDFKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ComPDFKit.xcframework; path = ../Lib/ComPDFKit.xcframework; sourceTree = "<group>"; };
+		C9F49E632D3E3E970047A943 /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = "PDFViewer-Swift/Font"; sourceTree = "<group>"; };
 		F3A6E9E32A89B53000280D06 /* PDFViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6E9E62A89B53000280D06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3A6E9E82A89B53000280D06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		F3A6E9DA2A89B53000280D06 = {
 			isa = PBXGroup;
 			children = (
+				C9F49E632D3E3E970047A943 /* Font */,
 				C9DB303B2B3417E7005470C5 /* license_key_ios.xml */,
 				C9DB30262B3417E7005470C5 /* TestFile */,
 				F3BAD69F2B0EFD4A003EC289 /* Home */,
@@ -306,6 +309,7 @@
 				C9DB30402B3417E7005470C5 /* Form_Widgets_Test.pdf in Resources */,
 				C9DB30432B3417E7005470C5 /* ComPDFKit_Watermark_Sample_File.pdf in Resources */,
 				C9DB304E2B3417E7005470C5 /* ComPDFKit_Annotations_Sample_File.pdf in Resources */,
+				C9F49E642D3E3E970047A943 /* Font in Resources */,
 				F3A6E9F32A89B53100280D06 /* LaunchScreen.storyboard in Resources */,
 				C9DB30502B3417E7005470C5 /* license_key_ios.xml in Resources */,
 				C9DB303E2B3417E7005470C5 /* ComPDFKit_Signatures_Sample_File.pdf in Resources */,

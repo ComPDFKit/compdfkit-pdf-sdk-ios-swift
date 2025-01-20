@@ -1088,7 +1088,14 @@ extension ComPDFKit_Tools.CPDFListView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) override open func selectDocumentRefresh()
   @_Concurrency.MainActor(unsafe) override open func reloadDocument(withFilePath filePath: Swift.String, password: Swift.String?, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) open func enterEditMode()
+  @_Concurrency.MainActor(unsafe) open func enterAnnotationMode()
+  @_Concurrency.MainActor(unsafe) open func enterViewerMode()
+  @_Concurrency.MainActor(unsafe) open func enterFormMode()
+  @_Concurrency.MainActor(unsafe) open func enterSignatureMode()
   @_Concurrency.MainActor(unsafe) override public func enterPDFSnipImageMode()
+  @_Concurrency.MainActor(unsafe) public func exitPDFSnipImageMode()
+  @_Concurrency.MainActor(unsafe) public func enterPrintState()
   @_Concurrency.MainActor(unsafe) override open func setTitleRefresh()
   @_Concurrency.MainActor(unsafe) @objc override open func buttonItemClicked_Bota(_ button: UIKit.UIButton?)
   @_Concurrency.MainActor(unsafe) @objc override open func titleButtonClickd(_ button: UIKit.UIButton)
@@ -1225,6 +1232,9 @@ public var SOUND_TMP_DICT: Swift.String
   @_Concurrency.MainActor(unsafe) @objc public func audioPlayerDidFinishPlaying(_ player: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc public func audioPlayerEndInterruption(_ player: AVFAudio.AVAudioPlayer, withOptions flags: Swift.Int)
   @objc deinit
+}
+extension ComPDFKit_Tools.CPDFListView {
+  @_Concurrency.MainActor(unsafe) public func exitSnipImage()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CPDFToolsManager : ObjectiveC.NSObject {
   public var compdfkitFonts: [ComPDFKit.CPDFFont]

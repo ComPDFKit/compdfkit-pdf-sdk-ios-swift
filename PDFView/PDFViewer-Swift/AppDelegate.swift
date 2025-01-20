@@ -23,10 +23,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let dir = Bundle.main.path(forResource: "Font", ofType: nil) ?? ""
+        let fileManager = FileManager.default
+        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let destinationPath = documentDirectory.appendingPathComponent("Font")
 
+        do {
+            if fileManager.fileExists(atPath: destinationPath.path) {
+                try fileManager.removeItem(at: destinationPath)
+            }
+
+            try fileManager.copyItem(atPath: dir, toPath: destinationPath.path)
+            CPDFFont.setImportDir(destinationPath.path, isContainSysFont: true)
+        } catch {
+            print("Error copying Font directory: \(error)")
+        }
+        
         guard let xmlFliePath = Bundle.main.path(forResource: "license_key_ios", ofType: "xml") else {
             return true
         }
+        
+        if CPDFKitConfig.sharedInstance().annotationAuthor() == nil {
+            CPDFKitConfig.sharedInstance().setAnnotationAuthor("Guest")
+        }
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(true, forKey: CPDFSaveFontSubesetKey)
+        userDefaults.synchronize()
         
         verifyLicenseFormXML(xmlFliePath)
                 
@@ -103,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func loadSamplesFiles() {
         
-        let fileNames = ["ComPDFKit_Viewer_Sample_File","ComPDFKit_Document_Editor_Sample_File", "ComPDFKit_Content_Editor_Sample_File", "Password_compdfkit_Security_Sample_File", "ComPDFKit_Sample_File_iOS", "ComPDFKit_Watermark_Sample_File", "ComPDFKit_Annotations_Sample_File", "ComPDFKit_Forms_Sample_File", "ComPDFKit_Signatures_Sample_File"]
+        let fileNames = ["ComPDFKit_Viewer_Sample_File","ComPDFKit_Document_Editor_Sample_File", "ComPDFKit_Content_Editor_Sample_File", "Password_compdfkit_Security_Sample_File", "ComPDFKit_Sample_File_iOS", "ComPDFKit_Watermark_Sample_File", "ComPDFKit_Annotations_Sample_File", "ComPDFKit_Forms_Sample_File","ComPDFKit_Signatures_Sample_File"]
         let samplesFilePaths = [VIEWERSFOLDER, DOCUMENTEDITORFOLDER, CONTENTEDITORFOLDER, SECURITYFOLDER, SAMPLESFOLDER, WATERMARKFOLDER, ANNOTATIONSFOLDER, FORMSFOLDER, SIGNATURESFOLDER]
         let fileManager = FileManager.default
         

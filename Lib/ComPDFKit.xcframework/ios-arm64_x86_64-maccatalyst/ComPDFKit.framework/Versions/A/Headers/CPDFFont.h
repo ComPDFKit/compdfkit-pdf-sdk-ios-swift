@@ -57,6 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (NSString *_Nullable)convertAppleFont:(CPDFFont *_Nonnull)cPDFFont;
 
+/**
+* Importing external fonts
+*/
++ (BOOL)setImportFontDir:(NSString *_Nonnull)fontDir isContainSysFont:(BOOL)isContainSysFont;
+
 @end
 
 NS_ASSUME_NONNULL_END

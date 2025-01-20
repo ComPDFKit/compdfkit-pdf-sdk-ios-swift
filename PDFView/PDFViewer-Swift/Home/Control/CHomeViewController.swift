@@ -20,6 +20,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var jsonDataParse:CPDFJSONDataParse?
     var compressDocument: CPDFDocument?
     private var okAction: UIAlertAction?
+    var textField: UITextField?
     
     private lazy var featureArrays: [Dictionary<String, Any>] = {
         let viewFeature: [String: Any] = ["title": NSLocalizedString("Viewer", comment: ""),
@@ -122,6 +123,17 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let settingVC = CHomeSettingViewController(nibName: nil, bundle: nil)
         let navController = CNavigationController(rootViewController: settingVC)
         self.present(navController, animated: true)
+    }
+    
+    @objc func buttonItemClicked_showOwerPassword(_ button: UIButton) {
+        if button.isSelected == true {
+            button.isSelected = false
+            textField?.isSecureTextEntry = true
+        } else {
+            button.isSelected = true
+            textField?.isSecureTextEntry = false
+            
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -389,8 +401,19 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                         // Add the text field to the alert controller
                         alertController.addTextField { [self] (textField) in
                             textField.placeholder = NSLocalizedString("Please enter the password", comment: "")
+                            let owerPasswordBtton = UIButton(type: .custom)
+                            owerPasswordBtton.addTarget(self, action: #selector(self.buttonItemClicked_showOwerPassword(_:)), for: .touchUpInside)
+                            owerPasswordBtton.setImage(UIImage(named: "CSecureImageInvisible", in: Bundle(for: self.classForCoder), compatibleWith: nil), for: .normal)
+                            owerPasswordBtton.setImage(UIImage(named: "CSecureImageVisible", in: Bundle(for: self.classForCoder), compatibleWith: nil), for: .selected)
+                            owerPasswordBtton.frame = CGRect(x:0, y:0, width:25, height:25)
                             
                             textField.addTarget(self, action: #selector(textField_change(_:)), for: .editingChanged)
+                            textField.isSecureTextEntry = true
+                            textField.returnKeyType = .done
+                            textField.rightViewMode = .always
+                            textField.rightView = owerPasswordBtton
+                            
+                            self.textField = textField
                         }
                         
                         // Add the Cancel action

@@ -42,6 +42,9 @@ typedef NS_ENUM(NSInteger, CPDFDisplayBox) {
 
 @property (nonatomic,assign) BOOL isDrawAnnot;
 
+/** 1~6*/
+@property (nonatomic,assign) CGFloat renderZoom;
+
 @end
 
 extern NSNotificationName const CPDFPageDidLoadAnnotationNotification;

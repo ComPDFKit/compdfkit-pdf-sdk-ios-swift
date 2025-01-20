@@ -2,7 +2,7 @@
   Localizable.strings
   PDFViewer
 
- //  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
+ //  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
  //
  //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
  //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -34,7 +34,7 @@
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "ComPDFKit技术支持请求";
 "Mail account is not set up!" = "尚未设置Email邮箱";
-"© 2014-2024 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2024 PDF Technologies, Inc. All Rights Reserved.";
+"© 2014-2025 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2025 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "隐私协议";
 "Service Terms" = "服务条款";
 "Click to Open & Process" = "点击打开 & 处理文档";
