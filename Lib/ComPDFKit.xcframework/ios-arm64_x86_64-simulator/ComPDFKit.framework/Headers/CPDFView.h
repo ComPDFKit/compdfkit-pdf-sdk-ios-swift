@@ -2,7 +2,7 @@
 //  CPDFView.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, CPDFDisplayMode) {
 typedef NS_OPTIONS(NSInteger, CAddEditingAreaType) {
     CAddEditingAreaTypeNone  = 0,
     CAddEditingAreaTypeText,
-    CAddEditingAreaTypeImage,
+    CAddEditingAreaTypeImage
 };
 
 typedef NS_OPTIONS(NSInteger, CPDFEditMenuItemType) {
@@ -441,6 +441,16 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * Returns an array of CPDFPage objects that represent the currently visible pages.
  */
 @property (nonatomic,readonly) NSArray<CPDFPage *> *visiblePages;
+
+/**
+    * Draws a specific rectangular area
+*/
+- (void)setSquareArea:(CGRect)rect onPage:(CPDFPage *_Nullable)page borderColor:(UIColor *_Nonnull)borderColor  borderOpacity:(CGFloat)borderOpacity fillColor:(UIColor *_Nonnull)fillColor fillOpacity:(CGFloat)fillOpacity;
+
+/**
+    * Removes a specific rectangular area
+*/
+- (void)removeSquareArea;
 
 #pragma mark - Selection
 

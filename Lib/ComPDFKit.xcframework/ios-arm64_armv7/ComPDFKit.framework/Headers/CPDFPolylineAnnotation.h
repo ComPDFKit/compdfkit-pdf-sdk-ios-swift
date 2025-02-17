@@ -2,7 +2,7 @@
 //  CPDFSignatureWidgetAnnotation.m
 //  ComPDFKit
 //
-//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -30,8 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @discussion Page space is a coordinate system with the origin at the lower-left corner of the current page.
  */
-- (void)setSavePoints:(NSArray<NSValue *> *)savePoints;
-- (NSArray<NSValue *> *)savePoints;
+@property (nonatomic,assign) NSArray<NSValue *> *savePoints;
 
 #pragma mark -  Measure
 /**

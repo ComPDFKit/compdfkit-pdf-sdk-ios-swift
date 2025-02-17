@@ -76,6 +76,7 @@ import _SwiftConcurrencyShims
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFAddWatermarkViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) public var isSaveAs: Swift.Bool
   @objc deinit
   @_Concurrency.MainActor(unsafe) public init(fileURL: Foundation.URL?, document: ComPDFKit.CPDFDocument?)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
@@ -148,6 +149,7 @@ public enum CPDFAnnotationListPopMenuViewType : Swift.Int {
   public var enterToolModel: ComPDFKit_Tools.CPDFToolFunctionTypeState
   public var availableViewModes: [ComPDFKit_Tools.CPDFToolFunctionTypeState]
   public var readerOnly: Swift.Bool
+  public var isWatermarkSaveAs: Swift.Bool
   public var showMoreItems: [ComPDFKit_Tools.CPDFPopMenuViewType]
   public var annotationsTypes: [ComPDFKit_Tools.CPDFAnnotationToolbarType]
   public var annotationsTools: [ComPDFKit_Tools.CPDFAnnotationPropertieType]
@@ -1315,6 +1317,7 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @_Concurrency.MainActor(unsafe) open func enterPDFSnipImageMode()
   @_Concurrency.MainActor(unsafe) public func enterPDFFlattened()
   @_Concurrency.MainActor(unsafe) public func enterPDFWatermark()
+  @_Concurrency.MainActor(unsafe) public func enterPDFWatermark(isSaveAs: Swift.Bool)
   @_Concurrency.MainActor(unsafe) public func enterPDFSecurity()
   @_Concurrency.MainActor(unsafe) public func enterSecurePDF(filePath: Swift.String, password: Swift.String?)
   @_Concurrency.MainActor(unsafe) public func enterPermissionPassword(pdfDocument: ComPDFKit.CPDFDocument)

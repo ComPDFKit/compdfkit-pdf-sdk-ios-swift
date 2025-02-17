@@ -1849,6 +1849,93 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isSaveAs",
+            "printedName": "isSaveAs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvp",
+            "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvg",
+                "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvs",
+                "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvM",
+                "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC8isSaveAsSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(fileURL:document:)",
@@ -5053,6 +5140,92 @@
                 "declKind": "Accessor",
                 "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC10readerOnlySbvM",
                 "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC10readerOnlySbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isWatermarkSaveAs",
+            "printedName": "isWatermarkSaveAs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC17isWatermarkSaveAsSbvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -50320,6 +50493,33 @@
           },
           {
             "kind": "Function",
+            "name": "enterPDFWatermark",
+            "printedName": "enterPDFWatermark(isSaveAs:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC17enterPDFWatermark8isSaveAsySb_tF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC17enterPDFWatermark8isSaveAsySb_tF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "enterPDFSecurity",
             "printedName": "enterPDFSecurity()",
             "children": [
@@ -54419,15 +54619,22 @@
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1178,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1668,
+      "offset": 1706,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1790,
+      "offset": 1828,
       "length": 3,
       "value": "0.0"
     },
@@ -55224,29 +55431,36 @@
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1512,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2376,
+      "offset": 2427,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2440,
+      "offset": 2491,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2496,
+      "offset": 2547,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2554,
+      "offset": 2605,
       "length": 3,
       "value": "[]"
     },

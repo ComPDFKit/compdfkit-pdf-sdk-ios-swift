@@ -2,7 +2,7 @@
 //  CPDFSignatureWidgetAnnotation.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -74,16 +74,14 @@
  *
  * @discussion Vertex points of the current page.
  */
-- (void)setSaveRectRotationPoints:(NSArray<NSValue *> *)saveRectRotationPoints;
-- (NSArray<NSValue *> *)saveRectRotationPoints;
+@property (nonatomic, strong) NSArray<NSValue *> *saveRectRotationPoints;
 
 /**
  * Method to get / set the  rect befer rotation.
  *
  * @discussion rect of the current page.
  */
-- (void)setSaveSourceRect:(CGRect)saveSourceRect;
-- (CGRect)saveSourceRect;
+@property (nonatomic, assign) CGRect saveSourceRect;
 
 /**
  * Sets the rotation angle for the annotation in degrees.
