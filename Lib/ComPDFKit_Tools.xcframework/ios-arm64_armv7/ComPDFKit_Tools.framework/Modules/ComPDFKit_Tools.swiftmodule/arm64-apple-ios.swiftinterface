@@ -1320,6 +1320,8 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @_Concurrency.MainActor(unsafe) open func initWitNavigationTitle()
   @_Concurrency.MainActor(unsafe) open func reloadDocument(withFilePath filePath: Swift.String, password: Swift.String?, completion: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) open func removeAllElectronicSignatures()
+  @_Concurrency.MainActor(unsafe) open func insertPDFDocument(_ document: ComPDFKit.CPDFDocument, Pages pages: [Swift.Int], Position index: Swift.UInt) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) open func extractPDFDocument(_ savePath: Swift.String, Pages pages: [Swift.Int]) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) open func pageEditViewControllerDone(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController)
   @_Concurrency.MainActor(unsafe) open func pageEditViewController(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController, pageIndex: Swift.Int, isPageEdit: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Text textWaterModel: ComPDFKit_Tools.CWatermarkModel)

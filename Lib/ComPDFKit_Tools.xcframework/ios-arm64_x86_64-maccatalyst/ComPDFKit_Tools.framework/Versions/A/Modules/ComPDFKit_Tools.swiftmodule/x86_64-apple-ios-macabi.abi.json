@@ -50734,6 +50734,98 @@
           },
           {
             "kind": "Function",
+            "name": "insertPDFDocument",
+            "printedName": "insertPDFDocument(_:Pages:Position:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFDocument",
+                "printedName": "ComPDFKit.CPDFDocument",
+                "usr": "c:objc(cs)CPDFDocument"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC17insertPDFDocument_5Pages8PositionSbSo12CPDFDocumentC_SaySiGSutF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC17insertPDFDocument_5Pages8PositionSbSo12CPDFDocumentC_SaySiGSutF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "extractPDFDocument",
+            "printedName": "extractPDFDocument(_:Pages:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC18extractPDFDocument_5PagesSbSS_SaySiGtF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC18extractPDFDocument_5PagesSbSS_SaySiGtF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "pageEditViewControllerDone",
             "printedName": "pageEditViewControllerDone(_:)",
             "children": [
@@ -54621,20 +54713,20 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "BooleanLiteral",
       "offset": 1178,
-      "length": 5,
-      "value": "false"
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1706,
+      "offset": 1705,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1828,
+      "offset": 1827,
       "length": 3,
       "value": "0.0"
     },
@@ -67542,21 +67634,42 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54806,
+      "offset": 54820,
+      "length": 29,
+      "value": "\"ImageNameToolbarMeasureLine\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 55005,
+      "length": 25,
+      "value": "\"ImageNameToolbarPolygon\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 55188,
+      "length": 26,
+      "value": "\"ImageNameToolbarPolyline\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 55364,
       "length": 22,
       "value": "\"KMemberLoginImageEye\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54982,
+      "offset": 55540,
       "length": 24,
       "value": "\"KMemberLoginImageUneye\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-maccatalyst\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55134,
+      "offset": 55692,
       "length": 11,
       "value": "\"syasarrow\""
     }

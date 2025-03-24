@@ -445,12 +445,38 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
     * Draws a specific rectangular area
 */
-- (void)setSquareArea:(CGRect)rect onPage:(CPDFPage *_Nullable)page borderColor:(UIColor *_Nonnull)borderColor  borderOpacity:(CGFloat)borderOpacity fillColor:(UIColor *_Nonnull)fillColor fillOpacity:(CGFloat)fillOpacity;
+- (void)setSquareArea:(CGRect)rect 
+               onPage:(CPDFPage *_Nullable)page 
+          borderColor:(UIColor *_Nonnull)borderColor
+        borderOpacity:(CGFloat)borderOpacity 
+            fillColor:(UIColor *_Nonnull)fillColor
+          fillOpacity:(CGFloat)fillOpacity;
 
 /**
     * Removes a specific rectangular area
 */
 - (void)removeSquareArea;
+
+/**
+    * Draw multiple specific rectangular areas on multiple pages.
+    * @param areas  A dictionary used to specify rectangular areas for each page.
+    *               NSDictionary *areas = @{
+    *                @0 : @[
+    *                     [NSValue valueWithCGRect:CGRectMake(10, 10, 100, 100)],
+    *                     [NSValue valueWithCGRect:CGRectMake(150, 150, 200, 50)]
+    *                 ]
+    *                };
+*/
+- (void)setSquareAreas:(NSDictionary<NSNumber *, NSArray<NSValue *> *> *_Nullable)areas
+           borderColor:(UIColor *_Nonnull)borderColor
+         borderOpacity:(CGFloat)borderOpacity
+             fillColor:(UIColor *_Nonnull)fillColor
+           fillOpacity:(CGFloat)fillOpacity;
+
+/**
+    * Removes all specific rectangular area
+*/
+- (void)removeAllSquareAreas;
 
 #pragma mark - Selection
 

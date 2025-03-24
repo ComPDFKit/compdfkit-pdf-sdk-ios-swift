@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		FDjn3d/l9+U1G0gLmqy25oUauQs=
+		XNiFV3f4leaXwnkU+LSqewwYE/Q=
 		</data>
 		<key>Headers/CPDFFont.h</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		Rm0zuqNfuaJ/bzswqBOQCL1Yj8A=
+		INOw4f53PJS2x9l2LqM++VvUCPo=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
@@ -226,7 +226,7 @@
 		</data>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
 		<data>
-		jnSqnbgaFRB/l07tO1we5tu5PMM=
+		hsYQnKGA/jFB2HjyTctrA2TGKCY=
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8HBadQpgpLex2qgINR/3S74tSw8=
+		5IL2EkWwSQM8ZBeLRkoPPgBr4pw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -475,7 +475,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XKszwCr+OED+Vo4NOp8MDwhGuDZOKZFKGjLOBcBkF1o=
+			xWPJDC8g9YTudc7NPNHU3Yu5n8beLavavUbwCOooLVQ=
 			</data>
 		</dict>
 		<key>Headers/CPDFFont.h</key>
@@ -706,7 +706,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0wlqkO8UBC0Vk40N/aAPTASL2LdsLKO/U/Zu/zF2uwM=
+			xPJWu4BbGsn5i9pY5yaUXA6fXQBnEY+ENTmuSUENy2o=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>
@@ -720,7 +720,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EmynCOnm4S3y7sZSauQVRVwhfgsrplHmx7kNxjg3PBk=
+			LTZCWkKRg1ebeMxdTpH6eB5C/XP34g4gpdNvTRghoaU=
 			</data>
 		</dict>
 		<key>Headers/ComPDFKit.h</key>

@@ -59,6 +59,11 @@
 @property (nonatomic,strong) CPDFKitPlatformColor *fontColor;
 
 /**
+ * Returns the type of the form. Examples include: "ComboBox", "TextField", etc.
+ */
+@property (nonatomic,readonly) NSString *widgetType;
+
+/**
  * Internal name for the field.
  */
 - (NSString *)fieldName;

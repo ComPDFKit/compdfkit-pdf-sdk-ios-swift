@@ -527,6 +527,17 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  */
 - (BOOL)hasAnnotations;
 
+#pragma mark - Form
+
+/**
+ * Export form to XFDF document.
+ */
+- (BOOL)exportToXFDFPath:(NSString *)xfdfPath;
+/**
+ * Import form from XFDF document.
+ */
+- (BOOL)importFormFromXFDFPath:(NSString *)xfdfPath;
+
 /**
  * Reset all forms in PDF document.
  */

@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		AksnJySgVS7LRB7MlRiA1D8jO0s=
+		CYYqj0JWwiE8dLHrCU0m1cHRvwQ=
 		</data>
 		<key>CDigitalTypeSelectView.nib</key>
 		<data>
@@ -42,23 +42,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4goYITkqXNLUljTwrj4wKx6NOjw=
+		VLiwYEjvg6ck3l9UzOVyn/yYKJM=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		jUV8zrvMX21fJIV6Tn6RLmFggmo=
+		IrF7IbxOeP8jrISO0OIOBC4ALgE=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		clmgoMTyqV/oAKmZkXf9E452E6M=
+		EyHytstA3d7jYW4Q4ZRwOwmuFXg=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		1p5fVHdIVG4wK9gJn4rg4s0RiWo=
+		nyePguVBartpGsirLucqr5lbhmI=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		93XDUyGUwJ614+ZrQa58Cdmec3Y=
+		33HwJzOTSzIFNtLlmD/mQ0kqCUI=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -66,19 +66,19 @@
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		93XDUyGUwJ614+ZrQa58Cdmec3Y=
+		33HwJzOTSzIFNtLlmD/mQ0kqCUI=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bCLb2tBaPqWJ9gHoUJm3wA9cod4=
+		enM/DvME4p8JKsmiZDlKCmosImA=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1p5fVHdIVG4wK9gJn4rg4s0RiWo=
+		nyePguVBartpGsirLucqr5lbhmI=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		fDh1BrLNzKVYWoLrPTgWfz5S5XY=
+		O2fgEZoJTOED8vK4bzErHvpCBOw=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -86,11 +86,11 @@
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		fDh1BrLNzKVYWoLrPTgWfz5S5XY=
+		O2fgEZoJTOED8vK4bzErHvpCBOw=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hHyqO1bPEOyYVCzpqQC5QLa2c6U=
+		WhOIHMb++5gD1paCQM1huM3S3VY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -114,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AksnJySgVS7LRB7MlRiA1D8jO0s=
+			CYYqj0JWwiE8dLHrCU0m1cHRvwQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			XyTXy/B3eJaI5+fWhtgoQTwstmi5T+GgNiisyRS+xRQ=
+			NFnLUxLa6KQUotQIogoDmBveJIQI2LITpS/z9fSqFdI=
 			</data>
 		</dict>
 		<key>CDigitalTypeSelectView.nib</key>
@@ -202,44 +202,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jUV8zrvMX21fJIV6Tn6RLmFggmo=
+			IrF7IbxOeP8jrISO0OIOBC4ALgE=
 			</data>
 			<key>hash2</key>
 			<data>
-			BzAxQFkVDJtEOuS6ZqTTWncRxh5Uq5+Nx6W9TGbOhX4=
+			rTl+2ed4g5yAAWqDvYSqZ6JmdROJ9fwCufiz4rX6Km8=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			clmgoMTyqV/oAKmZkXf9E452E6M=
+			EyHytstA3d7jYW4Q4ZRwOwmuFXg=
 			</data>
 			<key>hash2</key>
 			<data>
-			yFelbJDzxlAEFiTkbz2I3kiraRpWOGv2tt+TEIU9DSo=
+			TCgGbpuG0hflb/mDFzMRx1N+1NRXD3wPtezF2ZEedUI=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1p5fVHdIVG4wK9gJn4rg4s0RiWo=
+			nyePguVBartpGsirLucqr5lbhmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZHrD7zA0VMmlcNs+iNVfygxW0ZKY5EdMvXand9CbSRo=
+			KfUXgprL3V4dOHrTx0GnJofgaBh4VWzgFicP+dLyaSA=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			93XDUyGUwJ614+ZrQa58Cdmec3Y=
+			33HwJzOTSzIFNtLlmD/mQ0kqCUI=
 			</data>
 			<key>hash2</key>
 			<data>
-			UU5UljKgKBYGCQEmcpPs3oI/9XSOIX0z7+pBR9jlpEk=
+			IuL1mY9nMY6xtfk3KzS7cyYW9/XfJtuuakOnvfUf/KE=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -257,44 +257,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			93XDUyGUwJ614+ZrQa58Cdmec3Y=
+			33HwJzOTSzIFNtLlmD/mQ0kqCUI=
 			</data>
 			<key>hash2</key>
 			<data>
-			UU5UljKgKBYGCQEmcpPs3oI/9XSOIX0z7+pBR9jlpEk=
+			IuL1mY9nMY6xtfk3KzS7cyYW9/XfJtuuakOnvfUf/KE=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bCLb2tBaPqWJ9gHoUJm3wA9cod4=
+			enM/DvME4p8JKsmiZDlKCmosImA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/YTW7ZXnoe3uJE38JTRWsSCMz/wOLghazDjJmbGqXb8=
+			AWMtcDzcU4b3E4pnsuVl96OdcrvIgEDgaTsJKgQ5ARg=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1p5fVHdIVG4wK9gJn4rg4s0RiWo=
+			nyePguVBartpGsirLucqr5lbhmI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZHrD7zA0VMmlcNs+iNVfygxW0ZKY5EdMvXand9CbSRo=
+			KfUXgprL3V4dOHrTx0GnJofgaBh4VWzgFicP+dLyaSA=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fDh1BrLNzKVYWoLrPTgWfz5S5XY=
+			O2fgEZoJTOED8vK4bzErHvpCBOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			eS3SpjX//JLCmeefVC4lWQUf8W0mVcev6DhPwj3/TN8=
+			KfffR/2kP81XwvuYFhYHiB5kus7c91XYFVX1CpLlTNM=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -312,22 +312,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fDh1BrLNzKVYWoLrPTgWfz5S5XY=
+			O2fgEZoJTOED8vK4bzErHvpCBOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			eS3SpjX//JLCmeefVC4lWQUf8W0mVcev6DhPwj3/TN8=
+			KfffR/2kP81XwvuYFhYHiB5kus7c91XYFVX1CpLlTNM=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hHyqO1bPEOyYVCzpqQC5QLa2c6U=
+			WhOIHMb++5gD1paCQM1huM3S3VY=
 			</data>
 			<key>hash2</key>
 			<data>
-			vYm2imDRf0Jf1MGd2QkSbWiMul3fRGpUt6mntMg7+Uc=
+			eso7DCnYSev845mo9w4JqHjv4IDORLmwfLjsgpjySG8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
