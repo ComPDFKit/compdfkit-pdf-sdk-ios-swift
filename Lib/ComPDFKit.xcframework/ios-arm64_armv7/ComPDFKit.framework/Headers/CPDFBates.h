@@ -17,4 +17,9 @@
  */
 @interface CPDFBates : CPDFHeaderFooter
 
+/**
+ * Method to check whether the document has a bates.
+ */
+@property (nonatomic,assign) BOOL hasBates;
+
 @end

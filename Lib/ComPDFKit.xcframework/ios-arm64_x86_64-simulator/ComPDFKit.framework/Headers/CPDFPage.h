@@ -77,6 +77,13 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
 @property (nonatomic,readonly) NSString *label;
 
 /**
+ * Returns the index for the page.
+ *
+ * @discussion Typically, the index is “0” for the first page, “1” for the second page,defualt 0.
+ */
+@property (nonatomic,readonly) NSUInteger pageIndexInteger;
+
+/**
  * Returns the bounds for the specified PDF display box.
  *
  * @see CPDFDisplayBox
@@ -165,6 +172,14 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  *Page number search for content editing*
  */
 - (NSArray<NSArray<CPDFSelection *> *> *)findEditString:(NSString *)string withOptions:(CPDFSearchOptions)options;
+
+#pragma mark - Combine
+/**
+ * Combine Page.
+ *
+ * @discussion The content of the page is Combine into the current page, but the page will not be automatically deleted.
+ */
+- (BOOL)CombinePageWithPage:(CPDFPage *)page;
 
 #pragma mark - Text
 

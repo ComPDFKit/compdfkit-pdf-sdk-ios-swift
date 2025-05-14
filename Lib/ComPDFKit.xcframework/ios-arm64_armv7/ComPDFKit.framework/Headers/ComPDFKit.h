@@ -15,6 +15,7 @@
 #import <ComPDFKit/CPDFKitConfig.h>
 
 #import <ComPDFKit/CPDFDocument.h>
+#import <ComPDFKit/CPDFOptimizeOption.h>
 #import <ComPDFKit/CPDFBookmark.h>
 #import <ComPDFKit/CPDFOutline.h>
 #import <ComPDFKit/CPDFWatermark.h>

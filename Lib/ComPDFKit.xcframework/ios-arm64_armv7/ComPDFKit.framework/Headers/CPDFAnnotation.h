@@ -103,7 +103,7 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  *
  * @discussion The addAnnotation: method in the CPDFPage class lets you associate an annotation with a page.
  */
-@property (nonatomic,readonly) CPDFPage *page;
+@property (nonatomic, readonly, weak) CPDFPage *page;
 
 /**
  * Returns the type of the annotation. Examples include: "Text", "Link", "Line", etc.
@@ -140,7 +140,7 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * @discussion For the "geometry" annotations (Circle, Ink, Line, Square), the border indicates the line width and whether to draw with a dash pattern or solid pattern.
  * CPDFAnnotation markup types (Highlight, Strikethrough, Underline) ignores the border.
  */
-@property (nonatomic,strong) CPDFBorder *border;
+@property (nonatomic,strong) CPDFBorder *_Nullable border;
 
 /**
  * Method to get / set the opacity for the annotation.
@@ -239,6 +239,6 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
 /**
  * Draw method. Draws in page-space relative to origin of "box" passed in and to the given context.
  */
-- (void)drawWithBox:(CPDFDisplayBox)box inContext:(CGContextRef)context;
+- (void)drawWithBox:(CPDFDisplayBox)box inContext:(CGContextRef _Nonnull )context;
 
 @end

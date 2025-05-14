@@ -1001,6 +1001,8 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController LoadState:(BOOL)success;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController SaveState:(BOOL)success;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
+- (void)PDFViewBaseControllerPageEditBack:(CPDFViewBaseController * _Nonnull)baseController;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
 @end
 
 @class CPDFViewReplyViewController;
@@ -2178,6 +2180,8 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController LoadState:(BOOL)success;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController SaveState:(BOOL)success;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
+- (void)PDFViewBaseControllerPageEditBack:(CPDFViewBaseController * _Nonnull)baseController;
+- (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
 @end
 
 @class CPDFViewReplyViewController;

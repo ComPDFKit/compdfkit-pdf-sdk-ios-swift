@@ -87,6 +87,11 @@ typedef NS_ENUM(NSInteger, CPDFBackgroundType) {
 @property (nonatomic,assign) BOOL isAllowsPrint;
 
 /**
+ * Method to check whether the document has a background.
+ */
+@property (nonatomic,assign) BOOL hasBackground;
+
+/**
  * Sets the image of the background.
  */
 - (void)setImage:(CPDFKitPlatformImage *)image;
@@ -96,8 +101,12 @@ typedef NS_ENUM(NSInteger, CPDFBackgroundType) {
  */
 - (void)update;
 /**
+ * Reload the background.
+ */
+- (void)reload;
+/**
  * Removes the background.
  */
-- (void)clear;
+- (BOOL)clear;
 
 @end

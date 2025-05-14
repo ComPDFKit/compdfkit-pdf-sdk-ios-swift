@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @discussion Page space is a coordinate system with the origin at the lower-left corner of the current page.
  */
-@property (nonatomic,assign) NSArray<NSValue *> *savePoints;
+@property (nonatomic,strong) NSArray<NSValue *> *savePoints;
 
 #pragma mark -  Measure
 /**

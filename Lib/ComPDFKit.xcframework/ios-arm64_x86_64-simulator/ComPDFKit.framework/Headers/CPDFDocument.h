@@ -11,6 +11,8 @@
 //
 
 #import <ComPDFKit/CPDFKitPlatform.h>
+#import "CPDFOptimizeOption.h"
+
 
 extern NSNotificationName const CPDFDocumentDidUnlockNotification;
 
@@ -305,14 +307,79 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  */
 - (BOOL)writeDecryptToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
-#pragma mark - Optimize
+#pragma mark - Compress
 
-/**
- * Compress Document
- * param CPDFDocumentOptimizeOptionRange : 1~120, Default is 30.0.The higher the value, the better the quality of the picture
- */
+/// Compress File
+///@discussion
+/// @param
+///     url
+///         file to save url
+///
+/// @param
+///     options
+///         key1 : CPDFOptimizeCOLImageOptionKey
+///         value1 : CPDFOptimizeImageOption (NSValue )
+///         [NSValue valueWithBytes:&imageOption objCType:@encode(CPDFOptimizeImageOption)];
+///         see CPDFOptimizeOption.h
+///
+///         key2 : CPDFOptimizeFlagKey
+///         value2 : CPDF_OPTIMIZE_FLAG (NSNumber )
+///         [NSNumber numberWithInt:CPDF_OPTIMIZE_FLAG]
+///         see CPDFOptimizeOption.h
+///
+/// @param
+///     progressHandler
+///         progressHandler
+///
+/// @param
+///     cancelHandler
+///         cancelHandler
+///
+/// @param
+///     completionHandler
+///         completionHandler
+///
+///
+/// ```
+/// sample code :
+///
+///CPDF_OPTIMIZE_FLAG optimize_flag;
+///CPDFOptimizeImageOption imageOption;
+///
+///optimize_flag = 0xFF | CPDFOPTIMIZE_FLAG_RMHIDERLAYER | CPDFOPTIMIZE_FLAG_RMUNUSEDTARGET | CPDFOPTIMIZE_FLAG_USEFLATE | CPDFOPTIMIZE_FLAG_FLAT_REPLACELZW | CPDFOPTIMIZE_FLAG_RMJSACTION | CPDFOPTIMIZE_FLAG_RMREPLACEIMAGE | CPDFOPTIMIZE_FLAG_OPTIMIZEPAGECONTENT;
+///
+///imageOption.uperPpi = 225;
+///imageOption.targetPpi = 150;
+///imageOption.compAlg = CPDFCOMP_ALG_JPEG2000;
+///imageOption.quality = 40;
+///imageOption.blockSize = 256;
+///
+///[self.pdfDocument writeOptimizeToURL:[NSURL fileURLWithPath:targetPath]
+///                         withOptions:@{CPDFOptimizeCOLImageOptionKey:[NSValue valueWithBytes:&imageOption objCType:@encode(CPDFOptimizeImageOption)],
+///                                       CPDFOptimizeFlagKey:[NSNumber numberWithInt:optimize_flag]}
+///                     progressHandler:^(float cPageIndex, float totalPageIndex) {
+///    if (self.cPageIndex != cPageIndex) {
+///        self.cPageIndex = cPageIndex;
+///        if (progressHandle) {
+///            progressHandle(cPageIndex/totalPageIndex);
+///        }
+///    }
+///}
+///                       cancelHandler:^BOOL{
+///    return self.hasCanceled;
+///}
+///                   completionHandler:^(BOOL finished) {
+///    if (progressHandle) {
+///        progressHandle(1.0);
+///        sleep(0.01);
+///    }
+///    if (completeHandle) {
+///        completeHandle(finished);
+///    }
+///}];
+///```
 - (void)writeOptimizeToURL:(NSURL *)url
-               withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options
+       withOptimizeOptions:(NSDictionary *)options
            progressHandler:(void (^_Nullable)(float cPageIndex, float totalPageIndex))progressHandler
              cancelHandler:(BOOL (^_Nullable)(void))cancelHandler
          completionHandler:(void (^_Nullable)(BOOL finished))completionHandler;
@@ -347,6 +414,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * A array of document’s bookmarks.
  */
 - (NSArray<CPDFBookmark *> *)bookmarks;
+
+- (void)bookmarksBlock:(void(^)(NSArray<CPDFBookmark *> *))block;
 /**
  * Add a bookmark at the specified index number.
  *
@@ -366,6 +435,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  */
 - (CPDFBookmark *)bookmarkForPageIndex:(NSUInteger)pageIndex;
 
+- (void)bookmarkForPageIndex:(NSUInteger)pageIndex block:(void (^)(CPDFBookmark *bookmark))block;
 #pragma mark - Watermark
 
 /**
@@ -432,15 +502,17 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
      * @param password Certificate file password
      * @param location The hostname or physical location of the CPU which was used to sign the document.
      * @param reason Signature reason.
+     * @param Whether to set dynamic appearance
      * @param type Modify permission type. See more types by CPDFSignaturePermissions
      * @return Return true: Write signature successfully. Return false: Write signature failed.
 */
-- (BOOL)writeSignatureToURL:(NSURL *)url
-                 withWidget:(CPDFSignatureWidgetAnnotation *)widget
-                 PKCS12Cert:(NSString *)path
-                   password:(NSString *)password
-                   location:(NSString *)location
-                     reason:(NSString *)reason
+- (BOOL)writeSignatureToURL:(NSURL *_Nonnull)url
+                 withWidget:(CPDFSignatureWidgetAnnotation *_Nonnull)widget
+                 PKCS12Cert:(NSString *_Nonnull)path
+                   password:(NSString *_Nonnull)password
+                   location:(NSString *_Nullable)location
+                     reason:(NSString *_Nullable)reason
+                isSetSignAp:(BOOL)isSetSignAp
                 permissions:(CPDFSignaturePermissions)permissions;
 
 #pragma mark - Pages
@@ -462,7 +534,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  *
  * @discussion Indexes are zero based. This method raises an exception if index is out of bounds.
  */
-- (CPDFPage *_Nullable)pageAtIndex:(NSUInteger)index;
+- (CPDFPage *)pageAtIndex:(NSUInteger)index;
 
 /**
  * Gets the index number for the specified page.
@@ -505,7 +577,10 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion This method raises an exception if either index value is out of bounds.
  */
 - (BOOL)importPages:(NSIndexSet *)indexSet fromDocument:(CPDFDocument *)document atIndex:(NSUInteger)index;
-
+/**
+ * Retrieve the page data
+ */
+- (void)refreshPageData;
 #pragma mark - Annotations
 
 /**
@@ -719,6 +794,20 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @end
 
 @interface CPDFDocument (Deprecated)
+
+- (BOOL)writeSignatureToURL:(NSURL *)url
+                 withWidget:(CPDFSignatureWidgetAnnotation *)widget
+                 PKCS12Cert:(NSString *)path
+                   password:(NSString *)password
+                   location:(NSString *)location
+                     reason:(NSString *)reason
+                permissions:(CPDFSignaturePermissions)permissions DEPRECATED_MSG_ATTRIBUTE("Use writeSignatureToURL:withWidget:PKCS12Cert:location:reason:permissions:");
+
+- (void)writeOptimizeToURL:(NSURL *)url
+               withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options
+           progressHandler:(void (^_Nullable)(float cPageIndex, float totalPageIndex))progressHandler
+             cancelHandler:(BOOL (^_Nullable)(void))cancelHandler
+         completionHandler:(void (^_Nullable)(BOOL finished))completionHandler; DEPRECATED_MSG_ATTRIBUTE("Use writeOptimizeToURL:withOptimizeOptions:progressHandler:cancelHandler:completionHandler:");
 
 - (BOOL)writeOptimizeToURL:(NSURL *)url withOptions:(NSDictionary<CPDFDocumentOptimizeOption, id> *)options DEPRECATED_MSG_ATTRIBUTE("Use writeOptimizeToURL:withOptions:progressHandler:cancelHandler:completionHandler:");
 

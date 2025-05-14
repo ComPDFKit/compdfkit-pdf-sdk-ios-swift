@@ -69,6 +69,18 @@ typedef NS_OPTIONS(NSInteger, CPDFEditMenuItemType) {
     CPDFEditMenuItemTypePasteMatchStyle,
 };
 
+typedef NS_ENUM(NSInteger, CPDFViewScrollState) {
+    CPDFViewScrollStateBegin,
+    CPDFViewScrollStateScrolling,
+    CPDFViewScrollStateEnd,
+};
+
+typedef NS_ENUM(NSInteger, CPDFViewScaleState) {
+    CPDFViewScaleStateBegin,
+    CPDFViewScaleStateChange,
+    CPDFViewScaleStateEnd,
+};
+
 extern NSNotificationName const CPDFViewDocumentChangedNotification;
 extern NSNotificationName const CPDFViewPageChangedNotification;
 

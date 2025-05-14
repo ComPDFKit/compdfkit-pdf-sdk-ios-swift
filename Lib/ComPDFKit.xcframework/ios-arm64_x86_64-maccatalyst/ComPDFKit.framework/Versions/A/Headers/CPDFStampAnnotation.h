@@ -33,6 +33,18 @@ typedef NS_ENUM(NSInteger, CPDFStampShape) {
     CPDFStampShapeNone = 3,
 };
 
+typedef NS_ENUM(NSInteger, CPDFStampDraggedType) {
+    CPDFStampDraggedTypeNone = -1,
+    CPDFStampDraggedTypeMinXMinY = 0,
+    CPDFStampDraggedTypeMidXMinY = 1,
+    CPDFStampDraggedTypeMaxXMinY = 2,
+    CPDFStampDraggedTypeMaxXMidY = 3,
+    CPDFStampDraggedTypeMaxXMaxY = 4,
+    CPDFStampDraggedTypeMidXMaxY = 5,
+    CPDFStampDraggedTypeMinXMaxY = 6,
+    CPDFStampDraggedTypeMinXMidY = 7,
+};
+
 /**
  * A CPDFStampAnnotation object allows you to display a word or phrase in a PDF page.
  *
@@ -83,7 +95,7 @@ typedef NS_ENUM(NSInteger, CPDFStampShape) {
 @property (nonatomic, strong) NSArray<NSValue *> *saveRectRotationPoints;
 
 /**
- * Method to get / set the  rect befer rotation.
+ * Method to get / set the  rect befer rotation.based on the rect when the rotation angle is 0 degrees.
  *
  * @discussion rect of the current page.
  */
@@ -95,5 +107,26 @@ typedef NS_ENUM(NSInteger, CPDFStampShape) {
  * @discussion Rotation on a annotation. Must be -180 ~ 180.
  */
 @property (nonatomic,assign) NSInteger annotationRotation;
+
+/**
+ * Method to Quickly set the annotation rotation angle, and simultaneously update the saveRectRotationPoints and annotationRotation property.
+ *
+ * @discussion Rotation on a annotation. The annotationRotation based on when the rotation angle is 0 degrees. Must be -180 ~ 180.
+ */
+- (void)updateAnnotationRotation:(NSInteger)annotationRotation;
+
+/**
+ * Method to move stampAnnotation
+ *
+ * @discussion offset
+ */
+- (void)moveStampAnnotationWithActivePage:(CPDFPage *)newActivePage offset:(CPDFKitPlatformPoint)offset;
+
+/**
+ * Method to drag stampAnnotation
+ *
+ * @discussion draggedIndex
+ */
+- (void)dragStampAnnotationWithCurrentPagePoint:(CGPoint)currentPagePoint draggedIndex:(CPDFStampDraggedType)draggedIndex;
 
 @end

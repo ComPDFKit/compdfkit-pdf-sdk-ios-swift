@@ -30,6 +30,11 @@
 @property (nonatomic,assign) CPDFKitPlatformEdgeInsets margin;
 
 /**
+ * Method to check whether the document has a header & footer..
+ */
+@property (nonatomic,assign) BOOL hasHeaderFooter;
+
+/**
  * Gets the text of the header & footer at the specified index.
  */
 - (NSString *)textAtIndex:(NSUInteger)index;
@@ -70,8 +75,12 @@
  */
 - (void)update;
 /**
+ * Reload the header & footer.
+ */
+- (void)reload;
+/**
  * Removes the header & footer.
  */
-- (void)clear;
+- (BOOL)clear;
 
 @end

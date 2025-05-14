@@ -23,6 +23,7 @@
 #define CPDFKitPlatformView         UIView
 #define CPDFKitPlatformColor        UIColor
 #define CPDFKitPlatformImage        UIImage
+#define CPDFKitPlatformPoint        CGPoint
 #define CPDFKitPlatformFont         UIFont
 #define CPDFKitPlatformEdgeInsets   UIEdgeInsets
 
@@ -33,6 +34,7 @@
 #define CPDFKitPlatformView         NSView
 #define CPDFKitPlatformColor        NSColor
 #define CPDFKitPlatformImage        NSImage
+#define CPDFKitPlatformPoint        NSPoint
 #define CPDFKitPlatformFont         NSFont
 #define CPDFKitPlatformEdgeInsets   NSEdgeInsets
 

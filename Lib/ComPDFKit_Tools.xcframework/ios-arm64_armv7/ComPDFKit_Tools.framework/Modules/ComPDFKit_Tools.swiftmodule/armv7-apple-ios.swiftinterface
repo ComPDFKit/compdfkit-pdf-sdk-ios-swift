@@ -1272,6 +1272,8 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @objc optional func PDFViewBaseController(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, LoadState success: Swift.Bool)
   @objc optional func PDFViewBaseController(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, SaveState success: Swift.Bool)
   @objc optional func PDFViewBaseController(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, currentPageIndex index: Swift.Int)
+  @objc optional func PDFViewBaseControllerPageEditBack(_ baseController: ComPDFKit_Tools.CPDFViewBaseController)
+  @objc optional func PDFViewBaseController(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, HiddenState state: Swift.Bool)
 }
 @objc @_Concurrency.MainActor(unsafe) open class CPDFViewBaseController : UIKit.UIViewController, ComPDFKit_Tools.CPDFListViewDelegate, ComPDFKit.CPDFViewDelegate, ComPDFKit_Tools.CSearchToolbarDelegate, ComPDFKit_Tools.CPDFBOTAViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuDelegate, ComPDFKit_Tools.CPDFThumbnailViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuViewDelegate, ComPDFKit_Tools.CDocumentPasswordViewControllerDelegate, ComPDFKit_Tools.CPDFPageEditViewControllerDelegate, ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate, UIKit.UIDocumentPickerDelegate, ComPDFKit_Tools.CSearchTitleViewDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: ComPDFKit_Tools.CPDFViewBaseControllerDelete?

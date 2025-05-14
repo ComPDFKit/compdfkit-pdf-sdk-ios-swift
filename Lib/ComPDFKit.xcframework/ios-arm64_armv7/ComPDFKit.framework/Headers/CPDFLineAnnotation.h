@@ -30,7 +30,12 @@ typedef NS_ENUM(NSInteger, CPDFLineStyle) {
     /** A circular line ending filled with the annotation’s interior color, if any. */
     CPDFLineStyleCircle = 4,
     /** A diamond-shaped line ending filled with the annotation’s interior color, if any. */
-    CPDFLineStyleDiamond = 5
+    CPDFLineStyleDiamond = 5,
+    
+    CPDFLineStyleButt = 6,
+    CPDFLineStyleRopenarrow = 7,
+    CPDFLineStyleRclosedarrow = 8,
+    CPDFLineStyleSlash = 9
 };
 
 /**

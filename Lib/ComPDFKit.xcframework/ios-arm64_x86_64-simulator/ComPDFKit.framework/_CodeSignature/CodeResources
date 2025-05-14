@@ -38,7 +38,7 @@
 		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
-		FINi9wB5bCj/XJgGRtPRCXUHV2w=
+		BBYAgHUfXEx2ZU1FkISq3X5gmvA=
 		</data>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/CPDFBackground.h</key>
 		<data>
-		KFtZdHfFzklfCmr38FMio9g0aZI=
+		bRdW/ho0/FxNWQvDcMtvPwwvKzA=
 		</data>
 		<key>Headers/CPDFBates.h</key>
 		<data>
-		Z4v9dBVJjPckmQr/fxCy6nYLxGg=
+		pitBqB5q80P12k3a2xhxTXl1qeg=
 		</data>
 		<key>Headers/CPDFBookmark.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		XNiFV3f4leaXwnkU+LSqewwYE/Q=
+		VoDGZb/BsLs2udNtPFetLgTxvKo=
 		</data>
 		<key>Headers/CPDFFont.h</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Headers/CPDFHeaderFooter.h</key>
 		<data>
-		QBmvreC5HGWkTBYZWssOt8ra9NY=
+		AQaqSxgtE7taIGGV+eykxUDqVbQ=
 		</data>
 		<key>Headers/CPDFInkAnnotation.h</key>
 		<data>
@@ -114,15 +114,15 @@
 		</data>
 		<key>Headers/CPDFKitConfig.h</key>
 		<data>
-		YCJ8A6km328Vzrf0wz/D85k6C4c=
+		D8dKxMBZ/CWGqOC/aFyk3QFoBZc=
 		</data>
 		<key>Headers/CPDFKitPlatform.h</key>
 		<data>
-		vgmAx/EUT2rD2J7PLPgwE3Og5zo=
+		peTx7Rdmv4c6Y0FEOQausM6I7NI=
 		</data>
 		<key>Headers/CPDFLineAnnotation.h</key>
 		<data>
-		37Yo/CI0gN5pm6ifKPwYVCoqNKw=
+		/bboQv4rZrq0pp8lu+zO6use7+g=
 		</data>
 		<key>Headers/CPDFLinkAnnotation.h</key>
 		<data>
@@ -144,13 +144,17 @@
 		<data>
 		xp9H0ooTrZfT5WGySx//J4+50co=
 		</data>
+		<key>Headers/CPDFOptimizeOption.h</key>
+		<data>
+		OMUXKYniefIgrf/Jp4+Ha174nYg=
+		</data>
 		<key>Headers/CPDFOutline.h</key>
 		<data>
 		PBI/g99qOfUwXVcQl4Yf9uWRbiE=
 		</data>
 		<key>Headers/CPDFPage.h</key>
 		<data>
-		8A62p0hwr7LW6TX/Yzw3SpygqHA=
+		f+EZU4SJlDSdeyY+ZIp8BtK73HU=
 		</data>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
 		<data>
@@ -158,11 +162,11 @@
 		</data>
 		<key>Headers/CPDFPolygonAnnotation.h</key>
 		<data>
-		xL3hjrDxsMJJdk9ilqoloShTG3Q=
+		PvzNH0N7Zh4DmAYmXqC+29Xk0CA=
 		</data>
 		<key>Headers/CPDFPolylineAnnotation.h</key>
 		<data>
-		uFBNC0n97NmGEQevSn3dO9hvL1w=
+		TekDGXX0A4f+owRnC9McSPfRHPA=
 		</data>
 		<key>Headers/CPDFRedactAnnotation.h</key>
 		<data>
@@ -182,11 +186,11 @@
 		</data>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
 		<data>
-		EpoKuROS4e5Lj1w4Rma+kud1bXY=
+		5ADkOLhLjlIeol867jMvtzAOQY8=
 		</data>
 		<key>Headers/CPDFSignatureWidgetAnnotation.h</key>
 		<data>
-		s1NuLe7X91sLMjXDs+K1vmj68vw=
+		VN8hxIHlunPUB2giedVUH+vMbho=
 		</data>
 		<key>Headers/CPDFSoundAnnotation.h</key>
 		<data>
@@ -198,7 +202,7 @@
 		</data>
 		<key>Headers/CPDFStampAnnotation.h</key>
 		<data>
-		tQeMUmKzaxfXKd4HbWKmGFIoiLk=
+		xjNiFqh2dg9v60BSGdP7b4V45IQ=
 		</data>
 		<key>Headers/CPDFTextAnnotation.h</key>
 		<data>
@@ -218,23 +222,27 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		INOw4f53PJS2x9l2LqM++VvUCPo=
+		Vs5WHnv9BPrgWIxOTQSrBcsNvbU=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
-		j/DIOmI9H8jEWKEDN/ccG3Ij8ys=
+		DpsTZTBimPtoQ3SS58cXGOAOS28=
 		</data>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
 		<data>
 		hsYQnKGA/jFB2HjyTctrA2TGKCY=
 		</data>
+		<key>Headers/CTaskQueueManager.h</key>
+		<data>
+		yAylqmsV/uUKvZLZTRrSZAjpOkM=
+		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
-		GDo0buFDF9P4NWzIdxgKfFW7JRk=
+		lagUvy6D/4u2VyUwt/MiD0nziqY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5IL2EkWwSQM8ZBeLRkoPPgBr4pw=
+		td9/xS8uFCxOzEK2ow+wbwG6a80=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -242,7 +250,7 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		Q8zeda9Cf83kQdPMjIlKs3Ee8BQ=
+		HPBOH+IT1Ky1SA9wP+NrYuGjcx0=
 		</data>
 		<key>formsign_tag.png</key>
 		<data>
@@ -391,7 +399,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QGt83TJuHy8pChCalLE0lrYx/c9u16xNUUT1H8/Ea6U=
+			FYNmMr3msa6kZpUjKno7eu3Cs1G8mhCKZWyZgcdDyIU=
 			</data>
 		</dict>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
@@ -405,14 +413,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TXETfVh0g32MdN10sGoi+yIRavIMRfbCw2V4temRRc4=
+			gG5dj5mp9N+htIfdkmVkuFlB5ndVcW9McjC7txvYROc=
 			</data>
 		</dict>
 		<key>Headers/CPDFBates.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3X8Bv+aP7gcgOSlrwpHsHCitW6dhuF5MGR0BF/jezWY=
+			VXzGIegAyL2Ocx0+yxtxrvwOLjEOslhFX1yILJ6x3+0=
 			</data>
 		</dict>
 		<key>Headers/CPDFBookmark.h</key>
@@ -475,7 +483,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xWPJDC8g9YTudc7NPNHU3Yu5n8beLavavUbwCOooLVQ=
+			ReKXu8wyghADFMq0SRP4efKFXhN8AHNnZ70EOxD3OZw=
 			</data>
 		</dict>
 		<key>Headers/CPDFFont.h</key>
@@ -503,7 +511,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zhdbH/Vm3W2qSqRJ7/kQIHfwDcXQ8z8u9H90o5Fa2qo=
+			DlWwrm6w1TKGLhN/HwZgtU2sScmBeTzENypwD1of8Ek=
 			</data>
 		</dict>
 		<key>Headers/CPDFInkAnnotation.h</key>
@@ -524,21 +532,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LWf5l1HdKwKtGU+jA6Kw8gKO9NpC0DwwMWFE0kchGlY=
+			aT4ErzO2UnY+oUx/eR4UDsMOn7l5AyN5X2OsSr6rvUA=
 			</data>
 		</dict>
 		<key>Headers/CPDFKitPlatform.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YKIpVos3QbiZEWaHfqhBAM78bkKCXgN5vvj9cLL02GQ=
+			fDXhnXfvfUdOBSk23QNVrHXZ6ia8TV7ZRcLAHvObmOk=
 			</data>
 		</dict>
 		<key>Headers/CPDFLineAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7ws6gF+a5prrDgax+LcpjrGtS/bqqtS5MDFzXH1a0jE=
+			kB2DWBBubOJ0pg1vGG1PYKHKxtrYDJmr/pSoBpnMaZM=
 			</data>
 		</dict>
 		<key>Headers/CPDFLinkAnnotation.h</key>
@@ -576,6 +584,13 @@
 			4QsM7bZ8ZVE1Wm+4LDXDql66JD4suT4AsXYmYyt7+n0=
 			</data>
 		</dict>
+		<key>Headers/CPDFOptimizeOption.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			f/tduvMHIciozF4s8P8m5Wk8vpxMCRluIfoZiIALOgU=
+			</data>
+		</dict>
 		<key>Headers/CPDFOutline.h</key>
 		<dict>
 			<key>hash2</key>
@@ -587,7 +602,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UynwW8Q3SlBsWOXLPEBTEyVDB0t7bGyPsWBKS15nW+0=
+			ZKZdGdArEZdg8W6Yv1oHI5Fj3wNAR6U0K2iN44/P2aw=
 			</data>
 		</dict>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
@@ -601,14 +616,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U2fzx/M2o5hQjIRXq3MREIRfrw6JP9ingqvT+Hb/m4I=
+			EhcJFcdyAPv2L613dby15bpau6t5japPjPPkIqDlORo=
 			</data>
 		</dict>
 		<key>Headers/CPDFPolylineAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u07ueY7ESuBOEMgxYq9GjthD5PDJsRvsXG+aYxwmoGw=
+			6iqgUn7jDqVBNdtlJT4GDBT/JV54MNc93t4LYHInPgM=
 			</data>
 		</dict>
 		<key>Headers/CPDFRedactAnnotation.h</key>
@@ -643,14 +658,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gKNTHWiMMlABJi8cVvsYgBidI/+gtt6Lodtd05vJC5c=
+			TYo4rl6liglQn0GFYrQ5eAGehYlbHl9MGQYXja07FKg=
 			</data>
 		</dict>
 		<key>Headers/CPDFSignatureWidgetAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ymq9de9KnoPXsi9Q6xAUgsI2j0HGkdAT8d5/7YN6PGE=
+			OCcGJY2bSTUcACs5itFsbbdCyM5bKynQ5SRd6/86ByM=
 			</data>
 		</dict>
 		<key>Headers/CPDFSoundAnnotation.h</key>
@@ -671,7 +686,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			URKGzy/pX/EI0ikjCmeiRB5zcuFVTDc7XKAEmPsVI1Q=
+			g6wCn4B90yrTpiUQbRs7t+sx9sKkNFZDxxcGG7Mnc+Q=
 			</data>
 		</dict>
 		<key>Headers/CPDFTextAnnotation.h</key>
@@ -706,14 +721,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xPJWu4BbGsn5i9pY5yaUXA6fXQBnEY+ENTmuSUENy2o=
+			MWsjcHnJOsUVwbeK0BZup2uboqDfpSPGkYqwC+da1fA=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+QyYdQnMKGW1KeZf6wIMNLsNNOVHtAjfgZUmGQPnpSM=
+			29UAOA1jfG7b2NPbjBMMNb6YuOy8RngyBeIQePnMku0=
 			</data>
 		</dict>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
@@ -723,11 +738,18 @@
 			LTZCWkKRg1ebeMxdTpH6eB5C/XP34g4gpdNvTRghoaU=
 			</data>
 		</dict>
+		<key>Headers/CTaskQueueManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Bjb9JfhjyaHyvjeA9a/bezeQj+jchs8MJQam1mNxkkk=
+			</data>
+		</dict>
 		<key>Headers/ComPDFKit.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JebRbmKsxQ8tzYtrNzcpCB5qRrzZObtu4i3MXO1gOw0=
+			aFMHqLRHpv67gZZ2ykP9PPGOWK1dfYpgu2aG+Pru4C8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -741,7 +763,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ij2ZvThqBiJLbRTNI044tI8peehyKaMojVPFw5ckSrQ=
+			DYRwhT9p1TFHPMNwWvWqGGAzRN4dYUK/F35kD7FlSR8=
 			</data>
 		</dict>
 		<key>formsign_tag.png</key>

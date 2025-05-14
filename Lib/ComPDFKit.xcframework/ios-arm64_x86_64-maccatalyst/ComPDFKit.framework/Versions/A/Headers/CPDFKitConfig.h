@@ -13,6 +13,7 @@
 #import <Foundation/Foundation.h>
 #import <ComPDFKit/CPDFKitPlatform.h>
 #import <ComPDFKit/CPDFView.h>
+#import <ComPDFKit/CTaskQueueManager.h>
 
 #define CPDFKitShareConfig [CPDFKitConfig sharedInstance]
 
@@ -85,6 +86,14 @@
  * Set whether to allow to highlight form field in the CPDFView.
  */
 - (void)setEnableFormFieldHighlight:(BOOL)enableFormFieldHighlight;
+/**
+ * Get whether to allow to freetextAnnotation autoresizingmask width in the CPDFView.
+ */
+- (BOOL)enableFreeTextAnnotationAutoresizingMaskWidth;
+/**
+ * Set whether to allow to freetextAnnotation autoresizingmask width in the CPDFView.
+ */
+- (void)setEnableFreeTextAnnotationAutoresizingMaskWidth:(BOOL)enableFreeTextAnnotationAutoresizingMaskWidth;
 /**
  * Get whether to allow annotation rotation.
  */

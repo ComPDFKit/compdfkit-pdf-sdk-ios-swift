@@ -93,6 +93,12 @@ typedef NS_ENUM(NSInteger, CPDFWatermarkHorizontalPosition) {
  */
 @property (nonatomic,strong) CPDFKitPlatformImage *image;
 
+
+/**
+ * Sets the percentage of the watermark.
+ */
+- (void)setImageSizeWithPercentage:(CGFloat)percentage;
+
 /**
  * Method to get / set the scale factor for the watermark.
  *
