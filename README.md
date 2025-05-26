@@ -50,7 +50,7 @@ This section will help you to quickly get started with ComPDFKit PDF SDK to make
 
 ## Video Guide!
 
-[<img src="assets/youtube-image-20250521.png" alt="youtube-image-20250521" width="600" height="350"/>](https://youtu.be/pA-Dsv-qe0c?si=jaij_XNujPdM02xF%0A)
+[<img src="image/youtube-image-20250521.png" alt="youtube-image-20250521" width="600" height="350"/>](https://youtu.be/pA-Dsv-qe0c?si=jaij_XNujPdM02xF%0A)
 
 
 
