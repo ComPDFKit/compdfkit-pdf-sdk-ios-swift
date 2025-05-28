@@ -230,13 +230,13 @@ So far, we have added ***"ComPDFKit.xcframework"*** to the ***"PDFViewer"*** pro
 
 ComPDF offers professional technical support and 5*24 responsive service.
 
-- For detailed information, please visit our [Guides](https://www.compdf.com/guides/pdf-sdk/android/overview) page.
+- For detailed information, please visit our [Guides](https://www.compdf.com/guides/pdf-sdk/ios/overview) page.
 
-- Stay updated with the latest improvements through our [Changelog](https://www.compdf.com/pdf-sdk/changelog-android).
+- Stay updated with the latest improvements through our [Changelog](https://www.compdf.com/pdf-sdk/changelog-ios).
 
 - For technical assistance, please reach out to our [Technical Support](https://www.compdf.com/support).
 
-- To get more details and an accurate quote, please contact our [Sales Team](https://compdf.com/contact-us) or [Send an Email](mailto:support@compdf.com) to us.
+- To get more details and an accurate quote, please contact our [Sales Team](https://www.compdf.com/contact-sales) or [Send an Email](mailto:support@compdf.com) to us.
 
 
 
