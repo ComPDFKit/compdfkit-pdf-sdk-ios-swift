@@ -4585,7 +4585,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -4748,6 +4749,92 @@
                 "declKind": "Accessor",
                 "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18mainToolbarVisibleSbvM",
                 "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18mainToolbarVisibleSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "annotationToolbarVisible",
+            "printedName": "annotationToolbarVisible",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC24annotationToolbarVisibleSbvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6496,6 +6583,632 @@
                 "declKind": "Accessor",
                 "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC16readerViewConfigSDySSypGvM",
                 "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC16readerViewConfigSDySSypGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "globalMenuItemsConfig",
+            "printedName": "globalMenuItemsConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC21globalMenuItemsConfigSDySSypGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewMenuItemsConfig",
+            "printedName": "viewMenuItemsConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19viewMenuItemsConfigSDySSypGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "annotationMenuItemsConfig",
+            "printedName": "annotationMenuItemsConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC25annotationMenuItemsConfigSDySSypGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contentEditorMenuItemsConfig",
+            "printedName": "contentEditorMenuItemsConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC28contentEditorMenuItemsConfigSDySSypGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "formMenuItemsConfig",
+            "printedName": "formMenuItemsConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19formMenuItemsConfigSDySSypGvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -16513,6 +17226,43 @@
           },
           {
             "kind": "Var",
+            "name": "eraser",
+            "printedName": "eraser",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ComPDFKit_Tools.CPDFViewAnnotationMode.Type) -> ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFViewAnnotationMode",
+                    "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                    "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFViewAnnotationMode",
+                        "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                        "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO6eraseryA2CmF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewAnnotationModeO6eraseryA2CmF",
+            "moduleName": "ComPDFKit_Tools"
+          },
+          {
+            "kind": "Var",
             "name": "pencilDrawing",
             "printedName": "pencilDrawing",
             "children": [
@@ -18074,6 +18824,43 @@
             "declKind": "Func",
             "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFListViewDelegate(im)PDFListViewEditProperties:forAnnotation:",
             "mangledName": "$s15ComPDFKit_Tools20CPDFListViewDelegateP07PDFListE14EditProperties_13forAnnotationyAA0dE0C_So14CPDFAnnotationCtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFListViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFListViewDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFListViewPerformAddSign",
+            "printedName": "PDFListViewPerformAddSign(_:forAnnotation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFListView",
+                "printedName": "ComPDFKit_Tools.CPDFListView",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFListView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFAnnotation",
+                "printedName": "ComPDFKit.CPDFAnnotation",
+                "usr": "c:objc(cs)CPDFAnnotation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFListViewDelegate(im)PDFListViewPerformAddSign:forAnnotation:",
+            "mangledName": "$s15ComPDFKit_Tools20CPDFListViewDelegateP07PDFListE14PerformAddSign_13forAnnotationyAA0dE0C_So14CPDFAnnotationCtF",
             "moduleName": "ComPDFKit_Tools",
             "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFListViewDelegate>",
             "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFListViewDelegate>",
@@ -30950,6 +31737,43 @@
           },
           {
             "kind": "Var",
+            "name": "eraser",
+            "printedName": "eraser",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ComPDFKit_Tools.CPDFAnnotationToolbarType.Type) -> ComPDFKit_Tools.CPDFAnnotationToolbarType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFAnnotationToolbarType",
+                    "printedName": "ComPDFKit_Tools.CPDFAnnotationToolbarType",
+                    "usr": "s:15ComPDFKit_Tools25CPDFAnnotationToolbarTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ComPDFKit_Tools.CPDFAnnotationToolbarType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotationToolbarType",
+                        "printedName": "ComPDFKit_Tools.CPDFAnnotationToolbarType",
+                        "usr": "s:15ComPDFKit_Tools25CPDFAnnotationToolbarTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ComPDFKit_Tools25CPDFAnnotationToolbarTypeO6eraseryA2CmF",
+            "mangledName": "$s15ComPDFKit_Tools25CPDFAnnotationToolbarTypeO6eraseryA2CmF",
+            "moduleName": "ComPDFKit_Tools"
+          },
+          {
+            "kind": "Var",
             "name": "freeText",
             "printedName": "freeText",
             "children": [
@@ -32493,6 +33317,33 @@
             "declKind": "Func",
             "usr": "s:15ComPDFKit_Tools21CPDFAnnotationToolBarC18addImageAnnotation8withPage5pointySo8CPDFPageC_So7CGPointVtF",
             "mangledName": "$s15ComPDFKit_Tools21CPDFAnnotationToolBarC18addImageAnnotation8withPage5pointySo8CPDFPageC_So7CGPointVtF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "annotationToolBarSwitch",
+            "printedName": "annotationToolBarSwitch(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools21CPDFAnnotationToolBarC010annotationeF6SwitchyyAA22CPDFViewAnnotationModeOF",
+            "mangledName": "$s15ComPDFKit_Tools21CPDFAnnotationToolBarC010annotationeF6SwitchyyAA22CPDFViewAnnotationModeOF",
             "moduleName": "ComPDFKit_Tools",
             "declAttributes": [
               "Custom",
@@ -40632,6 +41483,117 @@
         "printedName": "CPDFViewController",
         "children": [
           {
+            "kind": "Var",
+            "name": "annotationBar",
+            "printedName": "annotationBar",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFAnnotationToolBar",
+                    "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar",
+                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvp",
+            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotationToolBar",
+                        "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar",
+                        "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvg",
+                "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotationToolBar",
+                        "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar",
+                        "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvs",
+                "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvM",
+                "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC13annotationBarAA018CPDFAnnotationToolG0CSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "viewDidLoad",
             "printedName": "viewDidLoad()",
@@ -40653,7 +41615,8 @@
               "ObjC",
               "Custom",
               "Override",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -40760,6 +41723,30 @@
             "declKind": "Func",
             "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC14reloadDocument12withFilePath8password10completionySS_SSSgySbctF",
             "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC14reloadDocument12withFilePath8password10completionySS_SSSgySbctF",
+            "moduleName": "ComPDFKit_Tools",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTitleRefresh",
+            "printedName": "setTitleRefresh()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC15setTitleRefreshyyF",
+            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC15setTitleRefreshyyF",
             "moduleName": "ComPDFKit_Tools",
             "overriding": true,
             "isOpen": true,
@@ -40942,30 +41929,6 @@
             "moduleName": "ComPDFKit_Tools",
             "declAttributes": [
               "Custom",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setTitleRefresh",
-            "printedName": "setTitleRefresh()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC15setTitleRefreshyyF",
-            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC15setTitleRefreshyyF",
-            "moduleName": "ComPDFKit_Tools",
-            "overriding": true,
-            "isOpen": true,
-            "declAttributes": [
-              "Custom",
-              "Override",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -47914,6 +48877,37 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerTouchEnded",
+            "printedName": "PDFViewBaseControllerTouchEnded(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerTouchEnded:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF10TouchEndedyyAA0deF0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -51277,6 +52271,27 @@
             "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC14enterThumbnailyyF",
             "moduleName": "ComPDFKit_Tools",
             "isOpen": true,
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "backSave",
+            "printedName": "backSave()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC8backSaveyyF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC8backSaveyyF",
+            "moduleName": "ComPDFKit_Tools",
             "declAttributes": [
               "Custom",
               "AccessControl"
@@ -55473,65 +56488,744 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 1120,
+      "offset": 1145,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1164,
+      "offset": 1189,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1241,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 1227,
+      "offset": 1304,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1460,
+      "offset": 1537,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1512,
+      "offset": 1589,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2427,
+      "offset": 2513,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2491,
+      "offset": 2577,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2547,
+      "offset": 2633,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2605,
+      "offset": 2691,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 2794,
+      "length": 12,
+      "value": "\"screenshot\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 2808,
+      "length": 69,
+      "value": "[[(\"key\", \"exit\")], [(\"key\", \"share\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 2951,
+      "length": 12,
+      "value": "\"textSelect\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 2965,
+      "length": 39,
+      "value": "[[(\"key\", \"copy\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 3084,
+      "length": 12,
+      "value": "\"textSelect\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 3098,
+      "length": 174,
+      "value": "[[(\"key\", \"copy\")], [(\"key\", \"highlight\")], [(\"key\", \"underline\")], [(\"key\", \"strikeout\")], [(\"key\", \"squiggly\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 3282,
+      "length": 18,
+      "value": "\"longPressContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 3302,
+      "length": 161,
+      "value": "[[(\"key\", \"paste\")], [(\"key\", \"note\")], [(\"key\", \"textBox\")], [(\"key\", \"stamp\")], [(\"key\", \"image\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 3473,
+      "length": 15,
+      "value": "\"markupContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 3490,
+      "length": 169,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 3669,
+      "length": 14,
+      "value": "\"soundContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 3685,
+      "length": 165,
+      "value": "[[(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"play\")], [(\"key\", \"record\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 3860,
+      "length": 12,
+      "value": "\"inkContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 3874,
+      "length": 169,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4053,
+      "length": 14,
+      "value": "\"shapeContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4069,
+      "length": 169,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4248,
+      "length": 17,
+      "value": "\"freeTextContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4267,
+      "length": 169,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4446,
+      "length": 18,
+      "value": "\"signStampContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4466,
+      "length": 105,
+      "value": "[[(\"key\", \"signHere\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4581,
+      "length": 14,
+      "value": "\"stampContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4597,
+      "length": 165,
+      "value": "[[(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4772,
+      "length": 13,
+      "value": "\"linkContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4787,
+      "length": 70,
+      "value": "[[(\"key\", \"edit\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 4940,
+      "length": 21,
+      "value": "\"editTextAreaContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 4963,
+      "length": 162,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5135,
+      "length": 23,
+      "value": "\"editSelectTextContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5175,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5182,
+      "length": 12,
+      "value": "\"properties\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5210,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5217,
+      "length": 9,
+      "value": "\"opacity\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5228,
+      "length": 10,
+      "value": "\"subItems\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 5240,
+      "length": 29,
+      "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5285,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5292,
+      "length": 5,
+      "value": "\"cut\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5313,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5320,
+      "length": 6,
+      "value": "\"copy\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5342,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5349,
+      "length": 8,
+      "value": "\"delete\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5378,
+      "length": 17,
+      "value": "\"editTextContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 5397,
+      "length": 105,
+      "value": "[[(\"key\", \"select\")], [(\"key\", \"selectAll\")], [(\"key\", \"paste\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5512,
+      "length": 18,
+      "value": "\"imageAreaContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5547,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5554,
+      "length": 12,
+      "value": "\"properties\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5582,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5589,
+      "length": 12,
+      "value": "\"rotateLeft\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5617,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5624,
+      "length": 13,
+      "value": "\"rotateRight\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5653,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5660,
+      "length": 9,
+      "value": "\"replace\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5685,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5692,
+      "length": 8,
+      "value": "\"export\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5716,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5723,
+      "length": 9,
+      "value": "\"opacity\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5734,
+      "length": 10,
+      "value": "\"subItems\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 5746,
+      "length": 29,
+      "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5791,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5798,
+      "length": 16,
+      "value": "\"flipHorizontal\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5830,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5837,
+      "length": 14,
+      "value": "\"flipVertical\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5867,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5874,
+      "length": 6,
+      "value": "\"crop\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5896,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5903,
+      "length": 8,
+      "value": "\"delete\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5927,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5934,
+      "length": 6,
+      "value": "\"copy\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5956,
+      "length": 5,
+      "value": "\"key\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5963,
+      "length": 5,
+      "value": "\"cut\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 5989,
+      "length": 15,
+      "value": "\"imageCropMode\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6006,
+      "length": 70,
+      "value": "[[(\"key\", \"done\")], [(\"key\", \"cancel\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6086,
+      "length": 17,
+      "value": "\"editPathContent\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6105,
+      "length": 98,
+      "value": "[[(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6213,
+      "length": 27,
+      "value": "\"longPressWithEditTextMode\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6242,
+      "length": 121,
+      "value": "[[(\"key\", \"addText\")], [(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6373,
+      "length": 28,
+      "value": "\"longPressWithEditImageMode\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6403,
+      "length": 74,
+      "value": "[[(\"key\", \"addImages\")], [(\"key\", \"paste\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6487,
+      "length": 22,
+      "value": "\"longPressWithAllMode\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6511,
+      "length": 89,
+      "value": "[[(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6610,
+      "length": 15,
+      "value": "\"searchReplace\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6627,
+      "length": 42,
+      "value": "[[(\"key\", \"replace\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6743,
+      "length": 12,
+      "value": "\"textSelect\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6757,
+      "length": 39,
+      "value": "[[(\"key\", \"copy\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6806,
+      "length": 11,
+      "value": "\"textField\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6819,
+      "length": 76,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 6905,
+      "length": 10,
+      "value": "\"checkBox\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 6917,
+      "length": 76,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 7003,
+      "length": 13,
+      "value": "\"radioButton\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 7018,
+      "length": 76,
+      "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 7104,
+      "length": 9,
+      "value": "\"listBox\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 7115,
+      "length": 108,
+      "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 7233,
+      "length": 10,
+      "value": "\"comboBox\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 7245,
+      "length": 108,
+      "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 7363,
+      "length": 16,
+      "value": "\"signatureField\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 7381,
+      "length": 77,
+      "value": "[[(\"key\", \"startToSign\")], [(\"key\", \"delete\")]]"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "StringLiteral",
+      "offset": 7468,
+      "length": 12,
+      "value": "\"pushButton\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "Array",
+      "offset": 7482,
+      "length": 108,
+      "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSound\/CPDFMediaManager.swift",
@@ -58323,97 +60017,104 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
       "offset": 1547,
-      "length": 13,
+      "length": 6,
       "value": "11"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1605,
-      "length": 8,
+      "offset": 1563,
+      "length": 13,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1623,
-      "length": 9,
+      "offset": 1621,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1642,
-      "length": 5,
+      "offset": 1639,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1657,
+      "offset": 1658,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1672,
-      "length": 4,
+      "offset": 1673,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1686,
-      "length": 5,
+      "offset": 1688,
+      "length": 4,
       "value": "17"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1721,
+      "offset": 1702,
+      "length": 5,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1737,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1735,
+      "offset": 1751,
       "length": 16,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1761,
+      "offset": 1777,
       "length": 19,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1790,
+      "offset": 1806,
       "length": 14,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1814,
+      "offset": 1830,
       "length": 12,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1836,
+      "offset": 1852,
       "length": 14,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1860,
+      "offset": 1876,
       "length": 12,
       "value": "1006"
     },
@@ -58498,97 +60199,104 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
       "offset": 1547,
-      "length": 13,
+      "length": 6,
       "value": "11"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1605,
-      "length": 8,
+      "offset": 1563,
+      "length": 13,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1623,
-      "length": 9,
+      "offset": 1621,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1642,
-      "length": 5,
+      "offset": 1639,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1657,
+      "offset": 1658,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1672,
-      "length": 4,
+      "offset": 1673,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1686,
-      "length": 5,
+      "offset": 1688,
+      "length": 4,
       "value": "17"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1721,
+      "offset": 1702,
+      "length": 5,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1737,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1735,
+      "offset": 1751,
       "length": 16,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1761,
+      "offset": 1777,
       "length": 19,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1790,
+      "offset": 1806,
       "length": 14,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1814,
+      "offset": 1830,
       "length": 12,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1836,
+      "offset": 1852,
       "length": 14,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1860,
+      "offset": 1876,
       "length": 12,
       "value": "1006"
     },
@@ -58673,120 +60381,134 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
       "offset": 1547,
-      "length": 13,
+      "length": 6,
       "value": "11"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1605,
-      "length": 8,
+      "offset": 1563,
+      "length": 13,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1623,
-      "length": 9,
+      "offset": 1621,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1642,
-      "length": 5,
+      "offset": 1639,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1657,
+      "offset": 1658,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1672,
-      "length": 4,
+      "offset": 1673,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1686,
-      "length": 5,
+      "offset": 1688,
+      "length": 4,
       "value": "17"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1721,
+      "offset": 1702,
+      "length": 5,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1737,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1735,
+      "offset": 1751,
       "length": 16,
       "value": "1001"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1761,
+      "offset": 1777,
       "length": 19,
       "value": "1002"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1790,
+      "offset": 1806,
       "length": 14,
       "value": "1003"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1814,
+      "offset": 1830,
       "length": 12,
       "value": "1004"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1836,
+      "offset": 1852,
       "length": 14,
       "value": "1005"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1860,
+      "offset": 1876,
       "length": 12,
       "value": "1006"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6100,
+      "offset": 6242,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "Array",
-      "offset": 6428,
+      "offset": 6570,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6513,
+      "offset": 6655,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "Array",
+      "offset": 6708,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnatationList\/CPDFAnnotationListCell.swift",
@@ -61269,63 +62991,63 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1186,
+      "offset": 1235,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1258,
+      "offset": 1307,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1295,
+      "offset": 1344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1345,
+      "offset": 1394,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "FloatLiteral",
-      "offset": 1440,
+      "offset": 1489,
       "length": 4,
       "value": "25.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "FloatLiteral",
-      "offset": 1483,
+      "offset": 1532,
       "length": 4,
       "value": "50.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "FloatLiteral",
-      "offset": 1527,
+      "offset": 1576,
       "length": 3,
       "value": "0.4"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1572,
+      "offset": 1621,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CPDFCaptureView.swift",
       "kind": "FloatLiteral",
-      "offset": 1616,
+      "offset": 1665,
       "length": 3,
       "value": "0.0"
     },
@@ -61655,43 +63377,50 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
       "offset": 790,
-      "length": 8,
+      "length": 6,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 808,
-      "length": 9,
+      "offset": 806,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 827,
-      "length": 5,
+      "offset": 824,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 842,
+      "offset": 843,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 857,
-      "length": 4,
+      "offset": 858,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 871,
-      "length": 5,
+      "offset": 873,
+      "length": 4,
       "value": "17"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
+      "kind": "IntegerLiteral",
+      "offset": 887,
+      "length": 5,
+      "value": "18"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
@@ -61781,43 +63510,50 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
       "offset": 790,
-      "length": 8,
+      "length": 6,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 808,
-      "length": 9,
+      "offset": 806,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 827,
-      "length": 5,
+      "offset": 824,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 842,
+      "offset": 843,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 857,
-      "length": 4,
+      "offset": 858,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 871,
-      "length": 5,
+      "offset": 873,
+      "length": 4,
       "value": "17"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
+      "kind": "IntegerLiteral",
+      "offset": 887,
+      "length": 5,
+      "value": "18"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
@@ -61907,139 +63643,146 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
       "offset": 790,
-      "length": 8,
+      "length": 6,
       "value": "12"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 808,
-      "length": 9,
+      "offset": 806,
+      "length": 8,
       "value": "13"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 827,
-      "length": 5,
+      "offset": 824,
+      "length": 9,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 842,
+      "offset": 843,
       "length": 5,
       "value": "15"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 857,
-      "length": 4,
+      "offset": 858,
+      "length": 5,
       "value": "16"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 871,
-      "length": 5,
+      "offset": 873,
+      "length": 4,
       "value": "17"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 946,
+      "offset": 887,
+      "length": 5,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
+      "kind": "IntegerLiteral",
+      "offset": 962,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 957,
+      "offset": 973,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 971,
+      "offset": 987,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 946,
+      "offset": 962,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 957,
+      "offset": 973,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 971,
+      "offset": 987,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 946,
+      "offset": 962,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 957,
+      "offset": 973,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 971,
+      "offset": 987,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1933,
+      "offset": 1949,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "Array",
-      "offset": 2282,
+      "offset": 2298,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2322,
+      "offset": 2338,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2706,
+      "offset": 2722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "StringLiteral",
-      "offset": 1238,
+      "offset": 1254,
       "length": 21,
       "value": "\"ComPDFKit_Tools.CPDFAnnotationToolBar\""
     },
@@ -64174,7 +65917,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2086,
+      "offset": 2093,
       "length": 5,
       "value": "false"
     },
@@ -65504,42 +67247,49 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3432,
+      "offset": 3535,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "Array",
-      "offset": 3493,
+      "offset": 3596,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "Array",
-      "offset": 3551,
+      "offset": 3654,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3667,
+      "offset": 3770,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3890,
+      "offset": 3993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4038,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "StringLiteral",
-      "offset": 2229,
+      "offset": 2332,
       "length": 22,
       "value": "\"ComPDFKit_Tools.CPDFViewBaseController\""
     },
@@ -66267,1393 +68017,1407 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20417,
+      "offset": 20429,
+      "length": 34,
+      "value": "\"CPDFAnnotationBarImageInkGesture\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 20649,
+      "length": 40,
+      "value": "\"CPDFAnnotationBarImageInkGestureSelect\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 20851,
       "length": 28,
       "value": "\"CPDFAnnotationBarImageLink\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20607,
+      "offset": 21041,
       "length": 28,
       "value": "\"CPDFAnnotationBarImageNote\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 20809,
+      "offset": 21243,
       "length": 34,
       "value": "\"CPDFAnnotationBarImagePencilDraw\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21017,
+      "offset": 21451,
       "length": 34,
       "value": "\"CPDFAnnotationBarImageProperties\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21213,
+      "offset": 21647,
       "length": 28,
       "value": "\"CPDFAnnotationBarImageRedo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21415,
+      "offset": 21849,
       "length": 34,
       "value": "\"CPDFAnnotationBarImageShapeArrow\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21625,
+      "offset": 22059,
       "length": 35,
       "value": "\"CPDFAnnotationBarImageShapeCircle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 21832,
+      "offset": 22266,
       "length": 33,
       "value": "\"CPDFAnnotationBarImageShapeLine\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22047,
+      "offset": 22481,
       "length": 38,
       "value": "\"CPDFAnnotationBarImageShapeRectangle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22257,
+      "offset": 22691,
       "length": 33,
       "value": "\"CPDFAnnotationBarImageSignature\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22454,
+      "offset": 22888,
       "length": 29,
       "value": "\"CPDFAnnotationBarImageSound\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22653,
+      "offset": 23087,
       "length": 32,
       "value": "\"CPDFAnnotationBarImageSquiggly\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 22849,
+      "offset": 23283,
       "length": 29,
       "value": "\"CPDFAnnotationBarImageStamp\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23050,
+      "offset": 23484,
       "length": 33,
       "value": "\"CPDFAnnotationBarImageStrikeout\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23255,
+      "offset": 23689,
       "length": 33,
       "value": "\"CPDFAnnotationBarImageUnderline\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23450,
+      "offset": 23884,
       "length": 28,
       "value": "\"CPDFAnnotationBarImageUndo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23642,
+      "offset": 24076,
       "length": 29,
       "value": "\"CPDFAnnotationBaseImageBack\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23821,
+      "offset": 24255,
       "length": 22,
       "value": "\"CPDFBookmarkImageAdd\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 23999,
+      "offset": 24433,
       "length": 25,
       "value": "\"CPDFBookmarkImageDelete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24176,
+      "offset": 24610,
       "length": 23,
       "value": "\"CPDFBookmarkImageEdit\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24355,
+      "offset": 24789,
       "length": 25,
       "value": "\"CPDFBookmarkImageEraser\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24532,
+      "offset": 24966,
       "length": 23,
       "value": "\"CPDFBookmarkImageMore\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24713,
+      "offset": 25147,
       "length": 31,
       "value": "\"CPDFColorSelectViewImageColor\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 24900,
+      "offset": 25334,
       "length": 25,
       "value": "\"CPDFCompressImageChange\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25083,
+      "offset": 25517,
       "length": 26,
       "value": "\"CPDFCompressImagePDFThum\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25265,
+      "offset": 25699,
       "length": 25,
       "value": "\"CPDFCompressImageSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25452,
+      "offset": 25886,
       "length": 28,
       "value": "\"CPDFCompressImageSelectOff\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25640,
+      "offset": 26074,
       "length": 27,
       "value": "\"CPDFCompressImageSelectOn\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25825,
+      "offset": 26259,
       "length": 26,
       "value": "\"CPDFCompressImageSuccess\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 25983,
+      "offset": 26417,
       "length": 13,
       "value": "\"CPDFEditAdd\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 26280,
+      "offset": 26714,
       "length": 17,
       "value": "\"CPDFEditAddText\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 26451,
+      "offset": 26885,
       "length": 24,
       "value": "\"CPDFEditAligmentCenter\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 26631,
+      "offset": 27065,
       "length": 25,
       "value": "\"CPDFEditAligmentCenterH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 26808,
+      "offset": 27242,
       "length": 23,
       "value": "\"CPDFEditAlignmentLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 26991,
+      "offset": 27425,
       "length": 27,
       "value": "\"CPDFEditAlignmentLeftHigh\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27172,
+      "offset": 27606,
       "length": 24,
       "value": "\"CPDFEditAlignmentRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27352,
+      "offset": 27786,
       "length": 25,
       "value": "\"CPDFEditAlignmentRightH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27513,
+      "offset": 27947,
       "length": 15,
       "value": "\"CPDFEditArrow\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27680,
+      "offset": 28114,
       "length": 23,
       "value": "\"CPDFEditBoldHighlight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 27849,
+      "offset": 28283,
       "length": 20,
       "value": "\"CPDFEditBoldNormal\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28005,
+      "offset": 28439,
       "length": 15,
       "value": "\"CPDFEditClose\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28154,
+      "offset": 28588,
       "length": 14,
       "value": "\"CPDFEditCrop\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28332,
+      "offset": 28766,
       "length": 29,
       "value": "\"CPDFEditDeleteStrikethrough\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28517,
+      "offset": 28951,
       "length": 25,
       "value": "\"CPDFEditDeleteUnderline\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28676,
+      "offset": 29110,
       "length": 14,
       "value": "\"CPDFEditDown\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28828,
+      "offset": 29262,
       "length": 16,
       "value": "\"CPDFEditExport\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 28986,
+      "offset": 29420,
       "length": 18,
       "value": "\"CPDFEditHiglight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29158,
+      "offset": 29592,
       "length": 24,
       "value": "\"CPDFEditHorizontalFlip\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29338,
+      "offset": 29772,
       "length": 25,
       "value": "\"CPDFEditHorizontalFlipH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29503,
+      "offset": 29937,
       "length": 17,
       "value": "\"CPDFEditIRotate\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29662,
+      "offset": 30096,
       "length": 18,
       "value": "\"CPDFEditIRotateH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 29830,
+      "offset": 30264,
       "length": 22,
       "value": "\"CPDFEditImageDefault\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30000,
+      "offset": 30434,
       "length": 21,
       "value": "\"CPDFEditImageSample\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30177,
+      "offset": 30611,
       "length": 25,
       "value": "\"CPDFEditItalicHighlight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30352,
+      "offset": 30786,
       "length": 22,
       "value": "\"CPDFEditItalicNormal\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30508,
+      "offset": 30942,
       "length": 14,
       "value": "\"CPDFEditList\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30662,
+      "offset": 31096,
       "length": 17,
       "value": "\"CPDFEditRRotate\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30821,
+      "offset": 31255,
       "length": 18,
       "value": "\"CPDFEditRRotateH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 30973,
+      "offset": 31407,
       "length": 14,
       "value": "\"CPDFEditRedo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31127,
+      "offset": 31561,
       "length": 17,
       "value": "\"CPDFEditReplace\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31296,
+      "offset": 31730,
       "length": 23,
       "value": "\"CPDFEditStrikethrough\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31453,
+      "offset": 31887,
       "length": 14,
       "value": "\"CPDFEditText\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31603,
+      "offset": 32037,
       "length": 15,
       "value": "\"CPDFEditTextH\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31750,
+      "offset": 32184,
       "length": 13,
       "value": "\"CPDFEditTxt\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 31907,
+      "offset": 32341,
       "length": 19,
       "value": "\"CPDFEditUnderline\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32060,
+      "offset": 32494,
       "length": 14,
       "value": "\"CPDFEditUndo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32226,
+      "offset": 32660,
       "length": 23,
       "value": "\"CPDFEditUnorderedList\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32399,
+      "offset": 32833,
       "length": 22,
       "value": "\"CPDFEditVerticalFlip\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32573,
+      "offset": 33007,
       "length": 23,
       "value": "\"CPDFEditimageHDefault\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32722,
+      "offset": 33156,
       "length": 10,
       "value": "\"CPDFForm\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 32870,
+      "offset": 33304,
       "length": 16,
       "value": "\"CPDFFormButton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33022,
+      "offset": 33456,
       "length": 15,
       "value": "\"CPDFFormCheck\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33179,
+      "offset": 33613,
       "length": 18,
       "value": "\"CPDFFormCheckbox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33335,
+      "offset": 33769,
       "length": 16,
       "value": "\"CPDFFormCircle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33487,
+      "offset": 33921,
       "length": 15,
       "value": "\"CPDFFormCross\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33642,
+      "offset": 34076,
       "length": 17,
       "value": "\"CPDFFormDiamond\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33803,
+      "offset": 34237,
       "length": 19,
       "value": "\"CPDFFormEditRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 33962,
+      "offset": 34396,
       "length": 17,
       "value": "\"CPDFFormListbox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34123,
+      "offset": 34557,
       "length": 19,
       "value": "\"CPDFFormOptionOff\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34284,
+      "offset": 34718,
       "length": 18,
       "value": "\"CPDFFormOptionOn\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34452,
+      "offset": 34886,
       "length": 22,
       "value": "\"CPDFFormPullDownMenu\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34622,
+      "offset": 35056,
       "length": 21,
       "value": "\"CPDFFormRadiobutton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34777,
+      "offset": 35211,
       "length": 14,
       "value": "\"CPDFFormSign\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 34929,
+      "offset": 35363,
       "length": 16,
       "value": "\"CPDFFormSquare\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35079,
+      "offset": 35513,
       "length": 14,
       "value": "\"CPDFFormStar\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35237,
+      "offset": 35671,
       "length": 19,
       "value": "\"CPDFFormTextField\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35408,
+      "offset": 35842,
       "length": 23,
       "value": "\"CPDFFreeTextImageBold\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35603,
+      "offset": 36037,
       "length": 33,
       "value": "\"CPDFFreeTextImageBoldHighLinght\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35792,
+      "offset": 36226,
       "length": 25,
       "value": "\"CPDFFreeTextImageCenter\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 35991,
+      "offset": 36425,
       "length": 34,
       "value": "\"CPDFFreeTextImageItailcHighLight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36177,
+      "offset": 36611,
       "length": 23,
       "value": "\"CPDFFreeTextImageLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36354,
+      "offset": 36788,
       "length": 24,
       "value": "\"CPDFFreeTextImageRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36540,
+      "offset": 36974,
       "length": 28,
       "value": "\"CPDFFreeTextImageUnderline\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36712,
+      "offset": 37146,
       "length": 19,
       "value": "\"CPDFInkImageEraer\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 36873,
+      "offset": 37307,
       "length": 18,
       "value": "\"CPDFInkImageRedo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37039,
+      "offset": 37473,
       "length": 21,
       "value": "\"CPDFInkImageSetting\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37202,
+      "offset": 37636,
       "length": 18,
       "value": "\"CPDFInkImageUndo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37406,
+      "offset": 37840,
       "length": 40,
       "value": "\"CPDFListViewImageNameAnnotationDragDot\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37630,
+      "offset": 38064,
       "length": 39,
       "value": "\"CPDFListViewImageNameMagnifierLoupeHi\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 37853,
+      "offset": 38287,
       "length": 39,
       "value": "\"CPDFListViewImageNameMagnifierLoupeLo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38078,
+      "offset": 38512,
       "length": 40,
       "value": "\"CPDFListViewImageNameMagnifierRangedHi\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38308,
+      "offset": 38742,
       "length": 42,
       "value": "\"CPDFListViewImageNameMagnifierRangedMask\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38528,
+      "offset": 38962,
       "length": 36,
       "value": "\"CPDFListViewImageNameSoundRecoding\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38734,
+      "offset": 39168,
       "length": 32,
       "value": "\"CPDFNoteContentImageNameDelete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 38932,
+      "offset": 39366,
       "length": 30,
       "value": "\"CPDFNoteContentImageNameSave\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39120,
+      "offset": 39554,
       "length": 26,
       "value": "\"CPDFOutlineImageBotaMore\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39312,
+      "offset": 39746,
       "length": 30,
       "value": "\"CPDFOutlineImageBotaMoreLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39492,
+      "offset": 39926,
       "length": 22,
       "value": "\"CPDFPageEitImageBack\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39664,
+      "offset": 40098,
       "length": 22,
       "value": "\"CPDFPageEitImageEdit\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 39846,
+      "offset": 40280,
       "length": 27,
       "value": "\"CPDFPageEitImageSelectAll\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40037,
+      "offset": 40471,
       "length": 29,
       "value": "\"CPDFPageEitImageSelectNoAll\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40216,
+      "offset": 40650,
       "length": 22,
       "value": "\"CPDFSearchImageClose\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40386,
+      "offset": 40820,
       "length": 21,
       "value": "\"CPDFSearchImageList\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40555,
+      "offset": 40989,
       "length": 21,
       "value": "\"CPDFSearchImageNext\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40732,
+      "offset": 41166,
       "length": 25,
       "value": "\"CPDFSearchImagePrevious\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 40911,
+      "offset": 41345,
       "length": 24,
       "value": "\"CPDFSearchImageSetting\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41093,
+      "offset": 41527,
       "length": 26,
       "value": "\"CPDFShapeArrowImageArrow\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41279,
+      "offset": 41713,
       "length": 27,
       "value": "\"CPDFShapeArrowImageCircle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41464,
+      "offset": 41898,
       "length": 26,
       "value": "\"CPDFShapeArrowImageCloud\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41644,
+      "offset": 42078,
       "length": 24,
       "value": "\"CPDFShapeArrowImageEnd\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 41824,
+      "offset": 42258,
       "length": 25,
       "value": "\"CPDFShapeArrowImageLine\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42007,
+      "offset": 42441,
       "length": 26,
       "value": "\"CPDFShapeArrowImageRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42191,
+      "offset": 42625,
       "length": 26,
       "value": "\"CPDFShapeArrowImageSliod\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42377,
+      "offset": 42811,
       "length": 27,
       "value": "\"CPDFShapeArrowImageSquare\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42562,
+      "offset": 42996,
       "length": 26,
       "value": "\"CPDFShapeArrowImageStart\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42746,
+      "offset": 43180,
       "length": 26,
       "value": "\"CPDFShapeArrowImageUnder\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 42924,
+      "offset": 43358,
       "length": 23,
       "value": "\"CPDFSignatureImageAdd\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43103,
+      "offset": 43537,
       "length": 25,
       "value": "\"CPDFSignatureImageClean\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43286,
+      "offset": 43720,
       "length": 26,
       "value": "\"CPDFSignatureImageDelete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43466,
+      "offset": 43900,
       "length": 24,
       "value": "\"CPDFSignatureImageDraw\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43636,
+      "offset": 44070,
       "length": 25,
       "value": "\"CPDFSignatureImageImage\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43815,
+      "offset": 44249,
       "length": 24,
       "value": "\"CPDFSignatureImageText\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 43997,
+      "offset": 44431,
       "length": 26,
       "value": "\"CPDFSliderImageSlidepage\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44179,
+      "offset": 44613,
       "length": 25,
       "value": "\"CPDFSoundImageNameClose\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44358,
+      "offset": 44792,
       "length": 24,
       "value": "\"CPDFSoundImageNamePlay\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44534,
+      "offset": 44968,
       "length": 23,
       "value": "\"CPDFSoundImageNameRec\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44711,
+      "offset": 45145,
       "length": 24,
       "value": "\"CPDFSoundImageNameStop\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 44889,
+      "offset": 45323,
       "length": 24,
       "value": "\"CPDFSoundImageNameSure\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45056,
+      "offset": 45490,
       "length": 19,
       "value": "\"CPDFStampImage-01\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45218,
+      "offset": 45652,
       "length": 19,
       "value": "\"CPDFStampImage-02\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45380,
+      "offset": 45814,
       "length": 19,
       "value": "\"CPDFStampImage-03\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45542,
+      "offset": 45976,
       "length": 19,
       "value": "\"CPDFStampImage-04\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45704,
+      "offset": 46138,
       "length": 19,
       "value": "\"CPDFStampImage-05\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 45866,
+      "offset": 46300,
       "length": 19,
       "value": "\"CPDFStampImage-06\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46028,
+      "offset": 46462,
       "length": 19,
       "value": "\"CPDFStampImage-07\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46190,
+      "offset": 46624,
       "length": 19,
       "value": "\"CPDFStampImage-08\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46352,
+      "offset": 46786,
       "length": 19,
       "value": "\"CPDFStampImage-09\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46514,
+      "offset": 46948,
       "length": 19,
       "value": "\"CPDFStampImage-10\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46676,
+      "offset": 47110,
       "length": 19,
       "value": "\"CPDFStampImage-11\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 46838,
+      "offset": 47272,
       "length": 19,
       "value": "\"CPDFStampImage-12\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47000,
+      "offset": 47434,
       "length": 19,
       "value": "\"CPDFStampImage-13\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47162,
+      "offset": 47596,
       "length": 19,
       "value": "\"CPDFStampImage-14\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47324,
+      "offset": 47758,
       "length": 19,
       "value": "\"CPDFStampImage-15\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47486,
+      "offset": 47920,
       "length": 19,
       "value": "\"CPDFStampImage-16\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47648,
+      "offset": 48082,
       "length": 19,
       "value": "\"CPDFStampImage-18\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47810,
+      "offset": 48244,
       "length": 19,
       "value": "\"CPDFStampImage-20\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 47967,
+      "offset": 48401,
       "length": 21,
       "value": "\"CPDFStampImageImage\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48134,
+      "offset": 48568,
       "length": 20,
       "value": "\"CPDFStampImageText\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48303,
+      "offset": 48737,
       "length": 22,
       "value": "\"CPDFStampImage_chick\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48476,
+      "offset": 48910,
       "length": 23,
       "value": "\"CPDFStampImage_circle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48648,
+      "offset": 49082,
       "length": 22,
       "value": "\"CPDFStampImage_cross\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 48828,
+      "offset": 49262,
       "length": 26,
       "value": "\"CPDFStampTextImageCenter\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49008,
+      "offset": 49442,
       "length": 24,
       "value": "\"CPDFStampTextImageLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49186,
+      "offset": 49620,
       "length": 24,
       "value": "\"CPDFStampTextImageNone\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49366,
+      "offset": 49800,
       "length": 25,
       "value": "\"CPDFStampTextImageRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49547,
+      "offset": 49981,
       "length": 25,
       "value": "\"CPDFThunbnailImageEnter\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49716,
+      "offset": 50150,
       "length": 19,
       "value": "\"CPDFViewImageBack\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 49867,
+      "offset": 50301,
       "length": 13,
       "value": "\"CPFFormBack\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50040,
+      "offset": 50474,
       "length": 27,
       "value": "\"CPageEditToolBarImageCopy\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50233,
+      "offset": 50667,
       "length": 30,
       "value": "\"CPageEditToolBarImageExtract\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50427,
+      "offset": 50861,
       "length": 29,
       "value": "\"CPageEditToolBarImageInsert\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50618,
+      "offset": 51052,
       "length": 28,
       "value": "\"CPageEditToolBarImagePaste\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 50810,
+      "offset": 51244,
       "length": 29,
       "value": "\"CPageEditToolBarImageRemove\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51005,
+      "offset": 51439,
       "length": 30,
       "value": "\"CPageEditToolBarImageRepalce\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51201,
+      "offset": 51635,
       "length": 30,
       "value": "\"CPageEditToolBarImageReverse\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51395,
+      "offset": 51829,
       "length": 29,
       "value": "\"CPageEditToolBarImageRotate\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51594,
+      "offset": 52028,
       "length": 32,
       "value": "\"CPageEditToolBarImageSelectOff\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51794,
+      "offset": 52228,
       "length": 31,
       "value": "\"CPageEditToolBarImageSelectOn\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 51963,
+      "offset": 52397,
       "length": 16,
       "value": "\"CSecureImageGo\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52131,
+      "offset": 52565,
       "length": 23,
       "value": "\"CSecureImageInvisible\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52302,
+      "offset": 52736,
       "length": 21,
       "value": "\"CSecureImageVisible\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52492,
+      "offset": 52926,
       "length": 34,
       "value": "\"CWatermarkNavigationSettingImage\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52667,
+      "offset": 53101,
       "length": 20,
       "value": "\"CWatermarkPreImage\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 52853,
+      "offset": 53287,
       "length": 30,
       "value": "\"CWatermarkPreViewRatoteIamge\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53043,
+      "offset": 53477,
       "length": 27,
       "value": "\"ImageNameDigitalSignature\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53228,
+      "offset": 53662,
       "length": 26,
       "value": "\"ImageNameSignCloseFolder\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53410,
+      "offset": 53844,
       "length": 25,
       "value": "\"ImageNameSignOpenFolder\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53607,
+      "offset": 54041,
       "length": 33,
       "value": "\"ImageNameSigntureTrustedFailure\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 53820,
+      "offset": 54254,
       "length": 37,
       "value": "\"ImageNameSigntureTrustedFailureIcon\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54023,
+      "offset": 54457,
       "length": 30,
       "value": "\"ImageNameSigntureTrustedIcon\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54221,
+      "offset": 54655,
       "length": 31,
       "value": "\"ImageNameSigntureVerifyDelete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54422,
+      "offset": 54856,
       "length": 32,
       "value": "\"ImageNameSigntureVerifyFailure\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54624,
+      "offset": 55058,
       "length": 32,
       "value": "\"ImageNameSigntureVerifySuccess\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 54820,
+      "offset": 55254,
       "length": 29,
       "value": "\"ImageNameToolbarMeasureLine\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55005,
+      "offset": 55439,
       "length": 25,
       "value": "\"ImageNameToolbarPolygon\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55188,
+      "offset": 55622,
       "length": 26,
       "value": "\"ImageNameToolbarPolyline\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55364,
+      "offset": 55798,
       "length": 22,
       "value": "\"KMemberLoginImageEye\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55540,
+      "offset": 55974,
       "length": 24,
       "value": "\"KMemberLoginImageUneye\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Library\/Developer\/Xcode\/DerivedData\/PDFViewer-Swift-fvbovahayowlugagkkwmpalvwykb\/Build\/Intermediates.noindex\/ComPDFKit_Tools.build\/Release-iphonesimulator\/ComPDFKit_Tools.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 55692,
+      "offset": 56126,
       "length": 11,
       "value": "\"syasarrow\""
     }

@@ -15,6 +15,16 @@
   
 */
 
+"Do you really want to reset the form?" = "Do you really want to reset the form?";
+"Start to Sign" = "Start to Sign";
+"Rotate Left" = "Rotate Left";
+"Rotate Right" = "Rotate Right";
+
+"The current document has been changed, do you want to keep the changes after exiting?" = "The current document has been changed, do you want to keep the changes after exiting?";
+"Yes" = "Yes";
+"No" = "No";
+"Keep editing" = "Keep editing";
+
 "Close" = "Close";
 "Settings" = "Settings";
 "Highlight Links" = "Highlight Links";
@@ -153,7 +163,7 @@
 "Pages:" = "Pages:";
 "Creator" = "Creator";
 "Creation Date:" = "Creation Date:";
-"Modification Date:" = "Modification Dat:e";
+"Modification Date:" = "Modification Date:";
 "Access Permissions:" = "Access Permissions:";
 "Printing:" = "Printing:";
 "Content Copying:" = "Content Copying:";

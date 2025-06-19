@@ -74,6 +74,70 @@ typedef NS_ENUM(NSInteger, CPDFType) {
     CPDFTypePDFA3b
 };
 
+typedef NS_ENUM(NSInteger, CPDFStandardType) {
+    CPDFStandardTypePDF = 0,
+    /** PDF/A-1a */
+    CPDFStandardTypePDFA1a,
+    /** PDF/A-1b */
+    CPDFStandardTypePDFA1b,
+    /** PDF/A-2a */
+    CPDFStandardTypePDFA2a,
+    /** PDF/A-2u */
+    CPDFStandardTypePDFA2u,
+    /** PDF/A-2b */
+    CPDFStandardTypePDFA2b,
+    /** PDF/A-3a */
+    CPDFStandardTypePDFA3a,
+    /** PDF/A-3u */
+    CPDFStandardTypePDFA3u,
+    /** PDF/A-3b */
+    CPDFStandardTypePDFA3b
+};
+
+typedef NS_ENUM(NSInteger, CPDFConvertLauguage) {
+    CPDFConvertLauguageUnspecified = 0, // Czech Republic
+    CPDFConvertLauguageCS_CZ, // Czech Republic
+    CPDFConvertLauguageDE_DE, // Germany
+    CPDFConvertLauguageEN_GB, // United Kingdom
+    CPDFConvertLauguageEN_US, // United States
+    CPDFConvertLauguageES_ES, // Spain
+    CPDFConvertLauguageFI_FI, // Finland
+    CPDFConvertLauguageFR_FR, // France
+    CPDFConvertLauguageHU_HU, // Hungary
+    CPDFConvertLauguageIT_IT, // Italy
+    CPDFConvertLauguageJP_JP, // Japan
+    CPDFConvertLauguageKO_KR, // South Korea
+    CPDFConvertLauguageNL_BE, // Belgium
+    CPDFConvertLauguageNL_NL, // Netherlands
+    CPDFConvertLauguageNO_NO, // Norway
+    CPDFConvertLauguagePL_PL, // Poland
+    CPDFConvertLauguagePT_BR, // Brazil
+    CPDFConvertLauguagePT_PT, // Portugal
+    CPDFConvertLauguageRU_RU, // Russia
+    CPDFConvertLauguageSK_SK, // Slovakia
+    CPDFConvertLauguageSV_SE, // Sweden
+    CPDFConvertLauguageTR_TR, // Turkey
+    CPDFConvertLauguageZH_CN, // China
+    CPDFConvertLauguageZH_TW, // Taiwan
+    CPDFConvertLauguageZH_HK, // Hong Kong
+    CPDFConvertLauguageZH_MO  // Macau
+};
+
+typedef NS_ENUM(NSInteger, CPDFPartType) {
+    CPDFPartTypeNone,
+    CPDFPartTypePDF_a,
+    CPDFPartTypePDF_b,
+    CPDFPartTypePDF_u,
+};
+
+typedef NS_ENUM(NSInteger, CPDFStandardFormat) {
+    CPDFStandardFormatPDF,
+    CPDFStandardFormatPDFA,
+    CPDFStandardFormatPDFX,
+    CPDFStandardFormatPDFE,
+    CPDFStandardFormatPDFUA
+};
+
 typedef NS_ENUM(NSInteger, CPDFDocumentEncryptionLevel) {
     CPDFDocumentEncryptionLevelRC4 = 0,
     CPDFDocumentEncryptionLevelAES128,
@@ -122,6 +186,28 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @class CPDFPage, CPDFOutline, CPDFBookmark, CPDFWatermark, CPDFHeaderFooter, CPDFBates, CPDFBackground, CPDFSelection,CPDFSignature,CPDFSignatureWidgetAnnotation;
 
 @protocol CPDFDocumentDelegate;
+
+#pragma mark - CPDFStandardMode
+
+@interface CPDFStandardMode : NSObject
+
+@property (nonatomic,assign) CPDFStandardFormat format;
+
+@property (nonatomic,assign) NSInteger typenum;
+
+@property (nonatomic,assign) CPDFPartType partType;
+
+@end
+
+#pragma mark - CPDFUAConfig
+
+@interface CPDFUAConfig : NSObject
+
+@property (nonatomic,assign) CPDFConvertLauguage lauguage;
+
+@property (nonatomic,strong) NSString* title;
+
+@end
 
 /**
  * An object that represents a PDF file and defines methods for writing, searching, and selecting PDF data.
@@ -634,24 +720,17 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 - (NSString *)summaryHTML;
 
-#pragma mark - PDF/A
+#pragma mark - PDF/Convert
 
-/**
- * Gets PDF/A conformance levels.
- *
- * @see CPDFType
- */
-- (CPDFType)type;
+- (CPDFConvertLauguage)convertLauguage;
 
-/**
- * Converts existing PDF files to PDF/A compliant documents, including PDF/A-1a and PDF/A-1b only.
- *
- * @discussion The conversion option analyzes the content of existing PDF files and performs a sequence of modifications in order to produce a PDF/A compliant document.
- * Features that are not suitable for long-term archiving (such as encryption, obsolete compression schemes, missing fonts, or device-dependent color) are replaced with their PDF/A compliant equivalents.
- * Because the conversion process applies only necessary changes to the source file, the information loss is minimal.
- * @see CPDFType
- */
-- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type isSaveFontSubset:(BOOL)isSaveFontSubset;
+- (CPDFStandardMode *_Nonnull)standardType;
+
+- (BOOL)writeStandardPDFToFilePath:(NSString * _Nonnull)saveFilePath
+                          withType:(CPDFStandardMode *_Nonnull)type
+                       iccFilePath:(NSString * _Nullable)iccFilePath
+                      withUAConfig:(CPDFUAConfig* _Nullable)pdfUAConfig
+                  isSaveFontSubset:(BOOL)isSaveFontSubset;
 
 #pragma mark - Find
 
@@ -833,5 +912,22 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 - (CPDFSelection *)findNextEditTextWithLastlection:(CPDFSelection *)lastSelection withString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findBackwordEditText:");
 
 - (CPDFSelection *)findPrevEditTextWithLastlection:(CPDFSelection *)lastSelection withString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findForwardEditText:");
+
+/**
+ * Gets PDF/A conformance levels.
+ *
+ * @see CPDFType
+ */
+- (CPDFType)type DEPRECATED_MSG_ATTRIBUTE("Use standardType");
+
+/**
+ * Converts existing PDF files to PDF/A compliant documents, including PDF/A-1a and PDF/A-1b only.
+ *
+ * @discussion The conversion option analyzes the content of existing PDF files and performs a sequence of modifications in order to produce a PDF/A compliant document.
+ * Features that are not suitable for long-term archiving (such as encryption, obsolete compression schemes, missing fonts, or device-dependent color) are replaced with their PDF/A compliant equivalents.
+ * Because the conversion process applies only necessary changes to the source file, the information loss is minimal.
+ * @see CPDFType
+ */
+- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type isSaveFontSubset:(BOOL)isSaveFontSubset DEPRECATED_MSG_ATTRIBUTE("Use writeStandardPDFToFilePath:withType:iccFilePath:withLauguage:withTitle:isSaveFontSubset:(BOOL)isSaveFontSubset:");
 
 @end

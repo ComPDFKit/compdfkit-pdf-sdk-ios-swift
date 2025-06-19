@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.gitignore</key>
+		<data>
+		T3B31/31+XpmM7fgWOJVSlahMac=
+		</data>
 		<key>Cert/0d264c89.0</key>
 		<data>
 		0EIDlAx5ZmuPbXF6xJs0EyCwnvo=
@@ -27,6 +31,14 @@
 		<key>Cert/eCA_64s.crt</key>
 		<data>
 		QyfhJNnJGdNYd7GYodxNo0pG4Bs=
+		</data>
+		<key>CoatedFOGRA39.icc</key>
+		<data>
+		kh3d5KYY4NXRHOmDnZj59K9f8X8=
+		</data>
+		<key>DEPS</key>
+		<data>
+		kQ8yy4qC4Y2msLWcec8VxfR1Q8g=
 		</data>
 		<key>DroidSansFallback.ttf</key>
 		<data>
@@ -86,7 +98,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		VoDGZb/BsLs2udNtPFetLgTxvKo=
+		y0/mVVG2ePuZBBzzfx/gcwavzco=
 		</data>
 		<key>Headers/CPDFFont.h</key>
 		<data>
@@ -234,7 +246,7 @@
 		</data>
 		<key>Headers/CTaskQueueManager.h</key>
 		<data>
-		yAylqmsV/uUKvZLZTRrSZAjpOkM=
+		SMFRZ9YE4ARnfO4uVp34796/f10=
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
@@ -242,11 +254,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		td9/xS8uFCxOzEK2ow+wbwG6a80=
+		4QrfTUCvbQ9KDYLZNst4yG8mGV4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		GJse0j0x4wLzigM/YeAjcM+nZxQ=
+		</data>
+		<key>PRESUBMIT.py</key>
+		<data>
+		YoDQnbYpJtIbzUvv295YMEnKb7w=
+		</data>
+		<key>README</key>
+		<data>
+		jepgA2cxptBAi5Mq9mExL/TCEus=
 		</data>
 		<key>default.metallib</key>
 		<data>
@@ -336,9 +356,20 @@
 		<data>
 		lGXLwuiV1yhpNpfn/e7Vo3ciGjI=
 		</data>
+		<key>workspace.xml</key>
+		<data>
+		VWwhZ9Bxr2pgbXJgTC2DyBWnJVY=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>.gitignore</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5q0Xd+LuCjUzIWgSrj6l7eNnBiz+2/ibjOCeRm82Nuw=
+			</data>
+		</dict>
 		<key>Cert/0d264c89.0</key>
 		<dict>
 			<key>hash2</key>
@@ -379,6 +410,20 @@
 			<key>hash2</key>
 			<data>
 			8PD6dLIdsb05Qa0cG0Z48hjbDFH+Ydnj+cNpzfPnLJM=
+			</data>
+		</dict>
+		<key>CoatedFOGRA39.icc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2iubWT4ny6JWPLyFlgccXI8jldPbtENFOLrCvJ1Yznc=
+			</data>
+		</dict>
+		<key>DEPS</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pgf2d3a6H2rpEsZ4Bbvpv3Yl9YCzJ5GCkjEl6PF8AUY=
 			</data>
 		</dict>
 		<key>DroidSansFallback.ttf</key>
@@ -483,7 +528,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ReKXu8wyghADFMq0SRP4efKFXhN8AHNnZ70EOxD3OZw=
+			RSeaAZQfwYJLU7THBVKuJfEYP7fQew1Q9PtEbeksKWY=
 			</data>
 		</dict>
 		<key>Headers/CPDFFont.h</key>
@@ -742,7 +787,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bjb9JfhjyaHyvjeA9a/bezeQj+jchs8MJQam1mNxkkk=
+			qLS0TFsYGJDYNyuhhZ1mIIhSvWSQF83VAw5kbUoU5n0=
 			</data>
 		</dict>
 		<key>Headers/ComPDFKit.h</key>
@@ -757,6 +802,20 @@
 			<key>hash2</key>
 			<data>
 			iQcHR0nTiFjwgQN3izRKSCofKuNTCmNsv4iXpEARTgc=
+			</data>
+		</dict>
+		<key>PRESUBMIT.py</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			v55+jQFXBGiWd36eumD9zbLTy8XvbEk6EkxiNhGrJ04=
+			</data>
+		</dict>
+		<key>README</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vmEK+Fk0UgFoCqOgkXJRPCgs1T3Z1t4y5mAYFzZYazI=
 			</data>
 		</dict>
 		<key>default.metallib</key>
@@ -911,6 +970,13 @@
 			<key>hash2</key>
 			<data>
 			88DMn6oUlk/dDwvP1AXmRpMEKhOTlPWbKp5+PDShViE=
+			</data>
+		</dict>
+		<key>workspace.xml</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Js7xGfK9M7sJ7HLprD63PUopwabr9YamQ8kpGtMyfwg=
 			</data>
 		</dict>
 	</dict>

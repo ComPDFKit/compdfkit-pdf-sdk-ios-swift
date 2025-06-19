@@ -758,6 +758,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformViewReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformPlay:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSoundAnnotation * _Nonnull)annotation;
@@ -1093,6 +1094,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
 - (void)PDFViewBaseControllerPageEditBack:(CPDFViewBaseController * _Nonnull)baseController;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
+- (void)PDFViewBaseControllerTouchEnded:(CPDFViewBaseController * _Nonnull)baseController;
 @end
 
 @class CPDFViewReplyViewController;
@@ -2032,6 +2034,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformViewReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformPlay:(CPDFListView * _Nonnull)pdfView forAnnotation:(CPDFSoundAnnotation * _Nonnull)annotation;
@@ -2367,6 +2370,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController currentPageIndex:(NSInteger)index;
 - (void)PDFViewBaseControllerPageEditBack:(CPDFViewBaseController * _Nonnull)baseController;
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
+- (void)PDFViewBaseControllerTouchEnded:(CPDFViewBaseController * _Nonnull)baseController;
 @end
 
 @class CPDFViewReplyViewController;

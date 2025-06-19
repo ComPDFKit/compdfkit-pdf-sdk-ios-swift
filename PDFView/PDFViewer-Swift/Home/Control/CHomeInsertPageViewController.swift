@@ -115,7 +115,7 @@ class CHomeInsertPageViewController: UIViewController,UITableViewDelegate,UITabl
         }
         let pdfDocument = CPDFDocument()
         
-        var documentAttributes = pdfDocument!.documentAttributes()!
+        var documentAttributes = pdfDocument?.documentAttributes() ?? [:]
         let userDefaults = UserDefaults.standard
         documentAttributes[CPDFDocumentAttribute.titleAttribute] = userDefaults.string(forKey: CPDFFileAuthorKey)
         pdfDocument?.setDocumentAttributes(documentAttributes)
