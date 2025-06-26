@@ -154,7 +154,7 @@
 		</data>
 		<key>Headers/CPDFKit.h</key>
 		<data>
-		7X4U0rYddJ9dJVkJVhU+aVYuMRw=
+		W7FdKkJIIY0nSU7QDs24e+7dCfM=
 		</data>
 		<key>Headers/CPDFKitConfig+Private.h</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		Vs5WHnv9BPrgWIxOTQSrBcsNvbU=
+		AL/86tC//m6UDN1u49HFEiWD5fc=
 		</data>
 		<key>Headers/CPDFWatermark+Protected.h</key>
 		<data>
@@ -334,15 +334,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		HO8uDcwk1ctWloK/HiQhQgvnX7E=
+		toFwAZ0iakyphDubqE47sWRZyhE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		LiQoiZ0HQqg8PLvhYGe2l6sUM/Q=
-		</data>
-		<key>PRESUBMIT.py</key>
-		<data>
-		YoDQnbYpJtIbzUvv295YMEnKb7w=
 		</data>
 		<key>README</key>
 		<data>
@@ -706,7 +702,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HXR+qdM2HtMb00EG+H4hshOzUl0iv1nPDP9HQuZLBMA=
+			uQMfPBcXpZ8gO8aoI8cWUbdr9cKmJbvMKW7mq7SuRkE=
 			</data>
 		</dict>
 		<key>Headers/CPDFKitConfig+Private.h</key>
@@ -972,7 +968,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MWsjcHnJOsUVwbeK0BZup2uboqDfpSPGkYqwC+da1fA=
+			3sGGX4PypeMBNT0mkZrvYxeVY1VefnSuiyqssxEDYjk=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark+Protected.h</key>
@@ -1022,13 +1018,6 @@
 			<key>hash2</key>
 			<data>
 			AAkcPQ+8lTvgjXGHEKzmPSMjAW0mw1D0ReUK5G9YEwQ=
-			</data>
-		</dict>
-		<key>PRESUBMIT.py</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			v55+jQFXBGiWd36eumD9zbLTy8XvbEk6EkxiNhGrJ04=
 			</data>
 		</dict>
 		<key>README</key>

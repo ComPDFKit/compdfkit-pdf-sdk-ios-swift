@@ -908,6 +908,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  */
 - (BOOL)textFocusedOffWithTextArea:(CPDFEditTextArea *)textArea;
 
+/**
+ * Replace the text content of the text area.
+ */
+- (BOOL)replaceEditTextArea:(CPDFEditTextArea *)editingArea text:(NSString *)text;
+
 #pragma mark - Edit Image
 
 /*

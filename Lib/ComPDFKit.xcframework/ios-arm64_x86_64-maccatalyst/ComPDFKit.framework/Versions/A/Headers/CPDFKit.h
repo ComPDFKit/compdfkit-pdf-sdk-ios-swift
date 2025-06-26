@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, CPDFKitLicenseCode) {
     CPDFKitLicenseCodeUnsupportedPlatform,
     CPDFKitLicenseCodeUnsupportedID,
     CPDFKitLicenseCodeUnsupportedDevice,
+    CPDFKitLicenseCodeUnsupportedVersion,
     CPDFKitLicenseCodePermissionDeny,
     CPDFKitLicenseCodeUninitialized,
     CPDFKitLicenseCodeIllegalAccess,
@@ -67,10 +68,11 @@ typedef NS_ENUM(NSInteger, CPDFKitOnlineLicenseCode) {
     CPDFKitOnlineLicenseCodeUnsupportedPlatform = 1003,
     CPDFKitOnlineLicenseCodeUnsupportedID = 1004,
     CPDFKitOnlineLicenseCodeUnsupportedDevice = 1005,
-    CPDFKitOnlineLicenseCodePermissionDeny = 1006,
-    CPDFKitOnlineLicenseCodeUninitialized = 1007,
-    CPDFKitOnlineLicenseCodeIllegalAccess = 1008,
-    CPDFKitOnlineLicenseCodeReadFailed = 1009,
+    CPDFKitOnlineLicenseCodeUnsupportedVersion = 1006,
+    CPDFKitOnlineLicenseCodePermissionDeny = 1007,
+    CPDFKitOnlineLicenseCodeUninitialized = 1008,
+    CPDFKitOnlineLicenseCodeIllegalAccess = 1009,
+    CPDFKitOnlineLicenseCodeReadFailed = 1010,
     CPDFKitOnlineLicenseCodeNetworkError = 2001,
     CPDFKitOnlineLicenseCodeNetworkTimeout = 2002,
     CPDFKitOnlineLicenseCodeLicenseRequired = 2003,
@@ -96,6 +98,11 @@ typedef void (^CPDFLicenseCompletionHandler)(CPDFKitOnlineLicenseCode code, NSSt
  * Activate ComPDFKit with your online license.
  */
 + (void)verifyWithOnlineLicense:(NSString *)license completionHandler:(CPDFLicenseCompletionHandler)handler;
+
+/**
+ * Activate ComPDFKit with your xml file path.
+ */
++ (void)verifyWithPath:(NSString *)xmlFilePath completionHandler:(CPDFLicenseCompletionHandler)handler;
 
 /**
  * Returns the full ComPDFKit product version string. (e.g. "ComPDFKit 1.0.1 for iOS (101)")

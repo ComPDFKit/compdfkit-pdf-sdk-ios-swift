@@ -51,7 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         userDefaults.setValue(true, forKey: CPDFSaveFontSubesetKey)
         userDefaults.synchronize()
         
-        verifyLicenseFormXML(xmlFliePath)
+        CPDFKit.verify(withPath: xmlFliePath, completionHandler: { code, message in
+            print("Code: \(code), Message:\(String(describing: message))")
+            
+            self.loadSamplesFiles()
+        })
                 
         if #available(iOS 13.0, *) {
             
@@ -73,55 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window!.rootViewController = navController
         self.window!.makeKeyAndVisible()
-    }
-    
-    func verifyLicenseFormXML(_ xmlFliePath: String) {
-        do {
-            let error: NSError = NSError()
-            let xmlData = try Data(contentsOf: URL(fileURLWithPath: xmlFliePath))
-            let result = XMLReader.dictionary(forXMLData: xmlData, error: error)
-            
-            if let license = result?["license"] as? NSDictionary {
-                
-                if let typeDic = license["type"] as? NSDictionary {
-                    
-                    if let type = typeDic["text"] as? String, type == "online" {
-                        readLicenseDic(license, isOnline: true)
-                    } else if let type = typeDic["text"] as? String, type == "offline" {
-                        readLicenseDic(license, isOnline: false)
-                    }
-                    
-                } else {
-                    readLicenseDic(license, isOnline: false)
-                }
-                
-            } else {
-                print("License key can not be empty.")
-            }
-        } catch {
-            
-        }
-    }
-    
-    func readLicenseDic(_ license: NSDictionary, isOnline: Bool) {
-        if let keysDic = license["key"] as? NSDictionary {
-            if let key = keysDic["text"] as? String {
-                if isOnline {
-                    CPDFKit.verify(withOnlineLicense: key) { code, message in
-                        print("Code: \(code), Message:\(String(describing: message))")
-                        
-                        self.loadSamplesFiles()
-                    }
-                } else {
-                    CPDFKit.verify(withKey: key)
-                    self.loadSamplesFiles()
-                }
-            } else {
-                print("License key can not be empty.")
-            }
-        } else {
-            print("License key can not be empty.")
-        }
     }
     
     private func loadSamplesFiles() {
