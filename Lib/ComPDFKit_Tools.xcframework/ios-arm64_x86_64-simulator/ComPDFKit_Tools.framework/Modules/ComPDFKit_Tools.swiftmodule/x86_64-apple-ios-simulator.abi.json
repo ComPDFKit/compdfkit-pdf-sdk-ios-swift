@@ -5321,6 +5321,92 @@
           },
           {
             "kind": "Var",
+            "name": "enableExitSaveTips",
+            "printedName": "enableExitSaveTips",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "showMoreItems",
             "printedName": "showMoreItems",
             "children": [
@@ -8285,7 +8371,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(pdfView:)",
+            "printedName": "init(pdfView:isOnlyThumbnail:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8298,16 +8384,21 @@
                 "name": "CPDFView",
                 "printedName": "ComPDFKit.CPDFView",
                 "usr": "c:objc(cs)CPDFView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF0ACSo8CPDFViewC_tcfc",
-            "mangledName": "$s15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF0ACSo8CPDFViewC_tcfc",
+            "usr": "s:15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF015isOnlyThumbnailACSo8CPDFViewC_Sbtcfc",
+            "mangledName": "$s15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF015isOnlyThumbnailACSo8CPDFViewC_Sbtcfc",
             "moduleName": "ComPDFKit_Tools",
-            "overriding": true,
             "declAttributes": [
               "Custom",
-              "Override",
               "AccessControl",
               "RawDocComment"
             ],
@@ -8714,6 +8805,36 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(pdfView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFPageEditViewController",
+                "printedName": "ComPDFKit_Tools.CPDFPageEditViewController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFPageEditViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFView",
+                "printedName": "ComPDFKit.CPDFView",
+                "usr": "c:objc(cs)CPDFView"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF0ACSo8CPDFViewC_tcfc",
+            "mangledName": "$s15ComPDFKit_Tools26CPDFPageEditViewControllerC03pdfF0ACSo8CPDFViewC_tcfc",
+            "moduleName": "ComPDFKit_Tools",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
@@ -8727,7 +8848,6 @@
         ],
         "superclassUsr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFThumbnailViewController",
         "hasMissingDesignatedInitializers": true,
-        "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ComPDFKit_Tools.CPDFThumbnailViewController",
           "UIKit.UIViewController",
@@ -42121,17 +42241,23 @@
           {
             "kind": "Function",
             "name": "enterThumbnail",
-            "printedName": "enterThumbnail()",
+            "printedName": "enterThumbnail(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC14enterThumbnailyyF",
-            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC14enterThumbnailyyF",
+            "usr": "s:15ComPDFKit_Tools18CPDFViewControllerC14enterThumbnailyySbF",
+            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC14enterThumbnailyySbF",
             "moduleName": "ComPDFKit_Tools",
             "overriding": true,
             "isOpen": true,
@@ -52258,17 +52384,23 @@
           {
             "kind": "Function",
             "name": "enterThumbnail",
-            "printedName": "enterThumbnail()",
+            "printedName": "enterThumbnail(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC14enterThumbnailyyF",
-            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC14enterThumbnailyyF",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC14enterThumbnailyySbF",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC14enterThumbnailyySbF",
             "moduleName": "ComPDFKit_Tools",
             "isOpen": true,
             "declAttributes": [
@@ -56529,701 +56661,708 @@
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1641,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2513,
+      "offset": 2565,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2577,
+      "offset": 2629,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2633,
+      "offset": 2685,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2691,
+      "offset": 2743,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2794,
+      "offset": 2842,
       "length": 12,
       "value": "\"screenshot\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 2808,
+      "offset": 2856,
       "length": 69,
       "value": "[[(\"key\", \"exit\")], [(\"key\", \"share\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2951,
+      "offset": 2999,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 2965,
+      "offset": 3013,
       "length": 39,
       "value": "[[(\"key\", \"copy\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3084,
+      "offset": 3132,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3098,
+      "offset": 3146,
       "length": 174,
       "value": "[[(\"key\", \"copy\")], [(\"key\", \"highlight\")], [(\"key\", \"underline\")], [(\"key\", \"strikeout\")], [(\"key\", \"squiggly\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3282,
+      "offset": 3330,
       "length": 18,
       "value": "\"longPressContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3302,
+      "offset": 3350,
       "length": 161,
       "value": "[[(\"key\", \"paste\")], [(\"key\", \"note\")], [(\"key\", \"textBox\")], [(\"key\", \"stamp\")], [(\"key\", \"image\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3473,
+      "offset": 3521,
       "length": 15,
       "value": "\"markupContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3490,
+      "offset": 3538,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3669,
+      "offset": 3717,
       "length": 14,
       "value": "\"soundContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3685,
+      "offset": 3733,
       "length": 165,
       "value": "[[(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"play\")], [(\"key\", \"record\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3860,
+      "offset": 3908,
       "length": 12,
       "value": "\"inkContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3874,
+      "offset": 3922,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4053,
+      "offset": 4101,
       "length": 14,
       "value": "\"shapeContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4069,
+      "offset": 4117,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4248,
+      "offset": 4296,
       "length": 17,
       "value": "\"freeTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4267,
+      "offset": 4315,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4446,
+      "offset": 4494,
       "length": 18,
       "value": "\"signStampContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4466,
+      "offset": 4514,
       "length": 105,
       "value": "[[(\"key\", \"signHere\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4581,
+      "offset": 4629,
       "length": 14,
       "value": "\"stampContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4597,
+      "offset": 4645,
       "length": 165,
       "value": "[[(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4772,
+      "offset": 4820,
       "length": 13,
       "value": "\"linkContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4787,
+      "offset": 4835,
       "length": 70,
       "value": "[[(\"key\", \"edit\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4940,
+      "offset": 4988,
       "length": 21,
       "value": "\"editTextAreaContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4963,
+      "offset": 5011,
       "length": 162,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5135,
+      "offset": 5183,
       "length": 23,
       "value": "\"editSelectTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5175,
+      "offset": 5223,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5182,
+      "offset": 5230,
       "length": 12,
       "value": "\"properties\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5210,
+      "offset": 5258,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5217,
+      "offset": 5265,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5228,
+      "offset": 5276,
       "length": 10,
       "value": "\"subItems\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5240,
+      "offset": 5288,
       "length": 29,
       "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5285,
+      "offset": 5333,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5292,
+      "offset": 5340,
       "length": 5,
       "value": "\"cut\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5313,
+      "offset": 5361,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5320,
+      "offset": 5368,
       "length": 6,
       "value": "\"copy\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5342,
+      "offset": 5390,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5349,
+      "offset": 5397,
       "length": 8,
       "value": "\"delete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5378,
+      "offset": 5426,
       "length": 17,
       "value": "\"editTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5397,
+      "offset": 5445,
       "length": 105,
       "value": "[[(\"key\", \"select\")], [(\"key\", \"selectAll\")], [(\"key\", \"paste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5512,
+      "offset": 5560,
       "length": 18,
       "value": "\"imageAreaContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5547,
+      "offset": 5595,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5554,
+      "offset": 5602,
       "length": 12,
       "value": "\"properties\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5582,
+      "offset": 5630,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5589,
+      "offset": 5637,
       "length": 12,
       "value": "\"rotateLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5617,
+      "offset": 5665,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5624,
+      "offset": 5672,
       "length": 13,
       "value": "\"rotateRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5653,
+      "offset": 5701,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5660,
+      "offset": 5708,
       "length": 9,
       "value": "\"replace\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5685,
+      "offset": 5733,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5692,
+      "offset": 5740,
       "length": 8,
       "value": "\"export\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5716,
+      "offset": 5764,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5723,
+      "offset": 5771,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5734,
+      "offset": 5782,
       "length": 10,
       "value": "\"subItems\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5746,
+      "offset": 5794,
       "length": 29,
       "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5791,
+      "offset": 5839,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5798,
+      "offset": 5846,
       "length": 16,
       "value": "\"flipHorizontal\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5830,
+      "offset": 5878,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5837,
+      "offset": 5885,
       "length": 14,
       "value": "\"flipVertical\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5867,
+      "offset": 5915,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5874,
+      "offset": 5922,
       "length": 6,
       "value": "\"crop\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5896,
+      "offset": 5944,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5903,
+      "offset": 5951,
       "length": 8,
       "value": "\"delete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5927,
+      "offset": 5975,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5934,
+      "offset": 5982,
       "length": 6,
       "value": "\"copy\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5956,
+      "offset": 6004,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5963,
+      "offset": 6011,
       "length": 5,
       "value": "\"cut\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5989,
+      "offset": 6037,
       "length": 15,
       "value": "\"imageCropMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6006,
+      "offset": 6054,
       "length": 70,
       "value": "[[(\"key\", \"done\")], [(\"key\", \"cancel\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6086,
+      "offset": 6134,
       "length": 17,
       "value": "\"editPathContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6105,
+      "offset": 6153,
       "length": 98,
       "value": "[[(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6213,
+      "offset": 6261,
       "length": 27,
       "value": "\"longPressWithEditTextMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6242,
+      "offset": 6290,
       "length": 121,
       "value": "[[(\"key\", \"addText\")], [(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6373,
+      "offset": 6421,
       "length": 28,
       "value": "\"longPressWithEditImageMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6403,
+      "offset": 6451,
       "length": 74,
       "value": "[[(\"key\", \"addImages\")], [(\"key\", \"paste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6487,
+      "offset": 6535,
       "length": 22,
       "value": "\"longPressWithAllMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6511,
+      "offset": 6559,
       "length": 89,
       "value": "[[(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6610,
+      "offset": 6658,
       "length": 15,
       "value": "\"searchReplace\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6627,
+      "offset": 6675,
       "length": 42,
       "value": "[[(\"key\", \"replace\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6743,
+      "offset": 6791,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6757,
+      "offset": 6805,
       "length": 39,
       "value": "[[(\"key\", \"copy\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6806,
+      "offset": 6854,
       "length": 11,
       "value": "\"textField\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6819,
+      "offset": 6867,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6905,
+      "offset": 6953,
       "length": 10,
       "value": "\"checkBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6917,
+      "offset": 6965,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7003,
+      "offset": 7051,
       "length": 13,
       "value": "\"radioButton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7018,
+      "offset": 7066,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7104,
+      "offset": 7152,
       "length": 9,
       "value": "\"listBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7115,
+      "offset": 7163,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7233,
+      "offset": 7281,
       "length": 10,
       "value": "\"comboBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7245,
+      "offset": 7293,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7363,
+      "offset": 7411,
       "length": 16,
       "value": "\"signatureField\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7381,
+      "offset": 7429,
       "length": 77,
       "value": "[[(\"key\", \"startToSign\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7468,
+      "offset": 7516,
       "length": 12,
       "value": "\"pushButton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7482,
+      "offset": 7530,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
@@ -57366,6 +57505,27 @@
       "offset": 1427,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEdit\/Control\/CPDFPageEditViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1469,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEdit\/Control\/CPDFPageEditViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1584,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DocsEditor\/PDFPageEdit\/Control\/CPDFPageEditViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 800,
+      "length": 26,
+      "value": "\"ComPDFKit_Tools.CPDFPageEditViewController\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DigitalSignature\/PDFDigitalSignatureProperties\/VerifySignature\/Controller\/CPDFSigntureListViewController.swift",
@@ -58899,6 +59059,27 @@
       "offset": 6909,
       "length": 27,
       "value": "\"CWatermarkBackgroundColor\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CStringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 6989,
+      "length": 30,
+      "value": "\"CThumbnailBackgroundColorKey\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CStringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 7049,
+      "length": 20,
+      "value": "\"CThumbnailTitleKey\""
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Utils\/CStringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 7100,
+      "length": 21,
+      "value": "\"CThumbnailIsOnlyKey\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFSearch\/CSearchTitleView.swift",

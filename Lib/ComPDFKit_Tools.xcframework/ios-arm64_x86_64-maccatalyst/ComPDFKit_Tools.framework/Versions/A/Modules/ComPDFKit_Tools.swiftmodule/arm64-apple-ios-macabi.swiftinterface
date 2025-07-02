@@ -151,6 +151,7 @@ public enum CPDFAnnotationListPopMenuViewType : Swift.Int {
   public var availableViewModes: [ComPDFKit_Tools.CPDFToolFunctionTypeState]
   public var readerOnly: Swift.Bool
   public var isWatermarkSaveAs: Swift.Bool
+  public var enableExitSaveTips: Swift.Bool
   public var showMoreItems: [ComPDFKit_Tools.CPDFPopMenuViewType]
   public var annotationsTypes: [ComPDFKit_Tools.CPDFAnnotationToolbarType]
   public var annotationsTools: [ComPDFKit_Tools.CPDFAnnotationPropertieType]
@@ -192,10 +193,10 @@ public protocol CPDFPageEditViewControllerDelegate : AnyObject {
   func pageEditViewControllerDone(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController)
   func pageEditViewController(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController, pageIndex: Swift.Int, isPageEdit: Swift.Bool)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPageEditViewController : ComPDFKit_Tools.CPDFThumbnailViewController, ComPDFKit_Tools.CPageEditToolBarDelegate {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPageEditViewController : ComPDFKit_Tools.CPDFThumbnailViewController, ComPDFKit_Tools.CPageEditToolBarDelegate {
   @_Concurrency.MainActor(unsafe) weak public var pageEditDelegate: (any ComPDFKit_Tools.CPDFPageEditViewControllerDelegate)?
   @_Concurrency.MainActor(unsafe) public var isPageEdit: Swift.Bool
-  @_Concurrency.MainActor(unsafe) override public init(pdfView: ComPDFKit.CPDFView)
+  @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView, isOnlyThumbnail: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
   @_Concurrency.MainActor(unsafe) public func beginEdit()
@@ -1116,7 +1117,7 @@ extension ComPDFKit_Tools.CPDFListView {
   @_Concurrency.MainActor(unsafe) @objc override open func buttonItemClicked_thumbnail(_ sender: UIKit.UIButton)
   @_Concurrency.MainActor(unsafe) @objc override open func buttonItemClicked_Search(_ button: UIKit.UIButton?)
   @_Concurrency.MainActor(unsafe) @objc override open func buttonItemClicked_searchBack(_ button: UIKit.UIButton?)
-  @_Concurrency.MainActor(unsafe) override open func enterThumbnail()
+  @_Concurrency.MainActor(unsafe) override open func enterThumbnail(_ isOnlyThumbnail: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override open func pdfViewPerformURL(_ pdfView: ComPDFKit.CPDFView, withContent content: Swift.String!)
   @_Concurrency.MainActor(unsafe) @objc override open func pdfViewEditingSelectStateDidChanged(_ pdfView: ComPDFKit.CPDFView)
   @_Concurrency.MainActor(unsafe) @objc override open func pdfViewShouldBeginEditing(_ pdfView: ComPDFKit.CPDFView, textView: UIKit.UITextView, for annotation: ComPDFKit.CPDFFreeTextAnnotation)
@@ -1353,7 +1354,7 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_Bota(_ button: UIKit.UIButton?)
   @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_More(_ button: UIKit.UIButton?)
   @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_thumbnail(_ button: UIKit.UIButton)
-  @_Concurrency.MainActor(unsafe) open func enterThumbnail()
+  @_Concurrency.MainActor(unsafe) open func enterThumbnail(_ isOnlyThumbnail: Swift.Bool)
   @_Concurrency.MainActor(unsafe) public func backSave()
   @objc @_Concurrency.MainActor(unsafe) open func titleButtonClickd(_ button: UIKit.UIButton)
   @objc @_Concurrency.MainActor(unsafe) open func buttonItemClicked_searchSetting(_ button: UIKit.UIButton)
