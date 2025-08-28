@@ -314,7 +314,16 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  *  A Boolean value indicating whether pagination is displayed in vertical mode.
  *  @discussion Defaults to NO.
  */
-@property (nonatomic,assign) BOOL displaysVerticalPaging;
+@property (nonatomic, assign) BOOL displaysVerticalPaging DEPRECATED_MSG_ATTRIBUTE("Use isContinueMode instead");
+
+/**
+ * A Boolean value indicating whether the view is in continuous mode.
+ *
+ * @discussion If isContinueMode is YES, then pages will be displayed continuously without any breaks.
+ * If isContinueMode is NO, then pages will be displayed with breaks (spacing) between them.
+ * Default is NO.
+ */
+@property (nonatomic,assign) BOOL isContinueMode;
 
 /**
  * A Boolean value indicating whether the view is displaying page breaks.
@@ -406,6 +415,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (void)setEditAnnotationFreeTextBorderColor:(CPDFKitPlatformColor *_Nullable)color;
 - (void)setEditAnnotationFreeTextBorder:(CPDFBorder *_Nullable)border;
 - (void)setEditAnnotationFreeAlignment:(NSTextAlignment)alignment;
+
+- (void)refreshAnnotationModifiedState;
 
 #pragma mark - Form Annotation
 

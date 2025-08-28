@@ -3288,6 +3288,1472 @@
         "printedName": "CAnnotStyle",
         "children": [
           {
+            "kind": "Var",
+            "name": "isSelectAnnot",
+            "printedName": "isSelectAnnot",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvs",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvM",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13isSelectAnnotSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "annotations",
+            "printedName": "annotations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ComPDFKit.CPDFAnnotation]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFAnnotation",
+                    "printedName": "ComPDFKit.CPDFAnnotation",
+                    "usr": "c:objc(cs)CPDFAnnotation"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ComPDFKit.CPDFAnnotation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotation",
+                        "printedName": "ComPDFKit.CPDFAnnotation",
+                        "usr": "c:objc(cs)CPDFAnnotation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ComPDFKit.CPDFAnnotation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotation",
+                        "printedName": "ComPDFKit.CPDFAnnotation",
+                        "usr": "c:objc(cs)CPDFAnnotation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvs",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvM",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11annotationsSaySo14CPDFAnnotationCGvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "annotMode",
+            "printedName": "annotMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFViewAnnotationMode",
+                    "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                    "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFViewAnnotationMode",
+                    "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                    "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovs",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0Ovs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0OvM",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9annotModeAA018CPDFViewAnnotationG0OvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(annotionMode:annotations:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CAnnotStyle",
+                "printedName": "ComPDFKit_Tools.CAnnotStyle",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CAnnotStyle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[ComPDFKit.CPDFAnnotation]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ComPDFKit.CPDFAnnotation]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotation",
+                        "printedName": "ComPDFKit.CPDFAnnotation",
+                        "usr": "c:objc(cs)CPDFAnnotation"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC12annotionMode11annotationsAcA018CPDFViewAnnotationG0O_SaySo14CPDFAnnotationCGSgtcfc",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC12annotionMode11annotationsAcA018CPDFViewAnnotationG0O_SaySo14CPDFAnnotationCGSgtcfc",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "annotation",
+            "printedName": "annotation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ComPDFKit.CPDFAnnotation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFAnnotation",
+                    "printedName": "ComPDFKit.CPDFAnnotation",
+                    "usr": "c:objc(cs)CPDFAnnotation"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC10annotationSo14CPDFAnnotationCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC10annotationSo14CPDFAnnotationCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ComPDFKit.CPDFAnnotation?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFAnnotation",
+                        "printedName": "ComPDFKit.CPDFAnnotation",
+                        "usr": "c:objc(cs)CPDFAnnotation"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC10annotationSo14CPDFAnnotationCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC10annotationSo14CPDFAnnotationCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC5colorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC5colorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC5colorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC5colorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setColor",
+            "printedName": "setColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC8setColoryySo7UIColorCSgF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC8setColoryySo7UIColorCSgF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "opacity",
+            "printedName": "opacity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC7opacity14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC7opacity12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC7opacity14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC7opacity12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setOpacity",
+            "printedName": "setOpacity(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC10setOpacityyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC10setOpacityyy12CoreGraphics7CGFloatVF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "style",
+            "printedName": "style",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFBorderStyle",
+                "printedName": "ComPDFKit.CPDFBorderStyle",
+                "usr": "c:@E@CPDFBorderStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC5styleSo010CPDFBorderE0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC5styleSo010CPDFBorderE0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFBorderStyle",
+                    "printedName": "ComPDFKit.CPDFBorderStyle",
+                    "usr": "c:@E@CPDFBorderStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC5styleSo010CPDFBorderE0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC5styleSo010CPDFBorderE0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setStyle",
+            "printedName": "setStyle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFBorderStyle",
+                "printedName": "ComPDFKit.CPDFBorderStyle",
+                "usr": "c:@E@CPDFBorderStyle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC03setE0yySo010CPDFBorderE0VF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC03setE0yySo010CPDFBorderE0VF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "dashPattern",
+            "printedName": "dashPattern",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.NSNumber]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11dashPatternSaySo8NSNumberCGvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11dashPatternSaySo8NSNumberCGvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Foundation.NSNumber]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11dashPatternSaySo8NSNumberCGvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11dashPatternSaySo8NSNumberCGvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setDashPattern",
+            "printedName": "setDashPattern(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.NSNumber]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC14setDashPatternyySaySo8NSNumberCGF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC14setDashPatternyySaySo8NSNumberCGF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "lineWidth",
+            "printedName": "lineWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9lineWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9lineWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9lineWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9lineWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setLineWidth",
+            "printedName": "setLineWidth(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC12setLineWidthyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC12setLineWidthyy12CoreGraphics7CGFloatVF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "startLineStyle",
+            "printedName": "startLineStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFLineStyle",
+                "printedName": "ComPDFKit.CPDFLineStyle",
+                "usr": "c:@E@CPDFLineStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC09startLineE0So08CPDFLineE0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC09startLineE0So08CPDFLineE0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFLineStyle",
+                    "printedName": "ComPDFKit.CPDFLineStyle",
+                    "usr": "c:@E@CPDFLineStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC09startLineE0So08CPDFLineE0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC09startLineE0So08CPDFLineE0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setStartLineStyle",
+            "printedName": "setStartLineStyle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFLineStyle",
+                "printedName": "ComPDFKit.CPDFLineStyle",
+                "usr": "c:@E@CPDFLineStyle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC012setStartLineE0yySo08CPDFLineE0VF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC012setStartLineE0yySo08CPDFLineE0VF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "endLineStyle",
+            "printedName": "endLineStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFLineStyle",
+                "printedName": "ComPDFKit.CPDFLineStyle",
+                "usr": "c:@E@CPDFLineStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC07endLineE0So08CPDFLineE0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC07endLineE0So08CPDFLineE0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFLineStyle",
+                    "printedName": "ComPDFKit.CPDFLineStyle",
+                    "usr": "c:@E@CPDFLineStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC07endLineE0So08CPDFLineE0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC07endLineE0So08CPDFLineE0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setEndLineStyle",
+            "printedName": "setEndLineStyle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFLineStyle",
+                "printedName": "ComPDFKit.CPDFLineStyle",
+                "usr": "c:@E@CPDFLineStyle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC010setEndLineE0yySo08CPDFLineE0VF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC010setEndLineE0yySo08CPDFLineE0VF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "fontColor",
+            "printedName": "fontColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9fontColorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9fontColorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9fontColorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9fontColorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setFontColor",
+            "printedName": "setFontColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC12setFontColoryySo7UIColorCSgF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC12setFontColoryySo7UIColorCSgF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "fontSize",
+            "printedName": "fontSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC8fontSize14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC8fontSize12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC8fontSize14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC8fontSize12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setFontSize",
+            "printedName": "setFontSize(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11setFontSizeyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11setFontSizeyy12CoreGraphics7CGFloatVF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "newCFont",
+            "printedName": "newCFont",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFFont",
+                "printedName": "ComPDFKit.CPDFFont",
+                "usr": "c:objc(cs)CPDFFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC8newCFontSo8CPDFFontCvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC8newCFontSo8CPDFFontCvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFFont",
+                    "printedName": "ComPDFKit.CPDFFont",
+                    "usr": "c:objc(cs)CPDFFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC8newCFontSo8CPDFFontCvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC8newCFontSo8CPDFFontCvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setNewCFont",
+            "printedName": "setNewCFont(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFFont",
+                "printedName": "ComPDFKit.CPDFFont",
+                "usr": "c:objc(cs)CPDFFont"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC11setNewCFontyySo8CPDFFontCF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC11setNewCFontyySo8CPDFFontCF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "alignment",
+            "printedName": "alignment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextAlignment",
+                "printedName": "UIKit.NSTextAlignment",
+                "usr": "c:@E@NSTextAlignment"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9alignmentSo15NSTextAlignmentVvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9alignmentSo15NSTextAlignmentVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextAlignment",
+                    "printedName": "UIKit.NSTextAlignment",
+                    "usr": "c:@E@NSTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC9alignmentSo15NSTextAlignmentVvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC9alignmentSo15NSTextAlignmentVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setAlignment",
+            "printedName": "setAlignment(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextAlignment",
+                "printedName": "UIKit.NSTextAlignment",
+                "usr": "c:@E@NSTextAlignment"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC12setAlignmentyySo06NSTextG0VF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC12setAlignmentyySo06NSTextG0VF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "interiorColor",
+            "printedName": "interiorColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13interiorColorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13interiorColorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC13interiorColorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC13interiorColorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setInteriorColor",
+            "printedName": "setInteriorColor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC16setInteriorColoryySo7UIColorCSgF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC16setInteriorColoryySo7UIColorCSgF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "interiorOpacity",
+            "printedName": "interiorOpacity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC15interiorOpacity14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC15interiorOpacity12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC15interiorOpacity14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC15interiorOpacity12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setInteriorOpacity",
+            "printedName": "setInteriorOpacity(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC18setInteriorOpacityyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC18setInteriorOpacityyy12CoreGraphics7CGFloatVF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBorderEffectType",
+            "printedName": "setBorderEffectType(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFBorderEffectType",
+                "printedName": "ComPDFKit.CPDFBorderEffectType",
+                "usr": "c:@E@CPDFBorderEffectType"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC19setBorderEffectTypeyySo010CPDFBorderhI0VF",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC19setBorderEffectTypeyySo010CPDFBorderhI0VF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "borderEffectType",
+            "printedName": "borderEffectType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFBorderEffectType",
+                "printedName": "ComPDFKit.CPDFBorderEffectType",
+                "usr": "c:@E@CPDFBorderEffectType"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CAnnotStyleC16borderEffectTypeSo010CPDFBordergH0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC16borderEffectTypeSo010CPDFBordergH0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFBorderEffectType",
+                    "printedName": "ComPDFKit.CPDFBorderEffectType",
+                    "usr": "c:@E@CPDFBorderEffectType"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CAnnotStyleC16borderEffectTypeSo010CPDFBordergH0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC16borderEffectTypeSo010CPDFBordergH0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -3318,12 +4784,12 @@
         "usr": "c:@M@ComPDFKit_Tools@objc(cs)CAnnotStyle",
         "mangledName": "$s15ComPDFKit_Tools11CAnnotStyleC",
         "moduleName": "ComPDFKit_Tools",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
@@ -4843,6 +6309,92 @@
           },
           {
             "kind": "Var",
+            "name": "showInkToggleButton",
+            "printedName": "showInkToggleButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC19showInkToggleButtonSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "showRightItems",
             "printedName": "showRightItems",
             "children": [
@@ -5399,6 +6951,92 @@
                 "declKind": "Accessor",
                 "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvM",
                 "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC18enableExitSaveTipsSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableErrorTips",
+            "printedName": "enableErrorTips",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvp",
+            "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvg",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvs",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvM",
+                "mangledName": "$s15ComPDFKit_Tools17CPDFConfigurationC15enableErrorTipsSbvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -20813,6 +22451,28 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "exitDrawing",
+            "printedName": "exitDrawing()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools12CPDFListViewC11exitDrawingyyF",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC11exitDrawingyyF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -54274,6 +55934,1317 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Var",
+            "name": "color",
+            "printedName": "color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5colorSo7UIColorCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "interiorColor",
+            "printedName": "interiorColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13interiorColorSo7UIColorCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontColor",
+            "printedName": "fontColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9fontColorSo7UIColorCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "checkedColor",
+            "printedName": "checkedColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC12checkedColorSo7UIColorCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lineWidth",
+            "printedName": "lineWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC9lineWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9lineWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9lineWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9lineWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9lineWidth14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9lineWidth12CoreGraphics7CGFloatVvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9lineWidth14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9lineWidth12CoreGraphics7CGFloatVvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontSize",
+            "printedName": "fontSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC8fontSize14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC8fontSize12CoreGraphics7CGFloatVvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC8fontSize14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC8fontSize12CoreGraphics7CGFloatVvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC8fontSize14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC8fontSize12CoreGraphics7CGFloatVvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC8fontSize14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC8fontSize12CoreGraphics7CGFloatVvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textAlignment",
+            "printedName": "textAlignment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextAlignment",
+                "printedName": "UIKit.NSTextAlignment",
+                "usr": "c:@E@NSTextAlignment"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextAlignment",
+                    "printedName": "UIKit.NSTextAlignment",
+                    "usr": "c:@E@NSTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextAlignment",
+                    "printedName": "UIKit.NSTextAlignment",
+                    "usr": "c:@E@NSTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0Vvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0VvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC13textAlignmentSo06NSTextG0VvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontFamilyName",
+            "printedName": "fontFamilyName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC14fontFamilyNameSSvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fontStyleName",
+            "printedName": "fontStyleName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC04fontE4NameSSvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isMultiline",
+            "printedName": "isMultiline",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC11isMultilineSbvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC11isMultilineSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC11isMultilineSbvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC11isMultilineSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC11isMultilineSbvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC11isMultilineSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC11isMultilineSbvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC11isMultilineSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isChecked",
+            "printedName": "isChecked",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC9isCheckedSbvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9isCheckedSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9isCheckedSbvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9isCheckedSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9isCheckedSbvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9isCheckedSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC9isCheckedSbvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC9isCheckedSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "checkedStyle",
+            "printedName": "checkedStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFWidgetButtonStyle",
+                "printedName": "ComPDFKit.CPDFWidgetButtonStyle",
+                "usr": "c:@E@CPDFWidgetButtonStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFWidgetButtonStyle",
+                    "printedName": "ComPDFKit.CPDFWidgetButtonStyle",
+                    "usr": "c:@E@CPDFWidgetButtonStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFWidgetButtonStyle",
+                    "printedName": "ComPDFKit.CPDFWidgetButtonStyle",
+                    "usr": "c:@E@CPDFWidgetButtonStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0Vvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0VvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC07checkedE0So016CPDFWidgetButtonE0VvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "style",
+            "printedName": "style",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFBorderStyle",
+                "printedName": "ComPDFKit.CPDFBorderStyle",
+                "usr": "c:@E@CPDFBorderStyle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFBorderStyle",
+                    "printedName": "ComPDFKit.CPDFBorderStyle",
+                    "usr": "c:@E@CPDFBorderStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFBorderStyle",
+                    "printedName": "ComPDFKit.CPDFBorderStyle",
+                    "usr": "c:@E@CPDFBorderStyle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0Vvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0VvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5styleSo010CPDFBorderE0VvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSString?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSString",
+                    "printedName": "Foundation.NSString",
+                    "usr": "c:objc(cs)NSString"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSString?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSString",
+                        "printedName": "Foundation.NSString",
+                        "usr": "c:objc(cs)NSString"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSString?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSString",
+                        "printedName": "Foundation.NSString",
+                        "usr": "c:objc(cs)NSString"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools10CFormStyleC5titleSo8NSStringCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -54304,6 +57275,7 @@
         "usr": "c:@M@ComPDFKit_Tools@objc(cs)CFormStyle",
         "mangledName": "$s15ComPDFKit_Tools10CFormStyleC",
         "moduleName": "ComPDFKit_Tools",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -56214,35 +59186,35 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFAnnotationManage\/CAnnotStyle.swift",
       "kind": "BooleanLiteral",
-      "offset": 565,
+      "offset": 568,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFAnnotationManage\/CAnnotStyle.swift",
       "kind": "Array",
-      "offset": 610,
+      "offset": 618,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFAnnotationManage\/CAnnotStyle.swift",
       "kind": "Array",
-      "offset": 712,
+      "offset": 725,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFAnnotationManage\/CAnnotStyle.swift",
       "kind": "Array",
-      "offset": 744,
+      "offset": 757,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFAnnotationManage\/CAnnotStyle.swift",
       "kind": "StringLiteral",
-      "offset": 507,
+      "offset": 505,
       "length": 11,
       "value": "\"ComPDFKit_Tools.CAnnotStyle\""
     },
@@ -56640,729 +59612,743 @@
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1288,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 1304,
+      "offset": 1351,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1537,
+      "offset": 1584,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1589,
+      "offset": 1636,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 1641,
+      "offset": 1688,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1737,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2565,
+      "offset": 2661,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2629,
+      "offset": 2725,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2685,
+      "offset": 2781,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Dictionary",
-      "offset": 2743,
+      "offset": 2839,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2842,
+      "offset": 2938,
       "length": 12,
       "value": "\"screenshot\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 2856,
+      "offset": 2952,
       "length": 69,
       "value": "[[(\"key\", \"exit\")], [(\"key\", \"share\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 2999,
+      "offset": 3095,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3013,
+      "offset": 3109,
       "length": 39,
       "value": "[[(\"key\", \"copy\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3132,
+      "offset": 3228,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3146,
+      "offset": 3242,
       "length": 174,
       "value": "[[(\"key\", \"copy\")], [(\"key\", \"highlight\")], [(\"key\", \"underline\")], [(\"key\", \"strikeout\")], [(\"key\", \"squiggly\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3330,
+      "offset": 3426,
       "length": 18,
       "value": "\"longPressContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3350,
+      "offset": 3446,
       "length": 161,
       "value": "[[(\"key\", \"paste\")], [(\"key\", \"note\")], [(\"key\", \"textBox\")], [(\"key\", \"stamp\")], [(\"key\", \"image\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3521,
+      "offset": 3617,
       "length": 15,
       "value": "\"markupContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3538,
+      "offset": 3634,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3717,
+      "offset": 3813,
       "length": 14,
       "value": "\"soundContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3733,
+      "offset": 3829,
       "length": 165,
       "value": "[[(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"play\")], [(\"key\", \"record\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 3908,
+      "offset": 4004,
       "length": 12,
       "value": "\"inkContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 3922,
+      "offset": 4018,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4101,
+      "offset": 4197,
       "length": 14,
       "value": "\"shapeContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4117,
+      "offset": 4213,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4296,
+      "offset": 4392,
       "length": 17,
       "value": "\"freeTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4315,
+      "offset": 4411,
       "length": 169,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4494,
+      "offset": 4590,
       "length": 18,
       "value": "\"signStampContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4514,
+      "offset": 4610,
       "length": 105,
       "value": "[[(\"key\", \"signHere\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4629,
+      "offset": 4725,
       "length": 14,
       "value": "\"stampContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4645,
+      "offset": 4741,
       "length": 165,
       "value": "[[(\"key\", \"note\")], [(\"key\", \"reply\")], [(\"key\", \"viewReply\")], [(\"key\", \"delete\")], [(\"key\", \"rotate\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4820,
+      "offset": 4916,
       "length": 13,
       "value": "\"linkContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 4835,
+      "offset": 4931,
       "length": 70,
       "value": "[[(\"key\", \"edit\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 4988,
+      "offset": 5084,
       "length": 21,
       "value": "\"editTextAreaContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5011,
+      "offset": 5107,
       "length": 162,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"edit\")], [(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5183,
+      "offset": 5279,
       "length": 23,
       "value": "\"editSelectTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5223,
+      "offset": 5319,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5230,
+      "offset": 5326,
       "length": 12,
       "value": "\"properties\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5258,
+      "offset": 5354,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5265,
+      "offset": 5361,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5276,
+      "offset": 5372,
       "length": 10,
       "value": "\"subItems\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5288,
+      "offset": 5384,
       "length": 29,
       "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5333,
+      "offset": 5429,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5340,
+      "offset": 5436,
       "length": 5,
       "value": "\"cut\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5361,
+      "offset": 5457,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5368,
+      "offset": 5464,
       "length": 6,
       "value": "\"copy\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5390,
+      "offset": 5486,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5397,
+      "offset": 5493,
       "length": 8,
       "value": "\"delete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5426,
+      "offset": 5522,
       "length": 17,
       "value": "\"editTextContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5445,
+      "offset": 5541,
       "length": 105,
       "value": "[[(\"key\", \"select\")], [(\"key\", \"selectAll\")], [(\"key\", \"paste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5560,
+      "offset": 5656,
       "length": 18,
       "value": "\"imageAreaContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5595,
+      "offset": 5691,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5602,
+      "offset": 5698,
       "length": 12,
       "value": "\"properties\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5630,
+      "offset": 5726,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5637,
+      "offset": 5733,
       "length": 12,
       "value": "\"rotateLeft\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5665,
+      "offset": 5761,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5672,
+      "offset": 5768,
       "length": 13,
       "value": "\"rotateRight\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5701,
+      "offset": 5797,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5708,
+      "offset": 5804,
       "length": 9,
       "value": "\"replace\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5733,
+      "offset": 5829,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5740,
+      "offset": 5836,
       "length": 8,
       "value": "\"export\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5764,
+      "offset": 5860,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5771,
+      "offset": 5867,
       "length": 9,
       "value": "\"opacity\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5782,
+      "offset": 5878,
       "length": 10,
       "value": "\"subItems\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 5794,
+      "offset": 5890,
       "length": 29,
       "value": "[\"25%\", \"50%\", \"75%\", \"100%\"]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5839,
+      "offset": 5935,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5846,
+      "offset": 5942,
       "length": 16,
       "value": "\"flipHorizontal\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5878,
+      "offset": 5974,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5885,
+      "offset": 5981,
       "length": 14,
       "value": "\"flipVertical\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5915,
+      "offset": 6011,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5922,
+      "offset": 6018,
       "length": 6,
       "value": "\"crop\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5944,
+      "offset": 6040,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5951,
+      "offset": 6047,
       "length": 8,
       "value": "\"delete\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5975,
+      "offset": 6071,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 5982,
+      "offset": 6078,
       "length": 6,
       "value": "\"copy\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6004,
+      "offset": 6100,
       "length": 5,
       "value": "\"key\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6011,
+      "offset": 6107,
       "length": 5,
       "value": "\"cut\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6037,
+      "offset": 6133,
       "length": 15,
       "value": "\"imageCropMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6054,
+      "offset": 6150,
       "length": 70,
       "value": "[[(\"key\", \"done\")], [(\"key\", \"cancel\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6134,
+      "offset": 6230,
       "length": 17,
       "value": "\"editPathContent\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6153,
+      "offset": 6249,
       "length": 98,
       "value": "[[(\"key\", \"cut\")], [(\"key\", \"copy\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6261,
+      "offset": 6357,
       "length": 27,
       "value": "\"longPressWithEditTextMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6290,
+      "offset": 6386,
       "length": 121,
       "value": "[[(\"key\", \"addText\")], [(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6421,
+      "offset": 6517,
       "length": 28,
       "value": "\"longPressWithEditImageMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6451,
+      "offset": 6547,
       "length": 74,
       "value": "[[(\"key\", \"addImages\")], [(\"key\", \"paste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6535,
+      "offset": 6631,
       "length": 22,
       "value": "\"longPressWithAllMode\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6559,
+      "offset": 6655,
       "length": 89,
       "value": "[[(\"key\", \"paste\")], [(\"key\", \"keepSourceFormatingPaste\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6658,
+      "offset": 6754,
       "length": 15,
       "value": "\"searchReplace\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6675,
+      "offset": 6771,
       "length": 42,
       "value": "[[(\"key\", \"replace\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6791,
+      "offset": 6887,
       "length": 12,
       "value": "\"textSelect\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6805,
+      "offset": 6901,
       "length": 39,
       "value": "[[(\"key\", \"copy\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6854,
+      "offset": 6950,
       "length": 11,
       "value": "\"textField\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6867,
+      "offset": 6963,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 6953,
+      "offset": 7049,
       "length": 10,
       "value": "\"checkBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 6965,
+      "offset": 7061,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7051,
+      "offset": 7147,
       "length": 13,
       "value": "\"radioButton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7066,
+      "offset": 7162,
       "length": 76,
       "value": "[[(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7152,
+      "offset": 7248,
       "length": 9,
       "value": "\"listBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7163,
+      "offset": 7259,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7281,
+      "offset": 7377,
       "length": 10,
       "value": "\"comboBox\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7293,
+      "offset": 7389,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7411,
+      "offset": 7507,
       "length": 16,
       "value": "\"signatureField\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7429,
+      "offset": 7525,
       "length": 77,
       "value": "[[(\"key\", \"startToSign\")], [(\"key\", \"delete\")]]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "StringLiteral",
-      "offset": 7516,
+      "offset": 7612,
       "length": 12,
       "value": "\"pushButton\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFConfiguration.swift",
       "kind": "Array",
-      "offset": 7530,
+      "offset": 7626,
       "length": 108,
       "value": "[[(\"key\", \"options\")], [(\"key\", \"properties\")], [(\"key\", \"delete\")]]"
     },
@@ -61955,36 +64941,29 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 885,
-      "length": 23,
+      "length": 11,
       "value": "7"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 918,
-      "length": 11,
+      "offset": 906,
+      "length": 10,
       "value": "8"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 939,
-      "length": 10,
+      "offset": 926,
+      "length": 11,
       "value": "9"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 959,
-      "length": 11,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 980,
+      "offset": 947,
       "length": 12,
-      "value": "11"
+      "value": "10"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
@@ -62039,36 +65018,29 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 885,
-      "length": 23,
+      "length": 11,
       "value": "7"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 918,
-      "length": 11,
+      "offset": 906,
+      "length": 10,
       "value": "8"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 939,
-      "length": 10,
+      "offset": 926,
+      "length": 11,
       "value": "9"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 959,
-      "length": 11,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 980,
+      "offset": 947,
       "length": 12,
-      "value": "11"
+      "value": "10"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
@@ -62123,41 +65095,34 @@
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
       "offset": 885,
-      "length": 23,
+      "length": 11,
       "value": "7"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 918,
-      "length": 11,
+      "offset": 906,
+      "length": 10,
       "value": "8"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 939,
-      "length": 10,
+      "offset": 926,
+      "length": 11,
       "value": "9"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 959,
-      "length": 11,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
-      "kind": "IntegerLiteral",
-      "offset": 980,
+      "offset": 947,
       "length": 12,
-      "value": "11"
+      "value": "10"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/PDFDisplaySetting\/CPDFDisplayViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1003,
+      "offset": 970,
       "length": 25,
       "value": "\"ComPDFKit_Tools.CPDFDisplayViewController\""
     },
@@ -67462,13 +70427,6 @@
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4038,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "StringLiteral",
       "offset": 2332,
       "length": 22,
@@ -67484,7 +70442,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Model\/CFormStyle.swift",
       "kind": "StringLiteral",
-      "offset": 506,
+      "offset": 504,
       "length": 10,
       "value": "\"ComPDFKit_Tools.CFormStyle\""
     },

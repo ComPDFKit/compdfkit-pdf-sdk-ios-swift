@@ -60,7 +60,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         
         if let configuration = self.configuration, configuration.readerOnly {
             self.navigationController?.navigationBar.isHidden = true
-            return
+            self.navigationController?.toolbar.isHidden = true
         }
         
         let editingConfig = CPDFEditingConfig.init()
@@ -194,6 +194,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             height += self.view.safeAreaInsets.bottom
         }
         
+        if let configuration = self.configuration, configuration.readerOnly {
+            height = 0
+        }
+        
         var bottomHeight: CGFloat = 0
         
         if functionTypeState == .annotation {
@@ -239,7 +243,6 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         } else if (functionTypeState == .signature) {
             if digitalSignatureBar?.superview != nil {
                 if self.navigationController?.isNavigationBarHidden == false {
-                    height += 14
                     digitalSignatureBar?.frame = CGRect(x: 0, y: self.view.frame.size.height - height, width: self.view.frame.size.width, height: height)
                     bottomHeight = digitalSignatureBar?.frame.height ?? 0
 
@@ -311,16 +314,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                     completion(false)
                 } else {
                     self.pdfListView?.document = document
-                    
-                    if document?.isImageDocument() == true {
-                        let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in
-                            self.navigationController?.popViewController(animated: true)
-                        }
-                        let alert = UIAlertController(title: NSLocalizedString("Warning", comment: ""), message: NSLocalizedString("The current page is scanned images that do not support adding highlights, underlines, strikeouts, and squiggly lines.", comment: ""), preferredStyle: .alert)
-                        alert.addAction(okAction)
-                        UIApplication.presentedViewController()?.present(alert, animated: true, completion: nil)
-                    }
-                    
+                
                     completion(true)
                 }
             }
@@ -744,6 +738,8 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     }
     
     open override func buttonItemClicked_thumbnail(_ sender: UIButton) {
+        let userDefaults = UserDefaults.standard
+        let isOnlyThumbnail = userDefaults.bool(forKey: "CThumbnailIsOnlyKey")
         
         if self.pdfListView?.activeAnnotations?.count ?? 0 > 0 {
             self.pdfListView?.updateActiveAnnotations([])
@@ -757,11 +753,11 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
                 DispatchQueue.main.async {
                     self.pdfListView?.endOfEditing()
-                    self.enterThumbnail()
+                    self.enterThumbnail(isOnlyThumbnail)
                 }
             }
         } else {
-            enterThumbnail()
+            enterThumbnail(isOnlyThumbnail)
         }
     }
     
@@ -776,9 +772,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         self.toolBar?.isHidden = false
     }
     
-    open override func enterThumbnail() {
+    open override func enterThumbnail(_ isOnlyThumbnail: Bool) {
         if(self.pdfListView != nil) {
-            let pageEditViewController = CPDFPageEditViewController(pdfView: self.pdfListView!)
+            let pageEditViewController = CPDFPageEditViewController(pdfView: self.pdfListView!, isOnlyThumbnail: isOnlyThumbnail)
             pageEditViewController.pageEditDelegate = self
             let navController = CNavigationController(rootViewController: pageEditViewController)
             navController.modalPresentationStyle = .fullScreen
@@ -1392,10 +1388,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     open override func pageEditViewControllerDone(_ pageEditViewController: CPDFPageEditViewController) {
         pageEditViewController.dismiss(animated: false) {
             if(pageEditViewController.isPageEdit) {
-                self.reloadDocument(withFilePath: (self.filePath)!, password: self.pdfListView?.document.password) { [weak self] result in
-                    self?.pdfListView?.reloadInputViews()
-                    self?.selectDocumentRefresh()
-                }
+                self.pdfListView?.layoutDocumentView()
+                self.pdfListView?.reloadInputViews()
+                self.selectDocumentRefresh()
                 self.pdfListView?.reloadInputViews()
             }
             self.delegate?.PDFViewBaseControllerPageEditBack?(self)
@@ -1405,13 +1400,12 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     open override func pageEditViewController(_ pageEditViewController: CPDFPageEditViewController, pageIndex: Int, isPageEdit: Bool) {
         pageEditViewController.dismiss(animated: true) {
             if isPageEdit {
-                self.reloadDocument(withFilePath: self.filePath!, password: self.pdfListView?.document.password) { [weak self] result in
-                    self?.pdfListView?.reloadInputViews()
-                    self?.pdfListView?.go(toPageIndex: pageIndex, animated: false)
-                    if self?.functionTypeState == .edit {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            self?.pdfListView?.setNeedsDisplayForVisiblePages()
-                        }
+                self.pdfListView?.layoutDocumentView()
+                self.pdfListView?.reloadInputViews()
+                self.pdfListView?.go(toPageIndex: pageIndex, animated: false)
+                if self.functionTypeState == .edit {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self.pdfListView?.setNeedsDisplayForVisiblePages()
                     }
                 }
             } else {

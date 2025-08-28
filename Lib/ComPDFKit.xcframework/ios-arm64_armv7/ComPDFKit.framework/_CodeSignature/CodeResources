@@ -306,7 +306,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		AL/86tC//m6UDN1u49HFEiWD5fc=
+		Xzd9NwCVHL/tSL2bl1LeR9AsFIs=
 		</data>
 		<key>Headers/CPDFWatermark+Protected.h</key>
 		<data>
@@ -334,7 +334,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		iJTuQjRoiEupeH7aCaqufn+mm4s=
+		OgsW1taAskYQi4LqYMN6Zity/Vs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -431,10 +431,6 @@
 		<key>viewer_dragDontFront@2x.png</key>
 		<data>
 		lGXLwuiV1yhpNpfn/e7Vo3ciGjI=
-		</data>
-		<key>workspace.xml</key>
-		<data>
-		VWwhZ9Bxr2pgbXJgTC2DyBWnJVY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -1268,11 +1264,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AL/86tC//m6UDN1u49HFEiWD5fc=
+			Xzd9NwCVHL/tSL2bl1LeR9AsFIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			3sGGX4PypeMBNT0mkZrvYxeVY1VefnSuiyqssxEDYjk=
+			wN60CPjc2IL9r0TjL186WbkCrRnJuIzUtFwK7YX88Ug=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark+Protected.h</key>
@@ -1603,17 +1599,6 @@
 			<key>hash2</key>
 			<data>
 			88DMn6oUlk/dDwvP1AXmRpMEKhOTlPWbKp5+PDShViE=
-			</data>
-		</dict>
-		<key>workspace.xml</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VWwhZ9Bxr2pgbXJgTC2DyBWnJVY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Js7xGfK9M7sJ7HLprD63PUopwabr9YamQ8kpGtMyfwg=
 			</data>
 		</dict>
 	</dict>

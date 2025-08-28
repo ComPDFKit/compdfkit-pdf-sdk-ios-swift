@@ -105,7 +105,70 @@ import _SwiftConcurrencyShims
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFCompressSuccessView : UIKit.UIView {
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class CAnnotStyle : ObjectiveC.NSObject {
+@objc open class CAnnotStyle : ObjectiveC.NSObject {
+  open var isSelectAnnot: Swift.Bool
+  open var annotations: [ComPDFKit.CPDFAnnotation]
+  open var annotMode: ComPDFKit_Tools.CPDFViewAnnotationMode
+  public init(annotionMode: ComPDFKit_Tools.CPDFViewAnnotationMode, annotations: [ComPDFKit.CPDFAnnotation]?)
+  open var annotation: ComPDFKit.CPDFAnnotation? {
+    get
+  }
+  open var color: UIKit.UIColor? {
+    get
+  }
+  open func setColor(_ color: UIKit.UIColor?)
+  open var opacity: CoreFoundation.CGFloat {
+    get
+  }
+  open func setOpacity(_ opacity: CoreFoundation.CGFloat)
+  open var style: ComPDFKit.CPDFBorderStyle {
+    get
+  }
+  open func setStyle(_ style: ComPDFKit.CPDFBorderStyle)
+  open var dashPattern: [Foundation.NSNumber] {
+    get
+  }
+  open func setDashPattern(_ dashPatterns: [Foundation.NSNumber])
+  open var lineWidth: CoreFoundation.CGFloat {
+    get
+  }
+  open func setLineWidth(_ lineWidth: CoreFoundation.CGFloat)
+  open var startLineStyle: ComPDFKit.CPDFLineStyle {
+    get
+  }
+  open func setStartLineStyle(_ startLineStyle: ComPDFKit.CPDFLineStyle)
+  open var endLineStyle: ComPDFKit.CPDFLineStyle {
+    get
+  }
+  open func setEndLineStyle(_ endLineStyle: ComPDFKit.CPDFLineStyle)
+  open var fontColor: UIKit.UIColor? {
+    get
+  }
+  open func setFontColor(_ fontColor: UIKit.UIColor?)
+  open var fontSize: CoreFoundation.CGFloat {
+    get
+  }
+  open func setFontSize(_ fontSize: CoreFoundation.CGFloat)
+  open var newCFont: ComPDFKit.CPDFFont {
+    get
+  }
+  open func setNewCFont(_ font: ComPDFKit.CPDFFont)
+  open var alignment: UIKit.NSTextAlignment {
+    get
+  }
+  open func setAlignment(_ alignment: UIKit.NSTextAlignment)
+  open var interiorColor: UIKit.UIColor? {
+    get
+  }
+  open func setInteriorColor(_ interiorColor: UIKit.UIColor?)
+  open var interiorOpacity: CoreFoundation.CGFloat {
+    get
+  }
+  open func setInteriorOpacity(_ interiorOpacity: CoreFoundation.CGFloat)
+  open func setBorderEffectType(_ borderEffectType: ComPDFKit.CPDFBorderEffectType)
+  open var borderEffectType: ComPDFKit.CPDFBorderEffectType {
+    get
+  }
   @objc deinit
 }
 public enum CPDFAnnotationListPopMenuViewType : Swift.Int {
@@ -145,12 +208,14 @@ public enum CPDFAnnotationListPopMenuViewType : Swift.Int {
   public var showleftItems: [ComPDFKit_Tools.CNavBarButtonItem]
   public var mainToolbarVisible: Swift.Bool
   public var annotationToolbarVisible: Swift.Bool
+  public var showInkToggleButton: Swift.Bool
   public var showRightItems: [ComPDFKit_Tools.CNavBarButtonItem]
   public var enterToolModel: ComPDFKit_Tools.CPDFToolFunctionTypeState
   public var availableViewModes: [ComPDFKit_Tools.CPDFToolFunctionTypeState]
   public var readerOnly: Swift.Bool
   public var isWatermarkSaveAs: Swift.Bool
   public var enableExitSaveTips: Swift.Bool
+  public var enableErrorTips: Swift.Bool
   public var showMoreItems: [ComPDFKit_Tools.CPDFPopMenuViewType]
   public var annotationsTypes: [ComPDFKit_Tools.CPDFAnnotationToolbarType]
   public var annotationsTools: [ComPDFKit_Tools.CPDFAnnotationPropertieType]
@@ -522,6 +587,7 @@ public enum CPDFAnnotationDraggingType {
   @_Concurrency.MainActor(unsafe) public var activeAnnotation: ComPDFKit.CPDFAnnotation? {
     get
   }
+  @_Concurrency.MainActor(unsafe) public func exitDrawing()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchBegan(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchMoved(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func touchEnded(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage)
@@ -1400,8 +1466,64 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @_Concurrency.MainActor(unsafe) open func documentPasswordViewControllerCancel(_ documentPasswordViewController: ComPDFKit_Tools.CDocumentPasswordViewController)
   @objc deinit
 }
-@objc public class CFormStyle : ObjectiveC.NSObject {
+@objc open class CFormStyle : ObjectiveC.NSObject {
   public init(formMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  open var color: UIKit.UIColor? {
+    get
+    set
+  }
+  open var interiorColor: UIKit.UIColor? {
+    get
+    set
+  }
+  open var fontColor: UIKit.UIColor? {
+    get
+    set
+  }
+  open var checkedColor: UIKit.UIColor? {
+    get
+    set
+  }
+  open var lineWidth: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  open var fontSize: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  open var textAlignment: UIKit.NSTextAlignment {
+    get
+    set
+  }
+  open var fontFamilyName: Swift.String {
+    get
+    set
+  }
+  open var fontStyleName: Swift.String {
+    get
+    set
+  }
+  open var isMultiline: Swift.Bool {
+    get
+    set
+  }
+  open var isChecked: Swift.Bool {
+    get
+    set
+  }
+  open var checkedStyle: ComPDFKit.CPDFWidgetButtonStyle {
+    get
+    set
+  }
+  open var style: ComPDFKit.CPDFBorderStyle {
+    get
+    set
+  }
+  open var title: Foundation.NSString? {
+    get
+    set
+  }
   @objc deinit
 }
 extension ComPDFKit_Tools.CPDFAnnotationListPopMenuViewType : Swift.Equatable {}
