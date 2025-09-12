@@ -78,8 +78,7 @@ typedef NS_ENUM(NSInteger, CPDFWidgetButtonStyle) {
  */
 - (void)setCaption:(NSString *)name;
 
-- (CPDFAction *)action;
-- (void)setAction:(CPDFAction *)action;
+@property (nonatomic, strong) CPDFAction *action;
 
 - (BOOL)isTick;
 - (void)setIsTick:(NSInteger)isTick;

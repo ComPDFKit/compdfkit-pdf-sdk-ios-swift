@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
-		BBYAgHUfXEx2ZU1FkISq3X5gmvA=
+		StjOo29p5UfgCo5Z8qy7eevbEsQ=
 		</data>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Headers/CPDFButtonWidgetAnnotation.h</key>
 		<data>
-		ej6zZD9R97Xao8wqItkMrG43mmk=
+		X1QW9ZaoGPGMVA44hgESZ+qMAGk=
 		</data>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>Headers/CPDFKit.h</key>
 		<data>
-		W7FdKkJIIY0nSU7QDs24e+7dCfM=
+		1FsnemGYxJ1cQIPPlCyKjAouA1E=
 		</data>
 		<key>Headers/CPDFKitConfig.h</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		Xzd9NwCVHL/tSL2bl1LeR9AsFIs=
+		tUlJpBHSvzypvNQ97aC3idxxRTc=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
@@ -254,7 +254,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1rs1rbipusr7BZ5QKDdKKifW+1M=
+		hfPEicaTXftkVvl5NY8L4g2c+5g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -436,7 +436,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FYNmMr3msa6kZpUjKno7eu3Cs1G8mhCKZWyZgcdDyIU=
+			1ToaBoQ6D0dVlCDXtoMxFmKMGMjPGesb4BsyD40NULs=
 			</data>
 		</dict>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
@@ -485,7 +485,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xjYyCQPZEbpWcOx5rSOyQXAtiFxgh+8LYXZoQJr/hjc=
+			KdcUzeTGmt6AihYDsYPfiCVPwa6yg1w6qBsqfFWWIlw=
 			</data>
 		</dict>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
@@ -562,7 +562,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uQMfPBcXpZ8gO8aoI8cWUbdr9cKmJbvMKW7mq7SuRkE=
+			MSYbvG/6g8WOnYpv63COxjvkcgWpAj2d3AJh2ZriuLM=
 			</data>
 		</dict>
 		<key>Headers/CPDFKitConfig.h</key>
@@ -758,7 +758,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wN60CPjc2IL9r0TjL186WbkCrRnJuIzUtFwK7YX88Ug=
+			06U7o4j+Hlw9icu9ipjVFeE2Gvu1XYMAowEGXdHkKfE=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>

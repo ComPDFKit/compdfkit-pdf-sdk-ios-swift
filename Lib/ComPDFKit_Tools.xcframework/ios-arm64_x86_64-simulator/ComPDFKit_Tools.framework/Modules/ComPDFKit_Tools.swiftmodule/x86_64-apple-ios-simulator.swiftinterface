@@ -560,6 +560,9 @@ public enum CPDFAnnotationDraggingType {
   @_Concurrency.MainActor(unsafe) weak public var performDelegate: (any ComPDFKit_Tools.CPDFListViewDelegate)?
   @_Concurrency.MainActor(unsafe) public var pageSliderView: ComPDFKit_Tools.CPDFSlider?
   @_Concurrency.MainActor(unsafe) public var currentToolModel: ComPDFKit_Tools.CToolModel
+  @_Concurrency.MainActor(unsafe) public var isSignState: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isFullDisplay: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isHideBottomBar: Swift.Bool
   @_Concurrency.MainActor(unsafe) public var currentAnnotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode
   @_Concurrency.MainActor(unsafe) public var undoPDFManager: Foundation.UndoManager?
   @_Concurrency.MainActor(unsafe) public var activeAnnotations: [ComPDFKit.CPDFAnnotation]?
@@ -595,6 +598,7 @@ public enum CPDFAnnotationDraggingType {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func longPress(_ annotation: ComPDFKit.CPDFAnnotation!, at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage!)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func longPressGestureShouldBegin(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage!) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func menuItems(at point: CoreFoundation.CGPoint, for page: ComPDFKit.CPDFPage) -> [UIKit.UIMenuItem]
+  @_Concurrency.MainActor(unsafe) public func showPageNumIndicator()
   @_Concurrency.MainActor(unsafe) public func updateActiveAnnotations(_ activeAnnotations: [ComPDFKit.CPDFAnnotation]?)
   @_Concurrency.MainActor(unsafe) public func addAnnotation(_ annotation: ComPDFKit.CPDFAnnotation?, for page: ComPDFKit.CPDFPage?)
   @_Concurrency.MainActor(unsafe) public func stopRecord()
@@ -1034,8 +1038,9 @@ public protocol CPageEditToolBarDelegate : AnyObject {
   @objc deinit
 }
 public enum CPDFPageIndicatorViewPosition : Swift.Int {
-  case CPDFPageIndicatorViewPositionLeftBottom
-  case CPDFPageIndicatorViewPositionCenterBottom
+  case leftBottom
+  case centerBottom
+  case centerTop
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1044,6 +1049,7 @@ public enum CPDFPageIndicatorViewPosition : Swift.Int {
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPageIndicatorView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) public func showPageNumIndicator()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class CWatermarkModel : ObjectiveC.NSObject {

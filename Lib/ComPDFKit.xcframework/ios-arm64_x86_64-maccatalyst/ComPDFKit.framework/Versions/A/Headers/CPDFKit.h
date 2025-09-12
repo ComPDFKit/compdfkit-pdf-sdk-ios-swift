@@ -99,6 +99,12 @@ typedef void (^CPDFLicenseCompletionHandler)(CPDFKitOnlineLicenseCode code, NSSt
  */
 + (void)verifyWithOnlineLicense:(NSString *)license completionHandler:(CPDFLicenseCompletionHandler)handler;
 
+
+/**
+ * Print your license permissions about ComPDFKit.
+ */
++ (void)printLicensePermission;
+
 /**
  * Activate ComPDFKit with your xml file path.
  */

@@ -81,6 +81,7 @@ typedef NS_ENUM(NSInteger, CPDFViewScaleState) {
     CPDFViewScaleStateEnd,
 };
 
+extern NSNotificationName const CPDFViewScrollBeginNotification;
 extern NSNotificationName const CPDFViewDocumentChangedNotification;
 extern NSNotificationName const CPDFViewPageChangedNotification;
 

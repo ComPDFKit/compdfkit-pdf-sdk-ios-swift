@@ -173,6 +173,11 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
 - (void)setUserName:(NSString *)userName;
 
 /**
+ * * Returns the image of the annotation.
+ */
+- (CPDFKitPlatformImage *_Nonnull)anntationImage;
+
+/**
  * Returns the flags of the annotation.
  *
  * @see CPDFAnnotationFlags

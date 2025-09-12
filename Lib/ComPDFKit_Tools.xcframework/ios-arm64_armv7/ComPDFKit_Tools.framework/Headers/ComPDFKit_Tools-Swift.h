@@ -833,6 +833,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools21CPDFPageIndicatorView")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)layoutSubviews;
+- (void)showPageNumIndicator;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 

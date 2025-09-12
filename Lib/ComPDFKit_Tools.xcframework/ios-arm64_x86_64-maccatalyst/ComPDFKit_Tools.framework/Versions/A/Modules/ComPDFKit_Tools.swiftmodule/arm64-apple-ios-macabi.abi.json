@@ -21371,6 +21371,267 @@
           },
           {
             "kind": "Var",
+            "name": "isSignState",
+            "printedName": "isSignState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvp",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvg",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvs",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvM",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC11isSignStateSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isFullDisplay",
+            "printedName": "isFullDisplay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvp",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvg",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvs",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvM",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC13isFullDisplaySbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isHideBottomBar",
+            "printedName": "isHideBottomBar",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvp",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvg",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvs",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvM",
+                "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC15isHideBottomBarSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "currentAnnotationMode",
             "printedName": "currentAnnotationMode",
             "children": [
@@ -22785,6 +23046,27 @@
               "ObjC",
               "Custom",
               "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showPageNumIndicator",
+            "printedName": "showPageNumIndicator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools12CPDFListViewC20showPageNumIndicatoryyF",
+            "mangledName": "$s15ComPDFKit_Tools12CPDFListViewC20showPageNumIndicatoryyF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
@@ -38146,8 +38428,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "CPDFPageIndicatorViewPositionLeftBottom",
-            "printedName": "CPDFPageIndicatorViewPositionLeftBottom",
+            "name": "leftBottom",
+            "printedName": "leftBottom",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -38177,14 +38459,14 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO0defG10LeftBottomyA2CmF",
-            "mangledName": "$s15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO0defG10LeftBottomyA2CmF",
+            "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO10leftBottomyA2CmF",
+            "mangledName": "$s15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO10leftBottomyA2CmF",
             "moduleName": "ComPDFKit_Tools"
           },
           {
             "kind": "Var",
-            "name": "CPDFPageIndicatorViewPositionCenterBottom",
-            "printedName": "CPDFPageIndicatorViewPositionCenterBottom",
+            "name": "centerBottom",
+            "printedName": "centerBottom",
             "children": [
               {
                 "kind": "TypeFunc",
@@ -38214,8 +38496,45 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO0defG12CenterBottomyA2CmF",
-            "mangledName": "$s15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO0defG12CenterBottomyA2CmF",
+            "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO12centerBottomyA2CmF",
+            "mangledName": "$s15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO12centerBottomyA2CmF",
+            "moduleName": "ComPDFKit_Tools"
+          },
+          {
+            "kind": "Var",
+            "name": "centerTop",
+            "printedName": "centerTop",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ComPDFKit_Tools.CPDFPageIndicatorViewPosition.Type) -> ComPDFKit_Tools.CPDFPageIndicatorViewPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFPageIndicatorViewPosition",
+                    "printedName": "ComPDFKit_Tools.CPDFPageIndicatorViewPosition",
+                    "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ComPDFKit_Tools.CPDFPageIndicatorViewPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFPageIndicatorViewPosition",
+                        "printedName": "ComPDFKit_Tools.CPDFPageIndicatorViewPosition",
+                        "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO9centerTopyA2CmF",
+            "mangledName": "$s15ComPDFKit_Tools29CPDFPageIndicatorViewPositionO9centerTopyA2CmF",
             "moduleName": "ComPDFKit_Tools"
           },
           {
@@ -38366,6 +38685,28 @@
               "Custom",
               "Override",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showPageNumIndicator",
+            "printedName": "showPageNumIndicator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFPageIndicatorView(im)showPageNumIndicator",
+            "mangledName": "$s15ComPDFKit_Tools21CPDFPageIndicatorViewC011showPageNumE0yyF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -58640,70 +58981,70 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4534,
+      "offset": 4532,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4580,
+      "offset": 4578,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4697,
+      "offset": 4695,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4744,
+      "offset": 4742,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4998,
+      "offset": 4996,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5200,
+      "offset": 5198,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5265,
+      "offset": 5263,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5275,
+      "offset": 5273,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 5284,
+      "offset": 5282,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFLink\/CPDFFormLinkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 5294,
+      "offset": 5292,
       "length": 3,
       "value": "0.2"
     },
@@ -63743,28 +64084,49 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6242,
+      "offset": 4995,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5037,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5081,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6368,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "Array",
-      "offset": 6570,
+      "offset": 6696,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6655,
+      "offset": 6781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFListView\/CPDFListView.swift",
       "kind": "Array",
-      "offset": 6708,
+      "offset": 6834,
       "length": 2,
       "value": "[]"
     },
@@ -67992,56 +68354,77 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 587,
+      "offset": 558,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
-      "length": 41,
+      "offset": 569,
+      "length": 12,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 587,
+      "offset": 591,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 558,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
-      "length": 41,
+      "offset": 569,
+      "length": 12,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 587,
+      "offset": 591,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 558,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 598,
-      "length": 41,
+      "offset": 569,
+      "length": 12,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "IntegerLiteral",
-      "offset": 813,
+      "offset": 591,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 774,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/项目\/ComPDFKit\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Views\/PDFView\/PDFPageIndicatorView\/CPDFPageIndicatorView.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 617,
       "length": 21,
       "value": "\"ComPDFKit_Tools.CPDFPageIndicatorView\""
     },
