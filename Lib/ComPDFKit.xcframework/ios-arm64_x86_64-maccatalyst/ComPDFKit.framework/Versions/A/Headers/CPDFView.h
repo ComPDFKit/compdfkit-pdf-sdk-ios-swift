@@ -242,6 +242,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 - (void)PDFViewShouldEndEditing:(CPDFView *)pdfView textView:(UITextView *)textView forTextWidget:(CPDFTextWidgetAnnotation *)textWidget;
 
+- (void)PDFViewPerformPencilToolHidden:(CPDFView *_Nonnull)pdfView;
+
 - (void)PDFViewWillBeginDragging:(CPDFView *)pdfView;
 
 - (void)PDFViewDidEndDragging:(CPDFView *)pdfView;
@@ -536,7 +538,15 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * @discussion The selection do not go away when the user clicks in the CPDFView, etc. You must explicitly remove them by passing nil to -[setHighlightedSelection:animated:].
  * This method allow you to highlight text perhaps to indicate matches from a text search. Commonly used for highlighting search results.
  */
-- (void)setHighlightedSelection:(CPDFSelection *)selection animated:(BOOL)animated;
+- (void)setHighlightedSelection:(CPDFSelection *_Nullable)selection animated:(BOOL)animated;
+
+/**
+ * The following calls allow you to associate a CPDFSelection with a CPDFView and allows to set the highlight color.
+ *
+ * @discussion The selection do not go away when the user clicks in the CPDFView, etc. You must explicitly remove them by passing nil to -[setHighlightedSelection:animated:].
+ * This method allow you to highlight text perhaps to indicate matches from a text search. Commonly used for highlighting search results.
+ */
+- (void)setHighlightedSelection:(CPDFSelection *_Nullable)selection borderColor:(UIColor *_Nonnull)borderColor fillColor:(UIColor *_Nonnull)fillColor animated:(BOOL)animated;
 
 #pragma mark - Display
 

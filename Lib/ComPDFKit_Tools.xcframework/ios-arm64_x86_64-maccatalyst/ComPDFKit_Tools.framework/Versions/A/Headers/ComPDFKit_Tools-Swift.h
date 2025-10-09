@@ -1141,6 +1141,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewWillBeginDragging:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFViewPerformPencilToolHidden:(CPDFView * _Nonnull)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
@@ -2420,6 +2421,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewCurrentPageDidChanged:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewWillBeginDragging:(CPDFView * _Nullable)pdfView;
 - (void)PDFViewDocumentDidLoaded:(CPDFView * _Null_unspecified)pdfView;
+- (void)PDFViewPerformPencilToolHidden:(CPDFView * _Nonnull)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;

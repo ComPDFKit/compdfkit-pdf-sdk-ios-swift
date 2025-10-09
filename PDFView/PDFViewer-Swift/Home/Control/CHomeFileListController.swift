@@ -196,7 +196,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
                 self.documentPasswordVC?.modalPresentationStyle = .fullScreen
                 self.present(self.documentPasswordVC!, animated: true, completion: nil)
             } else {
-                let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: url, document: document)
+                let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: url, document: document, config: CPDFConfiguration())
                 addWaterMarkVC.delegate = self
                 self.navigationController?.pushViewController(addWaterMarkVC, animated: false)
             }
@@ -639,7 +639,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
     func documentPasswordViewControllerOpen(_ documentPasswordViewController: CDocumentPasswordViewController, document: CPDFDocument) {
         if self.documentPasswordVC == documentPasswordViewController {
             if isAddWatermark {
-                let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: document.documentURL, document: document)
+                let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: document.documentURL, document: document, config: CPDFConfiguration())
                 addWaterMarkVC.delegate = self
                 self.navigationController?.pushViewController(addWaterMarkVC, animated: false)
             } else {
