@@ -257,7 +257,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             let navController = CNavigationController(rootViewController: pdfViewController)
             pdfViewController.delegate = self
             navController.modalPresentationStyle = .fullScreen
-            self.present(navController, animated: true)
+            self.present(navController, animated: false)
         } else {
             switch indexPath.row {
             case 0...5:
@@ -474,7 +474,7 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let navController = CNavigationController(rootViewController: pdfViewController)
         pdfViewController.delegate = self
         navController.modalPresentationStyle = .fullScreen
-        self.present(navController, animated: true)
+        self.present(navController, animated: false)
         
         pdfViewController.isComPressing = true
         pdfViewController.reloadCompressTopView()

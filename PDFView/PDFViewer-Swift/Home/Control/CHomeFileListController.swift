@@ -376,13 +376,13 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         
-        configuration.showMoreItems = [.setting, .pageEdit, .info, .save, .flattened, .share, .addFile, .snipImage]
+        configuration.showMoreItems = [.setting, .pageEdit, .info, .watermark, .save, .flattened, .share, .addFile, .snipImage]
         
         let pdfViewController = CPDFViewController(filePath: url.path, password: password, configuration: configuration)
         let navController = CNavigationController(rootViewController: pdfViewController)
         pdfViewController.delegate = self
         navController.modalPresentationStyle = .fullScreen
-        self.present(navController, animated: true)
+        self.present(navController, animated: false)
         
     }
     
@@ -461,7 +461,8 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
         if !isDir {
             let nameTitle = (url.path as NSString?)?.lastPathComponent ?? ""
             cell?.nameTitle?.text = NSLocalizedString(nameTitle, comment: "")
-            cell?.nameTitle?.adjustsFontSizeToFitWidth = true
+            cell?.nameTitle?.numberOfLines = 0
+            cell?.nameTitle?.lineBreakMode = .byWordWrapping
             
             cell?.thumImage?.image = UIImage(named: "CHomeImagePDFThum", in: Bundle(for: self.classForCoder), compatibleWith: nil)
             

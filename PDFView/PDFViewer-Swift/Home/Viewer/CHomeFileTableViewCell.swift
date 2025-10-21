@@ -28,7 +28,8 @@ class CHomeFileTableViewCell: UITableViewCell {
         nameTitle = UILabel.init(frame: CGRect(x: (thumImage?.frame.maxX ?? 0) + 12, y: 8, width: self.frame.width - 62 - 12, height: 20))
         nameTitle?.font = UIFont.systemFont(ofSize: 17.0)
         nameTitle?.autoresizingMask = .flexibleWidth
-        nameTitle?.numberOfLines = 1
+        nameTitle?.numberOfLines = 0
+        nameTitle?.lineBreakMode = .byWordWrapping
         if(nameTitle != nil) {
             self.contentView.addSubview(nameTitle!)
         }
@@ -36,12 +37,13 @@ class CHomeFileTableViewCell: UITableViewCell {
         subNameTitle = UILabel.init(frame: CGRect(x: (thumImage?.frame.maxX ?? 0) + 12, y: 30, width: self.frame.width - 62 - 12, height: 16))
         subNameTitle?.font = UIFont.systemFont(ofSize: 12.0)
         subNameTitle?.autoresizingMask = .flexibleWidth
+        subNameTitle?.numberOfLines = 0
+        subNameTitle?.lineBreakMode = .byWordWrapping
         if #available(iOS 13.0, *) {
             subNameTitle?.textColor = UIColor.secondaryLabel
         } else {
             subNameTitle?.textColor = UIColor.init(red: 153.0/255.0, green: 153.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         }
-        subNameTitle?.numberOfLines = 2
         if(subNameTitle != nil) {
             self.contentView.addSubview(subNameTitle!)
         }

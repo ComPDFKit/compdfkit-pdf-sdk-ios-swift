@@ -924,6 +924,7 @@ public enum CPDFReviewMoretPopMenuViewType : Swift.Int {
 }
 @objc @_Concurrency.MainActor(unsafe) public class CPDFViewReplyViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, ComPDFKit_Tools.CPDFPopMenuDelegate, ComPDFKit_Tools.CPDFAddReplyViewControllerDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFViewReplyViewControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) public var configuration: ComPDFKit_Tools.CPDFConfiguration
   @_Concurrency.MainActor(unsafe) public init(anntation: ComPDFKit.CPDFAnnotation? = nil)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
@@ -1011,6 +1012,7 @@ public enum CPDFAnnotationPropertieType : Swift.Int {
   @_Concurrency.MainActor(unsafe) public func updateUndoRedoState()
   @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openAnnotation(_ button: UIKit.UIButton?)
   @objc @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openModel(_ button: UIKit.UIButton)
+  @_Concurrency.MainActor(unsafe) public func setAnnotationModel(_ annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
   @_Concurrency.MainActor(unsafe) public func openSignatureAnnotation(_ signatureAnnotation: ComPDFKit.CPDFSignatureWidgetAnnotation)
   @_Concurrency.MainActor(unsafe) public func addStampAnnotation(withPage page: ComPDFKit.CPDFPage, point: CoreFoundation.CGPoint)
   @_Concurrency.MainActor(unsafe) public func addImageAnnotation(withPage page: ComPDFKit.CPDFPage, point: CoreFoundation.CGPoint)

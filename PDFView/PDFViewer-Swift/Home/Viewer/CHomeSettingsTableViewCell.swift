@@ -31,14 +31,14 @@ class CHomeSettingsTableViewCell: UITableViewCell {
         
         contentTitle = UILabel.init(frame: CGRect(x: 20, y: (self.frame.height - 22)/2 - 11, width: self.frame.width - 20 - 65, height: 22))
         contentTitle?.font = UIFont.boldSystemFont(ofSize: 15.0)
-        contentTitle?.numberOfLines = 1
+        contentTitle?.numberOfLines = 0
         if(contentTitle != nil) {
             self.contentView.addSubview(contentTitle!)
         }
         
         contentSubTitle = UILabel.init(frame: CGRect(x: 100, y: 0, width: (contentTitle?.frame.size.width ?? 0) - 60, height: 22))
         contentSubTitle?.font = UIFont.boldSystemFont(ofSize: 9.0)
-        contentSubTitle?.numberOfLines = 1
+        contentSubTitle?.numberOfLines = 0
         contentSubTitle?.isHidden = true
         if(contentSubTitle != nil) {
             contentTitle?.addSubview(contentSubTitle!)
@@ -65,7 +65,7 @@ class CHomeSettingsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         contentTitle?.centerY = self.contentView.centerY
-        contentTitle?.frame = CGRect(x: contentTitle?.frame.origin.x ?? 0, y: contentTitle?.frame.origin.y ?? 0, width: self.frame.width - 20 - 65, height: contentTitle?.frame.size.height ?? 0)
+        contentTitle?.frame = CGRect(x: contentTitle?.frame.origin.x ?? 0, y: contentTitle?.frame.origin.y ?? 0, width: self.frame.width - 20 - 75, height: contentTitle?.frame.size.height ?? 0)
     }
     
     required init?(coder: NSCoder) {

@@ -109,6 +109,8 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
         let haderView = UITableViewHeaderFooterView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 28.0))
         haderView.autoresizingMask = .flexibleWidth
         let titlelabel = UILabel(frame: CGRect(x: 10, y: 4, width: haderView.frame.width-20, height: 20))
+        titlelabel.numberOfLines = 0
+        titlelabel.lineBreakMode = .byWordWrapping
         titlelabel.font = UIFont.boldSystemFont(ofSize: 13)
         var title: String = ""
         switch section {

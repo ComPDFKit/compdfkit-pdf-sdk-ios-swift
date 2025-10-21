@@ -68,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7BDAD5D12EA7716F0060A879 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		7BDAD5D22EA771700060A879 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7BDAD5D32EA7717E0060A879 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C9DB30272B3417E7005470C5 /* Bird.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bird.wav; sourceTree = "<group>"; };
 		C9DB30282B3417E7005470C5 /* CommonFivePage.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CommonFivePage.pdf; sourceTree = "<group>"; };
 		C9DB30292B3417E7005470C5 /* ComPDFKit_Signatures_Sample_File.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ComPDFKit_Signatures_Sample_File.pdf; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"es-419",
 			);
 			mainGroup = F3A6E9DA2A89B53000280D06;
 			productRefGroup = F3A6E9E42A89B53000280D06 /* Products */;
@@ -364,6 +368,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F3A6E9ED2A89B53000280D06 /* Base */,
+				7BDAD5D12EA7716F0060A879 /* es-419 */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F3A6E9F22A89B53100280D06 /* Base */,
+				7BDAD5D22EA771700060A879 /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -381,6 +387,7 @@
 			children = (
 				F3B076F92B073B0800E32ECA /* en */,
 				F3B076FB2B073B1300E32ECA /* zh-Hans */,
+				7BDAD5D32EA7717E0060A879 /* es-419 */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

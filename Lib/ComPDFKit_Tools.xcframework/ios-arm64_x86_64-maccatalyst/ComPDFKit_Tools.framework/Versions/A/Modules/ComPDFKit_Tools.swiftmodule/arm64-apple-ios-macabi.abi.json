@@ -34416,6 +34416,93 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "configuration",
+            "printedName": "configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFConfiguration",
+                "printedName": "ComPDFKit_Tools.CPDFConfiguration",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFConfiguration"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvp",
+            "mangledName": "$s15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFConfiguration",
+                    "printedName": "ComPDFKit_Tools.CPDFConfiguration",
+                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFConfiguration"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvg",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CPDFConfiguration",
+                    "printedName": "ComPDFKit_Tools.CPDFConfiguration",
+                    "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFConfiguration"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvs",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvM",
+                "mangledName": "$s15ComPDFKit_Tools27CPDFViewReplyViewControllerC13configurationAA17CPDFConfigurationCvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(anntation:)",
@@ -37816,6 +37903,33 @@
               "Custom",
               "AccessControl",
               "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAnnotationModel",
+            "printedName": "setAnnotationModel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewAnnotationModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools21CPDFAnnotationToolBarC18setAnnotationModelyyAA08CPDFViewH4ModeOF",
+            "mangledName": "$s15ComPDFKit_Tools21CPDFAnnotationToolBarC18setAnnotationModelyyAA08CPDFViewH4ModeOF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },

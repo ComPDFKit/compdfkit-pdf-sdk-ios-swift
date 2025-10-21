@@ -23,9 +23,10 @@ class CHomeSettingFootView: UIView {
         super.init(frame: frame)
         
         footTitle = UILabel.init(frame: CGRect(x: (frame.width - 288)/2, y: 0, width: 288, height: 30))
+        footTitle?.numberOfLines = 0
+        footTitle?.lineBreakMode = .byWordWrapping
         footTitle?.font = UIFont.boldSystemFont(ofSize: 11.0)
         footTitle?.autoresizingMask = .flexibleLeftMargin
-        footTitle?.numberOfLines = 2
         footTitle?.textAlignment = .center
         if #available(iOS 13.0, *) {
             footTitle?.textColor = UIColor.secondaryLabel
