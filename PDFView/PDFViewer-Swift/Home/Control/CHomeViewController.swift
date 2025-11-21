@@ -278,7 +278,11 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 self.present(navController, animated: true)
             case 8:
                 if let url = URL(string: "https://www.compdf.com/pdf-sdk/security") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 9:
                 let featureDic = self.featureArrays[indexPath.row]
@@ -289,19 +293,35 @@ class CHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataS
                 self.present(navController, animated: true)
             case 10:
                 if let url = URL(string: "https://www.compdf.com/pdf-sdk/document-comparison") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 11:
                 if let url = URL(string: "https://www.compdf.com/conversion") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 12:
                 if let url = URL(string: NSLocalizedString("https://www.compdf.com/contact-sales", comment: "")) {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             default:
                 if let url = URL(string: "https://www.compdf.com/") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             }
             

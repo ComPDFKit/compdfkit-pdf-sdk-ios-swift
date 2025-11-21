@@ -76,13 +76,21 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     
     @objc func buttonItemClick_Privacy(_ button: UIButton) {
         if let url = URL(string: NSLocalizedString("https://www.compdf.com/privacy-policy", comment: "")) {
-            UIApplication.shared.open(url)
+            UIApplication.shared.open(url, options: [:]) { success in
+                if !success {
+                    // Handle the failure to open settings
+                }
+            }
         }
     }
     
     @objc func buttonItemClick_Service(_ button: UIButton) {
         if let url = URL(string: NSLocalizedString("https://www.compdf.com/terms-of-service", comment: "")) {
-            UIApplication.shared.open(url)
+            UIApplication.shared.open(url, options: [:]) { success in
+                if !success {
+                    // Handle the failure to open settings
+                }
+            }
         }
     }
     
@@ -236,19 +244,35 @@ class CHomeSettingViewController: UIViewController,UITableViewDelegate,UITableVi
             switch indexPath.row {
             case 0:
                 if let url = URL(string: NSLocalizedString("https://www.compdf.com/", comment: "")) {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 1:
                 if let url = URL(string: "https://www.compdf.com/company/about") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 2:
                 if let url = URL(string: NSLocalizedString("https://www.compdf.com/contact-sales", comment: "")) {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             case 3:
                 if let url = URL(string: "https://www.compdf.com/support") {
-                    UIApplication.shared.open(url)
+                    UIApplication.shared.open(url, options: [:]) { success in
+                        if !success {
+                            // Handle the failure to open settings
+                        }
+                    }
                 }
             default:
                 let mailVC = CHomeMFMailComposeViewController.init(nibName: nil, bundle: nil)

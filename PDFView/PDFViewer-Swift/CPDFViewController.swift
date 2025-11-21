@@ -851,7 +851,11 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     open override func pdfViewPerformURL(_ pdfView: CPDFView, withContent content: String!) {
         let url = URL.init(string: content)
         if(url != nil) {
-            UIApplication.shared.open(url!)
+            UIApplication.shared.open(url!, options: [:]) { success in
+                if !success {
+                    // Handle the failure to open settings
+                }
+            }
         }
     }
     
@@ -1169,7 +1173,11 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                         
                     } else {
                         if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
-                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            UIApplication.shared.open(url, options: [:]) { success in
+                                if !success {
+                                    // Handle the failure to open settings
+                                }
+                            }
                         }
                     }
                 }
@@ -1201,7 +1209,11 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                     
                 } else {
                     if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        UIApplication.shared.open(url, options: [:]) { success in
+                            if !success {
+                                // Handle the failure to open settings
+                            }
+                        }
                     }
                 }
             }
