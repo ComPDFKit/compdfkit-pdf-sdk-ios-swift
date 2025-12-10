@@ -1476,6 +1476,7 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @_Concurrency.MainActor(unsafe) public var popSearchReplaceView: ComPDFKit_Tools.CSearchContentView?
   @_Concurrency.MainActor(unsafe) public var hightSelection: ComPDFKit.CPDFSelection?
   @_Concurrency.MainActor(unsafe) public var isComPressing: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isNavigationBarHidden: Swift.Bool
   @_Concurrency.MainActor(unsafe) public init(filePath: Swift.String, password: Swift.String?)
   @_Concurrency.MainActor(unsafe) public init(filePath: Swift.String, password: Swift.String?, configuration: ComPDFKit_Tools.CPDFConfiguration)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)

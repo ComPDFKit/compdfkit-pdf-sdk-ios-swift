@@ -344,6 +344,7 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
         
         configuration.showleftItems = [back, thumbnail]
         configuration.showRightItems = [search, bota, more]
+        configuration.navbarDisplayState = .automatic
         
         switch feature {
         case .viewer:

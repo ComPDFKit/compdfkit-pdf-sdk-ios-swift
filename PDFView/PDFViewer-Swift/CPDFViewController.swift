@@ -40,7 +40,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     var addImageRect: CGRect = CGRect.zero
     
     var addImagePage: CPDFPage?
-    
+        
     public var digitalSignatureBar: CPDFDigitalSignatureToolBar?
     
     lazy var signtureViewController: CPDFSigntureViewController = {
@@ -202,8 +202,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         var bottomHeight: CGFloat = 0
         
         if functionTypeState == .annotation {
-            if self.navigationController?.isNavigationBarHidden == false {
-                
+            if self.isNavigationBarHidden == false {
                 if(self.annotationBar != nil) {
                     self.annotationBar?.frame = CGRect(x: 0, y: self.view.frame.size.height - height, width: self.view.frame.size.width, height: height)
                 }
@@ -228,7 +227,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             self.toolBar?.frame = CGRect(x: 0, y: self.view.frame.size.height - height, width: self.view.frame.size.width, height: height)
             bottomHeight = self.toolBar?.frame.size.height ?? 0
         } else if functionTypeState == .form {
-            if self.navigationController?.isNavigationBarHidden == false {
+            if self.isNavigationBarHidden == false {
                 if(self.formBar != nil) {
                     self.formBar?.frame = CGRect(x: 0, y: self.view.frame.size.height - height, width: self.view.frame.size.width, height: height)
                 }
@@ -243,16 +242,14 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             }
         } else if (functionTypeState == .signature) {
             if digitalSignatureBar?.superview != nil {
-                if self.navigationController?.isNavigationBarHidden == false {
+                if self.isNavigationBarHidden == false {
                     digitalSignatureBar?.frame = CGRect(x: 0, y: self.view.frame.size.height - height, width: self.view.frame.size.width, height: height)
                     bottomHeight = digitalSignatureBar?.frame.height ?? 0
-
                 } else {
                     var frame = digitalSignatureBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
                     digitalSignatureBar?.frame = frame
                     bottomHeight = 0
-
                 }
             }
         }
@@ -675,8 +672,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         self.pdfListView?.scrollEnabled = false
         
         if .annotation == functionTypeState {
-            if !(self.navigationController?.isNavigationBarHidden ?? false) {
+            if !(self.isNavigationBarHidden) {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.annotationBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -693,8 +691,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.form == functionTypeState) {
-            if !(self.navigationController?.isNavigationBarHidden ?? false) {
+            if !(self.isNavigationBarHidden) {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.formBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -708,8 +707,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.signature == functionTypeState) {
-            if !(self.navigationController?.isNavigationBarHidden ?? false) {
+            if !(self.isNavigationBarHidden) {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.digitalSignatureBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -720,8 +720,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 self.searchToolbar?.alpha = 0.0
             }
         } else {
-            if !(self.navigationController?.isNavigationBarHidden ?? false) {
+            if !(self.isNavigationBarHidden) {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
                 UIView.animate(withDuration: 0.3) {
                     self.pdfListView?.pageSliderView?.alpha = 0.0
                     self.searchToolbar?.alpha = 0.0
@@ -960,13 +961,15 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         if let configuration = self.configuration, configuration.navbarDisplayState == .never || configuration.navbarDisplayState == .always {
             return
         }
-    
+
         if .annotation == functionTypeState {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 if let configuration = self.configuration, !configuration.mainToolbarVisible {
                     self.navigationController?.setNavigationBarHidden(false, animated: false)
+                    self.isNavigationBarHidden = false
                 } else {
                     self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    self.isNavigationBarHidden = false
                 }
             
                 UIView.animate(withDuration: 0.3) {
@@ -985,6 +988,8 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             } else {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
+                
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.annotationBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -1001,11 +1006,13 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.form == functionTypeState) {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 if let configuration = self.configuration, !configuration.mainToolbarVisible {
                     self.navigationController?.setNavigationBarHidden(false, animated: false)
+                    self.isNavigationBarHidden = false
                 } else {
                     self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    self.isNavigationBarHidden = false
                 }
                 
                 UIView.animate(withDuration: 0.3) {
@@ -1021,6 +1028,8 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             } else {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
+                
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.formBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -1034,13 +1043,14 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.signature == functionTypeState) {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 if let configuration = self.configuration, !configuration.mainToolbarVisible {
                     self.navigationController?.setNavigationBarHidden(false, animated: false)
+                    self.isNavigationBarHidden = false
                 } else {
                     self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    self.isNavigationBarHidden = false
                 }
-                
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.digitalSignatureBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1050,9 +1060,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                     self.signtureViewController.view?.alpha = 1.0
                 }
                 self.searchToolbar?.alpha = 1.0
-
             } else {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
+                
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.digitalSignatureBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height
@@ -1064,11 +1075,13 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
 
             }
         } else {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 if let configuration = self.configuration, !configuration.mainToolbarVisible {
                     self.navigationController?.setNavigationBarHidden(false, animated: false)
+                    self.isNavigationBarHidden = false
                 } else {
                     self.navigationController?.setNavigationBarHidden(false, animated: true)
+                    self.isNavigationBarHidden = false
                 }
                 
                 UIView.animate(withDuration: 0.3) {
@@ -1078,6 +1091,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             } else {
                 self.navigationController?.setNavigationBarHidden(true, animated: true)
+                self.isNavigationBarHidden = true
                 UIView.animate(withDuration: 0.3) {
                     self.pdfListView?.pageSliderView?.alpha = 0.0
                     self.searchToolbar?.alpha = 0.0
@@ -1085,11 +1099,11 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             }
         }
         
-        self.delegate?.PDFViewBaseController?(self, HiddenState: self.navigationController?.isNavigationBarHidden ?? false)
+        self.delegate?.PDFViewBaseController?(self, HiddenState: self.isNavigationBarHidden)
         
         self.view.endEditing(true)
         
-        if self.navigationController?.isNavigationBarHidden ?? false {
+        if self.isNavigationBarHidden {
             pdfListView.isFullDisplay = true
             self.pdfListView?.showPageNumIndicator()
         } else {
@@ -1305,6 +1319,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     open override func PDFListViewPerformReply(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.isNavigationBarHidden = false
         UIView.animate(withDuration: 0.3) {
             var frame = self.annotationBar?.frame ?? CGRect.zero
             frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1327,6 +1342,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     open override func PDFListViewPerformViewReply(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.isNavigationBarHidden = false
         UIView.animate(withDuration: 0.3) {
             var frame = self.annotationBar?.frame ?? CGRect.zero
             frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1370,8 +1386,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         }
         
         if .annotation == functionTypeState {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
+                self.isNavigationBarHidden = false
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.annotationBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1388,8 +1405,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.form == functionTypeState) {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
+                self.isNavigationBarHidden = false
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.formBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1403,8 +1421,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 }
             }
         } else if(.signature == functionTypeState) {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
+                self.isNavigationBarHidden = false
                 UIView.animate(withDuration: 0.3) {
                     var frame = self.digitalSignatureBar?.frame ?? CGRect.zero
                     frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1417,7 +1436,8 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
 
             }
         } else {
-            if self.navigationController?.isNavigationBarHidden ?? false {
+            if self.isNavigationBarHidden {
+                self.isNavigationBarHidden = false
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
                 UIView.animate(withDuration: 0.3) {
                     self.pdfListView?.pageSliderView?.alpha = 1.0
@@ -1555,7 +1575,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     private func exitInkMode() {
         if self.configuration?.navbarDisplayState == .automatic {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
+            if self.configuration?.mainToolbarVisible == true {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+            }
             
             UIView.animate(withDuration: 0.3) {
                 self.pdfListView?.pageSliderView?.alpha = 1.0
@@ -1569,8 +1591,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     private func exitPecilDrawMode() {
         if self.configuration?.navbarDisplayState == .automatic {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-            
+            if self.configuration?.mainToolbarVisible == true {
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+            }
+            self.isNavigationBarHidden = false
             UIView.animate(withDuration: 0.3) {
                 var frame = self.annotationBar?.frame ?? CGRect.zero
                 frame.origin.y = self.view.bounds.size.height - frame.size.height
@@ -1583,7 +1607,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     private func enterInkMode() {
         if self.configuration?.navbarDisplayState == .automatic {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            if self.configuration?.mainToolbarVisible == true {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+            }
             
             UIView.animate(withDuration: 0.3) {
                 self.pdfListView?.pageSliderView?.alpha = 0.0
@@ -1594,7 +1620,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     private func enterPecilDrawMode() {
         if self.configuration?.navbarDisplayState == .automatic {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
+            if self.configuration?.mainToolbarVisible == true {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+            }
+            self.isNavigationBarHidden = true
             
             UIView.animate(withDuration: 0.3) {
                 var frame = self.annotationBar?.frame ?? CGRect.zero

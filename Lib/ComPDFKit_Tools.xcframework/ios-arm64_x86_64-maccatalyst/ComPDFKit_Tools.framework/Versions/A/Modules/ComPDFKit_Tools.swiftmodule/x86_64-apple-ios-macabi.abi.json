@@ -57946,6 +57946,93 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isNavigationBarHidden",
+            "printedName": "isNavigationBarHidden",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvp",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvg",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvs",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvM",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC21isNavigationBarHiddenSbvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(filePath:password:)",
@@ -74617,7 +74704,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2114,
+      "offset": 2118,
       "length": 5,
       "value": "false"
     },
@@ -75976,6 +76063,13 @@
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
       "offset": 3993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4049,
       "length": 5,
       "value": "false"
     },
