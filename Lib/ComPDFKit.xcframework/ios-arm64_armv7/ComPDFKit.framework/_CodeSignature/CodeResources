@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		QLXWRcNiHLA+9a35H+Ch3dyqTKE=
+		</data>
 		<key>.gitignore</key>
 		<data>
 		T3B31/31+XpmM7fgWOJVSlahMac=
@@ -48,6 +52,14 @@
 		<data>
 		51awBEHOTlqkNuXGKCxBhGEp3NU=
 		</data>
+		<key>Headers/CPDFAnnotation+AP.h</key>
+		<data>
+		xd/jFYKA/oUe4r+eBxakUCjUkIA=
+		</data>
+		<key>Headers/CPDFAnnotation+Utilities.h</key>
+		<data>
+		M0VNjiaw5StpiJfG+Id5RVdi3sI=
+		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
 		StjOo29p5UfgCo5Z8qy7eevbEsQ=
@@ -80,6 +92,10 @@
 		<data>
 		X1QW9ZaoGPGMVA44hgESZ+qMAGk=
 		</data>
+		<key>Headers/CPDFChoiceWidgetAnnotation+Protected.h</key>
+		<data>
+		rEarhyaoU6LWsAGYq1jetjTlXew=
+		</data>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
 		<data>
 		XjPRL/zkAlgNsisoPJHjztD2xh8=
@@ -88,6 +104,18 @@
 		<data>
 		/KK+0fC9T8zPFhgbZ20a/GfkW5k=
 		</data>
+		<key>Headers/CPDFCompareContent.h</key>
+		<data>
+		mDKCqAGxJvOu4Q9t7KcoJAxynbY=
+		</data>
+		<key>Headers/CPDFCompareOverlay.h</key>
+		<data>
+		rra/n4ry72fwt0Zp8wFcab6g9Sk=
+		</data>
+		<key>Headers/CPDFCompareResults.h</key>
+		<data>
+		d9ejrIW4JrpKMDcfoDWOhhSM1/4=
+		</data>
 		<key>Headers/CPDFDestination.h</key>
 		<data>
 		idexvxX7FWL6yaXipqpR3jK4/go=
@@ -95,6 +123,10 @@
 		<key>Headers/CPDFDistanceMeasureInfo.h</key>
 		<data>
 		vq1JWnAmGUBPbmirZtSvXdIZpyY=
+		</data>
+		<key>Headers/CPDFDocument+Protected.h</key>
+		<data>
+		rykUVvrK65XxFyO7VBDk/EfjFMA=
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
@@ -116,6 +148,10 @@
 		<data>
 		AQaqSxgtE7taIGGV+eykxUDqVbQ=
 		</data>
+		<key>Headers/CPDFInkAnnotation+Protected.h</key>
+		<data>
+		ufjqxj1I5vJvCm9mSijCnXGGyGc=
+		</data>
 		<key>Headers/CPDFInkAnnotation.h</key>
 		<data>
 		c656oP8+z13hXb0eJFnYVv7MVuE=
@@ -123,6 +159,10 @@
 		<key>Headers/CPDFKit.h</key>
 		<data>
 		1FsnemGYxJ1cQIPPlCyKjAouA1E=
+		</data>
+		<key>Headers/CPDFKitConfig+Private.h</key>
+		<data>
+		ajv7aaIKTJdndLe/t7f6+WEJldE=
 		</data>
 		<key>Headers/CPDFKitConfig.h</key>
 		<data>
@@ -164,6 +204,10 @@
 		<data>
 		PBI/g99qOfUwXVcQl4Yf9uWRbiE=
 		</data>
+		<key>Headers/CPDFPage+Protected.h</key>
+		<data>
+		nahz/P2IQTMBHy/TchiSG1yAFSU=
+		</data>
 		<key>Headers/CPDFPage.h</key>
 		<data>
 		f+EZU4SJlDSdeyY+ZIp8BtK73HU=
@@ -188,6 +232,10 @@
 		<data>
 		bHl0uUnxJjGu14PwkvYgGhUjGa8=
 		</data>
+		<key>Headers/CPDFSelection+Protected.h</key>
+		<data>
+		1yjAK4Bua8o5UNicRve6+/4jFWk=
+		</data>
 		<key>Headers/CPDFSelection.h</key>
 		<data>
 		/HHd6L5iRHLtXq/ffAWNRC+RBjA=
@@ -195,6 +243,10 @@
 		<key>Headers/CPDFSignature.h</key>
 		<data>
 		8xQP9pC4seHesSR1GVXgY3hiYvc=
+		</data>
+		<key>Headers/CPDFSignatureAnnotation+Protected.h</key>
+		<data>
+		vxyxdhGxR0BhO2mNLUnAJNsP6q8=
 		</data>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
 		<data>
@@ -216,9 +268,21 @@
 		<data>
 		xjNiFqh2dg9v60BSGdP7b4V45IQ=
 		</data>
+		<key>Headers/CPDFSubmitAction.h</key>
+		<data>
+		8Wja6PzN0CpA665nxTJsxPPpLcE=
+		</data>
+		<key>Headers/CPDFTextAnnotation+Protected.h</key>
+		<data>
+		dCzMV2CN/X+7xfcjf2ZRxelBKXo=
+		</data>
 		<key>Headers/CPDFTextAnnotation.h</key>
 		<data>
 		BN2KzqTbAjOUVk1fuu9MENLGHkE=
+		</data>
+		<key>Headers/CPDFTextWidgetAnnotation+Protected.h</key>
+		<data>
+		UPkQClXuK0IM7xE00qnz08FpF8w=
 		</data>
 		<key>Headers/CPDFTextWidgetAnnotation.h</key>
 		<data>
@@ -232,13 +296,33 @@
 		<data>
 		jn63QaWVxVnRtsazrqx0CFnDWBA=
 		</data>
+		<key>Headers/CPDFView+Display.h</key>
+		<data>
+		i5y0dxzXPXQLQT3m4o8P7t27i4A=
+		</data>
+		<key>Headers/CPDFView+DropDrag.h</key>
+		<data>
+		i5Y3d6V9mxtonepKMd79n0tunBY=
+		</data>
+		<key>Headers/CPDFView+Editing.h</key>
+		<data>
+		KJnP7uR4TbdiAq/0svDmEhoc7VY=
+		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
 		q/CeXQe6LbknTNW7jqTmMWspWpQ=
 		</data>
+		<key>Headers/CPDFWatermark+Protected.h</key>
+		<data>
+		zcBjbRoJq+TlfVy3vjX5mXO2IjE=
+		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
 		DpsTZTBimPtoQ3SS58cXGOAOS28=
+		</data>
+		<key>Headers/CPDFWidgetAnnotation+Protected.h</key>
+		<data>
+		tEQgkZeP1MOoyFLf8i/ApbPD5Wg=
 		</data>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
 		<data>
@@ -254,7 +338,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		byrWQ2babfvcGxjmPAg6tbOHEsM=
+		MsnYh9o7Nh+2fYBLokvP+wyI7/Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -476,6 +560,28 @@
 			dJI2EEc2Q9sBS7OPjhSvLdHSbGE7At0xZY3m/xQcqvI=
 			</data>
 		</dict>
+		<key>Headers/CPDFAnnotation+AP.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xd/jFYKA/oUe4r+eBxakUCjUkIA=
+			</data>
+			<key>hash2</key>
+			<data>
+			sEn3Lz2SWzw66y6zEYK+U5x6gACIROJYygRhUaaQioY=
+			</data>
+		</dict>
+		<key>Headers/CPDFAnnotation+Utilities.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			M0VNjiaw5StpiJfG+Id5RVdi3sI=
+			</data>
+			<key>hash2</key>
+			<data>
+			m82pBXIq3RyXjBN5nQiF/KwEnTy3mj5OX7NRKCHzBjw=
+			</data>
+		</dict>
 		<key>Headers/CPDFAnnotation.h</key>
 		<dict>
 			<key>hash</key>
@@ -564,6 +670,17 @@
 			KdcUzeTGmt6AihYDsYPfiCVPwa6yg1w6qBsqfFWWIlw=
 			</data>
 		</dict>
+		<key>Headers/CPDFChoiceWidgetAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rEarhyaoU6LWsAGYq1jetjTlXew=
+			</data>
+			<key>hash2</key>
+			<data>
+			4q3emsP1gi2IYFCzMArj6GY5dS2jItb3nkZny2h/nic=
+			</data>
+		</dict>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
 		<dict>
 			<key>hash</key>
@@ -586,6 +703,39 @@
 			mHfYzvMyqMJCxpMTZRqGe70XH/4jWpxsSrhbhVEunW4=
 			</data>
 		</dict>
+		<key>Headers/CPDFCompareContent.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mDKCqAGxJvOu4Q9t7KcoJAxynbY=
+			</data>
+			<key>hash2</key>
+			<data>
+			KI7M4IKO8v9qNUFXEgzJeF4WM98+tVUyne3/S3V3vik=
+			</data>
+		</dict>
+		<key>Headers/CPDFCompareOverlay.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rra/n4ry72fwt0Zp8wFcab6g9Sk=
+			</data>
+			<key>hash2</key>
+			<data>
+			WSRdeR11hVFq1Z7syUscL9OlA13XX4wZQ1OOF8+t4BA=
+			</data>
+		</dict>
+		<key>Headers/CPDFCompareResults.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			d9ejrIW4JrpKMDcfoDWOhhSM1/4=
+			</data>
+			<key>hash2</key>
+			<data>
+			wPdLKYDNyGX4LeqAcZag9vsQc8D/ZR9MKT/7gYKe3hE=
+			</data>
+		</dict>
 		<key>Headers/CPDFDestination.h</key>
 		<dict>
 			<key>hash</key>
@@ -606,6 +756,17 @@
 			<key>hash2</key>
 			<data>
 			PHyzjJVA7qJOVHiRFg6jQQrG8MKdzkx7QyxuAd2LXHw=
+			</data>
+		</dict>
+		<key>Headers/CPDFDocument+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rykUVvrK65XxFyO7VBDk/EfjFMA=
+			</data>
+			<key>hash2</key>
+			<data>
+			srh5bDPaOAi5Q5WI8XLQtmN5pdrJ15dWNd+OsCCMDrc=
 			</data>
 		</dict>
 		<key>Headers/CPDFDocument.h</key>
@@ -663,6 +824,17 @@
 			DlWwrm6w1TKGLhN/HwZgtU2sScmBeTzENypwD1of8Ek=
 			</data>
 		</dict>
+		<key>Headers/CPDFInkAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ufjqxj1I5vJvCm9mSijCnXGGyGc=
+			</data>
+			<key>hash2</key>
+			<data>
+			c//vMtQwKtSWQ0CJglTmTFdcwmh536hHSnu1cm4XEvU=
+			</data>
+		</dict>
 		<key>Headers/CPDFInkAnnotation.h</key>
 		<dict>
 			<key>hash</key>
@@ -683,6 +855,17 @@
 			<key>hash2</key>
 			<data>
 			MSYbvG/6g8WOnYpv63COxjvkcgWpAj2d3AJh2ZriuLM=
+			</data>
+		</dict>
+		<key>Headers/CPDFKitConfig+Private.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ajv7aaIKTJdndLe/t7f6+WEJldE=
+			</data>
+			<key>hash2</key>
+			<data>
+			geb0RwuwnZv4KHoAumJfM8vP5Dm6lvq4D15wFJQyd8I=
 			</data>
 		</dict>
 		<key>Headers/CPDFKitConfig.h</key>
@@ -795,6 +978,17 @@
 			uCok+QlRFVeDIRmJb/458Q0sUkhOySftNEP+EgsW/4Q=
 			</data>
 		</dict>
+		<key>Headers/CPDFPage+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			nahz/P2IQTMBHy/TchiSG1yAFSU=
+			</data>
+			<key>hash2</key>
+			<data>
+			DquYREjGPtZ2AuXDy+LSIgSbOEc4hGtakbQTek34JbY=
+			</data>
+		</dict>
 		<key>Headers/CPDFPage.h</key>
 		<dict>
 			<key>hash</key>
@@ -861,6 +1055,17 @@
 			486vfKP2xQ9xDLpa5j3o7vcJGmUNHJuoDc98pfk+J4s=
 			</data>
 		</dict>
+		<key>Headers/CPDFSelection+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1yjAK4Bua8o5UNicRve6+/4jFWk=
+			</data>
+			<key>hash2</key>
+			<data>
+			lt3NWfGHPjUBwtSnThHrmWUADjuidTWGkYr4xxxbNNk=
+			</data>
+		</dict>
 		<key>Headers/CPDFSelection.h</key>
 		<dict>
 			<key>hash</key>
@@ -881,6 +1086,17 @@
 			<key>hash2</key>
 			<data>
 			FvFPP3Yrwkq5B34hr3Kp2BTKqnhCO4qsEH6blQJRAsE=
+			</data>
+		</dict>
+		<key>Headers/CPDFSignatureAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vxyxdhGxR0BhO2mNLUnAJNsP6q8=
+			</data>
+			<key>hash2</key>
+			<data>
+			QZSxbJDzYi/fCaJfu/uMtHJofnAGks9SQzzGCNM/B3g=
 			</data>
 		</dict>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
@@ -938,6 +1154,28 @@
 			g6wCn4B90yrTpiUQbRs7t+sx9sKkNFZDxxcGG7Mnc+Q=
 			</data>
 		</dict>
+		<key>Headers/CPDFSubmitAction.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8Wja6PzN0CpA665nxTJsxPPpLcE=
+			</data>
+			<key>hash2</key>
+			<data>
+			0iJtg628ujNl0E5VGadwuynQlNLG+RGQS86BqrsZYZ8=
+			</data>
+		</dict>
+		<key>Headers/CPDFTextAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dCzMV2CN/X+7xfcjf2ZRxelBKXo=
+			</data>
+			<key>hash2</key>
+			<data>
+			2gua5pJ05ND5RgbGBKTNpFwUGvOqFjP/F7eVaFViqho=
+			</data>
+		</dict>
 		<key>Headers/CPDFTextAnnotation.h</key>
 		<dict>
 			<key>hash</key>
@@ -947,6 +1185,17 @@
 			<key>hash2</key>
 			<data>
 			DcUtztLq7dimnQKp7iXUynpBDdKVtT8dSdI0Wdnj998=
+			</data>
+		</dict>
+		<key>Headers/CPDFTextWidgetAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UPkQClXuK0IM7xE00qnz08FpF8w=
+			</data>
+			<key>hash2</key>
+			<data>
+			ksgRahBiKMqeLZislhQB5jOOzxWfolqUSBjCuI659mY=
 			</data>
 		</dict>
 		<key>Headers/CPDFTextWidgetAnnotation.h</key>
@@ -982,6 +1231,39 @@
 			mCWnBBd0XtjHVUTo8tDpHdQEQ4XPgZlC62c/YFyKdzw=
 			</data>
 		</dict>
+		<key>Headers/CPDFView+Display.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i5y0dxzXPXQLQT3m4o8P7t27i4A=
+			</data>
+			<key>hash2</key>
+			<data>
+			l6ZsX2lZ/JfBFM8B3oYbgOxkHuiAZyof1hhohv3UjIM=
+			</data>
+		</dict>
+		<key>Headers/CPDFView+DropDrag.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i5Y3d6V9mxtonepKMd79n0tunBY=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubYjeA/yRQUac83W1EhlT3YQSz8Tl/w6/nf1Difgeuk=
+			</data>
+		</dict>
+		<key>Headers/CPDFView+Editing.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KJnP7uR4TbdiAq/0svDmEhoc7VY=
+			</data>
+			<key>hash2</key>
+			<data>
+			TjVWs+XiiuSaeGqTXrRDitPMAj4dLbccCGI4uEKYmsU=
+			</data>
+		</dict>
 		<key>Headers/CPDFView.h</key>
 		<dict>
 			<key>hash</key>
@@ -993,6 +1275,17 @@
 			RZzy8f8ujsgfe499A1pCZJ0rifJGUapATYgtrUfckds=
 			</data>
 		</dict>
+		<key>Headers/CPDFWatermark+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zcBjbRoJq+TlfVy3vjX5mXO2IjE=
+			</data>
+			<key>hash2</key>
+			<data>
+			/uu5vfihIaTppCrabLNPcGVE8jauXYqHKATlcQEA0Xo=
+			</data>
+		</dict>
 		<key>Headers/CPDFWatermark.h</key>
 		<dict>
 			<key>hash</key>
@@ -1002,6 +1295,17 @@
 			<key>hash2</key>
 			<data>
 			29UAOA1jfG7b2NPbjBMMNb6YuOy8RngyBeIQePnMku0=
+			</data>
+		</dict>
+		<key>Headers/CPDFWidgetAnnotation+Protected.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tEQgkZeP1MOoyFLf8i/ApbPD5Wg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ykBIIyifQE1eU+/hqyBgD/VX3qKNKCo++vTyIrzG9I8=
 			</data>
 		</dict>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
