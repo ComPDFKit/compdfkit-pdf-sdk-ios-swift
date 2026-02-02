@@ -2,8 +2,12 @@
 //  CTaskQueueManager.h
 //  ComPDFKit
 //
-//  Created by lizhe on 2024/11/5.
-//  Copyright © 2024 Kdan Mobile. All rights reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
+//
+//  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+//  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
+//  UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+//  This notice may not be removed from this file.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,12 +21,10 @@ static void *kSearchHighPriorityQueueKey = &kSearchHighPriorityQueueKey;
 @interface CTaskQueueManager : NSObject
 + (instancetype)sharedManager;
 
-// 提交异步任务
 - (void)submitAsyncTask:(dispatch_block_t)task;
 
 - (void)submitSearchAsyncTask:(dispatch_block_t)task;
 
-// 提交同步任务（自动避免死锁）
 - (void)submitSyncTask:(dispatch_block_t)task;
 
 + (dispatch_queue_t)pdfReloadQueue;
