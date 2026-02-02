@@ -2,7 +2,7 @@
 //  CPDFView.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -13,13 +13,14 @@
 #import <UIKit/UIKit.h>
 #import <ComPDFKit/CPDFKitPlatform.h>
 
-@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation,CPDFFont,CPDFBorder;
+@class CPDFView, CPDFDocument, CPDFPage, CPDFSelection, CPDFDestination, CPDFFreeTextAnnotation, CPDFTextWidgetAnnotation,CPDFAnnotation,CPDFFont,CPDFBorder, CPDFSquareAreaStyle;
 
 typedef NS_ENUM(NSInteger, CEditingSelectState) {
     CEditingSelectStateEmpty = 0,
     CEditingSelectStateEditTextArea,
     CEditingSelectStateEditNoneText,
     CEditingSelectStateEditSelectText,
+    CEditingSelectStateEditPath
 };
 
 typedef NS_OPTIONS(NSInteger, CEditingLoadType) {
@@ -57,7 +58,8 @@ typedef NS_ENUM(NSInteger, CPDFDisplayMode) {
 typedef NS_OPTIONS(NSInteger, CAddEditingAreaType) {
     CAddEditingAreaTypeNone  = 0,
     CAddEditingAreaTypeText,
-    CAddEditingAreaTypeImage
+    CAddEditingAreaTypeImage,
+    CAddEditingAreaTypePath
 };
 
 typedef NS_OPTIONS(NSInteger, CPDFEditMenuItemType) {
@@ -187,12 +189,21 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
  * Sets the unselected border color of the text code block.
  */
-@property (nonatomic,strong) CPDFKitPlatformColor *editingBorderColor;
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nullable editingSelectionTextColor;
+
+/**
+ * Sets the unselected border color of the text code block.
+ */
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nullable editingBorderColor;
 
 /**
  * Sets the selected border color of the text code block.
  */
-@property (nonatomic,strong) CPDFKitPlatformColor *editingSelectionBorderColor;
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nonnull editingSelectionBorderColor;
+
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nonnull editingSelectionNoteBorderColor;
+
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nonnull editingImageCropBorderColor;
 
 /**
  * Border width of the text code block.
@@ -200,9 +211,29 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 @property (nonatomic,assign) CGFloat editingBorderWidth;
 
 /**
+ * Border width of the selected text code block.
+ */
+@property (nonatomic,assign) CGFloat editingSelectionBorderWidth;
+
+/**
+ * Border width of the image crop block.
+ */
+@property (nonatomic,assign) CGFloat editingImageCropBorderWidth;
+
+/**
  * Array of dashed lines of the text code block.
  */
-@property (nonatomic,strong) NSArray * editingBorderDashPattern;
+@property (nonatomic,strong) NSArray * _Nullable editingBorderDashPattern;
+
+/**
+ * Array of dashed lines of the selected text code block.
+ */
+@property (nonatomic,strong) NSArray * _Nullable editingSelectionBorderDashPattern;
+
+/**
+ * Array of dashed lines of the image crop block.
+ */
+@property (nonatomic,strong) NSArray * _Nullable editingImageCropBorderDashPattern;
 
 /**
  * Sets the offset interval at which blocks are displayed
@@ -267,6 +298,12 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (BOOL)PDFEditingViewCanDoubleEnterEdit:(CPDFView * _Nonnull)pdfView;
 
 - (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
+
+- (void)PDFEditingViewEditingAreaCreateForText:(CPDFView * _Nonnull)pdfView CPDFEditArea:(CPDFEditArea * _Nonnull)editArea CPDFEditAttributes:(CEditAttributes * _Nullable)attributes;
+
+- (void)PDFEditingViewEditingAreaCreateForImage:(CPDFView * _Nonnull)pdfView CPDFEditArea:(CPDFEditArea * _Nonnull)editArea;
+
+- (void)PDFEditingViewEditingAreaSelect:(CPDFView * _Nonnull)pdfView CPDFEditArea:(CPDFEditArea * _Nonnull)editArea isSelected:(BOOL)isSelected;
 
 @end
 
@@ -374,6 +411,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 @property (nonatomic,assign) BOOL directionaHorizontalLockEnabled;
 
 /**
+ * A Boolean value that determines whether annotation drawing is enabled for the document view.
+ */
+@property (nonatomic,assign) BOOL drawAnnotationEnabled;
+
+/**
  * The current scale factor for the view.
  *
  * @discussion Method to get / set the current scaling on the displayed PDF document. Default is 1.0.
@@ -471,16 +513,27 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 /**
     * Draws a specific rectangular area
 */
-- (void)setSquareArea:(CGRect)rect 
-               onPage:(CPDFPage *_Nullable)page 
-          borderColor:(UIColor *_Nonnull)borderColor
-        borderOpacity:(CGFloat)borderOpacity 
-            fillColor:(UIColor *_Nonnull)fillColor
-          fillOpacity:(CGFloat)fillOpacity;
+- (void)setSquareArea:(CGRect)rect
+               onPage:(nullable CPDFPage *)page
+          borderColor:(nonnull UIColor *)borderColor
+        borderOpacity:(CGFloat)borderOpacity
+            fillColor:(nonnull UIColor *)fillColor
+          fillOpacity:(CGFloat)fillOpacity
+NS_DEPRECATED_IOS(9_0, 16_0, "Use -setSquareArea:onPage:style: instead");
+
+
+/**
+ * Draws a specific rectangular area.
+ */
+@property(nonatomic, strong, nullable) CPDFSquareAreaStyle *squareAreaStyle;
+
+- (void)setSquareArea:(CGRect)rect
+               onPage:(nullable CPDFPage *)page;
 
 /**
     * Removes a specific rectangular area
 */
+
 - (void)removeSquareArea;
 
 /**
@@ -493,16 +546,47 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
     *                 ]
     *                };
 */
-- (void)setSquareAreas:(NSDictionary<NSNumber *, NSArray<NSValue *> *> *_Nullable)areas
-           borderColor:(UIColor *_Nonnull)borderColor
+
+- (void)setSquareAreas:(nullable NSDictionary<NSNumber *, NSArray<NSValue *> *> *)areas
+           borderColor:(nonnull UIColor *)borderColor
          borderOpacity:(CGFloat)borderOpacity
-             fillColor:(UIColor *_Nonnull)fillColor
-           fillOpacity:(CGFloat)fillOpacity;
+             fillColor:(nonnull UIColor *)fillColor
+           fillOpacity:(CGFloat)fillOpacity
+NS_DEPRECATED_IOS(9_0, 16_0, "Use -setSquareAreas:style: instead");
+
+/**
+ * Draws multiple specific rectangular areas on multiple pages.
+ *
+ * @param areas  A dictionary used to specify rectangular areas for each page.
+ *               NSDictionary *areas = @{
+ *                @0 : @[
+ *                     [NSValue valueWithCGRect:CGRectMake(10, 10, 100, 100)],
+ *                     [NSValue valueWithCGRect:CGRectMake(150, 150, 200, 50)]
+ *                 ]
+ *                };
+ *
+ */
+- (void)setSquareAreas:(nullable NSDictionary<NSNumber *, NSArray<NSValue *> *> *)areas
+                 style:(nonnull CPDFSquareAreaStyle *)style;
 
 /**
     * Removes all specific rectangular area
 */
 - (void)removeAllSquareAreas;
+
+#pragma mark - Icon
+
+/**
+ * Sets custom icons for bookmark
+ */
+@property (nonatomic, strong) UIImage *_Nullable bookmarkIcon;
+
+/**
+ * Sets custom icons for drag dots.
+ */
+@property (nonatomic, strong) UIImage *_Nullable dragDotFrontIcon;
+
+@property (nonatomic, strong) UIImage *_Nullable dragDotBackIcon;
 
 #pragma mark - Selection
 
@@ -519,6 +603,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  * @discussion The view redraws as necessary but does not scroll.
  */
 @property (nonatomic,readonly) CPDFSelection *currentSelection;
+
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nullable selectionColor;
 
 /**
  * Clears the selection.
@@ -587,9 +673,56 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 #pragma mark - Menu
 
+/**
+ * Delete the action event of the editing area context menu.
+ */
+- (void)deleteEditingItemAction:(id _Nullable )sender;
+
+/**
+ * Copy the action event of the editing area context menu.
+ */
+- (void)copyEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Eidt the action event of the editing area context menu.
+ */
+- (void)editEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Cut the action event of the editing area context menu.
+ */
+- (void)cutEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Paste the action event of the editing area context menu.
+ */
+- (void)pastEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Paste match style the action event of the editing area context menu.
+ */
+- (void)pasteMatchStyleEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Select the action event of the editing area context menu.
+ */
+- (void)selectEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Select all the action event of the editing area context menu.
+ */
+- (void)selectAllEditingItemAction:(id _Nullable)sender;
+
+/**
+ * Copy the action event of the annotation context menu.
+ */
+- (void)menuItemCopyAction:(id _Nullable)sender;
+
 - (NSArray<UIMenuItem *> *)menuItemsAtPoint:(CGPoint)point forPage:(CPDFPage *)page;
 
 #pragma mark - Touch
+
+@property (nonatomic, assign) BOOL enableDoubleTouchZoom;
 
 - (void)touchBeganAtPoint:(CGPoint)point forPage:(CPDFPage *)page;
 - (void)touchMovedAtPoint:(CGPoint)point forPage:(CPDFPage *)page;
@@ -691,6 +824,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (CPDFEditArea *)editingArea;
 
 /**
+ * Remove editing area.
+ */
+- (void)removeWithEditArea:(CPDFEditArea *_Nonnull)editArea;
+
+/**
  * The location of the click is the cursor position
  */
 - (BOOL)isClickSelectCharItem;
@@ -724,6 +862,11 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 
 
 #pragma mark - Edit Text & Image
+
+/**
+ * Get the string content of the selected text block.
+ */
+- (NSString *_Nullable)editingSelectionString;
 
 /**
  * Sets the position of the text (image) block

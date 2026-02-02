@@ -2,7 +2,7 @@
 //  CPDFSelection.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -52,5 +52,12 @@
  * Returns an NSString object representing the text contained in the selection (may contain linefeed characters).
  */
 - (NSString *)string;
+
+/**
+ * The color used to long press to select.
+ *
+ * @discussion Default is a light blue color.
+ */
+@property (nonatomic,strong) CPDFKitPlatformColor * _Nullable selectionColor;
 
 @end

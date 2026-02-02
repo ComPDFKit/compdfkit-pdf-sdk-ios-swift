@@ -2,7 +2,7 @@
 //  CPDFViewController.swift
 //  PDFViewer-Swift
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -64,15 +64,14 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             self.pdfListView?.isHideBottomBar = true
         }
         
-        let editingConfig = CPDFEditingConfig.init()
-        editingConfig.editingBorderWidth = 1.0
-        editingConfig.editingOffsetGap = 5
-        self.pdfListView?.editingConfig = editingConfig
-        
         self.initAnnotationBar()
         self.initWithEditTool()
         self.initWithFormTool()
         self.initDigitalSignatureBar()
+        
+        let editConfig = pdfListView?.editingConfig
+        editConfig?.editingBorderWidth = 5.0
+        editConfig?.editingSelectionBorderWidth = 1.0
         
         if let availableViewModes = self.configuration?.availableViewModes, !availableViewModes.contains(self.configuration?.enterToolModel ?? .viewer), self.configuration?.enterToolModel != .pageEdit {
             self.configuration?.enterToolModel = .viewer
@@ -313,7 +312,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 } else {
                     self.pdfListView?.layoutSubviews()
                     self.pdfListView?.document = document
-                
+                    if  let defaultPageIndex = self.configuration?.defaultPageIndex, defaultPageIndex > 0  {
+                        self.pdfListView?.go(toPageIndex: defaultPageIndex, animated: false)
+                    }
                     completion(true)
                 }
             }
@@ -750,6 +751,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     // MARK: - Action
     
     @objc open override func buttonItemClicked_Bota(_ button: UIButton?) {
+        self.popMenu?.hideMenu()
         let navArrays: [CPDFBOTATypeState] = configuration?.botaTabs ?? []
         if(self.pdfListView != nil) {
             let botaViewController = CPDFBOTAViewController(customizeWith: self.pdfListView!, navArrays: navArrays)
@@ -771,6 +773,8 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     }
     
     open override func buttonItemClicked_thumbnail(_ sender: UIButton) {
+        self.popMenu?.hideMenu()
+        
         let userDefaults = UserDefaults.standard
         let isOnlyThumbnail = userDefaults.bool(forKey: "CThumbnailIsOnlyKey")
         
@@ -795,6 +799,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     }
     
     open override func buttonItemClicked_Search(_ button: UIButton?) {
+        self.popMenu?.hideMenu()
         super.buttonItemClicked_Search(button)
         
         if let configuration = self.configuration, (configuration.navbarDisplayState == .never || !configuration.mainToolbarVisible) {
@@ -824,6 +829,14 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             let navController = CNavigationController(rootViewController: pageEditViewController)
             navController.modalPresentationStyle = .fullScreen
             UIApplication.presentedViewController()?.present(navController, animated: true, completion: nil)
+        }
+    }
+    
+    public func openEditPropertiesForAera(_ editArea: CPDFEditArea) {
+        if let editingArea = self.pdfListView?.editingArea() {
+            if editArea == editingArea {
+                self.showMenuList()
+            }
         }
     }
     
@@ -876,6 +889,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     }
     
     open override func pdfViewEditingAddTextArea(_ pdfView: CPDFView, add page: CPDFPage, add rect: CGRect) {
+        if configuration?.enableCreateEditTextInput == false {
+            return
+        }
+        
         var fontColor = CPDFTextProperty.shared.fontColor
         var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
         fontColor?.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
@@ -892,18 +909,35 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         atributes.fontColor = fontColor ?? .black
         atributes.isBold = false
         atributes.isItalic = false
+        atributes.fontSize = CPDFTextProperty.shared.fontSize
         atributes.alignment = CPDFTextProperty.shared.textAlignment
         
         self.pdfListView?.createStringBounds(rect, with: atributes, page: page)
     }
     
     open override func pdfViewEditingAddImageArea(_ pdfView: CPDFView, add page: CPDFPage, add rect: CGRect) {
+        if configuration?.enableCreateImagePickerDialog == false {
+            return
+        }
+        
         self.addImageRect = rect
         self.addImagePage = page
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
         UIApplication.presentedViewController()?.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    open func pdfEditingViewEditingAreaSelect(_ pdfView: CPDFView, cpdfEditArea editArea: CPDFEditArea, isSelected: Bool) {
+        self.delegate?.PDFViewBaseControllerEditingAreaSelect?(self, forEditingArea: editArea, isSelected: isSelected)
+    }
+    
+    open func pdfEditingViewEditingAreaCreate(forText pdfView: CPDFView, cpdfEditArea editArea: CPDFEditArea, cpdfEditAttributes attributes: CEditAttributes?) {
+        self.delegate?.PDFViewBaseControllerEditingAreaAdded?(self, forEditingArea: editArea, withAttributes: attributes)
+    }
+    
+    open func pdfEditingViewEditingAreaCreate(forImage pdfView: CPDFView, cpdfEditArea editArea: CPDFEditArea) {
+        self.delegate?.PDFViewBaseControllerEditingAreaAdded?(self, forEditingArea: editArea, withAttributes: nil)
     }
     
     open override func pdfViewCurrentPageDidChanged(_ pdfView: CPDFView?) {
@@ -951,8 +985,7 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
             
         }
     }
-    
-    
+
     // MARK: - CPDFListViewDelegate
     
     open override func PDFListViewPerformTouchEnded(_ pdfListView: CPDFListView) {
@@ -1127,17 +1160,56 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         }
     }
     
-    
     open override func PDFListViewEditNote(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
         if annotation is CPDFLinkAnnotation {
             self.annotationBar?.buttonItemClicked_openAnnotation(self.titleButton)
         } else if annotation is CPDFWidgetAnnotation {
-            self.formBar?.buttonItemClicked_openOption(annotation as! CPDFWidgetAnnotation)
+            if let listBoxWidgetAnnotation = annotation as? CPDFChoiceWidgetAnnotation {
+                if listBoxWidgetAnnotation.isListChoice {
+                    if self.configuration?.autoShowFormPicker["showCreateListBoxOptionsDialog"] == true {
+                        self.formBar?.buttonItemClicked_openOption(listBoxWidgetAnnotation)
+                    } else {
+                        self.delegate?.PDFViewBaseControllerAutoShowFormPicker?(self, forAnnotationMode: .formModeList, forAnnotation: listBoxWidgetAnnotation)
+                    }
+                } else {
+                    if self.configuration?.autoShowFormPicker["showCreateComboBoxOptionsDialog"] == true {
+                        self.formBar?.buttonItemClicked_openOption(listBoxWidgetAnnotation)
+                    } else {
+                        self.delegate?.PDFViewBaseControllerAutoShowFormPicker?(self, forAnnotationMode: .formModeCombox, forAnnotation: listBoxWidgetAnnotation)
+                    }
+                }
+            } else if let buttonWidgetAnnotation = annotation as? CPDFButtonWidgetAnnotation {
+                if self.configuration?.autoShowFormPicker["showCreatePushButtonOptionsDialog"] == true {
+                    self.formBar?.buttonItemClicked_openOption(buttonWidgetAnnotation)
+                } else {
+                    self.delegate?.PDFViewBaseControllerAutoShowFormPicker?(self, forAnnotationMode: .formModeButton, forAnnotation: buttonWidgetAnnotation)
+                }
+            } else {
+                self.formBar?.buttonItemClicked_openOption(annotation as! CPDFWidgetAnnotation)
+            }
         } else {
             let rect:CGRect = self.pdfListView?.convert(annotation.bounds, from: annotation.page) ?? CGRect.zero
             let noteVC = CPDFNoteOpenViewController(annotation: annotation)
             noteVC.delegate = self
             noteVC.showViewController(self, inRect: rect)
+        }
+    }
+    
+    open override func PDFListViewPerformFormMenuOptions(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
+        if annotation is CPDFLinkAnnotation {
+            self.annotationBar?.buttonItemClicked_openAnnotation(self.titleButton)
+        } else if annotation is CPDFWidgetAnnotation {
+            if let listBoxWidgetAnnotation = annotation as? CPDFChoiceWidgetAnnotation {
+                if listBoxWidgetAnnotation.isListChoice {
+                    self.formBar?.buttonItemClicked_openOption(listBoxWidgetAnnotation)
+                } else {
+                    self.formBar?.buttonItemClicked_openOption(listBoxWidgetAnnotation)
+                }
+            } else if let buttonWidgetAnnotation = annotation as? CPDFButtonWidgetAnnotation {
+                self.formBar?.buttonItemClicked_openOption(buttonWidgetAnnotation)
+            } else {
+                self.formBar?.buttonItemClicked_openOption(annotation as! CPDFWidgetAnnotation)
+            }
         }
     }
     
@@ -1301,7 +1373,15 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     
     open override func PDFListViewEditProperties(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
         if self.pdfListView?.toolModel == .annotation {
-            self.annotationBar?.buttonItemClicked_openAnnotation(self.titleButton)
+            if let linkAnnotation = annotation as? CPDFLinkAnnotation {
+                if self.configuration?.autoShowAnnotationPicker["autoShowLinkDialog"] == true {
+                    self.annotationBar?.buttonItemClicked_openAnnotation(self.titleButton)
+                } else {
+                    self.delegate?.PDFViewBaseControllerAutoShowAnnotationPicker?(self, forAnnotationMode: .link, forAnnotation: linkAnnotation)
+                }
+            } else {
+                self.annotationBar?.buttonItemClicked_openAnnotation(self.titleButton)
+            }
         } else if self.pdfListView?.toolModel == .form {
             self.formBar?.buttonItemClicked_open(nil)
         }
@@ -1448,6 +1528,29 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
         }
     }
     
+    open func PDFListViewPerformAnnotationAdd(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation) {
+        self.delegate?.PDFViewBaseControllerAnndotationAdded?(self, forAnnotation: annotation)
+    }
+    
+    open func PDFListViewPerformAnnotationSelect(_ pdfListView: CPDFListView, forAnnotation annotation: CPDFAnnotation, isSelected: Bool) {
+        self.delegate?.PDFViewBaseControllerAnndotationSelect?(self, forAnnotation: annotation, isSelected: isSelected)
+    }
+    
+    open func PDFListViewPerformFormAdd(_ pdfListView: CPDFListView, forForm form: CPDFWidgetAnnotation) {
+        self.delegate?.PDFViewBaseControllerFormFieldAdded?(self, forFormField: form)
+    }
+    
+    open func PDFListViewPerformFormSelect(_ pdfListView: CPDFListView, forForm form: CPDFWidgetAnnotation, isSelected: Bool) {
+        self.delegate?.PDFViewBaseControllerFormFieldSelect?(self, forFormField: form, isSelected: isSelected)
+    }
+    
+    
+    // MARK: - CPDFCustomMenuReporting
+    
+    open override func handleCustomMenuAction(fronView view: Any, payload: [String : Any]) {
+        self.delegate?.PDFViewBaseControllerHandleCustomMenuAction?(self, fronView: view, payload: payload)
+    }
+    
     // MARK: - CPDFEditToolBarDelegate
     public func editClick(in toolBar: CPDFEditToolBar, editMode mode: Int) {
         self.editMode = CPDFEditMode(rawValue: UInt(mode)) ?? .text
@@ -1571,6 +1674,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
                 exitInkMode()
             }
         }
+    }
+    
+    public func annotationBarOpenPicker(_ annotationBar: CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Int) {
+        self.delegate?.PDFViewBaseControllerAutoShowAnnotationPicker?(self, forAnnotationMode: CPDFViewAnnotationMode(rawValue: annotationMode) ?? .CPDFViewAnnotationModenone, forAnnotation: nil)
     }
     
     private func exitInkMode() {
@@ -1961,8 +2068,9 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     // MARK: - CImportCertificateViewControllerDelegate
     
     public func importCertificateViewControllerSave(_ importCertificateViewController: CImportCertificateViewController, PKCS12Cert path: String, password: String, config: CPDFSignatureConfig) {
-        self.dismiss(animated: false) {
+        importCertificateViewController.dismiss(animated: true) {
             self.writeSignatureToWidget(self.signatureAnnotation ?? CPDFSignatureWidgetAnnotation(), PKCS12Cert: path, password: password, config: config, lockDocument: true)
+            self.delegate?.PDFViewBaseControllerDigitalSignatureDone?(self)
         }
     }
     
@@ -1993,9 +2101,10 @@ open class CPDFViewController: CPDFViewBaseController,CPDFFormBarDelegate,CPDFSo
     }
     
     public func createCertificateInfoViewControllerSave(_ createCertificateInfoViewController: CCreateCertificateInfoViewController, PKCS12Cert path: String, password: String, config: CPDFSignatureConfig) {
-        self.dismiss(animated: false) {
+        createCertificateInfoViewController.dismiss(animated: true) {
             self.pdfListView?.setNeedsDisplayFor(self.signatureAnnotation?.page)
             self.writeSignatureToWidget(self.signatureAnnotation ?? CPDFSignatureWidgetAnnotation(), PKCS12Cert: path, password: password, config: config, lockDocument: true)
+            self.delegate?.PDFViewBaseControllerDigitalSignatureDone?(self)
         }
     }
     

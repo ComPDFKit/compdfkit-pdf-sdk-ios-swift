@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ComPDFKit_Tools"
-  spec.version      = "2.5.3"
+  spec.version      = "2.6.0"
   spec.summary      = "Comprehensiven iOS PDF SDK solutions for developers."
   spec.description  = <<-DESC
   ComPDFKit PDF SDK for iOS is designed for developers to integrate viewing, editing, converting, extracting, and signing PDFs to build PDF viewer and editor on iOS.

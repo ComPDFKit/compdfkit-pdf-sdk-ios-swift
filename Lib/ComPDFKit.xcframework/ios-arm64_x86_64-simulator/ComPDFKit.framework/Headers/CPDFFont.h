@@ -62,6 +62,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 + (BOOL)setImportFontDir:(NSString *_Nonnull)fontDir isContainSysFont:(BOOL)isContainSysFont;
 
++ (BOOL)reloadImportFontDir:(NSString *_Nonnull)fontDir isContainSysFont:(BOOL)isContainSysFont;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -2,7 +2,7 @@
 //  CPDFPage.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -238,6 +238,12 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * @discussion Given a range, returns a selection representing text within that range. Will clamp any range that goes out of bounds. Will return NULL for an empty selection.
  */
 - (CPDFSelection *)selectionForRange:(NSRange)range;
+
+/**
+ * Given a rect in page-space, returns a selection representing enclosed text on page.
+ *
+ */
+- (CPDFSelection *)selectionForRect:(CGRect)rect;
 
 #pragma mark - Redact
 

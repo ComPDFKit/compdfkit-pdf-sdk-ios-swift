@@ -1,4 +1,4 @@
-//  Copyright © 2014-2025 PDF Technologies, Inc. Todos los derechos reservados.
+//  Copyright © 2014-2026 PDF Technologies, Inc. Todos los derechos reservados.
 //
 //  ESTE CÓDIGO Y CUALQUIER DOCUMENTACIÓN ASOCIADA ESTÁN PROTEGIDOS
 //  POR LAS LEYES INTERNACIONALES DE DERECHOS DE AUTOR Y NO PUEDEN REVENDERSE
@@ -12,6 +12,13 @@
 "Start to Sign" = "Comenzar a firmar";
 "Rotate Left" = "Girar a la izquierda";
 "Rotate Right" = "Girar a la derecha";
+"Keep Text Only" = "Conservar solo texto";
+"Keep Source Formating Paste" = "Pegar conservando el formato de origen";
+"Exit" = "Exit";
+"Thumbnail" = "Thumbnail";
+"Search" = "Search";
+"BOTA" = "BOTA";
+"Menu" = "Menu";
 
 "The current document has been changed, do you want to keep the changes after exiting?" = "El documento ha sido modificado. ¿Desea guardar los cambios al salir?";
 "Yes" = "Sí";
@@ -40,7 +47,7 @@
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "Soporte técnico";
 "Mail account is not set up!" = "La cuenta de correo no está configurada.";
-"© 2014-2025 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2025 PDF Technologies, Inc. Todos los derechos reservados.";
+"© 2014-2026 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2026 PDF Technologies, Inc. Todos los derechos reservados.";
 "Privacy Policy" = "Política de privacidad";
 "Service Terms" = "Términos del servicio";
 "Click to Open & Process" = "Haga clic para abrir y procesar";

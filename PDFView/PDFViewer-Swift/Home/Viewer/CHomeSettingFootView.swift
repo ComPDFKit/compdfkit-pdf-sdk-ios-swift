@@ -2,7 +2,7 @@
 //  CHomeSettingFootView.swift
 //  ComPDFKit_Tools
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -34,7 +34,7 @@ class CHomeSettingFootView: UIView {
             footTitle?.textColor = UIColor.init(red: 153.0/255.0, green: 153.0/255.0, blue: 153.0/255.0, alpha: 1.0)
         }
         
-        footTitle?.text = NSLocalizedString("© 2014-2025 PDF Technologies, Inc. All Rights Reserved.", comment: "")
+        footTitle?.text = NSLocalizedString("© 2014-2026 PDF Technologies, Inc. All Rights Reserved.", comment: "")
         if(footTitle != nil) {
             self.addSubview(footTitle!)
         }

@@ -5,7 +5,7 @@
   Localizable.strings
   PDFViewer
 
- //  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+ //  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
  //
  //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
  //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -19,6 +19,13 @@
 "Start to Sign" = "Start to Sign";
 "Rotate Left" = "Rotate Left";
 "Rotate Right" = "Rotate Right";
+"Keep Text Only" = "Keep Text Only";
+"Keep Source Formating Paste" = "Keep Source Formating Paste";
+"Exit" = "Exit";
+"Thumbnail" = "Thumbnail";
+"Search" = "Search";
+"BOTA" = "BOTA";
+"Menu" = "Menu";
 
 "The current document has been changed, do you want to keep the changes after exiting?" = "The current document has been changed, do you want to keep the changes after exiting?";
 "Yes" = "Yes";
@@ -47,7 +54,7 @@
 "support@compdf.com" = "support@compdf.com";
 "Technical Supports" = "Technical Support";
 "Mail account is not set up!" = "Mail account is not set up!";
-"© 2014-2025 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2025 PDF Technologies, Inc. All Rights Reserved.";
+"© 2014-2026 PDF Technologies, Inc. All Rights Reserved." = "© 2014-2026 PDF Technologies, Inc. All Rights Reserved.";
 "Privacy Policy" = "Privacy Policy";
 "Service Terms" = "Service Terms";
 "Click to Open & Process" = "Click to Open & Process";

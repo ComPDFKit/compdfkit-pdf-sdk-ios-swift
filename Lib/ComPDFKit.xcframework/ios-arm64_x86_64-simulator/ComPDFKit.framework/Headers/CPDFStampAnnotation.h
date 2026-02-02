@@ -2,7 +2,7 @@
 //  CPDFStampAnnotation.h
 //  ComPDFKit
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -76,6 +76,12 @@ typedef NS_ENUM(NSInteger, CPDFStampDraggedType) {
 - (instancetype)initWithDocument:(CPDFDocument *)document text:(NSString *)text detailText:(NSString *)detailText dateText:(NSString *)dateText color:(CPDFKitPlatformColor *)color;
 
 /**
+ * Gets the standard stamp type.
+ *
+ */
+@property (nonatomic,assign,readonly) NSInteger standardType;
+
+/**
  * Gets the stamp type.
  *
  * @see CPDFStampType
@@ -128,5 +134,33 @@ typedef NS_ENUM(NSInteger, CPDFStampDraggedType) {
  * @discussion draggedIndex
  */
 - (void)dragStampAnnotationWithCurrentPagePoint:(CGPoint)currentPagePoint draggedIndex:(CPDFStampDraggedType)draggedIndex;
+
+/**
+ * Gets the main text of a text stamp annotation.
+ *
+ * @discussion Only applies when stampType is CPDFStampTypeText.
+ */
+@property (nonatomic, copy, readonly, nullable) NSString *text;
+
+/**
+ * Gets the detail text of a text stamp annotation.
+ *
+ * @discussion Only applies when stampType is CPDFStampTypeText.
+ */
+@property (nonatomic, copy, readonly, nullable) NSString *detailText;
+
+/**
+ * Gets the style of a text stamp annotation.
+ *
+ * @discussion Only applies when stampType is CPDFStampTypeText.
+ */
+@property (nonatomic, assign, readonly) CPDFStampStyle style;
+
+/**
+ * Gets the shape of a text stamp annotation.
+ *
+ * @discussion Only applies when stampType is CPDFStampTypeText.
+ */
+@property (nonatomic, assign, readonly) CPDFStampShape shape;
 
 @end

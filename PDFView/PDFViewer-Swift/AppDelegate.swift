@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PDFViewer-Swift
 //
-//  Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         CPDFKit.verify(withPath: xmlFliePath, completionHandler: { code, message in
             print("Code: \(code), Message:\(String(describing: message))")
-            
+            CPDFKit.printLicensePermission()
             self.loadSamplesFiles()
         })
                 
