@@ -770,6 +770,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewChangeatioActiveAnnotations:(CPDFListView * _Nonnull)pdfListView forActiveAnnotations:(NSArray<CPDFAnnotation *> * _Nonnull)annotations;
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -1109,6 +1110,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformFormMenuOptions:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
 - (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
@@ -1157,6 +1159,8 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseControllerHandleCustomMenuAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerHandleCustomToolbarAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerDigitalSignatureDone:(CPDFViewBaseController * _Nonnull)baseController;
+- (void)PDFViewBaseControllerInterceptAnnotationDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nullable)annotation;
+- (void)PDFViewBaseControllerInterceptWidgetDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFWidgetAnnotation * _Nullable)annotation;
 @end
 
 @class CPDFViewReplyViewController;
@@ -1208,6 +1212,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewPerformPencilToolHidden:(CPDFView * _Nonnull)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformFormMenuOptions:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
 - (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
@@ -2120,6 +2125,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewChangeatioActiveAnnotations:(CPDFListView * _Nonnull)pdfListView forActiveAnnotations:(NSArray<CPDFAnnotation *> * _Nonnull)annotations;
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformReply:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -2459,6 +2465,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 - (void)PDFEditingViewMenuItemAction:(CPDFView * _Nonnull)pdfView menuItemType:(CPDFEditMenuItemType)menuItemType;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformFormMenuOptions:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
 - (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
@@ -2507,6 +2514,8 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseControllerHandleCustomMenuAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerHandleCustomToolbarAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerDigitalSignatureDone:(CPDFViewBaseController * _Nonnull)baseController;
+- (void)PDFViewBaseControllerInterceptAnnotationDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nullable)annotation;
+- (void)PDFViewBaseControllerInterceptWidgetDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFWidgetAnnotation * _Nullable)annotation;
 @end
 
 @class CPDFViewReplyViewController;
@@ -2558,6 +2567,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)PDFViewPerformPencilToolHidden:(CPDFView * _Nonnull)pdfView;
 - (void)PDFListViewPerformTouchEnded:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformFormMenuOptions:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewChangedAnnotationType:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(NSInteger)annotationMode;
 - (void)PDFListViewPerformAddStamp:(CPDFListView * _Nonnull)pdfView atPoint:(CGPoint)point forPage:(CPDFPage * _Nonnull)page;
