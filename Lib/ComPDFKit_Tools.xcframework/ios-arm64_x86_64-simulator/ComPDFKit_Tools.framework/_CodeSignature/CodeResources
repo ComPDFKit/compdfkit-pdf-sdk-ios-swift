@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		6XQQrh70qiOjfrKd08xtmHtxKM0=
+		s/gDMO4Y+SCWxhTTWdD5fWNObVY=
 		</data>
 		<key>CDigitalTypeSelectView.nib</key>
 		<data>
@@ -42,15 +42,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		p4t6JAYeu677QMiLWBCbAVHe9Qw=
+		4Madrn6zaMm6Znm3XMfKQQU3fhw=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		sFPMtpyzDEZ+npwTHddBQqlyZDQ=
+		W722uxWcO65XgWq06rT7sBSGVcw=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		mSdK6zaoSwXvvoz1ywIMQXPipHg=
+		4wFFY5al1hycFL2dVZsWA4vxBaM=
 		</data>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -114,11 +114,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6XQQrh70qiOjfrKd08xtmHtxKM0=
+			s/gDMO4Y+SCWxhTTWdD5fWNObVY=
 			</data>
 			<key>hash2</key>
 			<data>
-			BrRtdgYXBT8PirRM74iOkKflszgo7Vq/M96YdiCkjSE=
+			/ubXLF7c76svs00Yjrf6gzb7HzzH3U+qxzB5SDYa0H0=
 			</data>
 		</dict>
 		<key>CDigitalTypeSelectView.nib</key>
@@ -202,22 +202,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sFPMtpyzDEZ+npwTHddBQqlyZDQ=
+			W722uxWcO65XgWq06rT7sBSGVcw=
 			</data>
 			<key>hash2</key>
 			<data>
-			d6ovvd3FCh+1x3vsYuOZGnjVSQikR/ZvOcxRmYWB+9g=
+			0UspIa0OZuL4GUVVH9DRc0qlM5EQ007aU6xxFFs+TJU=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mSdK6zaoSwXvvoz1ywIMQXPipHg=
+			4wFFY5al1hycFL2dVZsWA4vxBaM=
 			</data>
 			<key>hash2</key>
 			<data>
-			CpfkTHU1SVrnLuNtfT+eVrQYkePtTj5neCM44U8P5X0=
+			zjSKcunIO+TRm6CUSKaF0qKG3KnWpqmuVhxhvblCJIY=
 			</data>
 		</dict>
 		<key>Modules/ComPDFKit_Tools.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
