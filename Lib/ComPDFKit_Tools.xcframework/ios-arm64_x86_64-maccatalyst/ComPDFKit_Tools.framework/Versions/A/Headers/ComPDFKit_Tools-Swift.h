@@ -659,10 +659,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools23CPDFEditToolBarDelegate_")
 @end
 
 @class UITraitCollection;
-@class UIColorPickerViewController;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
-@interface CPDFEditViewController : UIViewController <UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface CPDFEditViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
@@ -672,9 +671,15 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController * _Nonnull)viewController SWIFT_AVAILABILITY(ios,introduced=14.0);
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class UIColorPickerViewController;
+
+SWIFT_AVAILABILITY(ios,introduced=14.0)
+@interface CPDFEditViewController (SWIFT_EXTENSION(ComPDFKit_Tools)) <UIColorPickerViewControllerDelegate>
+- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController * _Nonnull)viewController;
 @end
 
 @class CPDFFormToolBar;
@@ -2014,10 +2019,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools23CPDFEditToolBarDelegate_")
 @end
 
 @class UITraitCollection;
-@class UIColorPickerViewController;
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
-@interface CPDFEditViewController : UIViewController <UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface CPDFEditViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
@@ -2027,9 +2031,15 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController * _Nonnull)viewController SWIFT_AVAILABILITY(ios,introduced=14.0);
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class UIColorPickerViewController;
+
+SWIFT_AVAILABILITY(ios,introduced=14.0)
+@interface CPDFEditViewController (SWIFT_EXTENSION(ComPDFKit_Tools)) <UIColorPickerViewControllerDelegate>
+- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController * _Nonnull)viewController;
 @end
 
 @class CPDFFormToolBar;

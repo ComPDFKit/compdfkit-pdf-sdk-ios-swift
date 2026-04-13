@@ -5454,6 +5454,28 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preferredWidth",
+            "printedName": "preferredWidth()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools29CPDFAnnotationListPopMenuViewC14preferredWidth14CoreFoundation7CGFloatVyF",
+            "mangledName": "$s15ComPDFKit_Tools29CPDFAnnotationListPopMenuViewC14preferredWidth12CoreGraphics7CGFloatVyF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -17094,6 +17116,29 @@
               "ObjC",
               "Custom",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preferredWidth",
+            "printedName": "preferredWidth()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ComPDFKit_Tools15CPDFPopMenuViewC14preferredWidth14CoreFoundation7CGFloatVyF",
+            "mangledName": "$s15ComPDFKit_Tools15CPDFPopMenuViewC14preferredWidth12CoreGraphics7CGFloatVyF",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -56523,38 +56568,6 @@
           },
           {
             "kind": "Function",
-            "name": "colorPickerViewControllerDidFinish",
-            "printedName": "colorPickerViewControllerDidFinish(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIColorPickerViewController",
-                "printedName": "UIKit.UIColorPickerViewController",
-                "usr": "c:objc(cs)UIColorPickerViewController"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFEditViewController(im)colorPickerViewControllerDidFinish:",
-            "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC011colorPickereF9DidFinishyySo07UIColorheF0CF",
-            "moduleName": "ComPDFKit_Tools",
-            "intro_iOS": "14.0",
-            "objc_name": "colorPickerViewControllerDidFinish:",
-            "declAttributes": [
-              "ObjC",
-              "Custom",
-              "AccessControl",
-              "Available",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "imagePickerController",
             "printedName": "imagePickerController(_:didFinishPickingMediaWithInfo:)",
             "children": [
@@ -56656,6 +56669,37 @@
               "Override"
             ],
             "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "colorPickerViewControllerDidFinish",
+            "printedName": "colorPickerViewControllerDidFinish(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColorPickerViewController",
+                "printedName": "UIKit.UIColorPickerViewController",
+                "usr": "c:objc(cs)UIColorPickerViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@ComPDFKit_Tools@objc(cs)CPDFEditViewController(im)colorPickerViewControllerDidFinish:",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC011colorPickereF9DidFinishyySo07UIColorheF0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "colorPickerViewControllerDidFinish:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -60573,6 +60617,117 @@
         "name": "CPDFPopMenu",
         "printedName": "CPDFPopMenu",
         "children": [
+          {
+            "kind": "Var",
+            "name": "contentView",
+            "printedName": "contentView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvp",
+            "mangledName": "$s15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvg",
+                "mangledName": "$s15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvs",
+                "mangledName": "$s15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvM",
+                "mangledName": "$s15ComPDFKit_Tools11CPDFPopMenuC11contentViewSo6UIViewCSgvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "delegate",
@@ -75970,91 +76125,91 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1382,
+      "offset": 1345,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1413,
+      "offset": 1376,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2509,
+      "offset": 2472,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2540,
+      "offset": 2503,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2593,
+      "offset": 2556,
       "length": 4,
       "value": "0.14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2678,
+      "offset": 2641,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2750,
+      "offset": 2713,
       "length": 5,
       "value": "100.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2895,
+      "offset": 2858,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2957,
+      "offset": 2920,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2998,
+      "offset": 2961,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3091,
+      "offset": 3054,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3156,
+      "offset": 3119,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormComboxViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3428,
+      "offset": 3391,
       "length": 4,
       "value": "true"
     },
@@ -76306,7 +76461,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFTextWatermarkSettingViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2702,
+      "offset": 2665,
       "length": 2,
       "value": "\"\""
     },
@@ -76502,91 +76657,91 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2491,
+      "offset": 2454,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2556,
+      "offset": 2519,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2640,
+      "offset": 2603,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2713,
+      "offset": 2676,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2780,
+      "offset": 2743,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2832,
+      "offset": 2795,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2899,
+      "offset": 2862,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3170,
+      "offset": 3133,
       "length": 15,
       "value": "\"CPDFFormCheck\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3347,
+      "offset": 3310,
       "length": 16,
       "value": "\"CPDFFormCircle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3524,
+      "offset": 3487,
       "length": 15,
       "value": "\"CPDFFormCross\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3702,
+      "offset": 3665,
       "length": 17,
       "value": "\"CPDFFormDiamond\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3881,
+      "offset": 3844,
       "length": 16,
       "value": "\"CPDFFormSquare\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormRadioButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 4057,
+      "offset": 4020,
       "length": 14,
       "value": "\"CPDFFormStar\""
     },
@@ -79617,35 +79772,35 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSignature\/CPDFSignatureEditViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2408,
+      "offset": 2373,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSignature\/CPDFSignatureEditViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2448,
+      "offset": 2413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSignature\/CPDFSignatureEditViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2489,
+      "offset": 2454,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSignature\/CPDFSignatureEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2529,
+      "offset": 2494,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFSignature\/CPDFSignatureEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2580,
+      "offset": 2545,
       "length": 2,
       "value": "\"\""
     },
@@ -80170,105 +80325,105 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1393,
+      "offset": 1356,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1424,
+      "offset": 1387,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2537,
+      "offset": 2500,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2597,
+      "offset": 2560,
       "length": 4,
       "value": "0.14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2677,
+      "offset": 2640,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2740,
+      "offset": 2703,
       "length": 4,
       "value": "0.14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2781,
+      "offset": 2744,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2900,
+      "offset": 2863,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2978,
+      "offset": 2941,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3121,
+      "offset": 3084,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3187,
+      "offset": 3150,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3232,
+      "offset": 3195,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3329,
+      "offset": 3292,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3398,
+      "offset": 3361,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormListViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3698,
+      "offset": 3661,
       "length": 4,
       "value": "true"
     },
@@ -81955,77 +82110,77 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1565,
+      "offset": 1529,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1610,
+      "offset": 1574,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1677,
+      "offset": 1641,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 1736,
+      "offset": 1700,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1803,
+      "offset": 1767,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2928,
+      "offset": 2892,
       "length": 15,
       "value": "\"CPDFFormCheck\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3105,
+      "offset": 3069,
       "length": 16,
       "value": "\"CPDFFormCircle\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3282,
+      "offset": 3246,
       "length": 15,
       "value": "\"CPDFFormCross\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3460,
+      "offset": 3424,
       "length": 17,
       "value": "\"CPDFFormDiamond\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3639,
+      "offset": 3603,
       "length": 16,
       "value": "\"CPDFFormSquare\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormCheckBoxViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3815,
+      "offset": 3779,
       "length": 14,
       "value": "\"CPDFFormStar\""
     },
@@ -82487,98 +82642,98 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1637,
+      "offset": 1600,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1668,
+      "offset": 1631,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2950,
+      "offset": 2913,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2987,
+      "offset": 2950,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 3045,
+      "offset": 3008,
       "length": 4,
       "value": "0.14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3161,
+      "offset": 3124,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 3237,
+      "offset": 3200,
       "length": 5,
       "value": "100.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3360,
+      "offset": 3323,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3422,
+      "offset": 3385,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3463,
+      "offset": 3426,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3556,
+      "offset": 3519,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3621,
+      "offset": 3584,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3865,
+      "offset": 3828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormTextViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3946,
+      "offset": 3909,
       "length": 4,
       "value": "true"
     },
@@ -82592,14 +82747,14 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1073,
+      "offset": 1036,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditProperties\/CPDFEditViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1113,
+      "offset": 1076,
       "length": 2,
       "value": "\"\""
     },
@@ -83446,133 +83601,133 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1442,
+      "offset": 1406,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1473,
+      "offset": 1437,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2340,
+      "offset": 2304,
       "length": 5,
       "value": "233.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2346,
+      "offset": 2310,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2360,
+      "offset": 2324,
       "length": 5,
       "value": "233.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2366,
+      "offset": 2330,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2379,
+      "offset": 2343,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2385,
+      "offset": 2349,
       "length": 5,
       "value": "255.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2399,
+      "offset": 2363,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2601,
+      "offset": 2565,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2632,
+      "offset": 2596,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 2690,
+      "offset": 2654,
       "length": 4,
       "value": "0.14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2802,
+      "offset": 2766,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2877,
+      "offset": 2841,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3013,
+      "offset": 2977,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3075,
+      "offset": 3039,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3116,
+      "offset": 3080,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3209,
+      "offset": 3173,
       "length": 11,
       "value": "\"Helvetica\""
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormProperties\/Controller\/CPDFFormButtonViewController.swift",
       "kind": "StringLiteral",
-      "offset": 3274,
+      "offset": 3238,
       "length": 2,
       "value": "\"\""
     },
@@ -84237,7 +84392,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Viewer\/PDFPopMenu\/CPDFPopMenu.swift",
       "kind": "BooleanLiteral",
-      "offset": 761,
+      "offset": 768,
       "length": 5,
       "value": "false"
     },

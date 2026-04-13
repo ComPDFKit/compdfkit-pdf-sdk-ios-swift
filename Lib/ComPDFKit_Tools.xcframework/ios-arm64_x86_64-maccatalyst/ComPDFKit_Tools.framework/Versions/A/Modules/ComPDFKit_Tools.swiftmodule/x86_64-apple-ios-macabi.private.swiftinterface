@@ -193,6 +193,7 @@ public enum CPDFAnnotationListPopMenuViewType : Swift.Int {
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) public func preferredWidth() -> CoreFoundation.CGFloat
   @objc deinit
 }
 @objc public protocol CImportCertificateViewControllerDelegate : ObjectiveC.NSObjectProtocol {
@@ -395,6 +396,7 @@ public protocol CPDFPopMenuViewDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor(unsafe) public func preferredWidth() -> CoreFoundation.CGFloat
   @objc deinit
 }
 public enum CPDFInkTopToolBarSelect : Swift.Int {
@@ -1382,7 +1384,7 @@ extension ComPDFKit_Tools.CPDFListView {
   @_Concurrency.MainActor(unsafe) open func updateSelection(_ selection: ComPDFKit.CPDFSelection?)
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFEditViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIColorPickerViewControllerDelegate, UIKit.UIImagePickerControllerDelegate & UIKit.UINavigationControllerDelegate {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFEditViewController : UIKit.UIViewController, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource, UIKit.UIImagePickerControllerDelegate & UIKit.UINavigationControllerDelegate {
   @_Concurrency.MainActor(unsafe) public var editMode: ComPDFKit_Tools.CPDFEditMode {
     get
     set
@@ -1397,9 +1399,11 @@ extension ComPDFKit_Tools.CPDFListView {
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @available(iOS 14.0, *)
-  @_Concurrency.MainActor(unsafe) @objc public func colorPickerViewControllerDidFinish(_ viewController: UIKit.UIColorPickerViewController)
   @_Concurrency.MainActor(unsafe) @objc public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
+}
+@available(iOS 14.0, *)
+extension ComPDFKit_Tools.CPDFEditViewController : UIKit.UIColorPickerViewControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func colorPickerViewControllerDidFinish(_ viewController: UIKit.UIColorPickerViewController)
 }
 @objc public protocol CPDFThumbnailViewControllerDelegate {
   @objc optional func thumbnailViewController(_ thumbnailViewController: ComPDFKit_Tools.CPDFThumbnailViewController, pageIndex: Swift.Int)
@@ -1501,6 +1505,7 @@ public protocol CPDFPopMenuDelegate : AnyObject {
   func menuDidClosed(in menu: ComPDFKit_Tools.CPDFPopMenu, isClosed: Swift.Bool)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFPopMenu : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var contentView: UIKit.UIView?
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFPopMenuDelegate)?
   @objc @_Concurrency.MainActor(unsafe) public func showMenu(in rect: CoreFoundation.CGRect)
   @objc @_Concurrency.MainActor(unsafe) public func showSubMenu(in rect: CoreFoundation.CGRect)
