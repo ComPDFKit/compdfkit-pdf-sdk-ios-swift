@@ -198,7 +198,9 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             } else {
                 let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: url, document: document, config: CPDFConfiguration())
                 addWaterMarkVC.delegate = self
-                self.navigationController?.pushViewController(addWaterMarkVC, animated: false)
+                let nav = CNavigationController(rootViewController: addWaterMarkVC)
+                nav.modalPresentationStyle = .fullScreen
+                UIApplication.presentedViewController()?.present(nav, animated: true, completion: nil)
             }
         }
         
@@ -642,7 +644,9 @@ class CHomeFileListController: UIViewController, UITableViewDelegate, UITableVie
             if isAddWatermark {
                 let addWaterMarkVC = CPDFAddWatermarkViewController.init(fileURL: document.documentURL, document: document, config: CPDFConfiguration())
                 addWaterMarkVC.delegate = self
-                self.navigationController?.pushViewController(addWaterMarkVC, animated: false)
+                let nav = CNavigationController(rootViewController: addWaterMarkVC)
+                nav.modalPresentationStyle = .fullScreen
+                UIApplication.presentedViewController()?.present(nav, animated: true, completion: nil)
             } else {
                 deleteWatermarkAction(document)
             }

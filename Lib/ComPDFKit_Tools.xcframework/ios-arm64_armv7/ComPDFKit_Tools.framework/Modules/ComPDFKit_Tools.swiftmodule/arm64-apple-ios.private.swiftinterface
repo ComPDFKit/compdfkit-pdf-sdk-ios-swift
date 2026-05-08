@@ -74,6 +74,7 @@ import ObjectiveC.runtime
 @objc public protocol CPDFAddWatermarkViewControllerDelegate {
   @objc optional func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Text textWaterModel: ComPDFKit_Tools.CWatermarkModel)
   @objc optional func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Image imageWaterModel: ComPDFKit_Tools.CWatermarkModel)
+  @objc optional func addWatermarkViewControllerBack(_ addWatermarkViewController: ComPDFKit_Tools.CPDFAddWatermarkViewController)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFAddWatermarkViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate)?
@@ -84,6 +85,8 @@ import ObjectiveC.runtime
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
 }
 @objc public protocol CPDFSigntureVerifyDetailsViewControllerDelegate {
@@ -503,7 +506,7 @@ public enum CSearchTitleType : Swift.Int {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
-public enum CPDFEditMode : Swift.UInt {
+@objc public enum CPDFEditMode : Swift.UInt {
   case text
   case image
   case path
@@ -808,6 +811,7 @@ public enum CSignatureSelectType : Swift.Int {
 @objc public protocol CSignatureTypeSelectViewDelegate {
   @objc optional func signatureTypeSelectViewElectronic(_ signatureTypeSelectView: ComPDFKit_Tools.CSignatureTypeSelectView)
   @objc optional func signatureTypeSelectViewDigital(_ signatureTypeSelectView: ComPDFKit_Tools.CSignatureTypeSelectView)
+  @objc optional func signatureTypeSelectViewCancel(_ signatureTypeSelectView: ComPDFKit_Tools.CSignatureTypeSelectView)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CSignatureTypeSelectView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CSignatureTypeSelectViewDelegate)?
@@ -948,6 +952,7 @@ public protocol CPDFBOTAViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformFormAdd(_ pdfListView: ComPDFKit_Tools.CPDFListView, forForm form: ComPDFKit.CPDFWidgetAnnotation)
   @_Concurrency.MainActor(unsafe) @objc open func PDFListViewPerformFormSelect(_ pdfListView: ComPDFKit_Tools.CPDFListView, forForm form: ComPDFKit.CPDFWidgetAnnotation, isSelected: Swift.Bool)
   @_Concurrency.MainActor(unsafe) override open func handleCustomMenuAction(fronView view: Any, payload: [Swift.String : Any])
+  @_Concurrency.MainActor(unsafe) @objc public func formBarPropertyDialogDismissed(_ formBar: ComPDFKit_Tools.CPDFFormToolBar, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
   @_Concurrency.MainActor(unsafe) @objc public func editClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar, editMode mode: Swift.Int)
   @_Concurrency.MainActor(unsafe) @objc public func undoDidClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar)
   @_Concurrency.MainActor(unsafe) @objc public func redoDidClick(in toolBar: ComPDFKit_Tools.CPDFEditToolBar)
@@ -959,6 +964,7 @@ public protocol CPDFBOTAViewControllerDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public func keyboardShouldDissmiss(_ toolbar: ComPDFKit_Tools.CPDFKeyboardToolbar)
   @_Concurrency.MainActor(unsafe) @objc public func annotationBarClick(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Swift.Int, forSelected isSelected: Swift.Bool, forButton button: UIKit.UIButton)
   @_Concurrency.MainActor(unsafe) @objc public func annotationBarOpenPicker(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc public func annotationBarDialogDismissed(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
   @_Concurrency.MainActor(unsafe) @objc public func getNoteOpenViewController(_ noteOpenVC: ComPDFKit_Tools.CPDFNoteOpenViewController, content: Swift.String, isDelete: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc public func soundPlayBarRecordFinished(_ soundPlayBar: ComPDFKit_Tools.CPDFSoundPlayBar, withFile filePath: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc public func soundPlayBarRecordCancel(_ soundPlayBar: ComPDFKit_Tools.CPDFSoundPlayBar)
@@ -1030,8 +1036,9 @@ public enum CPDFFormPropertieType : Swift.Int {
 }
 @objc public protocol CPDFFormBarDelegate {
   @objc optional func formBarClick(_ pdfFormBar: ComPDFKit_Tools.CPDFFormToolBar, forSelected isSelected: Swift.Bool, forButton button: UIKit.UIButton)
+  @objc optional func formBarPropertyDialogDismissed(_ formBar: ComPDFKit_Tools.CPDFFormToolBar, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFFormToolBar : UIKit.UIView {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFFormToolBar : UIKit.UIView, ComPDFKit_Tools.AAPLCustomPresentationControllerDelegate, ComPDFKit_Tools.CPDFSignatureViewControllerDelegate {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFFormBarDelegate)?
   @_Concurrency.MainActor(unsafe) public var pdfListView: ComPDFKit_Tools.CPDFListView?
   @_Concurrency.MainActor(unsafe) weak public var parentVC: UIKit.UIViewController?
@@ -1045,7 +1052,9 @@ public enum CPDFFormPropertieType : Swift.Int {
   @objc @_Concurrency.MainActor(unsafe) public func buttonItemClicked_open(_ button: UIKit.UIButton?)
   @_Concurrency.MainActor(unsafe) public func openFormProperties(_ annotation: ComPDFKit.CPDFWidgetAnnotation)
   @_Concurrency.MainActor(unsafe) public func openFormPropertiesForModel(_ annotMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  @_Concurrency.MainActor(unsafe) @objc public func AAPLCustomPresentationControllerTap(_ customPresentationController: ComPDFKit_Tools.AAPLCustomPresentationController)
   @_Concurrency.MainActor(unsafe) public func buttonItemClicked_openOption(_ annotation: ComPDFKit.CPDFWidgetAnnotation)
+  @_Concurrency.MainActor(unsafe) @objc public func signatureViewControllerDismiss(_ signatureViewController: ComPDFKit_Tools.CPDFSignatureViewController)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class CPDFColorUtils : ObjectiveC.NSObject {
@@ -1174,6 +1183,7 @@ public enum CPDFAnnotationPropertieType : Swift.Int {
 @objc public protocol CPDFAnnotationBarDelegate {
   @objc optional func annotationBarClick(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Swift.Int, forSelected isSelected: Swift.Bool, forButton button: UIKit.UIButton)
   @objc optional func annotationBarOpenPicker(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, clickAnnotationMode annotationMode: Swift.Int)
+  @objc optional func annotationBarDialogDismissed(_ annotationBar: ComPDFKit_Tools.CPDFAnnotationToolBar, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CPDFAnnotationToolBar : UIKit.UIView, UIKit.UINavigationControllerDelegate, UIKit.UIImagePickerControllerDelegate, ComPDFKit_Tools.CPDFSignatureViewControllerDelegate, ComPDFKit_Tools.CPDFInkTopToolBarDelegate, ComPDFKit_Tools.CPDFDrawPencilViewDelegate, ComPDFKit_Tools.AAPLCustomPresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) public var shapeStyle: Swift.Int
@@ -1199,6 +1209,7 @@ public enum CPDFAnnotationPropertieType : Swift.Int {
   @_Concurrency.MainActor(unsafe) public func setSearchState(_ isSearch: Swift.Bool)
   @_Concurrency.MainActor(unsafe) public func inkCommitDrawing()
   @_Concurrency.MainActor(unsafe) public func buttonItemClicked_open(_ button: UIKit.UIButton?)
+  @_Concurrency.MainActor(unsafe) @objc public func annotationPropertyViewControllerDidDismiss(_ viewController: UIKit.UIViewController, annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
   @_Concurrency.MainActor(unsafe) @objc public func AAPLCustomPresentationControllerTap(_ customPresentationController: ComPDFKit_Tools.AAPLCustomPresentationController)
   @_Concurrency.MainActor(unsafe) @objc public func imagePickerController(_ picker: UIKit.UIImagePickerController, didFinishPickingMediaWithInfo info: [UIKit.UIImagePickerController.InfoKey : Any])
   @_Concurrency.MainActor(unsafe) @objc public func imagePickerControllerDidCancel(_ picker: UIKit.UIImagePickerController)
@@ -1388,6 +1399,7 @@ extension ComPDFKit_Tools.CPDFListView {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) public var dismissCallback: ((ComPDFKit_Tools.CPDFEditMode) -> Swift.Void)?
   @objc deinit
   @_Concurrency.MainActor(unsafe) public init(pdfView: ComPDFKit.CPDFView)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
@@ -1552,6 +1564,11 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @objc optional func PDFViewBaseControllerDigitalSignatureDone(_ baseController: ComPDFKit_Tools.CPDFViewBaseController)
   @objc optional func PDFViewBaseControllerInterceptAnnotationDoAction(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, forAnnotation annotation: ComPDFKit.CPDFAnnotation?)
   @objc optional func PDFViewBaseControllerInterceptWidgetDoAction(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, forAnnotation annotation: ComPDFKit.CPDFWidgetAnnotation?)
+  @objc optional func PDFViewBaseControllerAnnotationDialogDismissed(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  @objc optional func PDFViewBaseControllerFormPropertyDialogDismissed(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, forAnnotationMode annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
+  @objc optional func PDFViewBaseControllerEditPropertyDialogDismissed(_ baseController: ComPDFKit_Tools.CPDFViewBaseController, forEditMode editMode: ComPDFKit_Tools.CPDFEditMode)
+  @objc optional func PDFViewBaseControllerSearchToolbarBack(_ baseController: ComPDFKit_Tools.CPDFViewBaseController)
+  @objc optional func PDFViewBaseControllerWatermarkDialogDismissed(_ baseController: ComPDFKit_Tools.CPDFViewBaseController)
 }
 @objc @_Concurrency.MainActor(unsafe) open class CPDFViewBaseController : UIKit.UIViewController, ComPDFKit_Tools.CPDFListViewDelegate, ComPDFKit.CPDFViewDelegate, ComPDFKit_Tools.CSearchToolbarDelegate, ComPDFKit_Tools.CPDFBOTAViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuDelegate, ComPDFKit_Tools.CPDFThumbnailViewControllerDelegate, ComPDFKit_Tools.CPDFPopMenuViewDelegate, ComPDFKit_Tools.CDocumentPasswordViewControllerDelegate, ComPDFKit_Tools.CPDFPageEditViewControllerDelegate, ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate, UIKit.UIDocumentPickerDelegate, ComPDFKit_Tools.CSearchTitleViewDelegate, ComPDFKit_Tools.CPDFCustomMenuReporting {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CPDFViewBaseControllerDelete)?
@@ -1609,6 +1626,7 @@ public let CPDFSaveFontSubesetKey: Swift.String
   @_Concurrency.MainActor(unsafe) open func pageEditViewController(_ pageEditViewController: ComPDFKit_Tools.CPDFPageEditViewController, pageIndex: Swift.Int, isPageEdit: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Text textWaterModel: ComPDFKit_Tools.CWatermarkModel)
   @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerSave(_ addWatermarkViewControllerSave: ComPDFKit_Tools.CPDFAddWatermarkViewController, Image imageWaterModel: ComPDFKit_Tools.CWatermarkModel)
+  @_Concurrency.MainActor(unsafe) @objc open func addWatermarkViewControllerBack(_ addWatermarkViewController: ComPDFKit_Tools.CPDFAddWatermarkViewController)
   @_Concurrency.MainActor(unsafe) open func setTitleRefresh()
   @_Concurrency.MainActor(unsafe) open func reloadCompressTopView()
   @_Concurrency.MainActor(unsafe) open func selectDocumentRefresh()

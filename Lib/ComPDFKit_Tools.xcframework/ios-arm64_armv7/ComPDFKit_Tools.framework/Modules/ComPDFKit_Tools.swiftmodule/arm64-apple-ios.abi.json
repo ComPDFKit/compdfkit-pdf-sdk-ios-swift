@@ -1726,6 +1726,37 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addWatermarkViewControllerBack",
+            "printedName": "addWatermarkViewControllerBack(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFAddWatermarkViewController",
+                "printedName": "ComPDFKit_Tools.CPDFAddWatermarkViewController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAddWatermarkViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFAddWatermarkViewControllerDelegate(im)addWatermarkViewControllerBack:",
+            "mangledName": "$s15ComPDFKit_Tools38CPDFAddWatermarkViewControllerDelegateP03addefG4BackyyAA0defG0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFAddWatermarkViewControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -2179,6 +2210,70 @@
             "moduleName": "ComPDFKit_Tools",
             "overriding": true,
             "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidAppear",
+            "printedName": "viewDidAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAddWatermarkViewController(im)viewDidAppear:",
+            "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC13viewDidAppearyySbF",
+            "moduleName": "ComPDFKit_Tools",
+            "overriding": true,
+            "objc_name": "viewDidAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidDisappear",
+            "printedName": "viewDidDisappear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAddWatermarkViewController(im)viewDidDisappear:",
+            "mangledName": "$s15ComPDFKit_Tools30CPDFAddWatermarkViewControllerC16viewDidDisappearyySbF",
+            "moduleName": "ComPDFKit_Tools",
+            "overriding": true,
+            "objc_name": "viewDidDisappear:",
             "declAttributes": [
               "Dynamic",
               "ObjC",
@@ -10735,7 +10830,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "usr": "s:Sa"
@@ -10766,7 +10861,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ],
                     "usr": "s:Sa"
@@ -10798,7 +10893,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ],
                     "usr": "s:Sa"
@@ -21160,7 +21255,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   },
                   {
                     "kind": "TypeNominal",
@@ -21171,7 +21266,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ]
                   }
@@ -21179,9 +21274,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools12CPDFEditModeO4textyA2CmF",
+            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode@CPDFEditModeText",
             "mangledName": "$s15ComPDFKit_Tools12CPDFEditModeO4textyA2CmF",
-            "moduleName": "ComPDFKit_Tools"
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
           },
           {
             "kind": "Var",
@@ -21197,7 +21296,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   },
                   {
                     "kind": "TypeNominal",
@@ -21208,7 +21307,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ]
                   }
@@ -21216,9 +21315,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools12CPDFEditModeO5imageyA2CmF",
+            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode@CPDFEditModeImage",
             "mangledName": "$s15ComPDFKit_Tools12CPDFEditModeO5imageyA2CmF",
-            "moduleName": "ComPDFKit_Tools"
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
           },
           {
             "kind": "Var",
@@ -21234,7 +21337,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   },
                   {
                     "kind": "TypeNominal",
@@ -21245,7 +21348,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ]
                   }
@@ -21253,9 +21356,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools12CPDFEditModeO4pathyA2CmF",
+            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode@CPDFEditModePath",
             "mangledName": "$s15ComPDFKit_Tools12CPDFEditModeO4pathyA2CmF",
-            "moduleName": "ComPDFKit_Tools"
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
           },
           {
             "kind": "Var",
@@ -21271,7 +21378,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   },
                   {
                     "kind": "TypeNominal",
@@ -21282,7 +21389,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ]
                   }
@@ -21290,9 +21397,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:15ComPDFKit_Tools12CPDFEditModeO3allyA2CmF",
+            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode@CPDFEditModeAll",
             "mangledName": "$s15ComPDFKit_Tools12CPDFEditModeO3allyA2CmF",
-            "moduleName": "ComPDFKit_Tools"
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Constructor",
@@ -21308,7 +21419,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "usr": "s:Sq"
@@ -21368,11 +21479,12 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO",
+        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode",
         "mangledName": "$s15ComPDFKit_Tools12CPDFEditModeO",
         "moduleName": "ComPDFKit_Tools",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjC"
         ],
         "enumRawTypeName": "UInt",
         "conformances": [
@@ -22035,7 +22147,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "usr": "s:Sa"
@@ -22067,7 +22179,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ],
                     "usr": "s:Sa"
@@ -22099,7 +22211,7 @@
                         "kind": "TypeNominal",
                         "name": "CPDFEditMode",
                         "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                        "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                       }
                     ],
                     "usr": "s:Sa"
@@ -23029,7 +23141,7 @@
                 "kind": "TypeNominal",
                 "name": "CPDFEditMode",
                 "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
               }
             ],
             "declKind": "Var",
@@ -23053,7 +23165,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "declKind": "Accessor",
@@ -23077,7 +23189,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "declKind": "Accessor",
@@ -33022,6 +33134,37 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "signatureTypeSelectViewCancel",
+            "printedName": "signatureTypeSelectViewCancel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CSignatureTypeSelectView",
+                "printedName": "ComPDFKit_Tools.CSignatureTypeSelectView",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CSignatureTypeSelectView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CSignatureTypeSelectViewDelegate(im)signatureTypeSelectViewCancel:",
+            "mangledName": "$s15ComPDFKit_Tools32CSignatureTypeSelectViewDelegateP09signatureefG6CancelyyAA0defG0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CSignatureTypeSelectViewDelegate>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CSignatureTypeSelectViewDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -38635,6 +38778,42 @@
           },
           {
             "kind": "Function",
+            "name": "formBarPropertyDialogDismissed",
+            "printedName": "formBarPropertyDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFFormToolBar",
+                "printedName": "ComPDFKit_Tools.CPDFFormToolBar",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFFormToolBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewController(im)formBarPropertyDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC30formBarPropertyDialogDismissed_17forAnnotationModeyAA012CPDFFormToolG0C_AA0dlM0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "formBarPropertyDialogDismissed:forAnnotationMode:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "editClick",
             "printedName": "editClick(in:editMode:)",
             "children": [
@@ -39005,6 +39184,41 @@
             "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC23annotationBarOpenPicker_19clickAnnotationModeyAA018CPDFAnnotationToolG0C_SitF",
             "moduleName": "ComPDFKit_Tools",
             "objc_name": "annotationBarOpenPicker:clickAnnotationMode:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "annotationBarDialogDismissed",
+            "printedName": "annotationBarDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFAnnotationToolBar",
+                "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewController(im)annotationBarDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools18CPDFViewControllerC28annotationBarDialogDismissed_17forAnnotationModeyAA018CPDFAnnotationToolG0C_AA0dkL0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "annotationBarDialogDismissed:forAnnotationMode:",
             "declAttributes": [
               "ObjC",
               "Custom",
@@ -41542,6 +41756,43 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "formBarPropertyDialogDismissed",
+            "printedName": "formBarPropertyDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFFormToolBar",
+                "printedName": "ComPDFKit_Tools.CPDFFormToolBar",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFFormToolBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFFormBarDelegate(im)formBarPropertyDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools19CPDFFormBarDelegateP04formE23PropertyDialogDismissed_17forAnnotationModeyAA0d4ToolE0C_AA08CPDFViewlM0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFFormBarDelegate>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFFormBarDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -42144,6 +42395,36 @@
           },
           {
             "kind": "Function",
+            "name": "AAPLCustomPresentationControllerTap",
+            "printedName": "AAPLCustomPresentationControllerTap(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AAPLCustomPresentationController",
+                "printedName": "ComPDFKit_Tools.AAPLCustomPresentationController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)AAPLCustomPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFFormToolBar(im)AAPLCustomPresentationControllerTap:",
+            "mangledName": "$s15ComPDFKit_Tools15CPDFFormToolBarC35AAPLCustomPresentationControllerTapyyAA0ghI0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "AAPLCustomPresentationControllerTap:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "buttonItemClicked_openOption",
             "printedName": "buttonItemClicked_openOption(_:)",
             "children": [
@@ -42166,6 +42447,36 @@
             "declAttributes": [
               "Custom",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "signatureViewControllerDismiss",
+            "printedName": "signatureViewControllerDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFSignatureViewController",
+                "printedName": "ComPDFKit_Tools.CPDFSignatureViewController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFSignatureViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFFormToolBar(im)signatureViewControllerDismiss:",
+            "mangledName": "$s15ComPDFKit_Tools15CPDFFormToolBarC30signatureViewControllerDismissyyAA013CPDFSignaturehI0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "signatureViewControllerDismiss:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -42220,6 +42531,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AAPLCustomPresentationControllerDelegate",
+            "printedName": "AAPLCustomPresentationControllerDelegate",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)AAPLCustomPresentationControllerDelegate",
+            "mangledName": "$s15ComPDFKit_Tools40AAPLCustomPresentationControllerDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CPDFSignatureViewControllerDelegate",
+            "printedName": "CPDFSignatureViewControllerDelegate",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFSignatureViewControllerDelegate",
+            "mangledName": "$s15ComPDFKit_Tools35CPDFSignatureViewControllerDelegateP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -46566,6 +46891,43 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "annotationBarDialogDismissed",
+            "printedName": "annotationBarDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFAnnotationToolBar",
+                "printedName": "ComPDFKit_Tools.CPDFAnnotationToolBar",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFAnnotationBarDelegate(im)annotationBarDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools25CPDFAnnotationBarDelegateP010annotationE15DialogDismissed_17forAnnotationModeyAA0d4ToolE0C_AA08CPDFViewkL0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFAnnotationBarDelegate>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFAnnotationBarDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -47677,6 +48039,42 @@
             "declAttributes": [
               "Custom",
               "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "annotationPropertyViewControllerDidDismiss",
+            "printedName": "annotationPropertyViewControllerDidDismiss(_:annotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAnnotationToolBar(im)annotationPropertyViewControllerDidDismiss:annotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools21CPDFAnnotationToolBarC42annotationPropertyViewControllerDidDismiss_0G4ModeySo06UIViewJ0C_AA018CPDFViewAnnotationM0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "objc_name": "annotationPropertyViewControllerDidDismiss:annotationMode:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -52860,6 +53258,13 @@
       },
       {
         "kind": "Import",
+        "name": "ComPDFKit",
+        "printedName": "ComPDFKit",
+        "declKind": "Import",
+        "moduleName": "ComPDFKit_Tools"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -54809,6 +55214,13 @@
       },
       {
         "kind": "Import",
+        "name": "ComPDFKit",
+        "printedName": "ComPDFKit",
+        "declKind": "Import",
+        "moduleName": "ComPDFKit_Tools"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -56179,7 +56591,7 @@
                 "kind": "TypeNominal",
                 "name": "CPDFEditMode",
                 "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
               }
             ],
             "declKind": "Var",
@@ -56203,7 +56615,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "declKind": "Accessor",
@@ -56227,7 +56639,7 @@
                     "kind": "TypeNominal",
                     "name": "CPDFEditMode",
                     "printedName": "ComPDFKit_Tools.CPDFEditMode",
-                    "usr": "s:15ComPDFKit_Tools12CPDFEditModeO"
+                    "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
                   }
                 ],
                 "declKind": "Accessor",
@@ -56251,6 +56663,153 @@
                 "declKind": "Accessor",
                 "usr": "s:15ComPDFKit_Tools22CPDFEditViewControllerC8editModeAA0dH0OvM",
                 "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC8editModeAA0dH0OvM",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dismissCallback",
+            "printedName": "dismissCallback",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((ComPDFKit_Tools.CPDFEditMode) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ComPDFKit_Tools.CPDFEditMode) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CPDFEditMode",
+                        "printedName": "ComPDFKit_Tools.CPDFEditMode",
+                        "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvp",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvp",
+            "moduleName": "ComPDFKit_Tools",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((ComPDFKit_Tools.CPDFEditMode) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(ComPDFKit_Tools.CPDFEditMode) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CPDFEditMode",
+                            "printedName": "ComPDFKit_Tools.CPDFEditMode",
+                            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvg",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvg",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((ComPDFKit_Tools.CPDFEditMode) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(ComPDFKit_Tools.CPDFEditMode) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CPDFEditMode",
+                            "printedName": "ComPDFKit_Tools.CPDFEditMode",
+                            "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvs",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvs",
+                "moduleName": "ComPDFKit_Tools",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvM",
+                "mangledName": "$s15ComPDFKit_Tools22CPDFEditViewControllerC15dismissCallbackyAA0D4ModeOcSgvM",
                 "moduleName": "ComPDFKit_Tools",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -62744,6 +63303,179 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerAnnotationDialogDismissed",
+            "printedName": "PDFViewBaseControllerAnnotationDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerAnnotationDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF25AnnotationDialogDismissed_03forI4ModeyAA0deF0C_AA0diM0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerFormPropertyDialogDismissed",
+            "printedName": "PDFViewBaseControllerFormPropertyDialogDismissed(_:forAnnotationMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewAnnotationMode",
+                "printedName": "ComPDFKit_Tools.CPDFViewAnnotationMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFViewAnnotationMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerFormPropertyDialogDismissed:forAnnotationMode:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF27FormPropertyDialogDismissed_17forAnnotationModeyAA0deF0C_AA0dnO0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerEditPropertyDialogDismissed",
+            "printedName": "PDFViewBaseControllerEditPropertyDialogDismissed(_:forEditMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFEditMode",
+                "printedName": "ComPDFKit_Tools.CPDFEditMode",
+                "usr": "c:@M@ComPDFKit_Tools@E@CPDFEditMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerEditPropertyDialogDismissed:forEditMode:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF27EditPropertyDialogDismissed_03forI4ModeyAA0deF0C_AA08CPDFEditN0OtF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerSearchToolbarBack",
+            "printedName": "PDFViewBaseControllerSearchToolbarBack(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerSearchToolbarBack:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF17SearchToolbarBackyyAA0deF0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PDFViewBaseControllerWatermarkDialogDismissed",
+            "printedName": "PDFViewBaseControllerWatermarkDialogDismissed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFViewBaseController",
+                "printedName": "ComPDFKit_Tools.CPDFViewBaseController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(pl)CPDFViewBaseControllerDelete(im)PDFViewBaseControllerWatermarkDialogDismissed:",
+            "mangledName": "$s15ComPDFKit_Tools28CPDFViewBaseControllerDeleteP07PDFVieweF24WatermarkDialogDismissedyyAA0deF0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "genericSig": "<τ_0_0 where τ_0_0 : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "sugared_genericSig": "<Self where Self : ComPDFKit_Tools.CPDFViewBaseControllerDelete>",
+            "protocolReq": true,
+            "declAttributes": [
+              "Optional",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -65991,6 +66723,36 @@
             "moduleName": "ComPDFKit_Tools",
             "isOpen": true,
             "objc_name": "addWatermarkViewControllerSave:Image:",
+            "declAttributes": [
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addWatermarkViewControllerBack",
+            "printedName": "addWatermarkViewControllerBack(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CPDFAddWatermarkViewController",
+                "printedName": "ComPDFKit_Tools.CPDFAddWatermarkViewController",
+                "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFAddWatermarkViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ComPDFKit_Tools@objc(cs)CPDFViewBaseController(im)addWatermarkViewControllerBack:",
+            "mangledName": "$s15ComPDFKit_Tools22CPDFViewBaseControllerC016addWatermarkViewF4BackyyAA07CPDFAddhiF0CF",
+            "moduleName": "ComPDFKit_Tools",
+            "isOpen": true,
+            "objc_name": "addWatermarkViewControllerBack:",
             "declAttributes": [
               "ObjC",
               "Custom",
@@ -71330,35 +72092,42 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1178,
+      "offset": 1295,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "Array",
-      "offset": 1628,
+      "offset": 1745,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1808,
+      "offset": 1925,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 1930,
+      "offset": 2047,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2513,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Watermark\/WatermarkSetting\/Controller\/CPDFAddWatermarkViewController.swift",
       "kind": "StringLiteral",
-      "offset": 923,
+      "offset": 1040,
       "length": 30,
       "value": "\"ComPDFKit_Tools.CPDFAddWatermarkViewController\""
     },
@@ -76664,119 +77433,98 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 560,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 569,
+      "offset": 575,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 583,
+      "offset": 589,
       "length": 3,
       "value": "3"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 560,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 569,
+      "offset": 575,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 583,
+      "offset": 589,
       "length": 3,
       "value": "3"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
-      "length": 5,
+      "offset": 659,
+      "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 569,
+      "offset": 673,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 583,
-      "length": 3,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
-      "kind": "IntegerLiteral",
-      "offset": 653,
+      "offset": 659,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 667,
+      "offset": 673,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 653,
+      "offset": 659,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 667,
-      "length": 4,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
-      "kind": "IntegerLiteral",
-      "offset": 653,
-      "length": 4,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
-      "kind": "IntegerLiteral",
-      "offset": 667,
+      "offset": 673,
       "length": 4,
       "value": "2"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "Array",
-      "offset": 1225,
+      "offset": 1231,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/ContentEditor\/PDFEditBar\/CPDFEditToolBar.swift",
       "kind": "StringLiteral",
-      "offset": 1039,
+      "offset": 1045,
       "length": 15,
       "value": "\"ComPDFKit_Tools.CPDFEditToolBar\""
     },
@@ -78169,7 +78917,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/DigitalSignature\/PDFDigitalSignatureProperties\/AddSignature\/Viewer\/CSignatureTypeSelectView.swift",
       "kind": "StringLiteral",
-      "offset": 891,
+      "offset": 998,
       "length": 24,
       "value": "\"ComPDFKit_Tools.CSignatureTypeSelectView\""
     },
@@ -79492,21 +80240,28 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
       "kind": "Array",
-      "offset": 1202,
+      "offset": 1491,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 1402,
+      "offset": 1691,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1839,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Forms\/PDFFormBar\/CPDFFormToolBar.swift",
       "kind": "StringLiteral",
-      "offset": 956,
+      "offset": 1097,
       "length": 15,
       "value": "\"ComPDFKit_Tools.CPDFFormToolBar\""
     },
@@ -80920,42 +81675,49 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2078,
+      "offset": 2268,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "Array",
-      "offset": 2427,
+      "offset": 2617,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "IntegerLiteral",
-      "offset": 2467,
+      "offset": 2657,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "BooleanLiteral",
-      "offset": 2851,
+      "offset": 3041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "BooleanLiteral",
-      "offset": 3071,
+      "offset": 3312,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3416,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationBar\/CPDFAnnotationToolBar.swift",
       "kind": "StringLiteral",
-      "offset": 1383,
+      "offset": 1534,
       "length": 21,
       "value": "\"ComPDFKit_Tools.CPDFAnnotationToolBar\""
     },
@@ -82320,7 +83082,7 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Annotations\/PDFAnnotationProperties\/PDFBase\/CPDFAnnotationBaseViewController.swift",
       "kind": "StringLiteral",
-      "offset": 504,
+      "offset": 733,
       "length": 32,
       "value": "\"ComPDFKit_Tools.CPDFAnnotationBaseViewController\""
     },
@@ -84413,49 +85175,49 @@
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6171,
+      "offset": 6904,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "Array",
-      "offset": 6232,
+      "offset": 6965,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "Array",
-      "offset": 6290,
+      "offset": 7023,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "IntegerLiteral",
-      "offset": 6406,
+      "offset": 7139,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6629,
+      "offset": 7362,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6685,
+      "offset": 7418,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kdanmobile_2\/Downloads\/ComPDFKit_Package\/Swift\/ComPDFKit_Tools\/ComPDFKit_Tools\/Common\/Controls\/PDFViewController\/CPDFViewBaseController.swift",
       "kind": "StringLiteral",
-      "offset": 4975,
+      "offset": 5708,
       "length": 22,
       "value": "\"ComPDFKit_Tools.CPDFViewBaseController\""
     },
