@@ -451,6 +451,7 @@ public enum CDigitalSelectType : Swift.Int {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any ComPDFKit_Tools.CDigitalTypeSelectViewDelegate)?
   @_Concurrency.MainActor(unsafe) @objc dynamic public init()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @available(iOS, deprecated: 13.0, renamed: "init(frame:)")
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) public func show(in superView: UIKit.UIView)
   @objc deinit

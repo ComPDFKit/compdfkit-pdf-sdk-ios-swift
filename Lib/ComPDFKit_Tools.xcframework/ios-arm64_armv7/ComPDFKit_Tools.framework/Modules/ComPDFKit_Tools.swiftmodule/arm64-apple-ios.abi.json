@@ -19191,7 +19191,8 @@
               "ObjC",
               "Custom",
               "Override",
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "funcSelfKind": "NonMutating"
           },

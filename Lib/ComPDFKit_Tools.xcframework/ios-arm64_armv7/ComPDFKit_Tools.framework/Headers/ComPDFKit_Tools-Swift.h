@@ -381,7 +381,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CDigitalTypeSelectView")
 @interface CDigitalTypeSelectView : UIView
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)awakeFromNib;
+- (void)awakeFromNib SWIFT_AVAILABILITY(ios,deprecated=13.0,message="'awakeFromNib' has been renamed to 'init(frame:)'");
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
