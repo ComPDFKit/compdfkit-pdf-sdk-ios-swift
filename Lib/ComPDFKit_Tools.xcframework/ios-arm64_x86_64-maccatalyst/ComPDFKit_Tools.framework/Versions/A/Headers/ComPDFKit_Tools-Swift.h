@@ -381,7 +381,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CDigitalTypeSelectView")
 @interface CDigitalTypeSelectView : UIView
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)awakeFromNib SWIFT_AVAILABILITY(ios,deprecated=13.0,message="'awakeFromNib' has been renamed to 'init(frame:)'");
+- (void)awakeFromNib;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -515,6 +515,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools25CPDFAnnotationBarDelegate_")
 - (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
 - (void)annotationBarOpenPicker:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode;
 - (void)annotationBarDialogDismissed:(CPDFAnnotationToolBar * _Nonnull)annotationBar forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
+- (void)annotationBarPencilDrawingCompleted:(CPDFAnnotationToolBar * _Nonnull)annotationBar pageIndex:(NSInteger)pageIndex;
 @end
 
 @class UITableView;
@@ -752,6 +753,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)layoutSubviews;
+- (void)layoutDocumentView;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)cpdf_handleDynamicCustomMenuActionWithSelectorName:(NSString * _Nonnull)selectorName;
 @property (nonatomic, readonly) BOOL canResignFirstResponder;
@@ -1174,6 +1176,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
 - (void)PDFViewBaseControllerTouchEnded:(CPDFViewBaseController * _Nonnull)baseController;
 - (void)PDFViewBaseControllerAnndotationAdded:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFViewBaseControllerPencilDrawingCompleted:(CPDFViewBaseController * _Nonnull)baseController pageIndex:(NSInteger)pageIndex;
 - (void)PDFViewBaseControllerAnndotationSelect:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nonnull)annotation isSelected:(BOOL)isSelected;
 - (void)PDFViewBaseControllerFormFieldAdded:(CPDFViewBaseController * _Nonnull)baseController forFormField:(CPDFWidgetAnnotation * _Nonnull)formField;
 - (void)PDFViewBaseControllerFormFieldSelect:(CPDFViewBaseController * _Nonnull)baseController forFormField:(CPDFWidgetAnnotation * _Nonnull)formField isSelected:(BOOL)isSelected;
@@ -1272,6 +1275,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
 - (void)annotationBarOpenPicker:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode;
 - (void)annotationBarDialogDismissed:(CPDFAnnotationToolBar * _Nonnull)annotationBar forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
+- (void)annotationBarPencilDrawingCompleted:(CPDFAnnotationToolBar * _Nonnull)annotationBar pageIndex:(NSInteger)pageIndex;
 - (void)getNoteOpenViewController:(CPDFNoteOpenViewController * _Nonnull)noteOpenVC content:(NSString * _Nonnull)content isDelete:(BOOL)isDelete;
 - (void)soundPlayBarRecordFinished:(CPDFSoundPlayBar * _Nonnull)soundPlayBar withFile:(NSString * _Nonnull)filePath;
 - (void)soundPlayBarRecordCancel:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
@@ -1769,7 +1773,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CDigitalTypeSelectView")
 @interface CDigitalTypeSelectView : UIView
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)awakeFromNib SWIFT_AVAILABILITY(ios,deprecated=13.0,message="'awakeFromNib' has been renamed to 'init(frame:)'");
+- (void)awakeFromNib;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -1903,6 +1907,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools25CPDFAnnotationBarDelegate_")
 - (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
 - (void)annotationBarOpenPicker:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode;
 - (void)annotationBarDialogDismissed:(CPDFAnnotationToolBar * _Nonnull)annotationBar forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
+- (void)annotationBarPencilDrawingCompleted:(CPDFAnnotationToolBar * _Nonnull)annotationBar pageIndex:(NSInteger)pageIndex;
 @end
 
 @class UITableView;
@@ -2140,6 +2145,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)layoutSubviews;
+- (void)layoutDocumentView;
 @property (nonatomic, readonly) BOOL canBecomeFirstResponder;
 - (void)cpdf_handleDynamicCustomMenuActionWithSelectorName:(NSString * _Nonnull)selectorName;
 @property (nonatomic, readonly) BOOL canResignFirstResponder;
@@ -2562,6 +2568,7 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseController:(CPDFViewBaseController * _Nonnull)baseController HiddenState:(BOOL)state;
 - (void)PDFViewBaseControllerTouchEnded:(CPDFViewBaseController * _Nonnull)baseController;
 - (void)PDFViewBaseControllerAnndotationAdded:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
+- (void)PDFViewBaseControllerPencilDrawingCompleted:(CPDFViewBaseController * _Nonnull)baseController pageIndex:(NSInteger)pageIndex;
 - (void)PDFViewBaseControllerAnndotationSelect:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nonnull)annotation isSelected:(BOOL)isSelected;
 - (void)PDFViewBaseControllerFormFieldAdded:(CPDFViewBaseController * _Nonnull)baseController forFormField:(CPDFWidgetAnnotation * _Nonnull)formField;
 - (void)PDFViewBaseControllerFormFieldSelect:(CPDFViewBaseController * _Nonnull)baseController forFormField:(CPDFWidgetAnnotation * _Nonnull)formField isSelected:(BOOL)isSelected;
@@ -2660,6 +2667,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools18CPDFViewController")
 - (void)annotationBarClick:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode forSelected:(BOOL)isSelected forButton:(UIButton * _Nonnull)button;
 - (void)annotationBarOpenPicker:(CPDFAnnotationToolBar * _Nonnull)annotationBar clickAnnotationMode:(NSInteger)annotationMode;
 - (void)annotationBarDialogDismissed:(CPDFAnnotationToolBar * _Nonnull)annotationBar forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
+- (void)annotationBarPencilDrawingCompleted:(CPDFAnnotationToolBar * _Nonnull)annotationBar pageIndex:(NSInteger)pageIndex;
 - (void)getNoteOpenViewController:(CPDFNoteOpenViewController * _Nonnull)noteOpenVC content:(NSString * _Nonnull)content isDelete:(BOOL)isDelete;
 - (void)soundPlayBarRecordFinished:(CPDFSoundPlayBar * _Nonnull)soundPlayBar withFile:(NSString * _Nonnull)filePath;
 - (void)soundPlayBarRecordCancel:(CPDFSoundPlayBar * _Nonnull)soundPlayBar;
