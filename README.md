@@ -4,9 +4,7 @@ As part of the KDAN ecosystem, [ComPDF SDK for iOS](https://www.compdf.com/ios?u
 
 The ComPDF iOS PDF Library provides a native Swift API and polished UI components so teams can ship PDF features faster without rebuilding document tools from scratch.
 
-[ComPDF SDK](https://www.compdf.com/?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) seamlessly operates on [Web](https://www.compdf.com/web?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Windows](https://www.compdf.com/windows?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Android](https://www.compdf.com/android?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [iOS](https://www.compdf.com/ios?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Mac](https://www.compdf.com/contact-sales?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), and [Server](https://www.compdf.com/server?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), with support for cross-platform frameworks such as [React Native](https://www.compdf.com/react-native?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Flutter](https://www.compdf.com/flutter?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), etc.
-
-If you find ComPDF SDK useful, please consider giving us a ⭐ **Star** on GitHub — it helps us grow and improve! Got questions or ideas? Join the conversation in our [Discussions](https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift/discussions).
+> If you find ComPDF SDK useful, please consider giving us a ⭐ **Star** on GitHub — it helps us grow and improve! Got questions or ideas? Join the conversation in our [Discussions](https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift/discussions).
 
 <img src="image/Android%20Demo%20GIF.gif" title="" alt="Android Demo GIF" data-align="center">
 
@@ -22,29 +20,104 @@ If you find ComPDF SDK useful, please consider giving us a ⭐ **Star** on GitHu
 
 * **High-quality Service:** We provide 24/7 professional one-to-one technical support, including onsite service and remote assistance via phone and email.
 
----
 
 ## Table of Contents
 
-- [Related](#related)
+- [Supported Features](#supported-features)
 - [Preview](#preview)
 - [Requirements](#requirements)
 - [How to Make an iOS App in Swift](#how-to-make-an-ios-app-in-swift)
 - [Changelog](#changelog)
-- [Free Trial and License](#free-trial-and-license)
+- [Free Trial & License](#free-trial-and-license)
 - [Support](#support)
+- [Changelog](#changelog)
+- [Related](#related)
 
----
+## Supported Features
 
-## Related
+**Viewer**: Fast and smooth PDF rendering and viewing
 
-* [ComPDF SDK for iOS Documentation Guide](https://www.compdf.com/guides/pdf-sdk/ios/overview?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
-* [ComPDF PDF Library for Android](https://github.com/ComPDFKit/compdfkit-pdf-sdk-android)
-* [ComPDF SDK Apple Package](https://github.com/ComPDFKit/compdfkit-pdf-sdk-apple-package)
-* [How to Build an iOS PDF Viewer or Editor in Swift](https://www.compdf.com/blog/build-an-ios-pdf-viewer-or-editor-in-swift?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
-* [Code Samples for iOS](https://www.compdf.com/guides/pdf-sdk/ios/examples?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
-* [ComPDF API Reference](https://api.compdf.com/api-reference/overview?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
----
+* Display Modes - single/double page, vertical & horizontal scrolling, cover mode, crop mode
+* Text Search & Selection
+* PDF Navigation - outlines, bookmarks
+
+**Annotations**:
+
+- Notes - add longer comments with adjustable icon shape and color
+* Ink - freehand drawing with customizable color, opacity, line thickness
+* Text - add, move, resize text directly on page
+* Inspector - adjust annotation looks (line styles, borders, colors, opacity, font)
+* Comment on Annotations and Update Status
+* Import & Export & Flatten Annotations (XFDF, FDF, JSON)
+* Highlight, Underline, Strikeout, Squiggly
+* Shapes - Rectangle, Oval, Line, Arrow, Polygon, Polyline, Cloud
+* Stamps, Sound, Movie, File Attachment, Link, Distance, Perimeter, Area
+
+**Document Editor**: 
+
+- Page manipulation - insert, delete, rotate, reorder, extract, crop
+* Split PDF, Merge PDF
+
+**Content Editor**: Edit PDF text and images directly like in Word
+
+**Watermark:** 
+
+- Add Text or Image Watermarks
+
+- Delete Watermarks
+
+- Customize Watermarks
+
+**OCR:**
+
+- AI OCR
+
+- Recognize Tables, Graphics, Images
+
+- Support recognition in 80+ Languages
+
+**Signatures**: 
+
+- Electronic Signatures - draw, type, image signatures
+* Digital Signatures - certificate-based signature validation
+
+**Forms**:
+
+- Process fillable and static PDF forms
+* Form filling, form creation, form flattening
+
+**Security**: 
+
+- Encryption - set open password, permission password
+* Restrict printing, copying, editing
+
+**Redaction**: Permanently remove sensitive content from PDFs
+
+**Measurement**: Distance, area, perimeter measurement tools
+
+**Compress**: Optimize and reduce PDF file size
+
+**Compare Documents**: Side-by-side document comparison to highlight differences
+
+**PDF/A, PDF/X, PDF/E, PDF/UA**: Standards compliance for archiving, printing, engineering, and accessibility
+
+**Convert Files**: 
+
+- Convert PDF to Word, Excel, PPT, HTML, CSV, images (PNG,JPEG, JPEG, JPEG2000, BMP, TIFF, TGA, GIF), RTF, TXT, JSON, XML, markdown, searchable PDF, searchable OFD.
+
+- Convert images (PNG,JPEG, JPEG, JPEG2000, BMP, TIFF, TGA, GIF) to Word, Excel, PPT, HTML, CSV, RTF, TXT, JSON, XML.
+
+- Convert Word, Excel, PPT, HTML, CSV, PNG, RTF, TXT to PDF
+
+**UI Customization**:
+
+* Toolbar Customization
+
+* UI Personalization
+
+* Ready-Made UI Options
+
+* Out-of-the-box Source Code
 
 ## Preview
 
@@ -52,7 +125,6 @@ ComPDF SDK for iOS delivers a smooth, feature-rich PDF experience on iOS mobile 
 
 ![ComPDF SDK for iOS UI](image/ComPDF%20SDK%20for%20iOS%20UI.png)
 
----
 
 ## Requirements
 
@@ -61,7 +133,6 @@ ComPDF SDK for iOS delivers a smooth, feature-rich PDF experience on iOS mobile 
 * iOS 10.0 or higher.
 * Xcode 13.0 or newer for Objective-C or Swift.
 
----
 
 ## How to Make an iOS App in Swift
 
@@ -219,13 +290,6 @@ So far, we have added ***"ComPDF.xcframework"*** to the ***"PDFViewer"*** projec
 5. Other Problems
    If you meet some other problems when integrating our ComPDF SDK for iOS, feel free to contact [ComPDF's support team](https://www.compdf.com/support?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit).
 
----
-
-## Changelog
-
-Keep up with the latest updates, improvements, and bug fixes for ComPDF SDK for iOS: [View iOS Changelog](https://www.compdf.com/pdf-sdk/changelog-ios?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
-
----
 
 ## Free Trial and License
 
@@ -239,8 +303,6 @@ To get started:
 
 For custom deployments, advanced features, or volume licensing, please [contact our sales team](https://www.compdf.com/contact-sales?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
 
----
-
 ## Support
 
 [ComPDF](https://www.compdf.com/?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) has a professional R&D team that produces comprehensive technical documentation and guides to help developers. Also, you can get an immediate response when reporting your problems to our support team.
@@ -248,3 +310,24 @@ For custom deployments, advanced features, or volume licensing, please [contact 
 * For detailed information, please visit our [Guides](https://www.compdf.com/guides/pdf-sdk/ios/overview?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) page.
 * For technical assistance, please reach out to our [Technical Support](https://www.compdf.com/support?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit).
 * To get more details and an accurate quote, please contact our [Sales Team](https://www.compdf.com/contact-sales?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) or [send an email](mailto:support@compdf.com).
+
+## Changelog
+
+Keep up with the latest updates, improvements, and bug fixes for ComPDF SDK for iOS: [View iOS Changelog](https://www.compdf.com/pdf-sdk/changelog-ios?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
+
+## Related
+
+* More Guides:
+  
+  - [API Reference for ComPDF (iOS)](https://developers.compdf.com/guides/pdf-sdk/ios/api-reference/index)
+  
+  - [ComPDF SDK for iOS Documentation Guide](https://www.compdf.com/guides/pdf-sdk/ios/overview?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
+  
+  - [How to Build an iOS PDF Viewer or Editor in Swift](https://www.compdf.com/blog/build-an-ios-pdf-viewer-or-editor-in-swift?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
+  
+  - [Code Samples for iOS](https://www.compdf.com/guides/pdf-sdk/ios/examples?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
+  
+  - [ComPDF API Reference](https://api.compdf.com/api-reference/overview?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit)
+- More Platforms and Frameworks: [ComPDF SDK](https://www.compdf.com/?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) seamlessly operates on [Web](https://www.compdf.com/web?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Windows](https://www.compdf.com/windows?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Android](https://www.compdf.com/android?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [iOS](https://www.compdf.com/ios?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Mac](https://www.compdf.com/contact-sales?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), and [Server](https://www.compdf.com/server?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), with support for cross-platform frameworks such as [React Native](https://www.compdf.com/react-native?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), [Flutter](https://www.compdf.com/flutter?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit), etc.
+
+- ComPDF Cloud: We also provide Open API for developers. You can [register a free API account](https://api.compdf.com/signup?utm_source=github&utm_medium=compdfkit-pdf-sdk-ios-swift&utm_campaign=compdfkit_pdf_sdk_ios_swift_repo&ref_platform_id=github_compdfkit) to get up to 200+ API calls monthly for free.
