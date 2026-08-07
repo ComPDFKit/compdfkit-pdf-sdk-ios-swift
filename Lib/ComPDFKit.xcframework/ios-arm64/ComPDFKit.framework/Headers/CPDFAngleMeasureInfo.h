@@ -1,5 +1,5 @@
 //
-//  CTaskQueueManager.h
+//  CPDFAngleMeasureInfo.h
 //  ComPDFKit
 //
 //  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
@@ -10,24 +10,16 @@
 //  This notice may not be removed from this file.
 //
 
-#import <Foundation/Foundation.h>
+#import <ComPDFKit/CPDFMeasureInfo.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-static void *kHighPriorityQueueKey = &kHighPriorityQueueKey;
+@interface CPDFAngleMeasureInfo : CPDFMeasureInfo
 
-static void *kSearchHighPriorityQueueKey = &kSearchHighPriorityQueueKey;
-
-@interface CTaskQueueManager : NSObject
-+ (instancetype)sharedManager;
-
-- (void)submitAsyncTask:(dispatch_block_t)task;
-
-- (void)submitSearchAsyncTask:(dispatch_block_t)task;
-
-- (void)submitSyncTask:(dispatch_block_t)task;
-
-+ (dispatch_queue_t)pdfReloadQueue;
+/**
+ *  Getting the measure type in the measurement property value
+ */
+@property (nonatomic,assign,readonly) CPDFMeasureType mesureType;
 
 @end
 

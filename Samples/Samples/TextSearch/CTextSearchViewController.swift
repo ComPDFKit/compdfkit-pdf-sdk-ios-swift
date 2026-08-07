@@ -2,7 +2,7 @@
 //  CTextSearchViewController.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -120,10 +120,10 @@ class CTextSearchViewController: CSamplesBaseViewController {
                 quadrilateralPoints.append(NSValue(cgPoint: CGPoint(x: bounds.minX, y: bounds.minY)))
                 quadrilateralPoints.append(NSValue(cgPoint: CGPoint(x: bounds.maxX, y: bounds.minY)))
                 
-                if let highlight = CPDFMarkupAnnotation(document: document, markupType: .highlight) {
+                if let highlight = CPDFMarkupAnnotation(page: page, document: document, markupType: .highlight) {
                     highlight.color = UIColor.yellow
                     highlight.quadrilateralPoints = quadrilateralPoints
-                    page.addAnnotation(highlight)
+                    page.updateAndAddAnnotation(highlight)
                 }
             }
             

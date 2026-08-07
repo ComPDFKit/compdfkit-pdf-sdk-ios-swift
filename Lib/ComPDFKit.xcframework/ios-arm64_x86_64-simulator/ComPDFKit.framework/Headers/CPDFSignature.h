@@ -231,7 +231,14 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
 /**
  * Set up a certificate trust folder, default sandbox path.
  */
-- (void)setSignCertTrustedFolder:(NSString *)signCertTrustedFolder;
++ (void)setSignCertTrustedFolder:(NSString *)signCertTrustedFolder
+                      fileFolder:(NSString *)fileFolder;
+
+/**
+ * Remove a certificate trust folder, default sandbox path.
+ */
++ (void)removeSignCertTrustedFolder:(NSString *)signCertTrustedFolder
+                         fileFolder:(NSString *)fileFolder;
 
 /**
  * Add certificate to the trusted list.
@@ -358,6 +365,24 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
  * @param document The CPDFDocument object that needs to be verified.
 */
 - (void)verifySignatureWithDocument:(CPDFDocument *)document;
+
+/**
+    * Verify the signature.
+    * You need to sign the document properly first before verifying it.
+*/
+- (BOOL)verifySignature:(CPDFDocument *)document;
+
+/**
+    * Verify the document.
+    * You need to sign the document properly first before verifying it.
+*/
+- (BOOL)verifyDocument:(CPDFDocument *)document;
+
+/**
+ * Verify the timestamp.
+ * @return Return true: Trusted timestamp server. Return false: Local system time (untrusted).
+*/
+- (BOOL)verifyTimestampAuthority;
 
 /**
  * Sign the corresponding signature field.

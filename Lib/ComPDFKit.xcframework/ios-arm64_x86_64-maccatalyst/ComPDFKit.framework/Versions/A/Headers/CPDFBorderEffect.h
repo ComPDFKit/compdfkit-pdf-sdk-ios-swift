@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, CPDFBorderEffectType) {
     CPDFBorderEffectTypeCloudy  // Corresponding 'C'
 };
 
-@interface CPDFBorderEffect : NSObject
+@interface CPDFBorderEffect : NSObject <NSCopying>
 
 /**
  *  Setting the border effect strength

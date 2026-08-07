@@ -15,15 +15,22 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, CPDFMeasureType) {
+    CPDFMeasureTypeUnknown = -1,
     CPDFMeasureTypeDistance = 0,
     CPDFMeasureTypePerimeter,
-    CPDFMeasureTypeArea
+    CPDFMeasureTypeArea,
+    CPDFMeasureTypeAngle,
+    CPDFMeasureTypeCount
 };
 
 typedef NS_OPTIONS(NSInteger, CPDFCaptionType) {
     CPDFCaptionTypeNone = 0,
     CPDFCaptionTypeArea,
-    CPDFCaptionTypeLength
+    CPDFCaptionTypeLength,
+    CPDFCaptionTypeRadius,
+    CPDFCaptionTypeDiameter,
+    CPDFCaptionTypeAngle,
+    CPDFCaptionTypeCount
 };
 
 @interface CPDFMeasureConstants : NSObject

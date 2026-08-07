@@ -82,7 +82,7 @@ extern NSString * const CPDFOptimizeFlagKey;
 /**
  * Returns the document with which the outline is associated.
  */
-@property (nonatomic,readonly)  CPDFDocument *document;
+@property (nonatomic,readonly,weak)  CPDFDocument *document;
 
 /**
  * Image Option

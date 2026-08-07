@@ -2,7 +2,7 @@
 //  CInteractiveFormsViewController.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -133,7 +133,7 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 let height = pageSize.height
                 
                 // Your code to work with the new document and create interactive forms
-                let textWidget1 = CPDFTextWidgetAnnotation(document: document)
+                let textWidget1 = CPDFTextWidgetAnnotation(page: page, document: document)
                 let bounds = self.view.convert(CGRect(x: 28, y: height - 30, width: 80, height: 25), to: self.view)
                 textWidget1?.bounds = bounds
                 textWidget1?.setFieldName("TextField1")
@@ -141,9 +141,9 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 textWidget1?.stringValue = "Basic Text Field"
                 textWidget1?.fontColor = UIColor.black
                 textWidget1?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(textWidget1)
+                page.updateAndAddAnnotation(textWidget1)
                 
-                let textWidget2 = CPDFTextWidgetAnnotation(document: document)
+                let textWidget2 = CPDFTextWidgetAnnotation(page: page, document: document)
                 let boundsz = self.view.convert(CGRect(x: 28, y: height - 100, width: 80, height: 60), to: self.view)
                 textWidget2?.bounds = boundsz
                 textWidget2?.setFieldName("TextField2")
@@ -151,7 +151,7 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 textWidget2?.stringValue = "Basic Text Field\nBasic Text Field\nBasic Text Field"
                 textWidget2?.fontColor = UIColor.black
                 textWidget2?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(textWidget2)
+                page.updateAndAddAnnotation(textWidget2)
 
                 
                 var items = [CPDFChoiceWidgetItem]()
@@ -170,12 +170,12 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 item3.string = "List Box No.3"
                 items.append(item3)
 
-                let choiceWidget = CPDFChoiceWidgetAnnotation(document: document, listChoice: true)
+                let choiceWidget = CPDFChoiceWidgetAnnotation(page: page, document: document, listChoice: true)
                 choiceWidget?.setFieldName("ListBox1")
                 choiceWidget?.bounds = CGRect(x: 267, y: height - 100, width: 200, height: 100)
                 choiceWidget?.items = items
                 choiceWidget?.selectItemAtIndex = 2
-                page.addAnnotation(choiceWidget)
+                page.updateAndAddAnnotation(choiceWidget)
                 
                 
                 var itemsz = [CPDFChoiceWidgetItem]()
@@ -194,19 +194,19 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 item3z.string = "Combo Box No.3"
                 itemsz.append(item3z)
 
-                let choiceWidgetz = CPDFChoiceWidgetAnnotation(document: document, listChoice: false)
+                let choiceWidgetz = CPDFChoiceWidgetAnnotation(page: page, document: document, listChoice: false)
                 choiceWidgetz?.setFieldName("ComboBox1")
                 choiceWidgetz?.bounds = CGRect(x: 267, y: height - 100, width: 200, height: 100)
                 choiceWidgetz?.items = itemsz
                 choiceWidgetz?.selectItemAtIndex = 2
-                page.addAnnotation(choiceWidgetz)
+                page.updateAndAddAnnotation(choiceWidgetz)
 
-                let signatureWidget = CPDFSignatureWidgetAnnotation(document: document)
+                let signatureWidget = CPDFSignatureWidgetAnnotation(page: page, document: document)
                 signatureWidget?.bounds = CGRect(x: 28, y: height - 206, width: 80, height: 101)
                 signatureWidget?.setFieldName("Signature1")
-                page.addAnnotation(signatureWidget)
+                page.updateAndAddAnnotation(signatureWidget)
                 
-                let pushButton = CPDFButtonWidgetAnnotation(document: document, controlType: .pushButtonControl)
+                let pushButton = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .pushButtonControl)
                 pushButton?.bounds = CGRect(x: 267, y: height - 300, width: 130, height: 80)
                 pushButton?.setFieldName("PushButton1")
                 pushButton?.setCaption("PushButton")
@@ -217,10 +217,10 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 let goToAction = CPDFGoToAction(destination: destination)
                 pushButton?.setAction(goToAction)
 
-                page.addAnnotation(pushButton)
+                page.updateAndAddAnnotation(pushButton)
 
                 //Insert CheckBox Widget
-                let pushButtonz = CPDFButtonWidgetAnnotation(document: document, controlType: .pushButtonControl)
+                let pushButtonz = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .pushButtonControl)
                 pushButtonz?.bounds = CGRect(x: 367, y: height - 303, width: 150, height: 80)
                 pushButtonz?.setFieldName("PushButton2")
                 pushButtonz?.setCaption("PushButton")
@@ -230,10 +230,10 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 let urlAction = CPDFURLAction(url: "https://www.compdf.com/")
                 pushButtonz?.setAction(urlAction)
 
-                page.addAnnotation(pushButtonz)
+                page.updateAndAddAnnotation(pushButtonz)
 
                 //Insert CheckBox Widget
-                let checkBox = CPDFButtonWidgetAnnotation(document: document, controlType: .checkBoxControl)
+                let checkBox = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .checkBoxControl)
                 checkBox?.bounds = CGRect(x: 67, y: height - 351, width: 100, height: 90)
                 checkBox?.setFieldName("CheckBox1")
                 checkBox?.borderColor = UIColor.black
@@ -242,10 +242,10 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 checkBox?.setState(0)
                 checkBox?.font = UIFont.systemFont(ofSize: 15)
 
-                page.addAnnotation(checkBox)
+                page.updateAndAddAnnotation(checkBox)
                 
                 //Insert CheckBox Widget
-                let checkBoxz = CPDFButtonWidgetAnnotation(document: document, controlType: .checkBoxControl)
+                let checkBoxz = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .checkBoxControl)
                 checkBoxz?.bounds = CGRect(x: 167, y: height - 351, width: 100, height: 90)
                 checkBoxz?.setFieldName("CheckBox2")
                 checkBoxz?.borderColor = UIColor.black
@@ -253,9 +253,9 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 checkBoxz?.borderWidth = 2.0
                 checkBoxz?.setState(0)
                 checkBoxz?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(checkBoxz)
+                page.updateAndAddAnnotation(checkBoxz)
                 
-                let radioButton = CPDFButtonWidgetAnnotation(document: document, controlType: .radioButtonControl)
+                let radioButton = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .radioButtonControl)
                 radioButton?.bounds = CGRect(x: 167, y: height - 451, width: 100, height: 90)
                 radioButton?.setFieldName("RadioButton1")
                 radioButton?.borderColor = UIColor.black
@@ -263,9 +263,9 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 radioButton?.borderWidth = 2.0
                 radioButton?.setState(0)
                 radioButton?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(radioButton)
+                page.updateAndAddAnnotation(radioButton)
                 
-                let radioButtonz = CPDFButtonWidgetAnnotation(document: document, controlType: .radioButtonControl)
+                let radioButtonz = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .radioButtonControl)
                 radioButtonz?.bounds = CGRect(x: 267, y: height - 451, width: 100, height: 90)
                 radioButtonz?.setFieldName("RadioButton2")
                 radioButtonz?.borderColor = UIColor.black
@@ -273,9 +273,9 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 radioButtonz?.borderWidth = 2.0
                 radioButtonz?.setState(0)
                 radioButtonz?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(radioButtonz)
+                page.updateAndAddAnnotation(radioButtonz)
                 
-                let radioButtonh = CPDFButtonWidgetAnnotation(document: document, controlType: .radioButtonControl)
+                let radioButtonh = CPDFButtonWidgetAnnotation(page: page, document: document, controlType: .radioButtonControl)
                 radioButtonh?.bounds = CGRect(x: 367, y: height - 451, width: 100, height: 90)
                 radioButtonh?.setFieldName("RadioButton3")
                 radioButtonh?.borderColor = UIColor.black
@@ -283,7 +283,7 @@ class CInteractiveFormsViewController: CSamplesBaseViewController {
                 radioButtonh?.borderWidth = 2.0
                 radioButtonh?.setState(0)
                 radioButtonh?.font = UIFont.systemFont(ofSize: 15)
-                page.addAnnotation(radioButtonh)
+                page.updateAndAddAnnotation(radioButtonh)
                 
                 document.write(to: interactiveFormsURL)
 

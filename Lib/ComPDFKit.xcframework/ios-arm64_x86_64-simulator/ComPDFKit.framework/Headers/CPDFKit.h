@@ -43,6 +43,9 @@ typedef NS_ENUM(NSInteger, CPDFKitFeatureType) {
     CPDFKitFeatureConversionDigitalSignature,
     CPDFKitFeatureConversionAllowsEditText,
     CPDFKitFeatureConversionAllowsEditImage,
+    CPDFKitFeatureConversionAllowsEditPath,
+    CPDFKitFeatureConversionAllowsEditShading,
+    CPDFKitFeatureConversionAllowsEditForm,
     CPDFKitFeatureConversionCompressFile,
 
 };
@@ -96,8 +99,10 @@ typedef void (^CPDFLicenseCompletionHandler)(CPDFKitOnlineLicenseCode code, NSSt
 
 /**
  * Activate ComPDFKit with your online license.
+ *
+ * @deprecated Use `verifyWithPath:completionHandler:` instead.
  */
-+ (void)verifyWithOnlineLicense:(NSString *)license completionHandler:(CPDFLicenseCompletionHandler)handler;
++ (void)verifyWithOnlineLicense:(NSString *)license completionHandler:(CPDFLicenseCompletionHandler)handler __attribute__((deprecated("Use verifyWithPath:completionHandler: instead.")));
 
 
 /**

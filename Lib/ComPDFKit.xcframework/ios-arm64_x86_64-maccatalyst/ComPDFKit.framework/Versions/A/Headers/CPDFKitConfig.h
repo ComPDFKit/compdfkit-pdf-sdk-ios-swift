@@ -13,7 +13,6 @@
 #import <Foundation/Foundation.h>
 #import <ComPDFKit/CPDFKitPlatform.h>
 #import <ComPDFKit/CPDFView.h>
-#import <ComPDFKit/CTaskQueueManager.h>
 
 #define CPDFKitShareConfig [CPDFKitConfig sharedInstance]
 
@@ -46,6 +45,18 @@
  * @see CPDFDisplayDirection
  */
 - (void)setDisplayDirection:(CPDFDisplayDirection)displayDirection;
+
+#if TARGET_OS_IOS
+/**
+ * Get whether pages use the same display width in vertical continuous mode.
+ * Default is YES.
+ */
+- (BOOL)pageSameWidth;
+/**
+ * Set whether pages use the same display width in vertical continuous mode.
+ */
+- (void)setPageSameWidth:(BOOL)pageSameWidth;
+#endif
 
 /**
  * Get the default reading mode of CPDFView.
@@ -86,6 +97,17 @@
  * Set whether to allow to highlight form field in the CPDFView.
  */
 - (void)setEnableFormFieldHighlight:(BOOL)enableFormFieldHighlight;
+
+/**
+ * Get a custom background color for readonly form fields.
+ * If nil, readonly fields keep their existing appearance.
+ */
+- (CPDFKitPlatformColor *_Nullable)readOnlyFormFieldBackgroundColor;
+/**
+ * Set a custom background color for readonly form fields.
+ * Pass nil to keep the default readonly appearance.
+ */
+- (void)setReadOnlyFormFieldBackgroundColor:(CPDFKitPlatformColor *_Nullable)readOnlyFormFieldBackgroundColor;
 /**
  * Get whether to allow to freetextAnnotation autoresizingmask width in the CPDFView.
  */

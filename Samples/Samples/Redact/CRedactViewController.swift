@@ -2,7 +2,7 @@
 //  CRedactViewController.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -126,7 +126,7 @@ class CRedactViewController: CSamplesBaseViewController {
             if let selections = resultArray?[3] {
                 // Get the first search result on the first page
                 if let selection = selections[0] as? CPDFSelection {
-                    let redact = CPDFRedactAnnotation(document: document)
+                    let redact = CPDFRedactAnnotation(page: page, document: document)
                     redact?.bounds = selection.bounds
                     redact?.setOverlayText("REDACTED")
                     redact?.setFont(UIFont.systemFont(ofSize: 12))
@@ -134,7 +134,7 @@ class CRedactViewController: CSamplesBaseViewController {
                     redact?.setAlignment(.left)
                     redact?.setInteriorColor(UIColor.black)
                     redact?.setBorderColor(UIColor.yellow)
-                    page?.addAnnotation(redact)
+                    page?.updateAndAddAnnotation(redact)
                 }
             }
             

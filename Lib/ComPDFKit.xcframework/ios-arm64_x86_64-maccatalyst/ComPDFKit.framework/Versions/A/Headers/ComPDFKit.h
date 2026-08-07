@@ -21,8 +21,8 @@
 #import <ComPDFKit/CPDFWatermark.h>
 #import <ComPDFKit/CPDFHeaderFooter.h>
 #import <ComPDFKit/CPDFBates.h>
-#import <ComPDFKit/CPDFSignature.h>
 #import <ComPDFKit/CPDFBackground.h>
+#import <ComPDFKit/CPDFSignature.h>
 #import <ComPDFKit/CPDFDestination.h>
 
 #import <ComPDFKit/CPDFAction.h>
@@ -46,6 +46,7 @@
 #import <ComPDFKit/CPDFStampAnnotation.h>
 #import <ComPDFKit/CPDFInkAnnotation.h>
 #import <ComPDFKit/CPDFSoundAnnotation.h>
+#import <ComPDFKit/CPDFAttachmentAnnotation.h>
 #import <ComPDFKit/CPDFMovieAnnotation.h>
 #import <ComPDFKit/CPDFSignatureAnnotation.h>
 #import <ComPDFKit/CPDFRedactAnnotation.h>
@@ -54,6 +55,8 @@
 #import <ComPDFKit/CPDFPolygonAnnotation.h>
 #import <ComPDFKit/CPDFPerimeterMeasureInfo.h>
 #import <ComPDFKit/CPDFAreaMeasureInfo.h>
+#import <ComPDFKit/CPDFAngleMeasureInfo.h>
+#import <ComPDFKit/CPDFCountMeasureInfo.h>
 #import <ComPDFKit/CPDFBorderEffect.h>
 #import <ComPDFKit/CPDFSquareAreaStyle.h>
 
@@ -62,7 +65,9 @@
 #import <ComPDFKit/CPDFChoiceWidgetAnnotation.h>
 #import <ComPDFKit/CPDFTextWidgetAnnotation.h>
 #import <ComPDFKit/CPDFSignatureWidgetAnnotation.h>
+#import <ComPDFKit/CPDFAnnotation+Utilities.h>
 
 #import <ComPDFKit/CPDFView.h>
 
+#import <ComPDFKit/CPDFDocumentMemoryDistribution.h>
 #import <ComPDFKit/CPDFFont.h>

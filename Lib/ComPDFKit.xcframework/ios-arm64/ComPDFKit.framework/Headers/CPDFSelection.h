@@ -11,6 +11,7 @@
 //
 
 #import <ComPDFKit/CPDFKitPlatform.h>
+#import <ComPDFKit/CPDFMarkupAnnotation.h>
 
 @class CPDFPage;
 
@@ -40,6 +41,8 @@
  */
 @property (nonatomic,readonly) NSRange range;
 
+@property (nonatomic,readonly) NSArray<NSValue *> *transformedQuadPoints;
+
 /**
  * Returns an array of selections, one for each line of text covered by the receiver.
  *
@@ -52,6 +55,17 @@
  * Returns an NSString object representing the text contained in the selection (may contain linefeed characters).
  */
 - (NSString *)string;
+
+/**
+ * The markup type used for real-time selection preview rendering.
+ *
+ * @discussion Set this property to control the visual style of the selection preview.
+ * Supported types include highlight, underline, strikeout, and squiggly.
+ * The default value is \c CPDFMarkupTypeHighlight.
+ *
+ * @see CPDFMarkupType
+ */
+@property (nonatomic,assign) CPDFMarkupType markupType;
 
 /**
  * The color used to long press to select.

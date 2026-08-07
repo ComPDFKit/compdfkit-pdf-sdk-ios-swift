@@ -711,6 +711,10 @@ public protocol CPDFCustomMenuReporting : AnyObject {
   }
   @_Concurrency.MainActor(unsafe) public func canUndo() -> Swift.Bool
   @_Concurrency.MainActor(unsafe) public func canRedo() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func canMixedUndo() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func canMixedRedo() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func performMixedUndo()
+  @_Concurrency.MainActor(unsafe) public func performMixedRedo()
   @_Concurrency.MainActor(unsafe) public func stopObservingNotes(oldNotes: [ComPDFKit.CPDFAnnotation])
   @_Concurrency.MainActor(unsafe) public func setAnnotationMode(_ annotationMode: ComPDFKit_Tools.CPDFViewAnnotationMode)
   @_Concurrency.MainActor(unsafe) public func pencilDrawCancel()

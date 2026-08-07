@@ -2,7 +2,7 @@
 //  CAnnotaitonViewController.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -124,7 +124,7 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         
         if page1 != nil {
             // Create a freetext annotation
-            let freeText1 = CPDFFreeTextAnnotation(document: document)
+            let freeText1 = CPDFFreeTextAnnotation(page: page1, document: document)
             freeText1?.contents = "\n\nSome swift brown fox snatched a gray hare out of the air by freezing it with an angry glare."
             + "\n\nAha!\n\nAnd there was much rejoicing!"
             freeText1?.bounds = CGRect(x: 10, y: 200, width: 160, height: 570)
@@ -132,10 +132,10 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
             freeText1?.fontColor = UIColor.red
             freeText1?.alignment = .left
             // Add a freetext annotation for page
-            page1?.addAnnotation(freeText1)
+            page1?.updateAndAddAnnotation(freeText1)
             
             // Create a ink annotation
-            let ink = CPDFInkAnnotation(document: document)
+            let ink = CPDFInkAnnotation(page: page1, document: document)
             let startPoint = CGPoint(x: 220, y: 505)
             let point1 = CGPoint(x: 100, y: 490)
             let point2 = CGPoint(x: 120, y: 410)
@@ -146,7 +146,7 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
             ink?.opacity = 0.5
             ink?.borderWidth = 2.0
             ink?.paths = [[startPoint, point1, point2, point3, point4, endPoint]]
-            page1?.addAnnotation(ink)
+            page1?.updateAndAddAnnotation(ink)
             
         }
         
@@ -158,7 +158,7 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         let page2 = document?.page(at: 1)
         
         // Create a Line annotation
-        let line1 = CPDFLineAnnotation(document: document)
+        let line1 = CPDFLineAnnotation(page: page2, document: document)
         line1?.startPoint = CGPoint(x: 350, y: 270)
         line1?.endPoint = CGPoint(x: 260, y: 370)
         line1?.startLineStyle = .square
@@ -169,9 +169,9 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         line1?.interiorOpacity = 0.5
         line1?.border = border1
         line1?.contents = "Dashed Captioned"
-        page2?.addAnnotation(line1)
+        page2?.updateAndAddAnnotation(line1)
         
-        let line2 = CPDFLineAnnotation(document: document)
+        let line2 = CPDFLineAnnotation(page: page2, document: document)
         line2?.startPoint = CGPoint(x: 385, y: 480)
         line2?.endPoint = CGPoint(x: 540, y: 555)
         line2?.startLineStyle = .circle
@@ -182,9 +182,9 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         line2?.interiorOpacity = 0.5
         line2?.border = border2
         line2?.contents = "Inline Caption"
-        page2?.addAnnotation(line2)
+        page2?.updateAndAddAnnotation(line2)
         
-        let line3 = CPDFLineAnnotation(document: document)
+        let line3 = CPDFLineAnnotation(page: page2, document: document)
         line3?.startPoint = CGPoint(x: 25, y: 426)
         line3?.endPoint = CGPoint(x: 180, y: 555)
         line3?.startLineStyle = .circle
@@ -195,47 +195,47 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         line3?.interiorOpacity = 0.5
         line3?.border = border2
         line3?.contents = "Offset Caption"
-        page2?.addAnnotation(line3)
+        page2?.updateAndAddAnnotation(line3)
         
         //-----------------------------------------------------------------------------------------
         // Test of circle and square annotation
         let page3 = document?.page(at: 2)
         
-        let circle1 = CPDFCircleAnnotation(document: document)
+        let circle1 = CPDFCircleAnnotation(page: page3, document: document)
         circle1?.bounds = CGRect(x: 300, y: 300, width: 100, height: 100)
         circle1?.color = UIColor.red
         circle1?.interiorColor = UIColor.yellow
         circle1?.opacity = 0.5
         circle1?.interiorOpacity = 0.5
         circle1?.border = border1
-        page3?.addAnnotation(circle1)
+        page3?.updateAndAddAnnotation(circle1)
         
-        let circle2 = CPDFCircleAnnotation(document: document)
+        let circle2 = CPDFCircleAnnotation(page: page3, document: document)
         circle2?.bounds = CGRect(x: 100, y: 100, width: 200, height: 200)
         circle2?.color = UIColor.green
         circle2?.interiorColor = UIColor.purple
         circle2?.opacity = 1.0
         circle2?.interiorOpacity = 1.0
         circle2?.border = border2
-        page3?.addAnnotation(circle2)
+        page3?.updateAndAddAnnotation(circle2)
         
-        let square1 = CPDFSquareAnnotation(document: document)
+        let square1 = CPDFSquareAnnotation(page: page3, document: document)
         square1?.bounds = CGRect(x: 10, y: 200, width: 80, height: 150)
         square1?.color = UIColor.red
         square1?.interiorColor = UIColor.yellow
         square1?.opacity = 0.5
         square1?.interiorOpacity = 0.5
         square1?.border = border1
-        page3?.addAnnotation(square1)
+        page3?.updateAndAddAnnotation(square1)
         
-        let square2 = CPDFSquareAnnotation(document: document)
+        let square2 = CPDFSquareAnnotation(page: page3, document: document)
         square2?.bounds = CGRect(x: 400, y: 200, width: 80, height: 300)
         square2?.color = UIColor.green
         square2?.interiorColor = UIColor.purple
         square2?.opacity = 1.0
         square2?.interiorOpacity = 1.0
         square2?.border = border2
-        page3?.addAnnotation(square2)
+        page3?.updateAndAddAnnotation(square2)
         
         //-----------------------------------------------------------------------------------------
         // Test of circle and square annotation
@@ -255,34 +255,34 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
                 quadrilateralPoints.append(CGPoint(x: bounds.maxX, y: bounds.minY))
                 
                 // Create a highlight annotation
-                let highlight = CPDFMarkupAnnotation(document: document, markupType: .highlight)
+                let highlight = CPDFMarkupAnnotation(page: page4, document: document, markupType: .highlight)
                 highlight?.color = UIColor.yellow
                 highlight?.quadrilateralPoints = quadrilateralPoints
-                page4?.addAnnotation(highlight)
+                page4?.updateAndAddAnnotation(highlight)
             }
         }
         
         // Create a note annotation
-        let text = CPDFTextAnnotation(document: document)
+        let text = CPDFTextAnnotation(page: page4, document: document)
         text?.contents = "test"
         text?.bounds = CGRect(x: 50, y: 200, width: 50, height: 50)
         text?.color = UIColor.yellow
-        page4?.addAnnotation(text)
+        page4?.updateAndAddAnnotation(text)
         
         // Create a link annotation
         let dest = CPDFDestination(document: document, pageIndex: 1)
-        let link = CPDFLinkAnnotation(document: document)
+        let link = CPDFLinkAnnotation(page: page4, document: document)
         link?.bounds = CGRect(x: 50, y: 100, width: 50, height: 50)
         link?.setDestination(dest) // link.URL = “https://www.”
-        page4?.addAnnotation(link)
+        page4?.updateAndAddAnnotation(link)
         
         // Create a sound annotation
         // need import a recording file
         let filePath = Bundle.main.path(forResource: "Bird", ofType: "wav")
-        let soundAnnotation = CPDFSoundAnnotation(document: document)
+        let soundAnnotation = CPDFSoundAnnotation(page: page4, document: document)
         if ((soundAnnotation?.setMediaPath(filePath)) == true) {
             soundAnnotation?.bounds = CGRect(x: 100, y: 200, width: 50, height: 50)
-            page4?.addAnnotation(soundAnnotation)
+            page4?.updateAndAddAnnotation(soundAnnotation)
         }
         
         //-----------------------------------------------------------------------------------------
@@ -293,9 +293,9 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         let height5 = size5?.height ?? 0
         
         for i in 1...23 {
-            let standard = CPDFStampAnnotation(document: document, type: i)
+            let standard = CPDFStampAnnotation(page: page5, document: document, standardType: i)
             standard?.bounds = CGRect(x: 50, y: height5 - CGFloat(i*30), width: 50, height: 30)
-            page5?.addAnnotation(standard)
+            page5?.updateAndAddAnnotation(standard)
         }
         
         // Create a text stamp annotation
@@ -306,14 +306,14 @@ class CAnnotaitonViewController: CSamplesBaseViewController {
         var tDate: String?
         outputFormatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
         tDate = outputFormatter.string(from: Date())
-        let textStamp = CPDFStampAnnotation(document: document, text: "ComPDFKit", detailText: tDate, style: .red, shape: .arrowLeft)
+        let textStamp = CPDFStampAnnotation(page: page5, document: document, text: "ComPDFKit", detailText: tDate, style: .red, shape: .arrowLeft)
         textStamp?.bounds = CGRect(x: 150, y: height5 - 50, width: 80, height: 50)
-        page5?.addAnnotation(textStamp)
+        page5?.updateAndAddAnnotation(textStamp)
         
         // Create a Image stamp annotation
-        let imageStamp = CPDFStampAnnotation(document: document, image: UIImage(named: "Logo"))
+        let imageStamp = CPDFStampAnnotation(page: page5, document: document, image: UIImage(named: "Logo"))
         imageStamp?.bounds = CGRect(x: 150, y: height5 - 120, width: 50, height: 50)
-        page5?.addAnnotation(imageStamp)
+        page5?.updateAndAddAnnotation(imageStamp)
         
         // Save the created annotation action in document
         document?.write(to: self.annotationURL)

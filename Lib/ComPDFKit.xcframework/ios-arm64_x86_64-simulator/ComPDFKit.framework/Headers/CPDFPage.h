@@ -49,8 +49,10 @@ typedef NS_ENUM(NSInteger, CPDFDisplayBox) {
 
 extern NSNotificationName const CPDFPageDidLoadAnnotationNotification;
 extern NSNotificationName const CPDFPageDidAddAnnotationNotification;
+extern NSNotificationName const CPDFPageDidUpdateAnnotationNotification;
 extern NSNotificationName const CPDFPageDidRemoveAnnotationNotification;
 extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
+extern NSString * const CPDFPageAnnotationNotificationAnnotationKey;
 
 @class CPDFDocument, CPDFAnnotation, CPDFSelection;
 
@@ -58,7 +60,9 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * CPDFPage, a subclass of NSObject, defines methods used to render PDF pages and work with annotations, text, and selections.
  *
  * @discussion CPDFPage is a logical representation of a PDF document's page. Your application instantiates a CPDFPage object by asking for one from a CPDFDocument object.
- * For simple display and navigation of PDF documents within your application, you don’t need to use CPDFPage. You need only use CPDFView.
+ * For simple display and navigation of PDF documents within your application, you don't need to use CPDFPage. You need only use CPDFView.
+ *
+ * @note CPDFPage no longer conforms to NSCopying. Use -[CPDFDocument addPage:atIndex:] to insert a page from another document.
  */
 @interface CPDFPage : NSObject
 
@@ -126,13 +130,26 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
 - (void)reloadAnnotations;
 
 /**
- * Adds the specified annotation object to the page.
- */
-- (void)addAnnotation:(CPDFAnnotation *)annotation;
-/**
  * Removes the specified annotation from the page.
  */
 - (void)removeAnnotation:(CPDFAnnotation *)annotation;
+
+/**
+ * Attaches a previously created annotation to this page.
+ *
+ * @discussion This method performs the wrapper-side registration sequence:
+ *   AcroForm registration (for signature widgets), appearance stream generation,
+ *   @c annotations array update, and @c CPDFPageDidUpdateAnnotationNotification
+ *   notification.
+ *
+ *   Use this in combination with @c -[CPDFAnnotation initWithPage:document:] for a
+ *   two-step create-then-attach workflow (suitable for Undo/KVO).
+ *
+ * @param annotation  An annotation created via @c -initWithPage:document: (or a
+ *                    parameterised variant) for this page, and not already present
+ *                    in this page's annotations array.
+ */
+- (void)updateAndAddAnnotation:(CPDFAnnotation *)annotation;
 /**
  * Removes all annotations from the page.
  */
@@ -165,7 +182,21 @@ extern NSNotificationName const CPDFPageDidFindSearchChangeNotification;
  * Convenience function that returns an image of this page's bound.
  */
 - (CPDFKitPlatformImage *)renderPageOfRect:(CGRect)rect pageDrawRectOptions:(CPDFPageDrawRectOptions *)pageDrawRectOptions;
-- (void)thumbnailOfSize:(CGSize)size needReset:(BOOL)reset completion:(void (^)(CPDFKitPlatformImage *image))completion;
+
+/**
+ * Convenience function that returns an image of this page, with annotations.
+ */
+- (void)thumbnailOfSize:(CGSize)size
+              needReset:(BOOL)reset
+        backgroundColor:(CPDFKitPlatformColor *)backgroundColor
+             completion:(void (^)(CPDFKitPlatformImage *image))completion
+    DEPRECATED_MSG_ATTRIBUTE("use thumbnailOfSize:needReset:drawWithBox:backgroundColor:completion:");
+
+- (void)thumbnailOfSize:(CGSize)size
+              needReset:(BOOL)reset
+            drawWithBox:(CPDFDisplayBox)displayBox
+        backgroundColor:(CPDFKitPlatformColor *)backgroundColor
+             completion:(void (^)(CPDFKitPlatformImage *image))completion;
 
 #pragma mark - Find
 /**

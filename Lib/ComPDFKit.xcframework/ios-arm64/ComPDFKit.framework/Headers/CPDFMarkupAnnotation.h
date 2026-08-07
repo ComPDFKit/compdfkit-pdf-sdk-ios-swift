@@ -25,11 +25,16 @@ typedef NS_ENUM(NSInteger, CPDFMarkupType) {
 @interface CPDFMarkupAnnotation : CPDFAnnotation
 
 /**
- * Initializes CPDFMarkupAnnotation object.
+ * Initializes CPDFMarkupAnnotation with page and document.
  *
- * @see CPDFMarkupType
+ * @param page       The page on which the annotation will reside.
+ * @param document   The document that owns the page.
+ * @param markupType The markup style (highlight, strikeout, underline, squiggly).
+ *
+ * @discussion Creates the engine object and binds it to the page.
+ *             Call @c -[CPDFPage updateAndAddAnnotation:] to finish registration.
  */
-- (instancetype)initWithDocument:(CPDFDocument *)document markupType:(CPDFMarkupType)markupType;
+- (nullable instancetype)initWithPage:(CPDFPage *)page document:(CPDFDocument *)document markupType:(CPDFMarkupType)markupType;
 
 /**
  * Method to get / set the array of quadrilateral points defining the bounds of the markup.

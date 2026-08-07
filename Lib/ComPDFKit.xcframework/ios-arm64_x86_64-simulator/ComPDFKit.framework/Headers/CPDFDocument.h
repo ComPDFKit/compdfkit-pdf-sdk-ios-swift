@@ -12,11 +12,16 @@
 
 #import <ComPDFKit/CPDFKitPlatform.h>
 #import "CPDFOptimizeOption.h"
+#import "CPDFDocumentMemoryDistribution.h"
 
 
 extern NSNotificationName const CPDFDocumentDidUnlockNotification;
 
 extern NSNotificationName const CPDFDocumentPageCountChangedNotification;
+
+extern NSNotificationName const CPDFDocumentPageDataDidChangeNotification;
+
+extern NSNotificationName const CPDFDocumentWatermarkDidChangeNotification;
 
 extern NSErrorDomain const CPDFDocumentErrorDomain;
 
@@ -199,6 +204,37 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 @end
 
+#pragma mark - CPDFFontSubsetInfo
+
+@interface CPDFFontSubsetInfo : NSObject
+
+/**
+ Font name
+ */
+@property (nonatomic,strong) NSString * _Nullable fontName;
+
+/**
+ Whether the font is embedded
+ */
+@property (nonatomic,assign) BOOL isEmmbeded;
+
+/**
+ Font Type
+ */
+@property (nonatomic,strong) NSString * _Nullable fontType;
+
+/**
+ Font encoding
+ */
+@property (nonatomic,strong) NSString * _Nullable fontEncoding;
+
+/**
+ Actual Font used
+ */
+@property (nonatomic,strong) NSString * _Nullable fontTrueName;
+
+@end
+
 #pragma mark - CPDFUAConfig
 
 @interface CPDFUAConfig : NSObject
@@ -215,6 +251,10 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion The other utility classes are either instantiated from methods in CPDFDocument, as are CPDFPage and CPDFOutline; or support it, as do CPDFWatermark and CPDFDestination.
  * You initialize a CPDFDocument object with a URL to a PDF file. You can then ask for the page count, add or delete pages, perform a find, or parse selected content into an NSString object.
  */
+
+
+@class CPDFPageDrawRectOptions;
+
 @interface CPDFDocument : NSObject
 
 #pragma mark - Initializers
@@ -358,6 +398,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 @property (nonatomic,readonly) CPDFDocumentEncryptionLevel encryptionLevel;
 
+- (NSArray <CPDFFontSubsetInfo *>* _Nullable)getSubsetFontInfos;
+
 #pragma mark - Save
 
 /**
@@ -469,6 +511,28 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
            progressHandler:(void (^_Nullable)(float cPageIndex, float totalPageIndex))progressHandler
              cancelHandler:(BOOL (^_Nullable)(void))cancelHandler
          completionHandler:(void (^_Nullable)(BOOL finished))completionHandler;
+
+#pragma mark - Memory Distribution
+
+/**
+ * Returns a memory distribution analysis for the current document.
+ *
+ * @discussion This method analyzes the space occupied by different element categories
+ * (images, fonts, annotations, etc.) in this PDF document. Use the returned
+ * CPDFDocumentMemoryDistribution object to query individual category sizes or the total size.
+ * This is useful for understanding document composition before performing optimization.
+ *
+ * @return A CPDFDocumentMemoryDistribution instance, or nil if the analysis fails.
+ *
+ * @code
+ * CPDFDocumentMemoryDistribution *distribution = [document memoryDistribution];
+ * if (distribution) {
+ *     uint32_t total = [distribution totalSize];
+ *     uint32_t imageSize = [distribution sizeForCategory:CPDFMemoryDistributionCategoryImage];
+ * }
+ * @endcode
+ */
+- (nullable CPDFDocumentMemoryDistribution *)memoryDistribution;
 
 #pragma mark - Attributes
 
@@ -663,6 +727,22 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @discussion This method raises an exception if either index value is out of bounds.
  */
 - (BOOL)importPages:(NSIndexSet *)indexSet fromDocument:(CPDFDocument *)document atIndex:(NSUInteger)index;
+
+/**
+ * Adds a page from another document at the specified index.
+ *
+ * @param page The source page to add (must be from a different document).
+ * @param index The zero-based index at which to insert the page.
+ * @return YES if the page was added successfully, NO otherwise.
+ *
+ * @discussion This method uses the underlying Document::AddPage API to insert
+ *             a page from another document without requiring PDFPage copying.
+ *             The index must be within bounds (0 to pageCount).
+ */
+- (BOOL)addPage:(CPDFPage *)page atIndex:(NSUInteger)index;
+
+- (CPDFKitPlatformImage *_Nullable)exportImageWithPages:(NSIndexSet *_Nonnull)indexSet maxImageSize:(NSUInteger)maxImageSize pageDrawRectOptions:(CPDFPageDrawRectOptions *)pageDrawRectOptions;
+
 /**
  * Retrieve the page data
  */
@@ -746,7 +826,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Use this method when the complete search process will be brief and when you don’t need the flexibility or control offered by beginFindString:withOptions:.
  * @see CPDFSearchOptions
  */
-- (NSArray<NSArray<CPDFSelection *> *> *)findString:(NSString *)string withOptions:(CPDFSearchOptions)options;
+- (NSArray<NSArray<CPDFSelection *> *> *)findString:(NSString *)string withOptions:(CPDFSearchOptions)options completionHandler:(void (^_Nullable)(NSInteger currentPageIndex))handler;
 
 /**
  * Asynchronously finds all instances of the specified string in the document.
@@ -768,7 +848,7 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Call only in Content Editing
  * @see CPDFSearchOptions
  */
-- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)findEditAllPageString:(NSString *_Nonnull)string withOptions:(CPDFSearchOptions)options;
+- (NSArray<NSArray<CPDFSelection *> *> *_Nullable)findEditAllPageString:(NSString *_Nonnull)string withOptions:(CPDFSearchOptions)options completionHandler:(void (^_Nullable)(NSInteger currentPageIndex))handler;
 
 /**
  * Synchronously finds all instances of the specified string in the document.
@@ -902,6 +982,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 - (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type DEPRECATED_MSG_ATTRIBUTE("Use writePDFAToURL:withType:isSaveFontSubset:");
 
+
+- (NSArray<NSArray<CPDFSelection *> *> *)findString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findString:withOptions:completionHandler:");
 
 - (void)findEditString:(NSString *)string withOptions:(CPDFSearchOptions)options DEPRECATED_MSG_ATTRIBUTE("Use findEditAllPageString:withOptions:");
 

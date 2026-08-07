@@ -35,15 +35,24 @@ typedef NS_ENUM(NSInteger, CPDFWidgetButtonStyle) {
  * A CPDFButtonWidgetAnnotation object provides user interactivity on a page of a PDF document. There are three types of buttons available: push button, radio button, and checkbox.
  *
  * @discussion CPDFButtonWidgetAnnotation inherits general annotation behavior from the CPDFWidgetAnnotation class.
+ *
+ * @note Migration from previous versions:
+ *       Use @c -initWithPage:document:controlType: to create button widget annotations,
+ *       then call @c -[CPDFPage updateAndAddAnnotation:] to attach them.
  */
 @interface CPDFButtonWidgetAnnotation : CPDFWidgetAnnotation
 
 /**
- * Initializes CPDFButtonWidgetAnnotation object.
+ * Initializes a button widget annotation with page, document and control type.
  *
- * @see CPDFWidgetControlType
+ * @param page        The page on which the annotation will reside.
+ * @param document    The document that owns the page.
+ * @param controlType The button type (checkbox, radio button, push button).
+ *
+ * @discussion Creates the engine object and binds it to the page.
+ *             Call @c -[CPDFPage updateAndAddAnnotation:] to finish registration.
  */
-- (instancetype)initWithDocument:(CPDFDocument *)document controlType:(CPDFWidgetControlType)controlType;
+- (nullable instancetype)initWithPage:(CPDFPage *)page document:(CPDFDocument *)document controlType:(CPDFWidgetControlType)controlType;
 
 /**
  * Returns the type of the control.

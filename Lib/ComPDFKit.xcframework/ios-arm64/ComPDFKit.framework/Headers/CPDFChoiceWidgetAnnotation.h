@@ -23,13 +23,24 @@
  * A CPDFChoiceWidgetAnnotation object provides user interactivity on a page of a PDF document, in the form of pop-up menus and lists.
  *
  * @discussion CPDFButtonWidgetAnnotation inherits general annotation behavior from the CPDFWidgetAnnotation class.
+ *
+ * @note Migration from previous versions:
+ *       Use @c -initWithPage:document:listChoice: to create choice widget annotations,
+ *       then call @c -[CPDFPage updateAndAddAnnotation:] to attach them.
  */
 @interface CPDFChoiceWidgetAnnotation : CPDFWidgetAnnotation
 
 /**
- * Initializes CPDFChoiceWidgetAnnotation object.
+ * Initializes a choice widget annotation with page, document and list choice flag.
+ *
+ * @param page         The page on which the annotation will reside.
+ * @param document     The document that owns the page.
+ * @param isListChoice YES to create a list-box; NO for a combo-box.
+ *
+ * @discussion Creates the engine object and binds it to the page.
+ *             Call @c -[CPDFPage updateAndAddAnnotation:] to finish registration.
  */
-- (instancetype)initWithDocument:(CPDFDocument *)document listChoice:(BOOL)isListChoice;
+- (nullable instancetype)initWithPage:(CPDFPage *)page document:(CPDFDocument *)document listChoice:(BOOL)isListChoice;
 
 /**
  * Returns a Boolean value indicating whether the widget annotation is a list.

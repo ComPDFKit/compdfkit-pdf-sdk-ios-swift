@@ -27,6 +27,8 @@ typedef NS_OPTIONS(NSInteger, CEditingLoadType) {
     CEditingLoadTypeText =            (1UL << 0),
     CEditingLoadTypeImage =           (1UL << 1),
     CEditingLoadTypePath =            (1UL << 2),
+    CEditingLoadTypeShading =         (1UL << 3),
+    CEditingLoadTypeForm =            (1UL << 4),
 };
 
 typedef NS_OPTIONS(NSInteger, CEditingLocation) {
@@ -141,6 +143,16 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  */
 - (BOOL)IsPathArea;
 
+/**
+ * Whether it is shading code block.
+ */
+- (BOOL)IsShadingArea;
+
+/**
+ * Whether it is form code block.
+ */
+- (BOOL)IsFormArea;
+
 @end
 
 #pragma mark - CPDFEditTextArea
@@ -179,6 +191,18 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 #pragma mark - CPDFEditPathArea
 
 @interface CPDFEditPathArea : CPDFEditArea
+
+@end
+
+#pragma mark - CPDFEditShadingArea
+
+@interface CPDFEditShadingArea : CPDFEditArea
+
+@end
+
+#pragma mark - CPDFEditFormArea
+
+@interface CPDFEditFormArea : CPDFEditArea
 
 @end
 
@@ -420,6 +444,10 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
  *
  * @discussion Method to get / set the current scaling on the displayed PDF document. Default is 1.0.
  */
+@property (nonatomic,assign) CGFloat minimumScaleFactor;
+
+@property (nonatomic,assign) CGFloat maximumScaleFactor;
+
 @property (nonatomic,assign) CGFloat scaleFactor;
 
 - (void)setScaleFactor:(CGFloat)scaleFactor animated:(BOOL)animated;
@@ -449,6 +477,8 @@ extern NSNotificationName const CPDFViewPageChangedNotification;
 - (void)setDrawErasing:(BOOL)isErasing;
 - (void)drawUndo;
 - (void)drawRedo;
+- (BOOL)canDrawUndo;
+- (BOOL)canDrawRedo;
 
 #pragma mark - Annotation
 

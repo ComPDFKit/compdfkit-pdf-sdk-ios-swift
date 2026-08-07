@@ -2,7 +2,7 @@
 //  CSamplesFuctionViewController.swift
 //  Samples
 //
-//  Copyright © 2014-2023 PDF Technologies, Inc. All Rights Reserved.
+//  Copyright © 2014-2024 PDF Technologies, Inc. All Rights Reserved.
 //
 //  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
 //  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -96,10 +96,6 @@ class CSamplesFuctionViewController: UIViewController,UITableViewDataSource,UITa
         title = NSLocalizedString("Samples", comment: "")
 
         view.backgroundColor = UIColor.white
-
-        guard let filePath = filePaths?.first as? String else { return  }
-        let url = URL(fileURLWithPath: filePath)
-        document = CPDFDocument(url: url)
     }
     
     
@@ -119,6 +115,10 @@ class CSamplesFuctionViewController: UIViewController,UITableViewDataSource,UITa
     
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let filePath = filePaths?.first as? String else { return  }
+        let url = URL(fileURLWithPath: filePath)
+        document = CPDFDocument(url: url)
+        
         if(self.document == nil) {
             return
         }
@@ -169,9 +169,11 @@ class CSamplesFuctionViewController: UIViewController,UITableViewDataSource,UITa
         case .documentInfo:
             let documentInfoVC = CDocumentInfoViewController(document: document!)
             self.navigationController?.pushViewController(documentInfoVC, animated: true)
-        case .watermark:
-            let watermarkVC = CWatermarkViewController(document: document!)
-            self.navigationController?.pushViewController(watermarkVC, animated: true)
+//        case .watermark:
+//            let watermarkVC = CWatermarkViewController(document: document!)
+//            let nav = CNavigationController(rootViewController: watermarkVC)
+//            nav.modalPresentationStyle = .fullScreen
+//            UIApplication.presentedViewController()?.present(nav, animated: true, completion: nil)
         case .background:
             let backgroundVC = CBackgroundViewController(document: document!)
             self.navigationController?.pushViewController(backgroundVC, animated: true)

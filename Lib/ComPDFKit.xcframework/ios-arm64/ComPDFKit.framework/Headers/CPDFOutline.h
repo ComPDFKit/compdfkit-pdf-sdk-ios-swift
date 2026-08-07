@@ -48,6 +48,11 @@
 @property (nonatomic,readonly) NSUInteger index;
 
 /**
+ * Returns the unique outline node ID.
+ */
+@property (nonatomic,readonly) NSInteger outlineObjNum;
+
+/**
  * Method to get / set the label for the outline.
  *
  * @discussion The root outline serves only as a container for the outlines it owns; it does not have a label.

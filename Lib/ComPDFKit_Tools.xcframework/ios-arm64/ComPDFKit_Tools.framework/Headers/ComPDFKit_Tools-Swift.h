@@ -767,10 +767,10 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 @end
 
 
+
 @interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 @end
-
 
 
 
