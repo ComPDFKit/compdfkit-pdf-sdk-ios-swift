@@ -24,6 +24,7 @@
 #import <ComPDFKit/CPDFBackground.h>
 #import <ComPDFKit/CPDFSignature.h>
 #import <ComPDFKit/CPDFDestination.h>
+#import <ComPDFKit/CPDFUtilities.h>
 
 #import <ComPDFKit/CPDFAction.h>
 #import <ComPDFKit/CPDFGoToAction.h>

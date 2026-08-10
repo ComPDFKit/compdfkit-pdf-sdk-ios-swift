@@ -915,6 +915,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools24CPDFSecureViewController")
 @end
 
 
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFSignatureViewController")
 @interface CPDFSignatureViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;

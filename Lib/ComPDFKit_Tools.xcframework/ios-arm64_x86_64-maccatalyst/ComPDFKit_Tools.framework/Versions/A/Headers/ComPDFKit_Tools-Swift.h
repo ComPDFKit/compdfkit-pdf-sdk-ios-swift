@@ -918,6 +918,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools24CPDFSecureViewController")
 @end
 
 
+
 SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFSignatureViewController")
 @interface CPDFSignatureViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -2315,6 +2316,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools24CPDFSecureViewController")
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
+
 
 
 SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFSignatureViewController")
