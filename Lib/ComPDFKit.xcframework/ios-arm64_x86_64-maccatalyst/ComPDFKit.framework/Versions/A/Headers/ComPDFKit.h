@@ -23,6 +23,7 @@
 #import <ComPDFKit/CPDFBates.h>
 #import <ComPDFKit/CPDFBackground.h>
 #import <ComPDFKit/CPDFSignature.h>
+#import <ComPDFKit/CPDFDeferredSignSession.h>
 #import <ComPDFKit/CPDFDestination.h>
 #import <ComPDFKit/CPDFUtilities.h>
 

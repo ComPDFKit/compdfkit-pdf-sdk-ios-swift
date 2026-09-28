@@ -96,6 +96,10 @@
 		<data>
 		4eqHKDtqX4AgiUSiLq8utGnMF1U=
 		</data>
+		<key>Headers/CPDFDeferredSignSession.h</key>
+		<data>
+		qHZUKOb6LS7G44x+hsyrwQM2AK4=
+		</data>
 		<key>Headers/CPDFDestination.h</key>
 		<data>
 		II7nkHRlxijMWNzuL8m0SH0salo=
@@ -106,7 +110,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		1uwTqS3Ju2/9ZL0Eafngr224xaI=
+		uljOlBEo0b5aS6vTEQeuN7ZOxaY=
 		</data>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
 		<data>
@@ -262,11 +266,11 @@
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
-		pSHEMCjJi2P9zKKlA4XX7aVjQbY=
+		L7tiP8U63BDuE1uR+obe69c7JLY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		u/vMLLfkSFU5gYcxrNBDEkN4fSQ=
+		D6M0K/IvPs+Ip83UDzAvvc1zCJc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -520,6 +524,13 @@
 			q3SwzhJRHUZvgReM3mikA6VF/93S9bnItLkWVtytlvk=
 			</data>
 		</dict>
+		<key>Headers/CPDFDeferredSignSession.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VyNlOXAKWyIlaTR0rBwCfuDBftcL/jZ/jYeOLF1vc1w=
+			</data>
+		</dict>
 		<key>Headers/CPDFDestination.h</key>
 		<dict>
 			<key>hash2</key>
@@ -538,7 +549,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XK2GO/DC5Nae6r4vn+YoLXprgumGCaQ0pFhwb0GeYBM=
+			jZTzA7cqWqkd/b46X7DuN8yiksYBJIg+0oEYT1Po1iE=
 			</data>
 		</dict>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
@@ -811,7 +822,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dYNDRLz55hGeyac5HsuIU5wOdAHlkwiG96W0I5FTdY8=
+			MBJJlIKScQr7Ie0BRArctGMm3/5WBOI/exwBE6eGAdA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

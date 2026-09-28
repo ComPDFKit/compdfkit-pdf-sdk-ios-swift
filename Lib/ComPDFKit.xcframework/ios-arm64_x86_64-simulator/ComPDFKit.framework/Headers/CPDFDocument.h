@@ -13,6 +13,7 @@
 #import <ComPDFKit/CPDFKitPlatform.h>
 #import "CPDFOptimizeOption.h"
 #import "CPDFDocumentMemoryDistribution.h"
+#import "CPDFDeferredSignSession.h"
 
 
 extern NSNotificationName const CPDFDocumentDidUnlockNotification;
@@ -643,6 +644,48 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Delete the corresponding signature
  */
 - (void)removeSignature:(CPDFSignature *)signature;
+
+/**
+ * Two-phase ("deferred") signing, phase 1, against a signature field this document already
+ * has — a template or form-designer PDF where the field is already placed and signing must
+ * fill *that* field. No private key is involved: the returned hash goes to an HSM, UKey,
+ * cloud KMS or signing service, and phase 2 writes what comes back.
+ *
+ * `+[CPDFDeferredSignSession prepareWithDocument:sourceData:options:]` covers the other
+ * case: it creates the field itself, and refuses a name that is already taken. Both paths
+ * converge after phase 1 — the result carries the same `session` string, and both
+ * `+[CPDFDeferredSignSession fillSession:…]` methods work on it unchanged. See
+ * CPDFDeferredSignSession.h for the rest of the flow.
+ *
+ * The two settings that apply are parameters rather than a `CPDFDeferredSignPrepareOptions`
+ * object, because the field already exists: its name, page and rectangle are fixed, and the
+ * CMS attributes of `SignedAttributes` mode are built only when the field is created. An
+ * options object here would be eight properties that quietly do nothing.
+ *
+ * @warning The receiver must be the document loaded from exactly these `sourceData` bytes,
+ * and `signatureWidget` must belong to it.
+ *
+ * @warning The call modifies the receiver in memory. Do not save it afterwards.
+ *
+ * Requires the digital-signature license. Phase 2 does not re-check it.
+ *
+ * @param signatureWidget An unsigned signature field of this document. One that already
+ * carries a signature is rejected with `sdk.field_already_signed`.
+ * @param sourceData The bytes this document was loaded from.
+ * @param digestAlgorithm Digest applied to the `/ByteRange` bytes. The external signer must
+ * use this same one; it is reported back in the result's `digestAlgorithm`.
+ * @param estimatedContentsSize `/Contents` placeholder capacity in container bytes; 0
+ * selects the default of 16384. Frozen once this returns — a container that does not fit
+ * cannot be filled in, and the only remedy is to prepare again with a larger value.
+ *
+ * @return Never nil; failure is reported through `errorCode` / `errorMessage`. On success,
+ * `preparedData` and `session` must both be kept — phase 2 needs them.
+ */
+- (CPDFDeferredSignPrepareResult *)prepareDeferredSignForSignatureWidget:(CPDFSignatureWidgetAnnotation *)signatureWidget
+                                                              sourceData:(NSData *)sourceData
+                                                         digestAlgorithm:(CPDFSignatureDigestAlgorithm)digestAlgorithm
+                                                   estimatedContentsSize:(NSInteger)estimatedContentsSize;
+
 
 /**
      * Add a signature to a document.
