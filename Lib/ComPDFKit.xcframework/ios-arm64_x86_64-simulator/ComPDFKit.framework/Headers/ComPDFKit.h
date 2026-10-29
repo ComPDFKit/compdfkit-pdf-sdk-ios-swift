@@ -53,6 +53,7 @@
 #import <ComPDFKit/CPDFInkAnnotation.h>
 #import <ComPDFKit/CPDFSoundAnnotation.h>
 #import <ComPDFKit/CPDFAttachmentAnnotation.h>
+#import <ComPDFKit/CPDFAttachment.h>
 #import <ComPDFKit/CPDFMovieAnnotation.h>
 #import <ComPDFKit/CPDFSignatureAnnotation.h>
 #import <ComPDFKit/CPDFRedactAnnotation.h>

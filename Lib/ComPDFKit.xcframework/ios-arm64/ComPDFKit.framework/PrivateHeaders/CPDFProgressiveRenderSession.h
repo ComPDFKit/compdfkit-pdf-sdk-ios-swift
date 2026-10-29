@@ -172,6 +172,13 @@ typedef NS_ENUM(NSInteger, CPDFProgressiveRenderStatus) {
  *
  * C++: ProgressiveRenderSession::GetBitmap() (progressive_render_session.h:43),
  * whose bitmap is owned by the session and must not be destroyed by the caller.
+ *
+ * On macOS: returns nil only once -close has been called. After a step returns
+ * CPDFProgressiveRenderStatusDone this still returns the finished page, even
+ * though the engine has closed the session by then (isClosed is YES). The pixels
+ * come from a bitmap this object lends to the session
+ * (Page::StartProgressiveRender(bitmap, options), page.h:373-375) rather than
+ * from ProgressiveRenderSession::GetBitmap().
  */
 - (CPDFKitPlatformImage *)currentImage;
 

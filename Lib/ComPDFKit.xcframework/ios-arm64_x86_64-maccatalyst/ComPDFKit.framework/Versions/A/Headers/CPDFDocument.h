@@ -164,6 +164,22 @@ typedef NS_ENUM(NSInteger, CPDFStandardValidationSeverity) {
     CPDFStandardValidationSeverityInfo
 };
 
+/**
+ * Kind of content a successful standard conversion removed or altered.
+ */
+typedef NS_ENUM(NSInteger, CPDFStandardConversionWarningType) {
+    /** Annotations removed from a page (markup, stamps, links, ...). */
+    CPDFStandardConversionWarningTypeAnnotationRemoved = 0,
+    /** Interactive form fields or their widgets removed. */
+    CPDFStandardConversionWarningTypeFormFieldRemoved,
+    /** Page content removed (shadings, images, reference XObjects, ...). */
+    CPDFStandardConversionWarningTypePageContentRemoved,
+    /** Text made invisible because its font could not be embedded. */
+    CPDFStandardConversionWarningTypeTextHidden,
+    /** Transparency (soft masks, constant alpha, blend modes) removed. */
+    CPDFStandardConversionWarningTypeTransparencyRemoved
+};
+
 typedef NS_ENUM(NSInteger, CPDFDocumentEncryptionLevel) {
     CPDFDocumentEncryptionLevelRC4 = 0,
     CPDFDocumentEncryptionLevelAES128,
@@ -200,7 +216,8 @@ typedef NS_ERROR_ENUM(CPDFStandardConversionErrorDomain, CPDFStandardConversionE
     CPDFStandardConversionErrorColorConversionUnsupported = 5,
     CPDFStandardConversionErrorStructureGenerationFailed = 6,
     CPDFStandardConversionErrorConversionFailed = 7,
-    /** The conversion failed outside the core call, so no failure code exists. */
+    /** The conversion failed outside the core call (temporary copy, reload, or final save), so no core
+        failure code exists. NSLocalizedFailureReasonErrorKey describes the failing step. */
     CPDFStandardConversionErrorUnknown = 100,
 };
 
@@ -309,6 +326,26 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 @end
 
+#pragma mark - CPDFStandardConversionWarning
+
+/**
+ * Content a successful standard conversion removed or altered because the target standard does not allow it.
+ */
+@interface CPDFStandardConversionWarning : NSObject
+
+@property (nonatomic,readonly) CPDFStandardConversionWarningType type;
+
+/** Page the warning belongs to, or -1 when it is not tied to one page. */
+@property (nonatomic,readonly) NSInteger pageIndex;
+
+/** How many items this warning stands for; identical warnings are merged. */
+@property (nonatomic,readonly) NSInteger count;
+
+/** Human-readable description from the core library. May be empty. */
+@property (nonatomic,readonly) NSString * _Nonnull message;
+
+@end
+
 #pragma mark - CPDFStandardValidationIssue
 
 /**
@@ -346,7 +383,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @property (nonatomic,readonly) BOOL passed;
 
 /**
- * The standard level the document declares, or nil when the validation does not report one (PDF/E, PDF/UA, PDF/VT).
+ * The standard level the document declares, or nil when the document declares no level
+ * or the validation does not report one (PDF/E, PDF/UA, PDF/VT).
  */
 @property (nonatomic,readonly) CPDFStandardMode * _Nullable detectedType;
 
@@ -518,6 +556,12 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 /**
  * Writes the document to a location specified by the passed-in URL.
+ *
+ * @discussion If the document contains a completed digital signature, it is saved incrementally:
+ * the bytes it was opened from are kept unchanged and only the modifications are appended, so
+ * existing signatures (including certification signatures) stay valid. An unmodified signed
+ * document is written byte for byte. In that case `isSaveFontSubset` is ignored, because
+ * subsetting fonts would require rewriting the whole file.
  */
 - (BOOL)writeToURL:(NSURL *)url isSaveFontSubset:(BOOL)isSaveFontSubset;
 
@@ -998,8 +1042,10 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  *
  * @discussion Behaves exactly like writeStandardPDFToFilePath:withType:iccFilePath:withUAConfig:isSaveFontSubset:
  * but, on failure, populates `error` with a CPDFStandardConversionErrorDomain error
- * instead of returning a bare NO. The underlying reason comes from the core library;
- * its message is carried through in NSLocalizedFailureReasonErrorKey.
+ * instead of returning a bare NO. The reason is carried in NSLocalizedFailureReasonErrorKey:
+ * it comes from the core library for conversion failures, and from the wrapper for invalid
+ * input (empty path, missing destination directory, locked document, empty PDF/UA title)
+ * and for failures outside the core call.
  *
  * @param type The target standard. Must be one of the combinations listed on CPDFStandardMode.
  * @param error On return, the reason the conversion failed. Pass NULL if not needed.
@@ -1010,6 +1056,15 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
                       withUAConfig:(CPDFUAConfig* _Nullable)pdfUAConfig
                   isSaveFontSubset:(BOOL)isSaveFontSubset
                              error:(NSError * _Nullable * _Nullable)error;
+
+/**
+ * What the most recent successful writeStandardPDFToFilePath: call on this document removed or altered
+ * in the output, e.g. annotations or form fields the target standard does not allow.
+ *
+ * @discussion Empty when the conversion changed nothing, failed, or has not been run.
+ * The source document itself is never modified.
+ */
+@property (nonatomic,readonly) NSArray<CPDFStandardConversionWarning *> * _Nonnull standardConversionWarnings;
 
 #pragma mark - PDF/Validation
 
@@ -1034,8 +1089,8 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  *
  * @param type The standard to validate against.
  * @param basePath Directory used to resolve externally referenced files. Only used for PDF/X; may be nil.
- * @return The validation result, or nil if the document is not loaded, the target is not supported,
- * or the license does not allow PDF/A conversion.
+ * @return The validation result, or nil if the document is not loaded, the document is locked,
+ * the target is not supported, or the license does not allow PDF/A conversion.
  */
 - (CPDFStandardValidationResult * _Nullable)validateStandardPDFWithType:(CPDFStandardMode * _Nonnull)type
                                                                basePath:(NSString * _Nullable)basePath;
@@ -1145,6 +1200,70 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Applies redaction annotations in the document.
  */
 - (void)applyRedactions;
+
+@end
+
+#pragma mark - Attachments (Document-level embedded files)
+
+@class CPDFAttachment;
+
+/**
+ * Document-level file attachments, i.e. the entries of the document's /EmbeddedFiles name tree.
+ *
+ * @discussion Attachments are ordered by name in the PDF name tree, so adding or removing an
+ * attachment can shift the indexes of the others. Re-fetch `attachments` after any add/remove.
+ */
+@interface CPDFDocument (Attachment)
+
+/**
+ * The number of document-level attachments.
+ */
+@property (nonatomic, readonly) NSUInteger attachmentCount;
+
+/**
+ * Returns all document-level attachments, in index order.
+ */
+- (NSArray<CPDFAttachment *> *_Nonnull)attachments;
+
+/**
+ * Returns the attachment at the specified index, or nil if the index is out of bounds.
+ *
+ * @discussion Indexes are zero based.
+ */
+- (CPDFAttachment *_Nullable)attachmentAtIndex:(NSUInteger)index;
+
+/**
+ * Embeds a file from disk as a document-level attachment.
+ *
+ * @param path The full path of the file to embed. Must be an existing, readable regular file.
+ * @param name The attachment file name. If nil or empty, `path.lastPathComponent` is used.
+ * @return The new attachment, or nil if failed (e.g. invalid path, or an attachment with the same name already exists).
+ */
+- (CPDFAttachment *_Nullable)addAttachmentWithPath:(NSString *_Nonnull)path name:(NSString *_Nullable)name;
+
+/**
+ * Embeds in-memory data as a document-level attachment.
+ *
+ * @param data The file content.
+ * @param name The attachment file name. Must not be empty.
+ * @return The new attachment, or nil if failed (e.g. an attachment with the same name already exists).
+ */
+- (CPDFAttachment *_Nullable)addAttachmentWithData:(NSData *_Nonnull)data name:(NSString *_Nonnull)name;
+
+/**
+ * Removes the attachment at the specified index.
+ *
+ * @discussion Indexes are zero based. The indexes of the following attachments shift down by one.
+ * @return YES if succeeded; NO if the index is out of bounds or the removal failed.
+ */
+- (BOOL)removeAttachmentAtIndex:(NSUInteger)index;
+
+/**
+ * Removes the specified attachment. On success the attachment object becomes invalid.
+ *
+ * @return YES if succeeded; NO if the attachment does not belong to this document or the removal failed.
+ */
+- (BOOL)removeAttachment:(CPDFAttachment *_Nonnull)attachment;
 
 @end
 

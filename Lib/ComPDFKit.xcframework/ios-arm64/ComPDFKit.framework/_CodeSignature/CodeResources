@@ -56,9 +56,13 @@
 		<data>
 		v++7WLPZWU4lg0dlp2mBMTEJBVw=
 		</data>
+		<key>Headers/CPDFAttachment.h</key>
+		<data>
+		QePzK4FmJ8XQHUWHLzjIn7VjU3Y=
+		</data>
 		<key>Headers/CPDFAttachmentAnnotation.h</key>
 		<data>
-		0xWwTBGEbBAa8FhLdMALjomyO0w=
+		g5aD9dUmYB5e2o4sgtLAZlhjUiQ=
 		</data>
 		<key>Headers/CPDFBackground.h</key>
 		<data>
@@ -114,7 +118,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		XnDa9TpKdlTXgywV+7h4K7QzxAE=
+		35Sj8Bua5+WKU4g7EcEgRK5TiXI=
 		</data>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
 		<data>
@@ -226,7 +230,7 @@
 		</data>
 		<key>Headers/CPDFSignature.h</key>
 		<data>
-		gFrpnyzQ4igw4ljoZv9iG1RI36U=
+		mxBhibIs4rE/AfB/0jmK50HtvlQ=
 		</data>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
 		<data>
@@ -270,7 +274,7 @@
 		</data>
 		<key>Headers/CPDFTextWidgetAnnotation.h</key>
 		<data>
-		rT3vpoBQ6X1Wn5z7OHN5P9M9cM8=
+		MasycUjbbcd8tlqCdhruH8ty5iw=
 		</data>
 		<key>Headers/CPDFTimestamp.h</key>
 		<data>
@@ -298,7 +302,7 @@
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
-		d3PnCAoc/jxQNrQnWMp7zqUsXSI=
+		WJ+7Lyd/XNRkXF0rcaEcrDe+oxc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -310,7 +314,7 @@
 		</data>
 		<key>PrivateHeaders/CPDFProgressiveRenderSession.h</key>
 		<data>
-		MNJW2Dn0ZHme9NFEGFI7w4sZVUs=
+		mN0qJidQtbA9598OdP4+bVQZ498=
 		</data>
 		<key>formsign_tag.png</key>
 		<data>
@@ -490,11 +494,18 @@
 			HfyIW5a8dC5p7KULD7NOfArwMFTZsbpJJjKV/dLZ1y8=
 			</data>
 		</dict>
+		<key>Headers/CPDFAttachment.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bteCL0fe78s/PmFV7+uGIlH4dafs0DggwMVC+zsKZxw=
+			</data>
+		</dict>
 		<key>Headers/CPDFAttachmentAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M+XR1XUpCYbF5739LIKkLTHvVXL8fxpk8Bb185lbEJ4=
+			PkkN6Mk7cgXWJYvVwI31k1W0IeC99g85QBOJSnJkZag=
 			</data>
 		</dict>
 		<key>Headers/CPDFBackground.h</key>
@@ -592,7 +603,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pbl72c9loFo9UR+HAt8pzxdowe2d1mSZuowHr5vWwlc=
+			GOyRk4csrpSGwWtXXJjqseHJMzCXySwdyOJsu1I7jeE=
 			</data>
 		</dict>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
@@ -788,7 +799,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fzV/yPJrcV9hM2eugCIsgN8ryxKw5MEwzPZXYODC4IQ=
+			G2E8dZhOwFEzpHhx3WojcC6gRGq5uWptXpbO/ui+Www=
 			</data>
 		</dict>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
@@ -865,7 +876,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5ysTVBnqm0Wu95j4NBCZQZesV3F7Nlo+v7RuERp7phA=
+			KVc2/EiKvADNce4va1Q0xrEiALN69FSAi9ukiqmy2Ws=
 			</data>
 		</dict>
 		<key>Headers/CPDFTimestamp.h</key>
@@ -914,7 +925,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sGy8hJ1tz/7RkRiOT6l2Xk2LZOi/hli6NhUflVVn0+M=
+			K5KF6eF4EMlR+Q66BlRWSSpVSrD/8aL0upEBAXm22kE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -928,7 +939,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qtXxCU6VENpodZMCnye5kylyLORQqcv/IYDQkFZdIj0=
+			aMhciaa/Pv4EPddY2hHOJAf04NGIfwqbFa/XkQ/8ULQ=
 			</data>
 		</dict>
 		<key>formsign_tag.png</key>

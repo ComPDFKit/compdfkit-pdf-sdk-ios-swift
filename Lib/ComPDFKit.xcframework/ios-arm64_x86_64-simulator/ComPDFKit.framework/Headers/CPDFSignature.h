@@ -393,7 +393,7 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
 /**
  * Get the page index of the signature.
  * @param document CPDFDocument object.
- * @return Return the page index of the signature.
+ * @return Return the page index of the signature, or NSNotFound if the signature widget is not on any page.
 */
 - (NSUInteger)pageIndexWithDocument:(CPDFDocument *)document;
 

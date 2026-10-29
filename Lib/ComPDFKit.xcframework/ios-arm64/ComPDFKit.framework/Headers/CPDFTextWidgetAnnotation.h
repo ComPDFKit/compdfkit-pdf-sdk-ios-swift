@@ -25,6 +25,17 @@
 @property (nonatomic,strong) NSString *stringValue;
 
 /**
+ * Maximum text length, counted in user-perceived characters (composed character sequences).
+ * A value of 0 removes the limit. Negative values are ignored. Applies only to text fields.
+ * Comb fields use this value as their cell count.
+ *
+ * Text longer than the limit is truncated: setting a longer stringValue keeps only the first
+ * maxLength characters, and lowering maxLength below the length of the current value truncates
+ * that value. A value already stored in a document is left as-is until it is changed.
+ */
+@property (nonatomic,assign) NSInteger maxLength;
+
+/**
  * Alignment of text. Supported: NSLeftTextAlignment, NSRightTextAlignment and NSCenterTextAlignment.
  */
 @property (nonatomic,assign) NSTextAlignment alignment;
