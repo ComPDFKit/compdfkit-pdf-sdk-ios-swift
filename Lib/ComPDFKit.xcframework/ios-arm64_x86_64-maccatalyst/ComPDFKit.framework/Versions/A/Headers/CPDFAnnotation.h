@@ -20,7 +20,7 @@
 /**
  * Snapping mode used by the ruler snapping (object snapping) feature.
  *
- * @discussion This is an Objective-C wrapper for the C++ SnappingMode enum in pso::measure::Ruler.
+ * @discussion Mirrors the snapping modes supported by the ruler.
  */
 typedef NS_OPTIONS(NSInteger, CPDFSnappingMode) {
     CPDFSnappingModeNone = 0,

@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, CEditingSelectState) {
     CEditingSelectStateEditPath
 };
 
+/// Content kinds to load when entering editing mode.
+/// @note Two further load kinds, for DocumentAI layout and table recognition,
+/// are not exposed here: that recognition is
+/// macOS-only, so iOS has no way to request it and no `CPDFEditTableArea` to read
+/// a result back from. The macOS twin in `PDFView(Mac)/CPDFView+Editing.h` carries
+/// those two bits; the five below must stay bit-for-bit identical to it.
 typedef NS_OPTIONS(NSInteger, CEditingLoadType) {
     CEditingLoadTypeText =            (1UL << 0),
     CEditingLoadTypeImage =           (1UL << 1),
@@ -594,7 +600,6 @@ NS_DEPRECATED_IOS(9_0, 16_0, "Use -setSquareAreas:style: instead");
  *                     [NSValue valueWithCGRect:CGRectMake(150, 150, 200, 50)]
  *                 ]
  *                };
- *
  */
 - (void)setSquareAreas:(nullable NSDictionary<NSNumber *, NSArray<NSValue *> *> *)areas
                  style:(nonnull CPDFSquareAreaStyle *)style;
@@ -932,7 +937,6 @@ NS_DEPRECATED_IOS(9_0, 16_0, "Use -setSquareAreas:style: instead");
 
 /**
  * Gets the font size of a text block or a piece of text.
- *
  */
 - (CGFloat)editingSelectionFontSize DEPRECATED_MSG_ATTRIBUTE("use editingSelectionFontSizesWithTextArea instead.");
 - (CGFloat)editingSelectionFontSizesWithTextArea:(CPDFEditTextArea *)textArea;

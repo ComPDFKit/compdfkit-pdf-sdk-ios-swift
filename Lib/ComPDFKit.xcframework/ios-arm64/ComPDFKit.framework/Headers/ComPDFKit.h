@@ -24,6 +24,10 @@
 #import <ComPDFKit/CPDFBackground.h>
 #import <ComPDFKit/CPDFSignature.h>
 #import <ComPDFKit/CPDFDeferredSignSession.h>
+#import <ComPDFKit/CPDFTSAClient.h>
+#import <ComPDFKit/CPDFTimestamp.h>
+#import <ComPDFKit/CPDFCertificateService.h>
+#import <ComPDFKit/CPDFLtvService.h>
 #import <ComPDFKit/CPDFDestination.h>
 #import <ComPDFKit/CPDFUtilities.h>
 
@@ -67,6 +71,10 @@
 #import <ComPDFKit/CPDFChoiceWidgetAnnotation.h>
 #import <ComPDFKit/CPDFTextWidgetAnnotation.h>
 #import <ComPDFKit/CPDFSignatureWidgetAnnotation.h>
+#import <ComPDFKit/CPDFSignatureValidation.h>
+#import <ComPDFKit/CPDFSignExternal.h>
+#import <ComPDFKit/CPDFSignatureWorkflow.h>
+#import <ComPDFKit/CPDFPadesSigner.h>
 #import <ComPDFKit/CPDFAnnotation+Utilities.h>
 
 #import <ComPDFKit/CPDFView.h>

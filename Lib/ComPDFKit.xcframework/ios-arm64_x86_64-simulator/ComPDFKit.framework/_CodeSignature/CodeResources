@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
-		8zwyy8aOfvND8F5IRx/gXno50Vc=
+		/F3y9e5T/6ZP4jEJzNdTeAzvQGU=
 		</data>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
 		<data>
@@ -84,6 +84,10 @@
 		<data>
 		Q/9F06+MCH1k7ZAbg614IqZAFmo=
 		</data>
+		<key>Headers/CPDFCertificateService.h</key>
+		<data>
+		Fgr6tZJEqDyydiMMvXxoScGAk5Y=
+		</data>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
 		<data>
 		mNBxnAbDcMhr4uJuqxjSW6OYae0=
@@ -98,7 +102,7 @@
 		</data>
 		<key>Headers/CPDFDeferredSignSession.h</key>
 		<data>
-		qHZUKOb6LS7G44x+hsyrwQM2AK4=
+		vhoY6BIueXD0DHszY1OVaJokUIY=
 		</data>
 		<key>Headers/CPDFDestination.h</key>
 		<data>
@@ -110,7 +114,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		uljOlBEo0b5aS6vTEQeuN7ZOxaY=
+		XnDa9TpKdlTXgywV+7h4K7QzxAE=
 		</data>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
 		<data>
@@ -156,6 +160,10 @@
 		<data>
 		BbDvLEqervCh/2EaGSaIoOS0ggk=
 		</data>
+		<key>Headers/CPDFLtvService.h</key>
+		<data>
+		kLeqZDafmBRrCPOf0JxyYLp1MoQ=
+		</data>
 		<key>Headers/CPDFMarkupAnnotation.h</key>
 		<data>
 		G++dRk1HSkPgWJpfg4S0IshgjXg=
@@ -174,11 +182,15 @@
 		</data>
 		<key>Headers/CPDFOptimizeOption.h</key>
 		<data>
-		mgzZER3IQjzSd+3kPriGfdHGEaE=
+		9v8gnKlmZjj49P4+3TJsJae94y0=
 		</data>
 		<key>Headers/CPDFOutline.h</key>
 		<data>
 		4r0CHlSqVCowfGUmSNc7N0K2L4k=
+		</data>
+		<key>Headers/CPDFPadesSigner.h</key>
+		<data>
+		c2FlNH39Fjd2AuhbOMVYuz+YMcg=
 		</data>
 		<key>Headers/CPDFPage.h</key>
 		<data>
@@ -208,17 +220,29 @@
 		<data>
 		74et1F1jInHizUY7LxjgJ8cC3uI=
 		</data>
+		<key>Headers/CPDFSignExternal.h</key>
+		<data>
+		9ZXwb8MehPDntF3aBEDbRLte7Xc=
+		</data>
 		<key>Headers/CPDFSignature.h</key>
 		<data>
-		FDjHwpsb13Wexs/3FpPMXNNs+ng=
+		gFrpnyzQ4igw4ljoZv9iG1RI36U=
 		</data>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
 		<data>
 		44lkVnJD4hPjSSG0w832BuTvEB0=
 		</data>
+		<key>Headers/CPDFSignatureValidation.h</key>
+		<data>
+		X+alj/o0SOlrJnZ0OgOdCxYvcto=
+		</data>
 		<key>Headers/CPDFSignatureWidgetAnnotation.h</key>
 		<data>
 		DIbSkl2hQgyqkSJ8/9+JbLGv9tU=
+		</data>
+		<key>Headers/CPDFSignatureWorkflow.h</key>
+		<data>
+		NmRxZe8VhTLekPFZPGjkd96FF7c=
 		</data>
 		<key>Headers/CPDFSoundAnnotation.h</key>
 		<data>
@@ -236,6 +260,10 @@
 		<data>
 		3AM9mgUHviL79NRSH/Vw6ohcL4E=
 		</data>
+		<key>Headers/CPDFTSAClient.h</key>
+		<data>
+		gvb84DBwlmC4NCbp76rnh7XOOWA=
+		</data>
 		<key>Headers/CPDFTextAnnotation.h</key>
 		<data>
 		qkDRrWT2sT6vT0ZEYz5meR1zJ7A=
@@ -243,6 +271,10 @@
 		<key>Headers/CPDFTextWidgetAnnotation.h</key>
 		<data>
 		rT3vpoBQ6X1Wn5z7OHN5P9M9cM8=
+		</data>
+		<key>Headers/CPDFTimestamp.h</key>
+		<data>
+		9oaoemeI9L+YMDtJR183P4i8HbM=
 		</data>
 		<key>Headers/CPDFURLAction.h</key>
 		<data>
@@ -254,7 +286,7 @@
 		</data>
 		<key>Headers/CPDFView.h</key>
 		<data>
-		uf+9Vbxl4htZbZ/J2yIsA2vLnE4=
+		BZL16LZd+D3dhWIdV5Tlx/wdg/o=
 		</data>
 		<key>Headers/CPDFWatermark.h</key>
 		<data>
@@ -266,15 +298,19 @@
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
-		L7tiP8U63BDuE1uR+obe69c7JLY=
+		d3PnCAoc/jxQNrQnWMp7zqUsXSI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		D6M0K/IvPs+Ip83UDzAvvc1zCJc=
+		7wqHwVEqKO4dOUP7DzeF/IbioBo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		GJse0j0x4wLzigM/YeAjcM+nZxQ=
+		</data>
+		<key>PrivateHeaders/CPDFProgressiveRenderSession.h</key>
+		<data>
+		MNJW2Dn0ZHme9NFEGFI7w4sZVUs=
 		</data>
 		<key>formsign_tag.png</key>
 		<data>
@@ -444,7 +480,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h2oLBEcpa3caeCGheTUvbNUTPGxAnXTAiO8jrWj0Kpo=
+			vusg814U6Wetr5JqRjp+5NOVYsEiFtJedOzCSuUMhxw=
 			</data>
 		</dict>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
@@ -503,6 +539,13 @@
 			tRSzti7jxPhvoFcQ6Gw9W+KlyJP+JvhleahnYdKDXk0=
 			</data>
 		</dict>
+		<key>Headers/CPDFCertificateService.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pUJ1fTB1z6ZDm2p/vope8fYWplym37EGrurYzcFWgSA=
+			</data>
+		</dict>
 		<key>Headers/CPDFChoiceWidgetAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
@@ -528,7 +571,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VyNlOXAKWyIlaTR0rBwCfuDBftcL/jZ/jYeOLF1vc1w=
+			qkQRP80mw7uv4jmvJZYA89QfvXNgrrc73OvZMKduX6Y=
 			</data>
 		</dict>
 		<key>Headers/CPDFDestination.h</key>
@@ -549,7 +592,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jZTzA7cqWqkd/b46X7DuN8yiksYBJIg+0oEYT1Po1iE=
+			Pbl72c9loFo9UR+HAt8pzxdowe2d1mSZuowHr5vWwlc=
 			</data>
 		</dict>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
@@ -629,6 +672,13 @@
 			aN0S5w5CgVvSASKK9z/LAFLSWfWwAwh2M+z2Pz2AypA=
 			</data>
 		</dict>
+		<key>Headers/CPDFLtvService.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			o9Z7YpAGd5x4xveVK3bEJyImFru4qQ4LrOSCUnWm3E8=
+			</data>
+		</dict>
 		<key>Headers/CPDFMarkupAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
@@ -661,7 +711,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zyzxlth1VNuKu3l2jSlJ2f5jKmHDS2nVSPpdNnkr/4M=
+			TNfoV8dcVd4xDcqAPmrDZJB2dxiD+XXkDHd+Sf538S4=
 			</data>
 		</dict>
 		<key>Headers/CPDFOutline.h</key>
@@ -669,6 +719,13 @@
 			<key>hash2</key>
 			<data>
 			dCv1Z53UUT51EZBht68xb3fHwWkrYR81Qbx6Bt6WXqE=
+			</data>
+		</dict>
+		<key>Headers/CPDFPadesSigner.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c4/hXZZ3YtP/t96MSb7Gny0TrsvsNCfBugILwo+le9U=
 			</data>
 		</dict>
 		<key>Headers/CPDFPage.h</key>
@@ -720,11 +777,18 @@
 			LtYm1MUC0JojczC/5WAywi4y8nDNno0UB2/yDzYfy2Q=
 			</data>
 		</dict>
+		<key>Headers/CPDFSignExternal.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mJU0tM0ixe41A0mtGvlFN8yJPpVByNhNARXiro4DDjQ=
+			</data>
+		</dict>
 		<key>Headers/CPDFSignature.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pBm56TU29IsPuO/rscytoLHRF86PALQGiZ6t2HIpDM8=
+			fzV/yPJrcV9hM2eugCIsgN8ryxKw5MEwzPZXYODC4IQ=
 			</data>
 		</dict>
 		<key>Headers/CPDFSignatureAnnotation.h</key>
@@ -734,11 +798,25 @@
 			ne0PfJtvcj7zcMMbN4ENZt4ebSHKpOo7JQnFJUMHS/M=
 			</data>
 		</dict>
+		<key>Headers/CPDFSignatureValidation.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dSN/2QXZeETvn5wlwFJes10DFp76y8/NO07bWidtpoc=
+			</data>
+		</dict>
 		<key>Headers/CPDFSignatureWidgetAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			xnBzcPeVCc0573WGpNWa/9fdescKv8+6OV4XCncfWFU=
+			</data>
+		</dict>
+		<key>Headers/CPDFSignatureWorkflow.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ynB8kuKYuxqA1alVnOwSTCgAmv191fT1opo5R7Iw/6c=
 			</data>
 		</dict>
 		<key>Headers/CPDFSoundAnnotation.h</key>
@@ -769,6 +847,13 @@
 			NLp4jbymuw+so2jn0bpBn5CLrp0GLG2XkXjLrXsDvlk=
 			</data>
 		</dict>
+		<key>Headers/CPDFTSAClient.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m2n+1jszkv+cMfp7vlYtvNOR1Kz0yIYSb48tL3V9uUE=
+			</data>
+		</dict>
 		<key>Headers/CPDFTextAnnotation.h</key>
 		<dict>
 			<key>hash2</key>
@@ -781,6 +866,13 @@
 			<key>hash2</key>
 			<data>
 			5ysTVBnqm0Wu95j4NBCZQZesV3F7Nlo+v7RuERp7phA=
+			</data>
+		</dict>
+		<key>Headers/CPDFTimestamp.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UdFy4WaRfHtGFbz02xE5AlbSGsSbKlxCdY4lEbHaFS0=
 			</data>
 		</dict>
 		<key>Headers/CPDFURLAction.h</key>
@@ -801,7 +893,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W/bRc+JjhFhdEE4gh6jEpNhEuajA/fQbI5lykpPzpSI=
+			+9STmLadRiyGqpgYrfp2acmjRZP0IeNlXiDWAwXEKMg=
 			</data>
 		</dict>
 		<key>Headers/CPDFWatermark.h</key>
@@ -822,7 +914,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MBJJlIKScQr7Ie0BRArctGMm3/5WBOI/exwBE6eGAdA=
+			sGy8hJ1tz/7RkRiOT6l2Xk2LZOi/hli6NhUflVVn0+M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -830,6 +922,13 @@
 			<key>hash2</key>
 			<data>
 			iQcHR0nTiFjwgQN3izRKSCofKuNTCmNsv4iXpEARTgc=
+			</data>
+		</dict>
+		<key>PrivateHeaders/CPDFProgressiveRenderSession.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qtXxCU6VENpodZMCnye5kylyLORQqcv/IYDQkFZdIj0=
 			</data>
 		</dict>
 		<key>formsign_tag.png</key>

@@ -14,7 +14,7 @@
 #import "CPDFOptimizeOption.h"
 #import "CPDFDocumentMemoryDistribution.h"
 #import "CPDFDeferredSignSession.h"
-
+#import "CPDFTSAClient.h"
 
 extern NSNotificationName const CPDFDocumentDidUnlockNotification;
 
@@ -129,6 +129,11 @@ typedef NS_ENUM(NSInteger, CPDFConvertLauguage) {
     CPDFConvertLauguageZH_MO  // Macau
 };
 
+/**
+ * Conformance part of a PDF standard.
+ *
+ * The ordering is stable and safe to persist.
+ */
 typedef NS_ENUM(NSInteger, CPDFPartType) {
     CPDFPartTypeNone,
     CPDFPartTypePDF_a,
@@ -136,12 +141,27 @@ typedef NS_ENUM(NSInteger, CPDFPartType) {
     CPDFPartTypePDF_u,
 };
 
+/**
+ * Family of a PDF standard.
+ *
+ * The ordering is stable and safe to persist.
+ */
 typedef NS_ENUM(NSInteger, CPDFStandardFormat) {
     CPDFStandardFormatPDF,
     CPDFStandardFormatPDFA,
     CPDFStandardFormatPDFX,
     CPDFStandardFormatPDFE,
-    CPDFStandardFormatPDFUA
+    CPDFStandardFormatPDFUA,
+    CPDFStandardFormatPDFVT
+};
+
+/**
+ * Severity of a standard validation issue.
+ */
+typedef NS_ENUM(NSInteger, CPDFStandardValidationSeverity) {
+    CPDFStandardValidationSeverityError = 0,
+    CPDFStandardValidationSeverityWarning,
+    CPDFStandardValidationSeverityInfo
 };
 
 typedef NS_ENUM(NSInteger, CPDFDocumentEncryptionLevel) {
@@ -159,6 +179,30 @@ typedef NS_ENUM(NSInteger, CPDFSignaturePermissions) {
     CPDFSignaturePermissionsAnnotationFillSign,
 };
 
+
+#pragma mark - Standard conversion errors
+
+/**
+ * Error domain for PDF standard conversion failures.
+ */
+extern NSErrorDomain _Nonnull const CPDFStandardConversionErrorDomain;
+
+/**
+ * Why a standard conversion failed.
+ *
+ * `None` is not represented here because it never surfaces as an NSError.
+ */
+typedef NS_ERROR_ENUM(CPDFStandardConversionErrorDomain, CPDFStandardConversionError) {
+    CPDFStandardConversionErrorInvalidInput = 1,
+    CPDFStandardConversionErrorIccProfileMissing = 2,
+    CPDFStandardConversionErrorUnsupportedFormat = 3,
+    CPDFStandardConversionErrorFontOrUnicodeMapping = 4,
+    CPDFStandardConversionErrorColorConversionUnsupported = 5,
+    CPDFStandardConversionErrorStructureGenerationFailed = 6,
+    CPDFStandardConversionErrorConversionFailed = 7,
+    /** The conversion failed outside the core call, so no failure code exists. */
+    CPDFStandardConversionErrorUnknown = 100,
+};
 
 typedef NSString *CPDFDocumentOptimizeOption NS_STRING_ENUM;
 
@@ -195,6 +239,25 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 
 #pragma mark - CPDFStandardMode
 
+/**
+ * A PDF standard target, used both to report the standard a document already
+ * conforms to and to request a conversion.
+ *
+ * The conformance level is expressed as the triple (format, typenum, partType) —
+ * e.g. PDF/A-2b is (CPDFStandardFormatPDFA, 2, CPDFPartTypePDF_b).
+ *
+ * Supported conversion targets (format / typenum / partType):
+ *
+ *  - PDF/A-1a, 1b                 CPDFStandardFormatPDFA   1       a, b
+ *  - PDF/A-2a, 2u, 2b             CPDFStandardFormatPDFA   2       a, u, b
+ *  - PDF/A-3a, 3u, 3b             CPDFStandardFormatPDFA   3       a, u, b
+ *  - PDF/X-1a, X-3, X-4           CPDFStandardFormatPDFX   1, 3, 4 None
+ *  - PDF/E-1                      CPDFStandardFormatPDFE   1       None
+ *  - PDF/UA-1                     CPDFStandardFormatPDFUA  1       None
+ *  - PDF/VT-1, VT-2               CPDFStandardFormatPDFVT  1, 2    None
+ *
+ * Any other combination is rejected with CPDFStandardConversionErrorUnsupportedFormat.
+ */
 @interface CPDFStandardMode : NSObject
 
 @property (nonatomic,assign) CPDFStandardFormat format;
@@ -243,6 +306,51 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 @property (nonatomic,assign) CPDFConvertLauguage lauguage;
 
 @property (nonatomic,strong) NSString* title;
+
+@end
+
+#pragma mark - CPDFStandardValidationIssue
+
+/**
+ * A single rule violation (or note) reported by a standard validation.
+ */
+@interface CPDFStandardValidationIssue : NSObject
+
+/** Numeric issue code reported by the core library. */
+@property (nonatomic,readonly) NSInteger code;
+
+/** Identifier of the violated rule, e.g. a clause of the standard. May be empty. */
+@property (nonatomic,readonly) NSString * _Nonnull ruleId;
+
+/** Human-readable description of the issue. */
+@property (nonatomic,readonly) NSString * _Nonnull message;
+
+/** Page the issue belongs to, or -1 when the issue applies to the whole document. */
+@property (nonatomic,readonly) NSInteger pageIndex;
+
+/** Name of the standard the rule belongs to. May be empty. */
+@property (nonatomic,readonly) NSString * _Nonnull standardName;
+
+@property (nonatomic,readonly) CPDFStandardValidationSeverity severity;
+
+@end
+
+#pragma mark - CPDFStandardValidationResult
+
+/**
+ * Result of validating a document against a PDF standard.
+ */
+@interface CPDFStandardValidationResult : NSObject
+
+/** Whether the document conforms to the requested standard. */
+@property (nonatomic,readonly) BOOL passed;
+
+/**
+ * The standard level the document declares, or nil when the validation does not report one (PDF/E, PDF/UA, PDF/VT).
+ */
+@property (nonatomic,readonly) CPDFStandardMode * _Nullable detectedType;
+
+@property (nonatomic,readonly) NSArray<CPDFStandardValidationIssue *> * _Nonnull issues;
 
 @end
 
@@ -467,7 +575,6 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
 /// @param
 ///     completionHandler
 ///         completionHandler
-///
 ///
 /// ```
 /// sample code :
@@ -708,6 +815,37 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
                 isSetSignAp:(BOOL)isSetSignAp
                 permissions:(CPDFSignaturePermissions)permissions;
 
+/**
+     * Add a signature to a document, optionally timestamping it through an RFC 3161 TSA.
+     *
+     * @param url Save path for the signature file.
+     * @param widget Signature widget.
+     * @param path Certificate file path.
+     * @param password Certificate file password
+     * @param location The hostname or physical location of the CPU which was used to sign the document.
+     * @param reason Signature reason.
+     * @param isSetSignAp Whether to set dynamic appearance
+     * @param permissions Modify permission type. See more types by CPDFSignaturePermissions
+     * @param tsaClient The timestamp transport. Pass `nil` to sign without a timestamp,
+     *        which is what the variant without this parameter does. Use
+     *        `CPDFURLSessionTSAClient` unless you have a reason not to — it keeps the
+     *        request inside `NSURLSession` and therefore inside App Transport Security
+     *        and the system proxy configuration.
+     * @return Return true: Write signature successfully. Return false: Write signature failed.
+     *
+     * @warning `tsaClient` is called back **synchronously, on the framework's task queue**
+     * while the signature is being built. See `CPDFTSAClient`.
+*/
+- (BOOL)writeSignatureToURL:(NSURL *_Nonnull)url
+                 withWidget:(CPDFSignatureWidgetAnnotation *_Nonnull)widget
+                 PKCS12Cert:(NSString *_Nonnull)path
+                   password:(NSString *_Nonnull)password
+                   location:(NSString *_Nullable)location
+                     reason:(NSString *_Nullable)reason
+                isSetSignAp:(BOOL)isSetSignAp
+                permissions:(CPDFSignaturePermissions)permissions
+                  tsaClient:(nullable id<CPDFTSAClient>)tsaClient;
+
 #pragma mark - Pages
 
 /**
@@ -854,6 +992,53 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
                        iccFilePath:(NSString * _Nullable)iccFilePath
                       withUAConfig:(CPDFUAConfig* _Nullable)pdfUAConfig
                   isSaveFontSubset:(BOOL)isSaveFontSubset;
+
+/**
+ * Converts the document to a PDF standard, reporting why the conversion failed.
+ *
+ * @discussion Behaves exactly like writeStandardPDFToFilePath:withType:iccFilePath:withUAConfig:isSaveFontSubset:
+ * but, on failure, populates `error` with a CPDFStandardConversionErrorDomain error
+ * instead of returning a bare NO. The underlying reason comes from the core library;
+ * its message is carried through in NSLocalizedFailureReasonErrorKey.
+ *
+ * @param type The target standard. Must be one of the combinations listed on CPDFStandardMode.
+ * @param error On return, the reason the conversion failed. Pass NULL if not needed.
+ */
+- (BOOL)writeStandardPDFToFilePath:(NSString * _Nonnull)saveFilePath
+                          withType:(CPDFStandardMode *_Nonnull)type
+                       iccFilePath:(NSString * _Nullable)iccFilePath
+                      withUAConfig:(CPDFUAConfig* _Nullable)pdfUAConfig
+                  isSaveFontSubset:(BOOL)isSaveFontSubset
+                             error:(NSError * _Nullable * _Nullable)error;
+
+#pragma mark - PDF/Validation
+
+/**
+ * Validates the document against a PDF standard.
+ *
+ * @discussion This is a basic rule check, not a full certification equivalent to a
+ * third-party validator. PDF/X, PDF/UA and PDF/VT validation are experimental
+ * and may be incomplete.
+ *
+ * Supported targets (format / typenum / partType):
+ *
+ *  - PDF/A-1a, 1b                 CPDFStandardFormatPDFA   1       a, b
+ *  - PDF/A-2a, 2u, 2b             CPDFStandardFormatPDFA   2       a, u, b
+ *  - PDF/A-3a, 3u, 3b             CPDFStandardFormatPDFA   3       a, u, b
+ *  - PDF/X-1a, X-3, X-4           CPDFStandardFormatPDFX   1, 3, 4 None
+ *  - PDF/E-1, E-2                 CPDFStandardFormatPDFE   1, 2    None
+ *  - PDF/UA                       CPDFStandardFormatPDFUA  ignored None
+ *  - PDF/VT                       CPDFStandardFormatPDFVT  ignored None
+ *
+ * PDF/VT checks the VT level the document declares.
+ *
+ * @param type The standard to validate against.
+ * @param basePath Directory used to resolve externally referenced files. Only used for PDF/X; may be nil.
+ * @return The validation result, or nil if the document is not loaded, the target is not supported,
+ * or the license does not allow PDF/A conversion.
+ */
+- (CPDFStandardValidationResult * _Nullable)validateStandardPDFWithType:(CPDFStandardMode * _Nonnull)type
+                                                               basePath:(NSString * _Nullable)basePath;
 
 #pragma mark - Find
 
@@ -1053,6 +1238,6 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * Because the conversion process applies only necessary changes to the source file, the information loss is minimal.
  * @see CPDFType
  */
-- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type isSaveFontSubset:(BOOL)isSaveFontSubset DEPRECATED_MSG_ATTRIBUTE("Use writeStandardPDFToFilePath:withType:iccFilePath:withLauguage:withTitle:isSaveFontSubset:(BOOL)isSaveFontSubset:");
+- (BOOL)writePDFAToURL:(NSURL *)url withType:(CPDFType)type isSaveFontSubset:(BOOL)isSaveFontSubset DEPRECATED_MSG_ATTRIBUTE("Use writeStandardPDFToFilePath:withType:iccFilePath:withUAConfig:isSaveFontSubset:");
 
 @end

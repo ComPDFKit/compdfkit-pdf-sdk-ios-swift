@@ -70,8 +70,12 @@ NS_ASSUME_NONNULL_BEGIN
  * caller must never hand its signer a hash of a kind it did not ask for. The same is true
  * of any value added later but not yet wired up.
  */
+/// Digest algorithm used for the RFC 3161 message imprint.
 typedef NS_ENUM(NSInteger, CPDFSignatureDigestAlgorithm) {
     CPDFSignatureDigestAlgorithmSHA256 = 0,
+    CPDFSignatureDigestAlgorithmSHA384,
+    CPDFSignatureDigestAlgorithmSHA512,
+    CPDFSignatureDigestAlgorithmSM3,
     CPDFSignatureDigestAlgorithmUnknown,
 };
 

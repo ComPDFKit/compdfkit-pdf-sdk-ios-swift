@@ -22,6 +22,20 @@ typedef NS_ENUM(NSInteger, CPDFSignatureOCSPStatus) {
     CPDFSignatureOCSPStatusRevoked = 1
 };
 
+/**
+ * The source of the time associated with a PDF signature.
+ */
+typedef NS_ENUM(NSInteger, CPDFSignatureTimestampSource) {
+    /** The signature has no timestamp information. */
+    CPDFSignatureTimestampSourceNone = 0,
+    /** The signing time comes from the signer's local clock. */
+    CPDFSignatureTimestampSourceLocalClock,
+    /** The signature contains an embedded RFC 3161 timestamp token. */
+    CPDFSignatureTimestampSourceEmbedded,
+    /** The signature is a document timestamp. */
+    CPDFSignatureTimestampSourceDocument,
+};
+
 typedef NS_ENUM(NSInteger, CPDFSignatureAlgorithmType) {
     CPDFSignatureAlgorithmTypeRSA_RSA = 0, /*RSA_RSA*/
     CPDFSignatureAlgorithmTypeMD2RSA, /*MD2RSA*/
@@ -229,6 +243,18 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
 - (BOOL)exportToFilePath:(NSString *)filePath;
 
 /**
+ * The DER-encoded bytes of this certificate, or nil when the certificate is
+ * unavailable or cannot be encoded.
+ *
+ * This is the raw form that chain building and revocation lookup take as input;
+ * the digest and X509Data properties above are text renderings and are not
+ * interchangeable with it.
+ *
+ * Failure is reported as nil rather than as an empty NSData.
+ */
+- (NSData *)DERData;
+
+/**
  * Set up a certificate trust folder, default sandbox path.
  */
 + (void)setSignCertTrustedFolder:(NSString *)signCertTrustedFolder
@@ -332,6 +358,17 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
  * Get the sub filter of the signature.
  */
 @property (nonatomic,readonly) NSString *subFilter;
+
+/**
+ * The source of the time associated with this signature.
+ */
+@property (nonatomic,readonly) CPDFSignatureTimestampSource timestampSource;
+
+/**
+ * Whether this signature contains an embedded RFC 3161 timestamp token.
+ */
+@property (nonatomic,readonly) BOOL hasEmbeddedTimestamp;
+
 /**
  * Get the signing reason.
  */
@@ -402,5 +439,31 @@ typedef NS_ENUM(NSInteger, CPDFCertUsage) {
  * @return Return true: Succeed. Return false: Fail.
 */
 + (BOOL)generatePKCS12CertWithInfo:(NSDictionary *)info password:(NSString *)password toPath:(NSString *)path certUsage:(CPDFCertUsage)certUsage;
+
+/**
+ * Parse the Adobe AATL and EU EUTL trust lists and write the extracted trust
+ * certificate SHA1 lists to a cache, so later launches can use
+ * +loadAATLAndEUTLFromCachePath: instead of parsing the lists again.
+ *
+ * Call this once per trust-list update; it is the only thing that populates the
+ * cache that +loadAATLAndEUTLFromCachePath: reads.
+ *
+ * @param AATLPath  Path of the AATL file.
+ * @param EUTLPath  Path of the EUTL file.
+ * @param cachePath Cache path prefix to write. Must be writable.
+ * @return Return true: Succeed. Return false: Fail.
+ */
++ (BOOL)loadAATLAndEUTLWithAATLPath:(NSString *)AATLPath EUTLPath:(NSString *)EUTLPath cachePath:(NSString *)cachePath;
+
+/**
+ * Load the AATL / EUTL trust certificate SHA1 lists from a cache previously
+ * written by +loadAATLAndEUTLWithAATLPath:EUTLPath:cachePath:, skipping the
+ * parse of the original trust-list files.
+ *
+ * @param cachePath The same cache path prefix that was passed when the cache was
+ *                  written. Fails if nothing has ever written that cache.
+ * @return Return true: Succeed. Return false: Fail.
+ */
++ (BOOL)loadAATLAndEUTLFromCachePath:(NSString *)cachePath;
 
 @end

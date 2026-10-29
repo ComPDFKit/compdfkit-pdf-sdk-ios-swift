@@ -110,6 +110,29 @@ extern NSString * const CPDFOptimizeFlagKey;
  */
 @property (nonatomic,readwrite) BOOL isCanceled;
 
+/**
+ * ICC profile data used for the RGB/CMYK color-space conversion applied
+ * during optimization.
+ *
+ * nil (the default) disables the conversion entirely; so does an empty
+ * NSData.
+ *
+ * The core library borrows the buffer and does not own or copy it, so the
+ * receiver keeps an immutable copy of the data alive for as long as the
+ * option object lives. The property is `copy`
+ * rather than `strong` so that handing in an NSMutableData and mutating it
+ * afterwards cannot leave the core library holding a stale pointer.
+ */
+@property (nonatomic,copy) NSData *iccProfileData;
+
+/**
+ * Direction of the color-space conversion. YES (the default) converts
+ * RGB to CMYK, NO converts CMYK to RGB.
+ *
+ * Only takes effect while iccProfileData is non-nil and non-empty.
+ */
+@property (nonatomic,readwrite) BOOL rgbToCMYK;
+
 
 - (instancetype)initWithDocument:(CPDFDocument *)document;
 
@@ -121,5 +144,29 @@ extern NSString * const CPDFOptimizeFlagKey;
 - (void)startCompress;
 
 - (BOOL)saveAsCopyWithPath:(NSString *)path;
+
+/**
+ * Optimizes the document and writes the compressed result to `path` in a
+ * single call, reporting how long each phase took.
+ *
+ * Note this is NOT a variant of -saveAsCopyWithPath:. That method only
+ * serializes a document that -startCompress has already optimized in place,
+ * whereas this one performs the optimization itself. Do not call
+ * -startCompress beforehand, or the document is optimized twice — images
+ * would be recompressed a second time and lose quality.
+ *
+ * @param path              Destination file path.
+ * @param stepsMicroseconds On return, microseconds spent in the optimization
+ *                          steps. Pass NULL if not needed.
+ * @param saveMicroseconds  On return, microseconds spent serializing the
+ *                          compressed output. Pass NULL if not needed.
+ * @return YES on success.
+ *
+ * @note This is the only variant that reports timings; -saveAsCopyWithPath:
+ * cannot report them at all.
+ */
+- (BOOL)optimizeAndSaveAsCopyWithPath:(NSString *)path
+                    stepsMicroseconds:(int64_t *)stepsMicroseconds
+                     saveMicroseconds:(int64_t *)saveMicroseconds;
 
 @end
