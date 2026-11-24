@@ -106,7 +106,13 @@ extern NSString * const CPDFOptimizeFlagKey;
 @property (nonatomic,readwrite) CPDF_OPTIMIZE_FLAG optimizeflag;
 
 /**
- * Cancel
+ * Cancel flag for the run in progress.
+ *
+ * Set it to YES while a run is in progress (e.g. from another thread) to
+ * cancel that run. It is reset to NO whenever -startCompress or
+ * -optimizeAndSaveAsCopyWithPath:stepsMicroseconds:saveMicroseconds: starts a
+ * new run, so a value set before the run starts has no effect, and the same
+ * option object can be reused after a cancelled run.
  */
 @property (nonatomic,readwrite) BOOL isCanceled;
 
@@ -141,8 +147,18 @@ extern NSString * const CPDFOptimizeFlagKey;
  */
 - (void)startProgressMonitor;
 
+/**
+ * Optimizes the document in place. Starts a new run and resets isCanceled to
+ * NO first. If the run is cancelled, isCanceled is still YES on return; check
+ * it and skip -saveAsCopyWithPath: in that case.
+ */
 - (void)startCompress;
 
+/**
+ * Writes the document optimized by -startCompress to `path`. Does not reset
+ * isCanceled: when it is YES (the -startCompress run was cancelled), this
+ * method writes nothing and returns NO.
+ */
 - (BOOL)saveAsCopyWithPath:(NSString *)path;
 
 /**
@@ -160,7 +176,8 @@ extern NSString * const CPDFOptimizeFlagKey;
  *                          steps. Pass NULL if not needed.
  * @param saveMicroseconds  On return, microseconds spent serializing the
  *                          compressed output. Pass NULL if not needed.
- * @return YES on success.
+ * @return YES on success; NO if the run was cancelled through isCanceled,
+ *         which this method resets to NO when it starts.
  *
  * @note This is the only variant that reports timings; -saveAsCopyWithPath:
  * cannot report them at all.

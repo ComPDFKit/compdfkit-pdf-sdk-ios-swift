@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/CPDFAnnotation.h</key>
 		<data>
-		/F3y9e5T/6ZP4jEJzNdTeAzvQGU=
+		IwdMUYC5Q2vZjcj/C7FKbOYPcak=
 		</data>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
 		<data>
@@ -106,7 +106,7 @@
 		</data>
 		<key>Headers/CPDFDeferredSignSession.h</key>
 		<data>
-		vhoY6BIueXD0DHszY1OVaJokUIY=
+		wttyV/LEuYvLCcrxTrFKdyrj3S0=
 		</data>
 		<key>Headers/CPDFDestination.h</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Headers/CPDFDocument.h</key>
 		<data>
-		35Sj8Bua5+WKU4g7EcEgRK5TiXI=
+		LMLJgP/2033z1YOwXLds3pPwJdM=
 		</data>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
 		<data>
@@ -186,7 +186,7 @@
 		</data>
 		<key>Headers/CPDFOptimizeOption.h</key>
 		<data>
-		9v8gnKlmZjj49P4+3TJsJae94y0=
+		mHCkm7VDC6Ug/YHcQfufyau94hA=
 		</data>
 		<key>Headers/CPDFOutline.h</key>
 		<data>
@@ -198,7 +198,7 @@
 		</data>
 		<key>Headers/CPDFPage.h</key>
 		<data>
-		3J5K4skB0ii97n5SbzYjfkw3q38=
+		d/hTny4mkgIxJ1VXaNUG1PQXads=
 		</data>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>Headers/CPDFWidgetAnnotation.h</key>
 		<data>
-		vxoo9lqRGLMcB6uXaaU71Sbh4gs=
+		suwz7qSiUn4rdXL74b2gdzxmgDs=
 		</data>
 		<key>Headers/ComPDFKit.h</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EdU8bbgYns1T7oG/1BRV69Ph0dI=
+		eLwWZ3eEDl8XC+Ep8qWCTbzO7ro=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -484,7 +484,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vusg814U6Wetr5JqRjp+5NOVYsEiFtJedOzCSuUMhxw=
+			WTBbi8UhWtVtXMJxbSxtCaKpCbaoqVA9dZNdDker23w=
 			</data>
 		</dict>
 		<key>Headers/CPDFAreaMeasureInfo.h</key>
@@ -582,7 +582,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qkQRP80mw7uv4jmvJZYA89QfvXNgrrc73OvZMKduX6Y=
+			9wukkSg9PaL/kk6vBi/UsNfwlgQgtgBSsvijJwSAdgc=
 			</data>
 		</dict>
 		<key>Headers/CPDFDestination.h</key>
@@ -603,7 +603,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GOyRk4csrpSGwWtXXJjqseHJMzCXySwdyOJsu1I7jeE=
+			mmYfOYiHjFvd3+rQwsnvwQB25OXXwGerpdGCFhFAz+c=
 			</data>
 		</dict>
 		<key>Headers/CPDFDocumentMemoryDistribution.h</key>
@@ -722,7 +722,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TNfoV8dcVd4xDcqAPmrDZJB2dxiD+XXkDHd+Sf538S4=
+			rlgkN+RICD74pzMAyLsx6Llgm07L306pUPmoj5U+gTs=
 			</data>
 		</dict>
 		<key>Headers/CPDFOutline.h</key>
@@ -743,7 +743,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/ox8fUksHdOhLLW8BzgPKrp4kYxRYbUaX83PVTiftSU=
+			J5dKzS22t4sZHzttX5rx8TVqTu/IgTOEM/tEOPAUsH8=
 			</data>
 		</dict>
 		<key>Headers/CPDFPerimeterMeasureInfo.h</key>
@@ -918,7 +918,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zTrF1s6ym5ndy0ipth65epSzcc2QI+A4ZRtWuniKpNo=
+			q6mBX4/LlkeCikW63T60JRZhZq2wQxa+nNhjgWNcrw8=
 			</data>
 		</dict>
 		<key>Headers/ComPDFKit.h</key>

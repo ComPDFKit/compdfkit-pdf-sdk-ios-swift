@@ -823,8 +823,11 @@ extern CPDFDocumentWriteOption const CPDFDocumentAllowsFormFieldEntryOption;
  * @param signatureWidget An unsigned signature field of this document. One that already
  * carries a signature is rejected with `sdk.field_already_signed`.
  * @param sourceData The bytes this document was loaded from.
- * @param digestAlgorithm Digest applied to the `/ByteRange` bytes. The external signer must
- * use this same one; it is reported back in the result's `digestAlgorithm`.
+ * @param digestAlgorithm Digest applied to the `/ByteRange` bytes.
+ * `CPDFSignatureDigestAlgorithmSHA256`, `CPDFSignatureDigestAlgorithmSHA384` and
+ * `CPDFSignatureDigestAlgorithmSHA512` are supported; other values are rejected with
+ * `sdk.invalid_argument`. The external signer must use this same one; it is reported back in
+ * the result's `digestAlgorithm`.
  * @param estimatedContentsSize `/Contents` placeholder capacity in container bytes; 0
  * selects the default of 16384. Frozen once this returns — a container that does not fit
  * cannot be filled in, and the only remedy is to prepare again with a larger value.

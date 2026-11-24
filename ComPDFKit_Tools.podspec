@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ComPDFKit_Tools"
-  spec.version      = "3.2.0"
+  spec.version      = "3.2.1"
   spec.summary      = "Comprehensiven iOS PDF SDK solutions for developers."
   spec.description  = <<-DESC
   ComPDFKit PDF SDK for iOS is designed for developers to integrate viewing, editing, converting, extracting, and signing PDFs to build PDF viewer and editor on iOS.
@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
   spec.documentation_url = "https://www.compdf.com/guides/pdf-sdk/ios/overview"
   spec.license      = { :type => 'Commercial', :file => 'Lib/ComPDFKit_Tools.xcframework/LICENSE'} 
   spec.author       = { "ComPDFKit" => "support@compdf.com"}
-  spec.platform     = :ios, "10.0"
-  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift.git', :tag => "3.2.0"}
+  spec.platform     = :ios, "15.0"
+  spec.source       = { :git => 'https://github.com/ComPDFKit/compdfkit-pdf-sdk-ios-swift.git', :tag => "3.2.1"}
 
   spec.vendored_frameworks = "Lib/ComPDFKit_Tools.xcframework"
 

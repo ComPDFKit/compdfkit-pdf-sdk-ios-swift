@@ -506,6 +506,15 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools38CPDFAddWatermarkViewControllerDelegate_")
 @end
 
 
+
+@interface CPDFAnnotation (SWIFT_EXTENSION(ComPDFKit_Tools))
+@property (nonatomic, readonly) BOOL cpdf_canSelect;
+@property (nonatomic, readonly) BOOL cpdf_canMoveOrResize;
+@property (nonatomic, readonly) BOOL cpdf_canDelete;
+@property (nonatomic, readonly) BOOL cpdf_canEditProperties;
+@property (nonatomic, readonly) BOOL cpdf_canEditContents;
+@end
+
 @class CPDFAnnotationToolBar;
 enum CPDFViewAnnotationMode : NSInteger;
 
@@ -675,6 +684,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -765,10 +775,10 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 
 
 
+
 @interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 @end
-
 
 
 @interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
@@ -792,6 +802,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAnnotationCreatePrepared:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode forAnnotation:(CPDFAnnotation * _Nullable)annotation;
+/// Called when a Note or Link default action is intercepted by
+/// <code>interceptAnnotationActions</code>, <code>interceptAllAnnotationActions</code>, or the
+/// legacy Note/Link compatibility switches.
 - (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -852,6 +865,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFThumbnailViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -919,6 +933,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFSignatureViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -1049,6 +1064,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -1111,7 +1127,9 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 @interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchTitleViewDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewIsAppearing:(BOOL)animated;
 - (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Text:(CWatermarkModel * _Nonnull)textWaterModel;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Image:(CWatermarkModel * _Nonnull)imageWaterModel;
 - (void)addWatermarkViewControllerBack:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewController;
@@ -1189,6 +1207,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseControllerHandleCustomMenuAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerHandleCustomToolbarAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerDigitalSignatureDone:(CPDFViewBaseController * _Nonnull)baseController;
+/// Called when a Note or Link default action is intercepted by
+/// <code>interceptAnnotationActions</code>, <code>interceptAllAnnotationActions</code>, or the
+/// legacy Note/Link compatibility switches.
 - (void)PDFViewBaseControllerInterceptAnnotationDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nullable)annotation;
 - (void)PDFViewBaseControllerInterceptWidgetDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFWidgetAnnotation * _Nullable)annotation;
 - (void)PDFViewBaseControllerAnnotationDialogDismissed:(CPDFViewBaseController * _Nonnull)baseController forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
@@ -1374,6 +1395,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools15CWatermarkModel")
 @interface CWatermarkModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 
@@ -1901,6 +1923,15 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools38CPDFAddWatermarkViewControllerDelegate_")
 @end
 
 
+
+@interface CPDFAnnotation (SWIFT_EXTENSION(ComPDFKit_Tools))
+@property (nonatomic, readonly) BOOL cpdf_canSelect;
+@property (nonatomic, readonly) BOOL cpdf_canMoveOrResize;
+@property (nonatomic, readonly) BOOL cpdf_canDelete;
+@property (nonatomic, readonly) BOOL cpdf_canEditProperties;
+@property (nonatomic, readonly) BOOL cpdf_canEditContents;
+@end
+
 @class CPDFAnnotationToolBar;
 enum CPDFViewAnnotationMode : NSInteger;
 
@@ -2070,6 +2101,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFEditViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -2160,10 +2192,10 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools12CPDFListView")
 
 
 
+
 @interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 @end
-
 
 
 @interface CPDFListView (SWIFT_EXTENSION(ComPDFKit_Tools))
@@ -2187,6 +2219,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools20CPDFListViewDelegate_")
 - (void)PDFListViewAnnotationsOperationChange:(CPDFListView * _Nonnull)pdfListView;
 - (void)PDFListViewEditNote:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAnnotationCreatePrepared:(CPDFListView * _Nonnull)pdfListView forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode forAnnotation:(CPDFAnnotation * _Nullable)annotation;
+/// Called when a Note or Link default action is intercepted by
+/// <code>interceptAnnotationActions</code>, <code>interceptAllAnnotationActions</code>, or the
+/// legacy Note/Link compatibility switches.
 - (void)PDFListViewPerformTapAnnotation:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewEditProperties:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
 - (void)PDFListViewPerformAddSign:(CPDFListView * _Nonnull)pdfListView forAnnotation:(CPDFAnnotation * _Nonnull)annotation;
@@ -2247,6 +2282,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFThumbnailViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (void)viewDidLoad;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -2314,6 +2350,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools27CPDFSignatureViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -2444,6 +2481,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools23CPDFToolsViewController")
 - (void)viewDidLoad;
 - (void)viewWillLayoutSubviews;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -2506,7 +2544,9 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools22CPDFViewBaseController")
 @interface CPDFViewBaseController : UIViewController <CPDFViewDelegate, CPDFAddWatermarkViewControllerDelegate, CPDFListViewDelegate, CPDFThumbnailViewControllerDelegate, CSearchTitleViewDelegate, CSearchToolbarDelegate, UIDocumentPickerDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLoad;
+- (void)viewIsAppearing:(BOOL)animated;
 - (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Text:(CWatermarkModel * _Nonnull)textWaterModel;
 - (void)addWatermarkViewControllerSave:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewControllerSave Image:(CWatermarkModel * _Nonnull)imageWaterModel;
 - (void)addWatermarkViewControllerBack:(CPDFAddWatermarkViewController * _Nonnull)addWatermarkViewController;
@@ -2584,6 +2624,9 @@ SWIFT_PROTOCOL("_TtP15ComPDFKit_Tools28CPDFViewBaseControllerDelete_")
 - (void)PDFViewBaseControllerHandleCustomMenuAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerHandleCustomToolbarAction:(CPDFViewBaseController * _Nonnull)baseController fronView:(id _Nonnull)view payload:(NSDictionary<NSString *, id> * _Nonnull)payload;
 - (void)PDFViewBaseControllerDigitalSignatureDone:(CPDFViewBaseController * _Nonnull)baseController;
+/// Called when a Note or Link default action is intercepted by
+/// <code>interceptAnnotationActions</code>, <code>interceptAllAnnotationActions</code>, or the
+/// legacy Note/Link compatibility switches.
 - (void)PDFViewBaseControllerInterceptAnnotationDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFAnnotation * _Nullable)annotation;
 - (void)PDFViewBaseControllerInterceptWidgetDoAction:(CPDFViewBaseController * _Nonnull)baseController forAnnotation:(CPDFWidgetAnnotation * _Nullable)annotation;
 - (void)PDFViewBaseControllerAnnotationDialogDismissed:(CPDFViewBaseController * _Nonnull)baseController forAnnotationMode:(enum CPDFViewAnnotationMode)annotationMode;
@@ -2769,6 +2812,7 @@ SWIFT_CLASS("_TtC15ComPDFKit_Tools15CWatermarkModel")
 @interface CWatermarkModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

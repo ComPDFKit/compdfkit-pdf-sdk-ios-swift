@@ -84,28 +84,35 @@ typedef NS_ENUM(NSInteger, CPDFAnnotationDraggedHandle) {
 typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
     /* [IGNORED] If set, ignore annotation AP stream if there is no handler available. */
     CPDFAnnotationFlagInvisible = 1,
-    /* If set, do not display or print the annotation or allow it to interact with the user. */
+    /* If set, do not display or print the annotation, and do not hit-test it for user interaction. */
     CPDFAnnotationFlagHidden = 1 << 1,
-    /* [IGNORED] If set, print the annotation when the page is printed. */
+    /* If set, print the annotation when the page is printed. */
     CPDFAnnotationFlagPrint = 1 << 2,
     /* [IGNORED] If set, don't scale the annotation’s appearance to match the magnification of the page. */
     CPDFAnnotationFlagNoZoom = 1 << 3,
     /* [IGNORED] If set, don't rotate the annotation’s appearance to match the rotation of the page. */
     CPDFAnnotationFlagNoRotate = 1 << 4,
-    /* [IGNORED] If set, don't display the annotation on the screen. (But printing might be allowed) */
+    /* If set, don't display the annotation on the screen and don't hit-test it. (But printing might be allowed) */
     CPDFAnnotationFlagNoView = 1 << 5,
     /**
      * If set, don’t allow the annotation to be deleted or its properties to be modified, including `contents`.
-     * This is ignored for widget annotations (form elements).
+     * For non-widget annotations this is enforced by hit-testing (the annotation can't be selected) and by the
+     * ComPDFKit_Tools UI. Link annotations stay clickable for navigation.
      * For widget annotations the `isReadOnly` property of the associated form field should be used instead.
-     * This flag only restricts the ComPDFKit UI and does not impact programmatic modification of the annotation.
+     * This flag does not impact programmatic modification of the annotation.
      */
     CPDFAnnotationFlagReadOnly = 1 << 6,
-    /* If set, don’t allow the annotation to be deleted or its properties to be modified, except for `contents`. */
+    /**
+     * If set, don’t allow the annotation to be deleted or its properties to be modified, except for `contents`.
+     * This is enforced by the ComPDFKit_Tools UI and does not impact programmatic modification of the annotation.
+     */
     CPDFAnnotationFlagLocked = 1 << 7,
     /* [IGNORED] If set, invert the interpretation of the `.noView` flag for certain events. */
     CPDFAnnotationFlagToggleNoView = 1 << 8,
-    /* [IGNORED] If set, don't allow the `contents` of the annotation to be modified by the user. */
+    /**
+     * If set, don't allow the `contents` of the annotation to be modified by the user.
+     * This is enforced by the ComPDFKit_Tools UI and does not impact programmatic modification of the annotation.
+     */
     CPDFAnnotationFlagLockedContents = 1 << 9
 };
 
@@ -290,10 +297,20 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
 - (void)setFlags:(CPDFAnnotationFlags)flags;
 
 /**
- * This is a convenience property that checks for `CPDFAnnotationFlagHidden` in `flags`.
+ * This is a convenience property that checks for `CPDFAnnotationFlagHidden` or `CPDFAnnotationFlagNoView` in `flags`.
+ * Returns YES if either flag is set, since neither is displayed on the screen.
+ * Setting YES sets `CPDFAnnotationFlagHidden` and keeps all other flags; setting NO clears both
+ * `CPDFAnnotationFlagHidden` and `CPDFAnnotationFlagNoView`.
  */
 - (BOOL)isHidden;
 - (void)setHidden:(BOOL)hidden;
+
+/**
+ * This is a convenience property that checks for `CPDFAnnotationFlagNoView` in `flags`.
+ * The setter only changes the `CPDFAnnotationFlagNoView` bit.
+ */
+- (BOOL)isNoView;
+- (void)setNoView:(BOOL)noView;
 
 /**
  * This is a convenience property that checks for `CPDFAnnotationFlagReadOnly` in `flags`.
@@ -308,6 +325,20 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
 - (void)setLocked:(BOOL)locked;
 
 /**
+ * This is a convenience property that checks for `CPDFAnnotationFlagPrint` in `flags`.
+ * The setter only changes the `CPDFAnnotationFlagPrint` bit.
+ */
+- (BOOL)isPrint;
+- (void)setPrint:(BOOL)print;
+
+/**
+ * This is a convenience property that checks for `CPDFAnnotationFlagLockedContents` in `flags`.
+ * The setter only changes the `CPDFAnnotationFlagLockedContents` bit.
+ */
+- (BOOL)isLockedContents;
+- (void)setLockedContents:(BOOL)lockedContents;
+
+/**
  * Update appearance stream for the annotation.
  *
  * @discussion ComPDFKit will update the annotation appearance by default when you modify the annotation properties.
@@ -315,6 +346,23 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
  * but you must call the updateAppearanceStream method manually when you modify the bounds of CPDFTextAnnotation, CPDFStampAnnotation, CPDFSignatureAnnotation annotations.
  */
 - (void)updateAppearanceStream;
+
+/**
+ * Replaces the appearance stream of the annotation with an image.
+ *
+ * @discussion The bounds of the annotation are kept; the image is drawn inside the current appearance area.
+ * For a CPDFStampAnnotation the stamp becomes an image stamp (stampType returns CPDFStampTypeImage) and the image is kept after saving and reopening the document.
+ * @param image The image used as the new appearance. Nothing happens when it is nil.
+ */
+- (void)updateAppearanceStreamWithImage:(CPDFKitPlatformImage *)image;
+
+/**
+ * Replaces the appearance stream of the annotation with an image, rotated by the given angle.
+ *
+ * @param image The image used as the new appearance. Nothing happens when it is nil.
+ * @param rotation The rotation angle in degrees. It must be a multiple of 90 and is normalized to 0, 90, 180 or 270 (for example, 360 is treated as 0 and -90 as 270). Nothing happens for any other value.
+ */
+- (void)updateAppearanceStreamWithImage:(CPDFKitPlatformImage *)image rotation:(NSInteger)rotation;
 
 - (void)updateAnnotationRotationAppearanceStream;
 
@@ -433,5 +481,80 @@ typedef NS_OPTIONS(NSInteger, CPDFAnnotationFlags) {
 + (BOOL)snapPointToNearest:(CPDFKitPlatformPoint *_Nonnull)point
                    outMode:(CPDFSnappingMode *_Nullable)outMode
                     radius:(double)radius;
+
+#pragma mark - Custom Properties
+
+/**
+ * Stores an application-defined string in the annotation dictionary under the given key.
+ *
+ * @discussion Use these methods to attach business data (for example a status, an owner or a
+ * JSON document serialized by the application) to an annotation. The value is written as a
+ * PDF string, replaces any previous value for the key, and is kept when the document is saved.
+ * It does not change the annotation's appearance.
+ *
+ * Use an application-specific prefix for keys, such as "App_Status". The key is written as given
+ * (without a leading "/"); the SDK does not check it, so the following are not supported and
+ * their result is undefined:
+ * - Standard PDF annotation or form field keys, such as "Type", "Subtype", "Rect", "Contents",
+ *   "AP", "P", "NM", "Popup", "IRT", "T", "V" or "MK". Writing them can change or break the
+ *   annotation.
+ * - Keys reserved by the SDK or the PDF core: keys starting with "CPDF" or "PSO" (for example
+ *   "PSOKEY_EXTENSION_INFO"). Use @c extensionInfo for the SDK extension field.
+ * - Keys starting with "/".
+ * - Strings (keys or values) containing a NUL character; text after the NUL is lost.
+ * An empty key is rejected.
+ *
+ * Passing an empty string clears the value but keeps the key; there is no API to remove a key
+ * or to enumerate keys. The SDK does not parse or validate the content.
+ *
+ * @param value The UTF-8 string to store. Must not contain NUL characters.
+ * @param key The dictionary key.
+ * @return YES if the value was written; NO if the key is empty or the annotation no longer
+ * belongs to a page.
+ */
+- (BOOL)setCustomValue:(NSString *_Nonnull)value forKey:(NSString *_Nonnull)key;
+
+/**
+ * Returns the application-defined string stored under the given key.
+ *
+ * @return The stored string, or nil if the key is empty, the annotation no longer belongs to
+ * a page, or no non-empty value is stored. A missing key and an empty value cannot be told apart.
+ */
+- (NSString *_Nullable)customValueForKey:(NSString *_Nonnull)key;
+
+/**
+ * Stores an array of application-defined strings under the given key.
+ *
+ * @discussion The array is written as a PDF array of strings and replaces any previous value;
+ * it is not appended to. Pass an empty array to clear the value. The same keys are not supported
+ * as for -setCustomValue:forKey:. Elements must be strings; numbers, booleans, nested arrays or
+ * dictionaries are not supported (serialize them, for example as JSON text).
+ *
+ * @param values The strings to store. Elements must not contain NUL characters.
+ * @param key The dictionary key.
+ * @return YES if the array was written; NO if the key is empty or the annotation no longer
+ * belongs to a page.
+ */
+- (BOOL)setCustomArray:(NSArray<NSString *> *_Nonnull)values forKey:(NSString *_Nonnull)key;
+
+/**
+ * Returns the array of application-defined strings stored under the given key.
+ *
+ * @return The stored strings, or an empty array if the key is empty, the annotation no longer
+ * belongs to a page, or no array is stored.
+ */
+- (NSArray<NSString *> *_Nonnull)customArrayForKey:(NSString *_Nonnull)key;
+
+/**
+ * Free-form text stored in the SDK's fixed extension field of the annotation, for example a
+ * JSON document owned by the application.
+ *
+ * @discussion Setting this property replaces the whole field; when several modules share it,
+ * read and merge the existing content first. Setting nil or an empty string clears the value.
+ * Returns nil when no value is stored or the annotation no longer belongs to a page.
+ * Accessing this field through -customValueForKey: / -setCustomValue:forKey: is not supported;
+ * the two use different text encodings. Text containing a NUL character is not supported.
+ */
+@property (nonatomic, copy, nullable) NSString *extensionInfo;
 
 @end

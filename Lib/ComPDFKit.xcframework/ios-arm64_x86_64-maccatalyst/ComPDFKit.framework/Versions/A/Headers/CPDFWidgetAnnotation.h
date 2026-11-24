@@ -69,6 +69,14 @@
 - (NSString *)fieldName;
 - (void)setFieldName:(NSString *)name;
 
+/**
+ * Method to get / set whether the form field is required (the Required bit of the field's /Ff entry).
+ *
+ * @discussion The flag belongs to the form field, so it is inherited from a parent field when the widget itself has no /Ff entry.
+ */
+- (BOOL)requiredFlag;
+- (void)setRequiredFlag:(BOOL)requiredFlag;
+
 - (void)reset;
 
 @end

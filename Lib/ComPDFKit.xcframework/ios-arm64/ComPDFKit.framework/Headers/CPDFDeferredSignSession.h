@@ -61,10 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Digest algorithm applied to the bytes being signed.
  *
- * SHA-256 is the only value this API exposes, on the core team's recommendation. The core
- * library also implements SHA-384 and SHA-512, and the wider signature API carries SM3;
- * they are held back here until there is a caller for them, so that every value in this
- * enum is one the deferred-signing path has actually been exercised with.
+ * Deferred signing supports SHA-256 (the default), SHA-384 and SHA-512. The wider
+ * signature API also carries SM3, which the deferred-signing core does not implement.
  *
  * `Unknown` is rejected with `sdk.invalid_argument` rather than quietly downgraded — a
  * caller must never hand its signer a hash of a kind it did not ask for. The same is true
@@ -136,7 +134,12 @@ typedef NS_ENUM(NSInteger, CPDFDeferredSignHashMode) {
 /** Defaults to `CPDFDeferredSignHashModeDocumentDigest`. */
 @property (nonatomic,assign) CPDFDeferredSignHashMode hashMode;
 
-/** Defaults to `CPDFSignatureDigestAlgorithmSHA256`. */
+/**
+ * Digest algorithm. `CPDFSignatureDigestAlgorithmSHA256` (the default),
+ * `CPDFSignatureDigestAlgorithmSHA384` and `CPDFSignatureDigestAlgorithmSHA512` are supported.
+ * SM3 and `Unknown` are not supported by deferred signing and are rejected with
+ * `sdk.invalid_argument`.
+ */
 @property (nonatomic,assign) CPDFSignatureDigestAlgorithm digestAlgorithm;
 
 /**
@@ -222,7 +225,7 @@ typedef NS_ENUM(NSInteger, CPDFDeferredSignHashMode) {
 @property (nonatomic,readonly,copy,nullable) NSData *hashToSign;
 
 /**
- * "SHA256", "SHA384" or "SHA512". The external signer must use this same digest.
+ * The digest name: "SHA256", "SHA384" or "SHA512". The external signer must use this same digest.
  */
 @property (nonatomic,readonly,copy,nullable) NSString *digestAlgorithm;
 

@@ -150,6 +150,27 @@ extern NSString * const CPDFPageAnnotationNotificationAnnotationKey;
  *                    in this page's annotations array.
  */
 - (void)updateAndAddAnnotation:(CPDFAnnotation *)annotation;
+
+/**
+ * Adds a reference to an existing annotation object of the same document to this page.
+ *
+ * @discussion No copy is made: this page's /Annots array refers to the same indirect PDF object
+ * as the source page (for example both pages list "12 0 R"). All properties are shared, including
+ * the bounds, contents, appearance stream and custom properties, so an edit on one page appears on
+ * every page that references the object. Each page needs its own refresh after an edit.
+ *
+ * The source annotation must belong to a page of this document. Widgets (including signature
+ * fields), popups and annotations with a reply or popup relationship are rejected. Adding the same
+ * object to a page twice returns the existing annotation without adding a duplicate.
+ *
+ * Sharing one annotation object between pages is a non-standard PDF extension: other PDF viewers,
+ * format conversions and XFDF / JSON export may not keep the shared identity. Use
+ * -[CPDFAnnotation copyToPage:] for an independent copy.
+ *
+ * @param annotation The annotation to reference from this page.
+ * @return The annotation as seen on this page, or nil if it cannot be referenced.
+ */
+- (CPDFAnnotation *)addAnnotationReference:(CPDFAnnotation *)annotation;
 /**
  * Removes all annotations from the page.
  */
